@@ -1,3 +1,4 @@
+
 @import url("Bitrise_font.css");
 
 @charset: "utf8";
@@ -6,8 +7,19 @@ body {
   font-family: TTNorms;
 }
 
+.portal-body-row {
+}
+
+.portal-contents.featured-content, .featured-content-label {
+  display: none;
+}
+
 .title {
     color: #760fc3;
+}
+
+.site-sidebar {
+  background-color: #492f5c;
 }
 
 #publication-title {
@@ -21,3 +33,4 @@ body {
 .portal-header {
     display: none;
 }
+
