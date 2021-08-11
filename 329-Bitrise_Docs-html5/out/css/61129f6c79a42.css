@@ -1,0 +1,19 @@
+
+
+@charset: "utf8";
+
+.title {
+    color: #760fc3;
+}
+
+#publication-title {
+    background-color: #760fc3;
+}
+
+.site-header {
+    color: #760fc3;
+}
+
+.portal-header {
+    display: none;
+}
