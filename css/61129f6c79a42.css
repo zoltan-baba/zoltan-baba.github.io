@@ -1,6 +1,10 @@
-
+@import url("Bitrise_font.css");
 
 @charset: "utf8";
+
+body {
+  font-family: TTNorms;
+}
 
 .title {
     color: #760fc3;
