@@ -5,7 +5,7 @@
   <param name="jquery.version" select="3.4.1"/>
   <param name="use.algolia.search" select="0"/>
   <param name="use.algolia.free.docsearch" select="0"/>
-  <param name="publication.id" select="en-UUID-1a69c010-b7fd-4c0e-2cc0-26ceba8e5a15"/>
+  <param name="publication.id" select="ja-UUID-1a69c010-b7fd-4c0e-2cc0-26ceba8e5a15"/>
   <param name="algolia.custom.index.name" select=""/>
   <param name="use.fuse.search" select="1"/>
   <param name="use.multilingual.default.search" select="0"/>
@@ -30,12 +30,12 @@
   <param name="submit.feedback" select="1"/>
   <param name="voting.panel" select="1"/>
   <param name="feedback.email" select=""/>
-  <param name="feedback.description" select="Would you like to provide feedback? Just click here to suggest edits."/>
-  <param name="voting.panel.text" select="Was this helpful?"/>
-  <param name="yes" select="Yes"/>
-  <param name="no" select="No"/>
+  <param name="feedback.description" select=""/>
+  <param name="voting.panel.text" select=""/>
+  <param name="yes" select=""/>
+  <param name="no" select=""/>
   <param name="custom.meta.tags" select=""/>
-  <param name="last.modified.text" select="Last modified: "/>
+  <param name="last.modified.text" select=""/>
   <param name="categories.shown" select="4"/>
   <param name="single.topic.permalink" select=""/>
   <param name="logo.link" select="https://support.bitrise.io/hc/en-us"/>
@@ -49,8 +49,8 @@
   <param name="use.page.toc" select="1"/>
   <param name="swagger.embed" select="1"/>
   <param name="use.separate.relationship.toc" select="1"/>
-  <param name="in.this.section.string" select="In this section"/>
-  <param name="seealso.string" select="See also"/>
+  <param name="in.this.section.string" select=""/>
+  <param name="seealso.string" select="&#x53C2;&#x7167;"/>
   <param name="use.section.toc" select="after"/>
   <param name="taxonomies.relationship" select=""/>
   <param name="use.top.nav" select="1"/>
@@ -62,7 +62,7 @@
   <param name="versions.file" select=""/>
   <param name="fuse.threshold" select="0.3"/>
   <param name="use.print.icon" select="0"/>
-  <param name="portal.publication.title" select="Bitrise Docs"/>
+  <param name="portal.publication.title" select="Bitrise&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;"/>
   <param name="collapsible.toc" select="0"/>
   <param name="focus.on.current.toc.section" select="1"/>
   <param name="use.resource.version.suffix" select="0"/>
