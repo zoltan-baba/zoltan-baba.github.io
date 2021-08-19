@@ -1,0 +1,528 @@
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] ############################################################
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] # Output Factory initiated (html5)
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] # Building output for: Bitrise Docs
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] # URL /document/edit/329
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] # User: Zoltán Bába
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] # Time: Thu, 19 Aug 2021 18:43:52 +0200
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] # Server: augsburg
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] ############################################################
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] Group: custom
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] Type: html5
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] Transformation: /var/www/ccms/usr/bitrise/xsl/custom/layout-435.xsl
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] File found: /var/www/ccms/usr/bitrise/xsl/custom/layout-435.xsl
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] ############################################################
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] Building output for: html5
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] Using stylesheet: /var/www/ccms/usr/bitrise/xsl/custom/layout-435.xsl
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] Parameters for this build: (array) []
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] Environment variables for this build: (array) {"taxonomies.propagate":"1"}
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] Building output for languages: (array) ["en","ja"]
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] Building multilang: no
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] Building preview: no
+[19/Aug/2021 18:43:52 Europe/Stockholm] [Info] ############################################################
+[19/Aug/2021 18:43:53 Europe/Stockholm] [Info] Using build directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5
+[19/Aug/2021 18:43:53 Europe/Stockholm] [Info] -- Generating source files
+[19/Aug/2021 18:43:53 Europe/Stockholm] [Info] -- Propagating taxonomies: true
+[19/Aug/2021 18:43:54 Europe/Stockholm] [Info] -- Source files have been generated
+[19/Aug/2021 18:43:54 Europe/Stockholm] [Info] -- Publication has no unresolved dependencies.
+[19/Aug/2021 18:43:54 Europe/Stockholm] [Info] -- Generating source files complete.
+[19/Aug/2021 18:43:54 Europe/Stockholm] [Info] Localizing: publication-329.xml
+[19/Aug/2021 18:43:54 Europe/Stockholm] [Info] Language: en
+[19/Aug/2021 18:43:54 Europe/Stockholm] [Info] Language: ja
+[19/Aug/2021 18:43:55 Europe/Stockholm] [Info] Variable sets found: 0
+[19/Aug/2021 18:43:56 Europe/Stockholm] [Info] Inserting image links.
+[19/Aug/2021 18:43:56 Europe/Stockholm] [Info] Found 5 image(s).
+[19/Aug/2021 18:43:56 Europe/Stockholm] [Info] Found image 'documentation_icon.png'
+[19/Aug/2021 18:43:56 Europe/Stockholm] [Info] Found image 'Adding a new app'
+[19/Aug/2021 18:43:56 Europe/Stockholm] [Info] Found image 'Getting started'
+[19/Aug/2021 18:43:56 Europe/Stockholm] [Info] Found image 'Scheduling your builds'
+[19/Aug/2021 18:43:56 Europe/Stockholm] [Info] Found image 'Scheduling your builds'
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Profiling parameters: (array) []
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Profiling customisation: /var/www/ccms/usr/bitrise/xsl/profile.xsl (not found)
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Transformation: publication-329--en.org.xml -> publication-329--en.xml [profile.xsl]
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Transformation: publication-329--ja.org.xml -> publication-329--ja.xml [profile.xsl]
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Transformation: publication-329--en.xml -> publication-329--en.xml [internal-xref.xsl]
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Transformation: publication-329--ja.xml -> publication-329--ja.xml [internal-xref.xsl]
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Transformation: A-filelist.xml -> B-sorted.xml [IO.document.sortlang.xsl]
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Transformation: B-sorted.xml -> C-concatenated.xml [IO.document.concat.xsl]
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Transformation: B-sorted.xml -> index-en.xml [IO.document.head.xsl]
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Transformation: A-filelist.xml -> B-sorted.xml [IO.document.sortlang.xsl]
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Transformation: B-sorted.xml -> C-concatenated.xml [IO.document.concat.xsl]
+[19/Aug/2021 18:43:57 Europe/Stockholm] [Info] Transformation: B-sorted.xml -> index-ja.xml [IO.document.head.xsl]
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Created copy: /var/www/ccms/usr/bitrise/xsl/custom/layout-435.xsl -> /var/www/ccms/usr/bitrise/xsl/custom/611e8a4e278c3.xsl
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Created symlink: /var/www/ccms/application/lib/docbook/xsl/html5/html5-2.page.xsl -> /var/www/ccms/usr/bitrise/xsl/custom/611e8a4e278c3.page.xsl
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Created symlink: /var/www/ccms/application/lib/docbook/xsl/html5/html5-2.index.xsl -> /var/www/ccms/usr/bitrise/xsl/custom/611e8a4e278c3.index.xsl
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Created symlink: /var/www/ccms/application/lib/docbook/xsl/html5/html5.toc.xsl -> /var/www/ccms/usr/bitrise/xsl/custom/611e8a4e278c3.toc.xsl
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Created symlink: /var/www/ccms/application/lib/docbook/xsl/html5/html5.page.xsl -> /var/www/ccms/usr/bitrise/xsl/custom/611e8a4e278c3.page.xsl
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Created symlink: /var/www/ccms/application/lib/docbook/xsl/html5/html5.index.xsl -> /var/www/ccms/usr/bitrise/xsl/custom/611e8a4e278c3.index.xsl
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Image copied: en/image/1611e8a4c75fa5.png
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Image copied: en/image/1611e8a4c78c3c.png
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Image copied: en/image/1611e8a4c7be95.png
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Image copied: en/image/1611e8a4c80f51.jpg
+[19/Aug/2021 18:43:58 Europe/Stockholm] [Info] Image copied: en/image/1611e8a4c84044.jpg
+[19-Aug-2021 18:43:59 Europe/Stockholm] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, js/jquery-3/*, fonts/*, js/swagger/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: css/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap-3.0.2.min.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap-theme-3.0.2.min.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap-theme.min.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap-theme.min.css.map'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap.min.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap.min.css.map'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'content-theme1.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'content-theme2.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'docbook.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'font-awesome.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'graphical-lists.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5.algoliasearch.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5.algoliasearchpage.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'mathml.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto.font.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'rwd-table.min.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'sm-core-css.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'sm-simple.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-api-responsive.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-api.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-common.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-index-page.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-modern-tables.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-print.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-responsive.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-revealjs-slides.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-single-page.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme0.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme1-colors.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme1.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme2-colors.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme2.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme3-colors.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme3.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme3b-colors.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme3b.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: css/image/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'breadcrumb-seperator.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'caution.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo-blue-inverted.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo-blue.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo-white.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo-white.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'important.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'note.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'portal1-bg.jpg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'portal2a-bg.jpg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'portal2b-bg.jpg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'portal2c-bg.jpg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'subheader-bg.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'warning.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: css/image/callouts/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '1.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '1.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '1.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '10.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '10.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '10.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '11.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '11.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '11.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '12.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '12.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '12.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '13.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '13.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '13.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '14.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '14.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '14.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '15.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '15.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '15.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '16.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '17.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '18.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '19.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '2.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '2.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '2.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '20.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '21.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '22.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '23.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '24.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '25.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '26.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '27.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '28.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '29.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '3.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '3.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '3.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '30.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '4.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '4.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '4.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '5.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '5.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '5.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '6.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '6.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '6.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '7.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '7.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '7.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '8.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '8.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '8.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '9.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '9.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '9.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: js/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'ajax-loading.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'anchorlinks.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'checklist.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'clipboard.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'cookie-consent.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'create-toc.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'csh.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fuse.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'hilitor.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5-2-ajax-hp.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5-2-ajax.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5-2-mp-common.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5-2-portal.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5-2.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5.algoliasearch.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5.algoliasearchpage.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5.fuse.search.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-1.10.2.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-1.10.2.min.map'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-migrate-3.0.1.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-ui-1.10.3.custom.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.event.move.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.event.swipe.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.mark.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.paligocode.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.smartmenus.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.sticky.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'lunr-single-lang.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'lunr.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'materialize.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'mspace.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'purl.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'respond.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'responsive-tables.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'rwd-table.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'script-api.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'script-revealjs-slides.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'script.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'search.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'updateurl.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: js/jquery-3/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-3.4.1.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-3.5.1.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-3.6.0.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: fonts/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'FontAwesome.otf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fontawesome-webfont.eot'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fontawesome-webfont.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fontawesome-webfont.ttf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fontawesome-webfont.woff'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fontawesome-webfont.woff2'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'glyphicons-halflings-regular.eot'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'glyphicons-halflings-regular.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'glyphicons-halflings-regular.ttf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'glyphicons-halflings-regular.woff'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'glyphicons-halflings-regular.woff2'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.eot'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.ttf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.woff'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.woff2'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.eot'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.ttf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.woff'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: js/swagger/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'favicon-16x16.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'favicon-32x32.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'index.html'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'oauth2-redirect.html'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'paligo-swagger.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'paligo.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'swagger-ui-bundle.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'swagger-ui-bundle.js.map'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'swagger-ui-standalone-preset.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'swagger-ui-standalone-preset.js.map'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'swagger-ui.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'swagger-ui.css.map'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'swagger-ui.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'swagger-ui.js.map'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'yaml.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, fonts/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: css/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap-3.0.2.min.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap-theme-3.0.2.min.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap-theme.min.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap-theme.min.css.map'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap.min.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap.min.css.map'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'content-theme1.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'content-theme2.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'docbook.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'font-awesome.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'graphical-lists.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5.algoliasearch.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5.algoliasearchpage.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'mathml.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto.font.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'rwd-table.min.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'sm-core-css.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'sm-simple.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-api-responsive.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-api.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-common.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-index-page.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-modern-tables.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-print.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-responsive.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-revealjs-slides.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style-single-page.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'style.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme0.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme1-colors.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme1.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme2-colors.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme2.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme3-colors.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme3.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme3b-colors.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'theme3b.css'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: css/image/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'breadcrumb-seperator.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'caution.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo-blue-inverted.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo-blue.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo-white.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo-white.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'corporate-logo.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'important.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'note.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'portal1-bg.jpg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'portal2a-bg.jpg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'portal2b-bg.jpg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'portal2c-bg.jpg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'subheader-bg.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'warning.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: css/image/callouts/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '1.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '1.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '1.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '10.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '10.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '10.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '11.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '11.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '11.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '12.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '12.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '12.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '13.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '13.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '13.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '14.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '14.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '14.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '15.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '15.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '15.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '16.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '17.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '18.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '19.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '2.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '2.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '2.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '20.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '21.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '22.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '23.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '24.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '25.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '26.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '27.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '28.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '29.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '3.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '3.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '3.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '30.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '4.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '4.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '4.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '5.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '5.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '5.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '6.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '6.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '6.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '7.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '7.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '7.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '8.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '8.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '8.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '9.gif'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '9.png'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '9.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: js/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'ajax-loading.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'anchorlinks.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'bootstrap.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'checklist.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'clipboard.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'cookie-consent.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'create-toc.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'csh.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fuse.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'hilitor.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5-2-ajax-hp.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5-2-ajax.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5-2-mp-common.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5-2-portal.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5-2.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5.algoliasearch.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5.algoliasearchpage.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'html5.fuse.search.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-1.10.2.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-1.10.2.min.map'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-migrate-3.0.1.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery-ui-1.10.3.custom.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.event.move.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.event.swipe.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.mark.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.paligocode.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.smartmenus.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'jquery.sticky.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'lunr-single-lang.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'lunr.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'materialize.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'mspace.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'purl.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'respond.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'responsive-tables.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'rwd-table.min.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'script-api.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'script-revealjs-slides.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'script.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'search.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'updateurl.js'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Filename: fonts/*
+[19-Aug-2021 18:43:59 Europe/Stockholm] Source directory: /var/www/ccms/application/lib/docbook/xsl/html5
+[19-Aug-2021 18:43:59 Europe/Stockholm] Target directory: /paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'FontAwesome.otf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fontawesome-webfont.eot'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fontawesome-webfont.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fontawesome-webfont.ttf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fontawesome-webfont.woff'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'fontawesome-webfont.woff2'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'glyphicons-halflings-regular.eot'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'glyphicons-halflings-regular.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'glyphicons-halflings-regular.ttf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'glyphicons-halflings-regular.woff'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'glyphicons-halflings-regular.woff2'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.eot'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.ttf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.woff'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.woff2'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.eot'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.ttf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.woff'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file 'roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-435/611636eba8cd9.svg' to '/paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out/css/image/corporate-logo.svg'
+[19-Aug-2021 18:43:59 Europe/Stockholm] Copy file '/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-435/61153896d6c9b.css' to '/paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out/css/image/portal-logo.css'
+[19/Aug/2021 18:43:59 Europe/Stockholm] [Info] Image copied: ja/image/1611e8a4c75fa5.png
+[19/Aug/2021 18:43:59 Europe/Stockholm] [Info] Image copied: ja/image/1611e8a4c78c3c.png
+[19/Aug/2021 18:43:59 Europe/Stockholm] [Info] Image copied: ja/image/1611e8a4c7be95.png
+[19/Aug/2021 18:43:59 Europe/Stockholm] [Info] Image copied: ja/image/1611e8a4c80f51.jpg
+[19/Aug/2021 18:43:59 Europe/Stockholm] [Info] Image copied: ja/image/1611e8a4c84044.jpg
+[19-Aug-2021 18:44:00 Europe/Stockholm] Copy file '/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-435/611636eba8cd9.svg' to '/paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out/css/image/corporate-logo.svg'
+[19-Aug-2021 18:44:00 Europe/Stockholm] Copy file '/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-435/61153896d6c9b.css' to '/paligo/tmp/bitrise/production-611e8a4747a6c2.73991511/329-Bitrise_Docs-html5/out/css/image/portal-logo.css'
+[19-Aug-2021 18:44:00 Europe/Stockholm] Post build HTML5
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: index-en.html -> toc-en.html [611e8a4e278c3.toc.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: remote-access-with-ssh.html -> remote-access-with-ssh.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: remote-access-with-screenshare.html -> remote-access-with-screenshare.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: scheduling-builds.html -> scheduling-builds.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: remote-access.html -> remote-access.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: api-reference.html -> api-reference.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: for-contributors.html -> for-contributors.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: getting-started.html -> getting-started.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: infrastructure.html -> infrastructure.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: accounts-and-user-management.html -> accounts-and-user-management.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: steps-and-workflows.html -> steps-and-workflows.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: builds.html -> builds.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: code-signing.html -> code-signing.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: testing.html -> testing.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: deploying.html -> deploying.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: monitoring.html -> monitoring.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: bitrise-cli.html -> bitrise-cli.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: bitrise-api.html -> bitrise-api.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: index-en.html -> index-en.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:01 Europe/Stockholm] [Info] Transformation: index-ja.html -> toc-ja.html [611e8a4e278c3.toc.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: sshによるリモートアクセス.html -> sshによるリモートアクセス.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: apiリファレンス.html -> apiリファレンス.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: -チーム-組織.html -> -チーム-組織.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: .html -> .html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: bitrise-cli.html -> bitrise-cli.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: bitrise-api.html -> bitrise-api.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: index-ja.html -> index-ja.html [611e8a4e278c3.page.xsl]
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Generating index page.
+[19/Aug/2021 18:44:02 Europe/Stockholm] [Info] Transformation: index.manifest -> index.html [611e8a4e278c3.index.xsl]
+[19/Aug/2021 18:44:03 Europe/Stockholm] [Info] # Took 10.447754 seconds to render.
