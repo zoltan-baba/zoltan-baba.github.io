@@ -54,7 +54,7 @@
   <param name="use.section.toc" select="after"/>
   <param name="taxonomies.relationship" select=""/>
   <param name="use.top.nav" select="1"/>
-  <param name="external.top.nav.links" select="text:EN, url:https://zoltan-baba.github.io;&#10;text:&#x65E5;&#x672C;&#x8A9E;, url:https://zoltan-baba.github.io/ja/index-ja.html;&#10;text:bitrise.io, url:https://www.bitrise.io?utm_source=devcenter&amp;utm_medium=top_cta;&#10;text:Support Center, url:https://support.bitrise.io/hc/en-us?utm_source=devcenter&amp;utm_medium=top_cta;&#10;text: Book a demo, url: https://www.bitrise.io/contact?utm_source=website&amp;utm_medium=devcenter&amp;utm_campaign=contact;"/>
+  <param name="external.top.nav.links" select="text:EN, url:https://zoltan-baba.github.io;&#10;text:&#x65E5;&#x672C;&#x8A9E;, url:https://zoltan-baba.github.io/ja/index-ja.html;&#10;text:bitrise.io, url:https://www.bitrise.io?utm_source=devcenter&amp;utm_medium=top_cta;&#10;text:Go to Support, url:https://support.bitrise.io/hc/en-us?utm_source=devcenter&amp;utm_medium=top_cta;&#10;text: Book a demo, url: https://www.bitrise.io/contact?utm_source=website&amp;utm_medium=devcenter&amp;utm_campaign=contact;"/>
   <param name="top.nav.section.depth" select="2"/>
   <param name="gentext.for.top.nav" select="0"/>
   <param name="version.dropdown.values" select=""/>
