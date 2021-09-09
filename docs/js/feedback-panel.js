@@ -3,6 +3,7 @@ window.onload = function initialConfig() {
     const pageUrl = window.location.href;
     const homePage = "https://zoltan-baba.github.io";
     const jpHomePage = "https://zoltan-baba.github.io/ja/index-ja.html";
+    console.log(window.location.href);
 
     function homePageConfig() {
     
