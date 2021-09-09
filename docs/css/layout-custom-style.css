@@ -43,11 +43,6 @@ body {
   float: left;
 }
 
-.site-sidebar {
-  background-color: #f8f8f8;
-  font-size: 14px;
-}
-
 .theme2 .toolbar.top-nav-on {
   min-height: 48px;
   height: 48px;
@@ -286,15 +281,22 @@ button.navbar-toggle {
   content: url(/css/image/navicons/code-active.svg);  
 }
 
+.site-sidebar {
+  background-color: #f8f8f8;
+  font-size: 14px;
+}
+
 .nav-site-sidebar>li>a {
   padding: 10px 15px 10px 60px
 }
 
 .nav-site-sidebar ul a {
+  color: rgba(51,51,51,0.7);
   padding: 8px 20px 8px 75px
 }
 
 .nav-site-sidebar ul ul a {
+  color: rgba(51,51,51,0.7);
   padding-left: 90px;
 }
 
@@ -306,6 +308,10 @@ button.navbar-toggle {
 .nav-site-sidebar > li.active.opened > a, .nav-site-sidebar .active > a.topic-link.section:hover {
   color: white;
   background-color: var(--active-purple);
+}
+
+li.opened > a.topic-link.section a {
+  color: rgb(51,51,51,0.7);
 }
 
 .nav-site-sidebar ul .active > a {
@@ -351,6 +357,14 @@ li.breadcrumb-link:hover {
 
 .page-toc main article {
   padding-right: 50px;
+}
+
+
+@media (max-width: 768px) {
+
+  .page-toc main article {
+    padding-right: 20px !important;
+  }
 }
 
 main article p {
@@ -611,9 +625,9 @@ p.index-title {
   position: relative;
   font-weight: bold;
   font-size: 1.6rem;
-  color: #683d87;
+  color: #351d48;
   cursor: pointer;
-  background-color: #f8f0ff;
+  background-color: #ececec;
   padding: 15px 10px 15px 40px;
 }
 
