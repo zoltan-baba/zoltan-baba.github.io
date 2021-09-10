@@ -160,7 +160,7 @@ ul.top-nav-menu.sm.sm-simple > li:nth-child(1):hover, ul.top-nav-menu.sm.sm-simp
   color: #333;
 }
 
-.selected-searchresultitem {
+.searchresultitem.selected-searchresultitem {
   background-color: var(--nav-highlight);
   border-radius: 8px;
 }
