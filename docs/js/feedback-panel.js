@@ -16,14 +16,20 @@ window.onload = function initialConfig() {
 
     function languageSelector() {
         let langParent = document.querySelector("div.toolbar-tools");
+        let jaSelector = langParent.querySelectorAll("li")[1];
+        let enSelector = langParent.querySelectorAll("li")[0];
+
+        enSelector.querySelector("a").setAttribute("target", "_self");
+        jaSelector.querySelector("a").setAttribute("target", "_self");
 
         if (pageUrl.indexOf("/ja/") > -1) {
-            langParent.querySelectorAll("li")[1].classList.add("active-lang");
+            jaSelector.classList.add("active-lang");
         }
         else {
-            langParent.querySelectorAll("li")[0].classList.add("active-lang");
+            enSelector.classList.add("active-lang");
         }
     };
+
 
     homePageConfig();
     languageSelector();

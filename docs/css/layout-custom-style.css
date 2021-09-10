@@ -1,16 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
 @import url("Bitrise_font.css");
 
 @charset: "utf8";
@@ -440,7 +428,7 @@ a:focus, a:hover, a:active {
 
 .titlepage h2.title, .titlepage h1.title {
     font-family: TTNorms, sans-serif;
-    color: #683d87;
+    color: var(--deep-purple);
     font-weight: bold;
     letter-spacing: 0.2px;
     margin: 0 0 1em;
@@ -460,6 +448,13 @@ a:focus, a:hover, a:active {
   font-weight: bold;
   font-size: 2.5rem;
   line-height: 1.4;
+}
+
+.fa-chain:before, .fa-link:before {
+  content: url(/css/image/navicons/anchor.svg);
+  position: absolute;
+  transform: translateY(-0.9em);
+  cursor: pointer;
 }
 
 p {
