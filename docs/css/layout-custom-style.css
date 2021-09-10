@@ -156,6 +156,15 @@ ul.top-nav-menu.sm.sm-simple > li:nth-child(1):hover, ul.top-nav-menu.sm.sm-simp
   height: 48px;
 }
 
+.searchresultitem > a {
+  color: #333;
+}
+
+.selected-searchresultitem {
+  background-color: var(--nav-highlight);
+  border-radius: 8px;
+}
+
 @media (min-width: 1200px) {
   .site-sidebar {
     width: 20%;
@@ -386,7 +395,7 @@ a:focus, a:hover, a:active {
 
 #topic-content > section > .titlepage h1.title.homepage-title {
   margin-top: 1em;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #492f5c;
 }
 
