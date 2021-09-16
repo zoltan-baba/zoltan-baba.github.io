@@ -22,9 +22,9 @@ body {
 
 
 .site-sidebar .logo {
-  height: 100% !important;
+  height: 48px;
+  width: 200px;
   padding: 10px 20px;
-  display: block !important;
 }
 
 #logotype-pageheader {
@@ -34,19 +34,19 @@ body {
 .theme2 .toolbar.top-nav-on {
   min-height: 48px;
   height: 48px;
-  padding: 0 25px 0 25px !important;
+  padding: 0 25px 0 25px;
 }
 
-.toolbar-tools .navbar-collapse.collapse {
+div#navbar.navbar-collapse.collapse {
   height: 100% !important;
 }
 
 
-.site-sidebar-header {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  background-color: #492f5c !important;
-  border-color: #492f5c !important;
+.colored-top .site-sidebar-header {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #492f5c;
+  border-color: #492f5c;
   height: 48px;
 }
 
@@ -412,10 +412,6 @@ a:focus, a:hover, a:active {
   color: var(--active-purple);
 }
 
-.topic-content {
-  border-bottom: 1px solid #f5f5f5;
-}
-
 #topic-content > section > .titlepage h1.title.homepage-title {
   margin-top: 1em;
   font-size: 3.5rem;
@@ -598,6 +594,28 @@ ol.procedure {
   color: #e6db74;
 }
 
+.section-toc.section-toc-after .section-toc-title {
+  color: #351d48;
+  border-top: solid 2px #ececec;
+  padding-top: 20px;
+}
+
+.section-toc.section-toc-after .section-toc-title:before {
+  content: url(/css/image/navicons/doc.svg);
+  padding-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.section-toc.section-toc-after a {
+  padding-left: 5px;
+}
+
+.section-toc.section-toc-after a:after {
+  content: ">>";
+  padding-left: 5px;
+}
+
 div.feedback-panel {
   display: none;
   float: left;
@@ -768,6 +786,8 @@ ul.itemizedlist.intro-container {
 }
 
 .index-image img.materialboxed {
+  height: 128px;
+  width: 119px;
   margin-right: 0;
   float: center;
 }
