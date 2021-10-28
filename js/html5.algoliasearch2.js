@@ -5,23 +5,23 @@ $(document).ready(function () {
 function addSearch() {
     $("#aa-search-input").keyup(function () {
         var input = $(this);
-
+        
         if (input.val() == "") {
             $('.overlay').hide();
         }
     });
-
-    //For permalinks: the data-topic-level will only be set if produce.permalink = 1 in XSLT
+    
+    //For permalinks: data-topic-level will only be set if produce.permalink = 1 in XSLT
     var topiclevel = $('section[data-topic-level]').first().attr('data-topic-level');
     var up = '';
-
+    
     if (topiclevel != '') {
         for (i = 1; i < parseInt(topiclevel);
         i++) {
             up += '../';
         }
     }
-
+    
     //If this is the portal/index page:
     if ($('.portal-search-result').length) {
         up = portalLanguage + '/';
@@ -29,7 +29,7 @@ function addSearch() {
         //If the customer has specified a custom index there will be no language mappings. If so use the existing publication_id.
         publication_id = publication_langs_id[portalLanguage] ? publication_langs_id[portalLanguage] : publication_id;
     }
-
+    
     var client = algoliasearch(algolia_application_id, algolia_search_only_api_key);
     var index = client.initIndex(publication_id);
     //initialize autocomplete on search input (ID selector must match)
@@ -69,8 +69,7 @@ function addSearch() {
     }).on('autocomplete:closed', function (event, suggestion, dataset) {
         $('.overlay').hide();
     }).on('autocomplete:selected', function (dataset, suggestion) {
-            location.href = up + suggestion.url;
-            //Note: Important to prepend the up path.
-        }
+        location.href = up + suggestion.url;
+        //Note: Important to prepend the up path.
     });
 }
