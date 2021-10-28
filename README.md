@@ -1,1 +1,1 @@
-This repo is about storing the necessary assets for building the documentation. These are files that Paligo doesn't generate.
+This repo is about storing the necessary assets for building the documentation.
