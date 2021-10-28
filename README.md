@@ -1,1 +1,1 @@
-This repo is about storing the necessary assets for building our documentation.
+This repo is about storing the necessary assets for building documentation.
