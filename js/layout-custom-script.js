@@ -1,8 +1,8 @@
 function initialConfig() {
 
     const pageUrl = window.location.href;
-    const homePage = "https://devcenter.bitrise.io/";
-    const jpHomePage = "https://devcenter.bitrise.io/ja/index-ja.html";
+    const homePage = "https://zoltan-baba.github.io/";
+    const jpHomePage = "https://zoltan-baba.github.io/ja/index-ja.html";
 
     function homePageConfig() {
     
@@ -10,13 +10,6 @@ function initialConfig() {
             document.querySelector(".breadcrumb-container").style.display = "block";
             document.querySelector(".feedback-panel").style.display = "block";
         }
-    };
-
-    function breadCrumbFix() {
-        let breadCrumbHome = document.querySelector(".breadcrumb-link");
-        let breadCrumbLink = breadCrumbHome.querySelector("a[href*='index-en.html']");
-        breadCrumbLink.href = "/";
-        breadCrumbLink.textContent = "Home";
     };
 
     function advSearchAdd() {
@@ -37,18 +30,6 @@ function initialConfig() {
         searchBar.insertAdjacentElement("afterend", newDiv);
     };
 
-    /* Adding cookie consent banner scripts */
-
-    let scriptOne = document.createElement('script');
-    scriptOne.src = "https://cdn.cookielaw.org/consent/a8f28a53-d138-4cac-a6dc-bdafd1611beb/OtAutoBlock.js";
-    document.head.appendChild(scriptOne);
-
-    let scriptTwo = document.createElement('script');      
-    scriptTwo.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"; 
-    scriptTwo.setAttribute("data-domain-script", "a8f28a53-d138-4cac-a6dc-bdafd1611beb");
-    document.head.appendChild(scriptTwo);
-
-    /*
     function languageSelector() {
         let langParent = document.querySelector("div.toolbar-tools");
         let jaSelector = langParent.querySelectorAll("li")[1];
@@ -62,13 +43,16 @@ function initialConfig() {
         }
         else {
             enSelector.classList.add("active-lang");
+            let breadCrumbHome = document.querySelector(".breadcrumb-link");
+            let breadCrumbLink = breadCrumbHome.querySelector("a[href*='index-en.html']");
+            breadCrumbLink.href = "/";
+            breadCrumbLink.textContent = "Home";
         }
     };
-    */
 
     advSearchAdd()
     homePageConfig();
-    breadCrumbFix();
+    languageSelector();
 };
 
 initialConfig();
