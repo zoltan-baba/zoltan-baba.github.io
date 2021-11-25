@@ -69,7 +69,7 @@ function addSearch() {
     }).on('autocomplete:closed', function (event, suggestion, dataset) {
         $('.overlay').hide();
     }).on('autocomplete:selected', function (dataset, suggestion) {
-        location.href = https://zoltan-baba.github.io/en/ + suggestion.url;
+        location.href = up + suggestion.url;
         //Note: Important to prepend the up path.
     });
 }
