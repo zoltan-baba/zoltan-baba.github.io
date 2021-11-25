@@ -57,7 +57,7 @@ function addSearch() {
                 body = body.replace(/\[PALIGO-EM-REPLACEMENT-FIX-1\]/g, '<em>');
                 body = body.replace(/\[PALIGO-EM-REPLACEMENT-FIX-2\]/g, '</em>');
 
-                var html = '<a href="' + up + suggestion.url + '"><div class="aa-search-title">' +
+                var html = '<a href="https://zoltan-baba.github.io/en/' + suggestion.url + '"><div class="aa-search-title">' +
                 suggestion._highlightResult.title.value + '</div><div class="aa-search-body">' +
                 body + '</div></a>';
 
