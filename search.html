@@ -10,9 +10,37 @@
   <link href="css/theme2.css" rel="stylesheet">
   <link href="css/content-theme2.css" rel="stylesheet">
   <link href="css/html5.algoliasearch.css" rel="stylesheet">
-  <link href="css/layout-custom-style.css" rel="stylesheet">
+  <link href="css/layout-custom-style.css?version=20230125" rel="stylesheet">
 </head>
 <body class="theme2 search-page">
+  <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+  </style>
+  <div xmlns="http://www.w3.org/1999/xhtml" class="skipnav">
+    <a href="#content-wrapper">Skip to main content</a>
+  </div>
   <header xmlns="http://www.w3.org/1999/xhtml" class="portal-header" data-portal-language="en">
     <div xmlns="" class="inner">
       <a class="logo-link" href="https://www.bitrise.io" target="_blank" rel="noopener"><img class="logo" src="css/image/portal-logo.svg" alt="Logo"></a>
@@ -86,8 +114,10 @@
   </script>
   <script type="text/javascript">
 
+                            var searchimmediate = true;
+                            
                             var search = instantsearch({
-                            indexName : portalLanguage + '-UUID-6417de03-03ef-7c79-83a0-26f08db51f10',
+                            indexName : portalLanguage + '-UUID-865cf584-32dd-e767-d17b-2a77930fded7',
   searchClient : algoliasearch('HI1538U2K4', 'eda8ab602a414630fc98dfac94d555bf'),
 
                             });
@@ -136,5 +166,6 @@
   <script type="text/javascript">
   search.start();
   </script>
+  <script xmlns="http://www.w3.org/1999/xhtml" src="js/layout-custom-script.js?version=20230125" type="text/javascript"></script>
 </body>
 </html>

@@ -2,31 +2,31 @@
 <params>
   <param name="html5.theme" select="2"/>
   <param name="html5.content.theme" select="2"/>
-  <param name="jquery.version" select="3.6.0"/>
-  <param name="use.algolia.search" select="1"/>
+  <param name="jquery.version" select="3.4.1"/>
+  <param name="use.algolia.search" select="0"/>
   <param name="use.algolia.free.docsearch" select="0"/>
-  <param name="publication.id" select="en-UUID-6417de03-03ef-7c79-83a0-26f08db51f10"/>
+  <param name="publication.id" select="en-UUID-865cf584-32dd-e767-d17b-2a77930fded7"/>
   <param name="algolia.custom.index.name" select=""/>
   <param name="use.fuse.search" select="1"/>
   <param name="use.multilingual.default.search" select="0"/>
-  <param name="custom.css.source" select="/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-435/618d22f3a3f89.css"/>
-  <param name="portal.logo.filename" select="/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-435/61770eafbf909.svg"/>
+  <param name="custom.css.source" select="/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-70867/63d1254d042cd.css"/>
+  <param name="portal.logo.filename" select="/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-70867/61770eafbf909.svg"/>
   <param name="portal.background.filename" select=""/>
-  <param name="portal.background.filename.out" select="/paligo/tmp/bitrise/production-61953f363ffeb8.75478474/41967-Bitrise_Docs-html5/out/css/image/portal-bg.jpg"/>
+  <param name="portal.background.filename.out" select="/paligo/tmp/bitrise/production-63d1258ff19fb0.17182142/78560-Bitrise_Docs-html5/out/css/image/portal-bg.jpg"/>
   <param name="company.name" select=""/>
   <param name="copyright.year" select=""/>
-  <param name="copyright"> © 2021  </param>
+  <param name="copyright"> © 2023  </param>
   <param name="sticky.header" select="1"/>
   <param name="full.width.header" select="1"/>
   <param name="cookie.consent" select="0"/>
   <param name="privacypolicy" select="/privacy"/>
   <param name="privacypolicy" select="/privacy"/>
-  <param name="google.analytics" select="GTM-TZK32GR"/>
-  <param name="google.analytics.type" select="tagmanager"/>
+  <param name="google.analytics" select=""/>
+  <param name="google.analytics.type" select="gtag"/>
   <param name="user.custom.script" select="0"/>
-  <param name="layout.custom.script" select="/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-435/619268e8aaa35.js"/>
+  <param name="layout.custom.script" select="/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-70867/61a65fa902af3.js"/>
   <param name="create.sitemap" select="1"/>
-  <param name="destination.domain" select="zoltan-baba.github.io"/>
+  <param name="destination.domain" select="https://devcenter.bitrise.io"/>
   <param name="submit.feedback" select="1"/>
   <param name="voting.panel" select="1"/>
   <param name="feedback.email" select="letsconnect@bitrise.io"/>
@@ -35,6 +35,8 @@
   <param name="yes" select="Yes"/>
   <param name="no" select="No"/>
   <param name="custom.meta.tags" select=""/>
+  <param name="custom.meta.tag.separator" select=":"/>
+  <param name="custom.meta.tag.pair.separator" select=";"/>
   <param name="last.modified.text" select="Last modified: "/>
   <param name="categories.shown" select="4"/>
   <param name="single.topic.permalink" select=""/>
@@ -54,9 +56,10 @@
   <param name="use.section.toc" select="after"/>
   <param name="taxonomies.relationship" select="Related links taxonomies"/>
   <param name="use.top.nav" select="1"/>
-  <param name="external.top.nav.links" select="text:EN, url:https://devcenter.bitrise.io;&#10;text:&#x65E5;&#x672C;&#x8A9E;, url:https://devcenter.bitrise.io/ja/index-ja.html;&#10;text:Go to Support, url:https://support.bitrise.io/hc/en-us?utm_source=devcenter&amp;utm_medium=top_cta;&#10;text: Book a demo, url: https://www.bitrise.io/contact?utm_source=website&amp;utm_medium=devcenter&amp;utm_campaign=contact;"/>
+  <param name="external.top.nav.links" select="text:Go to Support, url:https://support.bitrise.io/hc/en-us?utm_source=devcenter&amp;utm_medium=top_cta;&#10;text: Book a demo, url: https://www.bitrise.io/contact?utm_source=website&amp;utm_medium=devcenter&amp;utm_campaign=contact;"/>
   <param name="top.nav.section.depth" select="2"/>
   <param name="gentext.for.top.nav" select="0"/>
+  <param name="use.portal.category" select="1"/>
   <param name="version.dropdown.values" select=""/>
   <param name="enter.key.search.behaviour" select="select"/>
   <param name="versions.file" select=""/>
@@ -67,7 +70,7 @@
   <param name="focus.on.current.toc.section" select="1"/>
   <param name="use.resource.version.suffix" select="1"/>
   <param name="create.search.page.for.algolia" select="1"/>
-  <param name="add.canonical.url" select="0"/>
+  <param name="add.canonical.url" select="1"/>
   <param name="custom.favicon.path" select=""/>
   <param name="initial.heading.level" select="chunk"/>
   <param name="add.rel.noopener" select="1"/>
@@ -76,6 +79,12 @@
   <param name="drift.id" select=""/>
   <param name="pendo.agent" select=""/>
   <param name="highlight" select="0"/>
+  <param name="universalaccess.include-wcag-css" select="0"/>
+  <param name="universalaccess.admonitions.strong" select="0"/>
+  <param name="universalaccess.skipnav.linktext" select="Skip to main content"/>
+  <param name="universalaccess.skipnav.css.inline" select="1"/>
+  <param name="universalaccess.skipnav.linktext" select="Skip to main content"/>
+  <param name="universalaccess.skipnav.css.inline" select="1"/>
   <param name="slides.revealjs.animate.listitems" select="1"/>
   <param name="slides.revealjs.transition" select="slide"/>
   <param name="slides.revealjs.show.progress" select="1"/>
@@ -90,9 +99,11 @@
   <param name="slides.revealjs.theme.custom" select=""/>
   <param name="slides.revealjs.background.image.opacity" select="1"/>
   <param name="slides.revealjs.default.background.image" select=""/>
-  <param name="slides.revealjs.default.background.image.out" select="/paligo/tmp/bitrise/production-61953f363ffeb8.75478474/41967-Bitrise_Docs-html5/out/css/image/default_slide_background.png"/>
+  <param name="slides.revealjs.default.background.image.out" select="/paligo/tmp/bitrise/production-63d1258ff19fb0.17182142/78560-Bitrise_Docs-html5/out/css/image/default_slide_background.png"/>
   <param name="slides.revealjs.logo" select=""/>
-  <param name="slides.revealjs.logo.out" select="/paligo/tmp/bitrise/production-61953f363ffeb8.75478474/41967-Bitrise_Docs-html5/out/css/image/logo-light.png"/>
+  <param name="slides.revealjs.logo.out" select="/paligo/tmp/bitrise/production-63d1258ff19fb0.17182142/78560-Bitrise_Docs-html5/out/css/image/logo-light.png"/>
   <param name="slides.revealjs.logo.alt" select=""/>
-  <param name="slides.revealjs.logo.alt.out" select="/paligo/tmp/bitrise/production-61953f363ffeb8.75478474/41967-Bitrise_Docs-html5/out/css/image/logo-dark.png"/>
+  <param name="slides.revealjs.logo.alt.out" select="/paligo/tmp/bitrise/production-63d1258ff19fb0.17182142/78560-Bitrise_Docs-html5/out/css/image/logo-dark.png"/>
+  <param name="delayed.algolia.search" select="0"/>
+  <param name="choose.startpage.by.role" select="1"/>
 </params>

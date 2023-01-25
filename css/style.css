@@ -539,7 +539,8 @@ span.plain-text-callout:after {
 }
 
 
-.warning h3, .note h3, .important h3, .caution h3, .tip h3{
+.warning h3, .note h3, .important h3, .caution h3, .tip h3,
+.warning>p.admonition-label, .note>p.admonition-label, .important>p.admonition-label, .caution>p.admonition-label, .tip>p.admonition-label{
     margin-top:0px;
     margin-left: 0px;
     margin-right: 0px;
@@ -552,22 +553,25 @@ span.plain-text-callout:after {
     background-image: none;
 }
 
-.note h3:before, .tip h3:before, .important h3:before, .warning h3:before, .caution h3:before{    
+.note h3:before, .tip h3:before, .important h3:before, .warning h3:before, .caution h3:before,
+.warning>p.admonition-label::before, .note>p.admonition-label::before, .important>p.admonition-label::before, .caution>p.admonition-label::before, .tip>p.admonition-label::before{
     font-family: FontAwesome;
     margin-right: 15px;
     color: #ffffff;
     font-size: 1.5em;
 }
 
-.note h3:before, .important h3:before{
+.note h3:before, .important h3:before,
+.note>p.admonition-label::before, .important>.admonition-label::before{
     content: "\f06a";
 }
 
-.warning h3:before, .caution h3:before{
+.warning h3:before, .caution h3:before,
+.warning>p.admonition-label::before, .caution>p.admonition-label::before{
     content: "\f071";
 }
 
-.tip h3:before{
+.tip h3::before,.tip>.admonition-label::before{
     content: "\f0eb";    
 }
 
