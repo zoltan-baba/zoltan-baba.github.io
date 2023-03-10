@@ -18,6 +18,7 @@
 
 
 
+
 @charset: "utf8";
 
 @font-face {
@@ -194,7 +195,7 @@ ul.top-nav-menu.sm.sm-simple > li:nth-child(5) > .external-top-nav-link {
 }
 
 ul.top-nav-menu.sm.sm-simple > li:nth-child(5) > .external-top-nav-link:after {
-  content: url(/css/image/navicons/linktarget.svg);
+  content: url(../css/image/navicons/linktarget.svg);
   position: absolute;
   transform: translateY(3px);
   margin-left: 10px;
@@ -224,7 +225,7 @@ ul.top-nav-menu.sm.sm-simple > li:nth-child(1):hover, ul.top-nav-menu.sm.sm-simp
 }
 .fa.fa-search::before {
   position: absolute;
-  content: url(/css/image/navicons/magnifier.svg);
+  content: url(../css/image/navicons/magnifier.svg);
 }
 
 .fa.fa-search::after {
@@ -269,7 +270,7 @@ ul.top-nav-menu.sm.sm-simple > li:nth-child(1):hover, ul.top-nav-menu.sm.sm-simp
 }
 
 .adv-search-link::after {
-  content: url(/css/image/navicons/linktarget.svg);
+  content: url(../css/image/navicons/linktarget.svg);
   position: absolute;
   margin-left: 10px;
   transform: translateY(4px);
@@ -410,7 +411,7 @@ li.lang-option.active-lang > a {
 
 li.lang-option.active-lang > a:after {
   position: absolute;
-  content: url(/css/image/navicons/tick.svg);
+  content: url(../css/image/navicons/tick.svg);
   transform: translateY(-3px);
 }
 
@@ -444,115 +445,131 @@ button.navbar-toggle {
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(1) > a:before {
-  content: url(/css/image/navicons/getting-started.svg);
+  content: url(../css/image/navicons/getting-started.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(1).active > a:before {
-  content: url(/css/image/navicons/getting-started-active.svg);  
+  content: url(../css/image/navicons/getting-started-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(2) > a:before {
-  content: url(/css/image/navicons/cpu.svg);
+  content: url(../css/image/navicons/cpu.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(2).active > a:before {
-  content: url(/css/image/navicons/cpu-active.svg);  
+  content: url(../css/image/navicons/cpu-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(3) > a:before {
-  content: url(/css/image/navicons/dudes.svg);
+  content: url(../css/image/navicons/dudes.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(3).active > a:before {
-  content: url(/css/image/navicons/dudes-active.svg);  
+  content: url(../css/image/navicons/dudes-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(4) > a:before {
-  content: url(/css/image/navicons/laptop.svg);
+  content: url(../css/image/navicons/laptop.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(4).active > a:before {
-  content: url(/css/image/navicons/laptop-active.svg);  
+  content: url(../css/image/navicons/laptop-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(5) > a:before {
-  content: url(/css/image/navicons/app.svg);
+  content: url(../css/image/navicons/app.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(5).active > a:before {
-  content: url(/css/image/navicons/app-active.svg);  
+  content: url(../css/image/navicons/app-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(6) > a:before {
-  content: url(/css/image/navicons/workflow.svg);
+  content: url(../css/image/navicons/workflow.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(6).active > a:before {
-  content: url(/css/image/navicons/workflow-active.svg);  
+  content: url(../css/image/navicons/workflow-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(7) > a:before {
-  content: url(/css/image/navicons/build.svg);
+  content: url(../css/image/navicons/build.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(7).active > a:before {
-  content: url(/css/image/navicons/build-active.svg);  
+  content: url(../css/image/navicons/build-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(8) > a:before {
-  content: url(/css/image/navicons/code-signing.svg);
+  content: url(../css/image/navicons/code-signing.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(8).active > a:before {
-  content: url(/css/image/navicons/code-signing-active-active.svg);  
+  content: url(../css/image/navicons/code-signing-active-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(9) > a:before {
-  content: url(/css/image/navicons/testing.svg);
+  content: url(../css/image/navicons/testing.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(9).active > a:before {
-  content: url(/css/image/navicons/testing-active.svg);  
+  content: url(../css/image/navicons/testing-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(10) > a:before {
-  content: url(/css/image/navicons/deployment.svg);
+  content: url(../css/image/navicons/deployment.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(10).active > a:before {
-  content: url(/css/image/navicons/deployment-active.svg);  
+  content: url(../css/image/navicons/deployment-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(11) > a:before {
-  content: url(/css/image/navicons/monitoring.svg);
+  content: url(../css/image/navicons/monitoring.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(11).active > a:before {
-  content: url(/css/image/navicons/monitoring-active.svg);  
+  content: url(../css/image/navicons/monitoring-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(12) > a:before {
-  content: url(/css/image/navicons/window.svg);
+  content: url(../css/image/navicons/window.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(12).active > a:before {
-  content: url(/css/image/navicons/window-active.svg);  
+  content: url(../css/image/navicons/window-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(13) > a:before {
-  content: url(/css/image/navicons/code.svg);
+  content: url(../css/image/navicons/code.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(13).active > a:before {
-  content: url(/css/image/navicons/code-active.svg);
+  content: url(../css/image/navicons/code-active.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(14) > a:before {
-  content: url(/css/image/navicons/book.svg);
+  content: url(../css/image/navicons/bug.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(14).active > a:before {
-  content: url(/css/image/navicons/book-active.svg);  
+  content: url(../css/image/navicons/bug-active.svg);  
+}
+
+.toc.nav.nav-site-sidebar > li:nth-child(15) > a:before {
+  content: url(../css/image/navicons/support.svg);
+}
+
+.toc.nav.nav-site-sidebar > li:nth-child(15).active > a:before {
+  content: url(../css/image/navicons/support-active.svg);  
+}
+
+.toc.nav.nav-site-sidebar > li:nth-child(16) > a:before {
+  content: url(../css/image/navicons/book.svg);
+}
+
+.toc.nav.nav-site-sidebar > li:nth-child(16).active > a:before {
+  content: url(../css/image/navicons/book-active.svg);  
 }
 
 .site-sidebar {
@@ -706,7 +723,7 @@ a:focus, a:hover, a:active {
 }
 
 .fa-chain:before, .fa-link:before {
-  content: url(/css/image/navicons/anchor.svg);
+  content: url(../css/image/navicons/anchor.svg);
   position: absolute;
   transform: translateY(-0.9em);
   cursor: pointer;
@@ -897,7 +914,7 @@ ol.procedure {
 }
 
 .section-toc.section-toc-after .section-toc-title:before {
-  content: url(/css/image/navicons/doc.svg);
+  content: url(../css/image/navicons/doc.svg);
   padding-right: 5px;
   display: inline-block;
   vertical-align: middle;
@@ -1006,14 +1023,14 @@ div.feedback-panel .btn:focus, div.feedback-panel .btn:hover, div.feedback-panel
 
 /*
 #feedback-yes-btn::before {
-  content: url(../css/image/navicons/tick.svg);
+  content: url(..../css/image/navicons/tick.svg);
   position: absolute;
   left: 5px;
   margin: auto;
 }
 
 #feedback-no-btn::before {
-  content: url(../css/image/navicons/close-small.svg);
+  content: url(..../css/image/navicons/close-small.svg);
   position: absolute;
   left: 5px;
   margin: auto;
@@ -1083,7 +1100,7 @@ p.index-title:before {
   position: absolute;
   left: 10px;
   top: 15px;
-  content: url(/css/image/navicons/doc.svg);
+  content: url(../css/image/navicons/doc.svg);
 }
 
 .index-box {
@@ -1222,7 +1239,64 @@ ul.itemizedlist.intro-container {
   background-color: #0fc389;
 }
 
+.my-tabs {}
 
+div.tab-content {
+  display: none;
+}
+
+div.tab-content.is-active {
+  display: block;
+}
+
+.tabs {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  width: 20%;
+  font-weight: bold;
+  color: #7D7184;
+  border-bottom: 1px solid #DFDAE1;
+  margin-bottom: 2.5rem;
+  background-color: RGBA(223,218,225,0.3);
+}
+
+/*
+.tabs:after {
+  position: absolute;
+  left: 0;
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #DFDAE1;
+  height: 10px;
+  width: 70%;
+  margin-left: 7%;
+}
+*/
+
+.tabs:hover {
+  cursor: pointer;
+  background-color: RGBA(223,218,225,0.2);
+}
+
+.tabs.is-active {
+  border-top: solid 2px #9247C2;
+  border-bottom: none;
+  color: #9247C2;
+  background-color: #fff;
+  border-left: none;
+  border-right: none;
+}
+
+/*
+.tabs.is-active {
+  border-bottom: solid 2px #9247C2;
+  color: #9247C2;
+  background-color: #fff;
+  border-left: none;
+  border-right: none;
+}
+*/
 
 
 

@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/getting-started/adding-your-first-app.html</loc>
-    <lastmod>2022-10-12</lastmod>
+    <lastmod>2023-02-17</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/getting-started/getting-started-with-ios-apps.html</loc>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/infrastructure/build-machines.html</loc>
-    <lastmod>2022-06-16</lastmod>
+    <lastmod>2023-02-27</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/infrastructure/build-machines/configuring-network-access-for-bitrise.html</loc>
@@ -74,11 +74,11 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/infrastructure/build-machines/build-machine-types.html</loc>
-    <lastmod>2022-07-29</lastmod>
+    <lastmod>2023-02-27</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/infrastructure/build-stacks.html</loc>
-    <lastmod>2022-10-20</lastmod>
+    <lastmod>2023-02-27</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/infrastructure/build-stacks/stack-update-policy.html</loc>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/infrastructure/build-stacks/stack-deprecation-and-removal-policy.html</loc>
-    <lastmod>2022-10-21</lastmod>
+    <lastmod>2023-02-13</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/infrastructure/build-stacks/preinstalled-tools-on-bitrise-stacks.html</loc>
@@ -94,7 +94,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/infrastructure/build-stacks/m1-stacks.html</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2023-02-27</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/infrastructure/build-stacks/the-android-linux-docker-environment.html</loc>
@@ -386,7 +386,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/steps-and-workflows/workflows.html</loc>
-    <lastmod>2022-06-13</lastmod>
+    <lastmod>2023-02-16</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/steps-and-workflows/workflows/default-workflows.html</loc>
@@ -394,11 +394,11 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/steps-and-workflows/workflows/creating-a-workflow.html</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2023-02-02</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/steps-and-workflows/workflows/managing-workflows.html</loc>
-    <lastmod>2022-10-18</lastmod>
+    <lastmod>2023-02-16</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/steps-and-workflows/workflows/copying-workflows-from-one-app-to-another.html</loc>
@@ -590,7 +590,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/build-pipelines--beta-.html</loc>
-    <lastmod>2022-12-02</lastmod>
+    <lastmod>2023-02-06</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/build-pipelines--beta-/configuring-a-bitrise-pipeline.html</loc>
@@ -642,19 +642,19 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/configuring-build-settings/accessing-a-build-s-bitrise-yml-file.html</loc>
-    <lastmod>2022-07-04</lastmod>
+    <lastmod>2023-02-09</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/configuring-build-settings/selective-builds.html</loc>
-    <lastmod>2022-11-22</lastmod>
+    <lastmod>2023-02-09</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/configuring-build-settings/rolling-builds.html</loc>
-    <lastmod>2022-10-21</lastmod>
+    <lastmod>2023-02-14</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/configuring-build-settings/configuring-email-notifications.html</loc>
-    <lastmod>2022-07-14</lastmod>
+    <lastmod>2023-02-14</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/configuring-build-settings/configuring-slack-integration.html</loc>
@@ -662,7 +662,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/configuring-build-settings/setting-your-git-credentials-on-build-machines.html</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2023-02-14</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/configuring-build-settings/reporting-the-build-status-to-your-git-hosting-provider.html</loc>
@@ -706,7 +706,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/caching/key-based-caching.html</loc>
-    <lastmod>2022-12-12</lastmod>
+    <lastmod>2023-02-17</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/caching/branch-based-caching.html</loc>
@@ -794,7 +794,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/build-data-and-troubleshooting/build-logs.html</loc>
-    <lastmod>2022-07-12</lastmod>
+    <lastmod>2023-02-02</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/build-data-and-troubleshooting/remote-access.html</loc>
@@ -806,11 +806,11 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/build-data-and-troubleshooting/bitrise-checks-on-github.html</loc>
-    <lastmod>2022-07-12</lastmod>
+    <lastmod>2023-02-10</lastmod>
   </url>
   <url>
-    <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/build-data-and-troubleshooting/monitoring-your-builds-with-meercode.html</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/build-data-and-troubleshooting/meercode.html</loc>
+    <lastmod>2023-02-01</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/builds-and-pipelines/build-data-and-troubleshooting/checking-build-details.html</loc>
@@ -894,7 +894,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/testing/exporting-to-test-reports-from-any-step.html</loc>
-    <lastmod>2022-07-13</lastmod>
+    <lastmod>2023-02-21</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/testing/running-xcode-tests.html</loc>
@@ -998,7 +998,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/deploying/release-management--beta-/configuring-a-release.html</loc>
-    <lastmod>2023-01-10</lastmod>
+    <lastmod>2023-02-24</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/deploying/bitrise-ota-app-deployment.html</loc>
@@ -1054,15 +1054,15 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/insights.html</loc>
-    <lastmod>2022-12-19</lastmod>
+    <lastmod>2023-03-01</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/insights/getting-started-with-insights.html</loc>
-    <lastmod>2022-12-13</lastmod>
+    <lastmod>2023-03-02</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/insights/available-metrics-in-insights.html</loc>
-    <lastmod>2022-12-13</lastmod>
+    <lastmod>2023-03-01</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/bitrise-cli.html</loc>
@@ -1106,7 +1106,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/api/adding-and-managing-apps.html</loc>
-    <lastmod>2022-12-14</lastmod>
+    <lastmod>2023-02-17</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/api/triggering-and-aborting-builds.html</loc>
@@ -1149,8 +1149,72 @@
     <lastmod>2021-10-12</lastmod>
   </url>
   <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/builds-aren-t-getting-triggered.html</loc>
+    <lastmod>2023-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/handling-errors-on-linux-when-fetching-apt-packages.html</loc>
+    <lastmod>2023-03-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/can-t-install-ios--ipa.html</loc>
+    <lastmod>2023-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/error--missing-cmdline-tools.html</loc>
+    <lastmod>2023-03-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/ios-ui-tests-are-failing-intermittently.html</loc>
+    <lastmod>2021-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/modifying-the-java-virtual-machine-heap-size.html</loc>
+    <lastmod>2023-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/the-deploy-to-app-store-connect-with-deliver-step-fails-with---transporter-error-output-.html</loc>
+    <lastmod>2023-02-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/xcode-scheme-not-found.html</loc>
+    <lastmod>2023-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/missing-required-module-in-the-xcode-test-for-ios-step.html</loc>
+    <lastmod>2023-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/troubleshooting-intermittent-connection-timeout-issues-when-downloading-android-dependencies.html</loc>
+    <lastmod>2023-02-07</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/troubleshooting-and-faq/changing-the-ruby-version-on-the-virtual-machine.html</loc>
+    <lastmod>2023-02-20</lastmod>
+  </url>
+  <url>
     <loc>https://devcenter.bitrise.io/en/tips,-tricks,-tutorials.html</loc>
     <lastmod>2021-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/tips,-tricks,-tutorials/configuring-fastlane-match-for-bitrise.html</loc>
+    <lastmod>2023-02-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/tips,-tricks,-tutorials/installing-a-specific-fastlane-version.html</loc>
+    <lastmod>2023-02-23</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/tips,-tricks,-tutorials/benefits-of-committing-your-dependencies-into-your-repository.html</loc>
+    <lastmod>2023-02-08</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/tips,-tricks,-tutorials/screen-recording-of-android-ui-tests-with-script-steps.html</loc>
+    <lastmod>2023-03-04</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/tips,-tricks,-tutorials/screen-recording-your-ui-tests-with-appium.html</loc>
+    <lastmod>2022-02-15</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/references.html</loc>
@@ -1194,7 +1258,7 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/references/available-environment-variables.html</loc>
-    <lastmod>2023-01-24</lastmod>
+    <lastmod>2023-03-02</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/references/bitrise-tools.html</loc>
