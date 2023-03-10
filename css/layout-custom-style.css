@@ -18,7 +18,6 @@
 
 
 
-
 @charset: "utf8";
 
 @font-face {
@@ -195,7 +194,7 @@ ul.top-nav-menu.sm.sm-simple > li:nth-child(5) > .external-top-nav-link {
 }
 
 ul.top-nav-menu.sm.sm-simple > li:nth-child(5) > .external-top-nav-link:after {
-  content: url(../css/image/navicons/linktarget.svg);
+  content: url(/css/image/navicons/linktarget.svg);
   position: absolute;
   transform: translateY(3px);
   margin-left: 10px;
@@ -225,7 +224,7 @@ ul.top-nav-menu.sm.sm-simple > li:nth-child(1):hover, ul.top-nav-menu.sm.sm-simp
 }
 .fa.fa-search::before {
   position: absolute;
-  content: url(../css/image/navicons/magnifier.svg);
+  content: url(/css/image/navicons/magnifier.svg);
 }
 
 .fa.fa-search::after {
@@ -270,7 +269,7 @@ ul.top-nav-menu.sm.sm-simple > li:nth-child(1):hover, ul.top-nav-menu.sm.sm-simp
 }
 
 .adv-search-link::after {
-  content: url(../css/image/navicons/linktarget.svg);
+  content: url(/css/image/navicons/linktarget.svg);
   position: absolute;
   margin-left: 10px;
   transform: translateY(4px);
@@ -411,7 +410,7 @@ li.lang-option.active-lang > a {
 
 li.lang-option.active-lang > a:after {
   position: absolute;
-  content: url(../css/image/navicons/tick.svg);
+  content: url(/css/image/navicons/tick.svg);
   transform: translateY(-3px);
 }
 
@@ -445,131 +444,131 @@ button.navbar-toggle {
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(1) > a:before {
-  content: url(../css/image/navicons/getting-started.svg);
+  content: url(/css/image/navicons/getting-started.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(1).active > a:before {
-  content: url(../css/image/navicons/getting-started-active.svg);  
+  content: url(/css/image/navicons/getting-started-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(2) > a:before {
-  content: url(../css/image/navicons/cpu.svg);
+  content: url(/css/image/navicons/cpu.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(2).active > a:before {
-  content: url(../css/image/navicons/cpu-active.svg);  
+  content: url(/css/image/navicons/cpu-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(3) > a:before {
-  content: url(../css/image/navicons/dudes.svg);
+  content: url(/css/image/navicons/dudes.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(3).active > a:before {
-  content: url(../css/image/navicons/dudes-active.svg);  
+  content: url(/css/image/navicons/dudes-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(4) > a:before {
-  content: url(../css/image/navicons/laptop.svg);
+  content: url(/css/image/navicons/laptop.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(4).active > a:before {
-  content: url(../css/image/navicons/laptop-active.svg);  
+  content: url(/css/image/navicons/laptop-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(5) > a:before {
-  content: url(../css/image/navicons/app.svg);
+  content: url(/css/image/navicons/app.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(5).active > a:before {
-  content: url(../css/image/navicons/app-active.svg);  
+  content: url(/css/image/navicons/app-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(6) > a:before {
-  content: url(../css/image/navicons/workflow.svg);
+  content: url(/css/image/navicons/workflow.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(6).active > a:before {
-  content: url(../css/image/navicons/workflow-active.svg);  
+  content: url(/css/image/navicons/workflow-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(7) > a:before {
-  content: url(../css/image/navicons/build.svg);
+  content: url(/css/image/navicons/build.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(7).active > a:before {
-  content: url(../css/image/navicons/build-active.svg);  
+  content: url(/css/image/navicons/build-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(8) > a:before {
-  content: url(../css/image/navicons/code-signing.svg);
+  content: url(/css/image/navicons/code-signing.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(8).active > a:before {
-  content: url(../css/image/navicons/code-signing-active-active.svg);  
+  content: url(/css/image/navicons/code-signing-active-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(9) > a:before {
-  content: url(../css/image/navicons/testing.svg);
+  content: url(/css/image/navicons/testing.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(9).active > a:before {
-  content: url(../css/image/navicons/testing-active.svg);  
+  content: url(/css/image/navicons/testing-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(10) > a:before {
-  content: url(../css/image/navicons/deployment.svg);
+  content: url(/css/image/navicons/deployment.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(10).active > a:before {
-  content: url(../css/image/navicons/deployment-active.svg);  
+  content: url(/css/image/navicons/deployment-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(11) > a:before {
-  content: url(../css/image/navicons/monitoring.svg);
+  content: url(/css/image/navicons/monitoring.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(11).active > a:before {
-  content: url(../css/image/navicons/monitoring-active.svg);  
+  content: url(/css/image/navicons/monitoring-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(12) > a:before {
-  content: url(../css/image/navicons/window.svg);
+  content: url(/css/image/navicons/window.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(12).active > a:before {
-  content: url(../css/image/navicons/window-active.svg);  
+  content: url(/css/image/navicons/window-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(13) > a:before {
-  content: url(../css/image/navicons/code.svg);
+  content: url(/css/image/navicons/code.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(13).active > a:before {
-  content: url(../css/image/navicons/code-active.svg);
+  content: url(/css/image/navicons/code-active.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(14) > a:before {
-  content: url(../css/image/navicons/bug.svg);
+  content: url(/css/image/navicons/bug.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(14).active > a:before {
-  content: url(../css/image/navicons/bug-active.svg);  
+  content: url(/css/image/navicons/bug-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(15) > a:before {
-  content: url(../css/image/navicons/support.svg);
+  content: url(/css/image/navicons/support.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(15).active > a:before {
-  content: url(../css/image/navicons/support-active.svg);  
+  content: url(/css/image/navicons/support-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(16) > a:before {
-  content: url(../css/image/navicons/book.svg);
+  content: url(/css/image/navicons/book.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(16).active > a:before {
-  content: url(../css/image/navicons/book-active.svg);  
+  content: url(/css/image/navicons/book-active.svg);  
 }
 
 .site-sidebar {
@@ -723,7 +722,7 @@ a:focus, a:hover, a:active {
 }
 
 .fa-chain:before, .fa-link:before {
-  content: url(../css/image/navicons/anchor.svg);
+  content: url(/css/image/navicons/anchor.svg);
   position: absolute;
   transform: translateY(-0.9em);
   cursor: pointer;
@@ -914,7 +913,7 @@ ol.procedure {
 }
 
 .section-toc.section-toc-after .section-toc-title:before {
-  content: url(../css/image/navicons/doc.svg);
+  content: url(/css/image/navicons/doc.svg);
   padding-right: 5px;
   display: inline-block;
   vertical-align: middle;
@@ -1023,14 +1022,14 @@ div.feedback-panel .btn:focus, div.feedback-panel .btn:hover, div.feedback-panel
 
 /*
 #feedback-yes-btn::before {
-  content: url(..../css/image/navicons/tick.svg);
+  content: url(/css/image/navicons/tick.svg);
   position: absolute;
   left: 5px;
   margin: auto;
 }
 
 #feedback-no-btn::before {
-  content: url(..../css/image/navicons/close-small.svg);
+  content: url(/css/image/navicons/close-small.svg);
   position: absolute;
   left: 5px;
   margin: auto;
@@ -1100,15 +1099,13 @@ p.index-title:before {
   position: absolute;
   left: 10px;
   top: 15px;
-  content: url(../css/image/navicons/doc.svg);
+  content: url(/css/image/navicons/doc.svg);
 }
 
 .index-box {
   padding: 0 0 1.5rem;
   margin: 0.825rem auto;
   border-radius: 8px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
-  border: solid 1px #ececec;
   background-color: #ffffff;
   text-align: left;
   color: #444444;
@@ -1160,16 +1157,17 @@ ul.itemizedlist.explore {
   color: #616161 !important;
 }
 
-div.intro-container {
+section.intro-container {
   display: flex;
   flex-direction: row;
-  padding: 30px 30px 20px;
-  margin-bottom: 6em;
+  justify-content: space-between;
+  padding: 0;
+  /*
   border-radius: 8px;
   box-shadow: 0 11px 24px 0 rgb(0 0 0 / 8%);
   background-image: url(https://assets-global.website-files.com/5db35de024bb983af1b4e151/5e4d482a42706efe90fac7fb_stars-landing-bg.svg),linear-gradient(
 180deg,#f8f8f8,#fff);
-  
+*/
 }
 
 .slogan-text {
@@ -1178,8 +1176,10 @@ div.intro-container {
   font-weight: bold;
 }
 
-ul.itemizedlist.intro-container {
-  padding-left: 0;
+section.intro-container-text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .itemizedlist .intro-container .listitem {
@@ -1187,8 +1187,11 @@ ul.itemizedlist.intro-container {
 }
 
 .index-image {
-  float: right;
-  width: 25%;
+  width: 30%;
+}
+
+.placeholder-section {
+  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -1203,17 +1206,12 @@ ul.itemizedlist.intro-container {
 }
 
 .index-image img.materialboxed {
-  height: 128px;
-  width: 119px;
   margin-right: 0;
-  float: center;
 }
 
 .homepage-intro {
-  width: 70%;
   font-size: 1.6rem;
   letter-spacing: 0px;
-  float: left;
   margin: 0;
 }
 
@@ -1238,8 +1236,6 @@ ul.itemizedlist.intro-container {
   color: #fff;
   background-color: #0fc389;
 }
-
-.my-tabs {}
 
 div.tab-content {
   display: none;
@@ -1286,7 +1282,7 @@ div.tab-content.is-active {
   background-color: #fff;
   border-left: none;
   border-right: none;
-}
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;}
 
 /*
 .tabs.is-active {
@@ -1298,7 +1294,66 @@ div.tab-content.is-active {
 }
 */
 
+.index-list .listitem a.linktype-component {
+  padding: 10px;
+  border: solid 1px #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  width: 90%;
+  margin-bottom: 20px;
+  float: right;
+}
 
+.index-list .listitem a.linktype-component:hover {
+  background-color: #ececec;
+}
+
+.index-list .listitem {
+  list-style-type: none;
+}
+
+.index-list .listitem:before {
+  position: absolute;
+  content: url(/css/image/step-icon.svg);
+  transform: translate(-25px, 5px);
+}
+
+.listitem.deploy:before{
+  content: url(/css/image/deploy.svg);
+}
+
+.listitem.ios-deploy:before {
+  content: url(/css/image/ios-deploy.svg);
+}
+
+.listitem.getting-started:before {
+  content: url(/css/image/getting-started.svg);
+}
+
+.listitem.starting-builds:before {
+  content: url(/css/image/starting-builds.svg);
+}
+
+.listitem.release:before {
+  content: url(/css/image/release.svg);
+}
+
+.listitem.adding-app:before {
+  content: url(/css/image/adding-app.svg);
+}
+
+.index-list .listitem p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.index-list .listitem p a {
+  color: rgb(32, 27, 34);
+}
 
 
 

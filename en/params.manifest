@@ -5,20 +5,20 @@
   <param name="jquery.version" select="3.4.1"/>
   <param name="use.algolia.search" select="0"/>
   <param name="use.algolia.free.docsearch" select="0"/>
-  <param name="publication.id" select="en-UUID-865cf584-32dd-e767-d17b-2a77930fded7"/>
+  <param name="publication.id" select="en-UUID-7395f1f7-ccf0-589c-1269-55efc35b445b"/>
   <param name="algolia.custom.index.name" select=""/>
   <param name="use.fuse.search" select="1"/>
   <param name="use.multilingual.default.search" select="0"/>
-  <param name="custom.css.source" select="/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-70867/63fd415852392.css"/>
+  <param name="custom.css.source" select="/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-70867/6405165e3f3d2.css"/>
   <param name="portal.logo.filename" select="/var/www/ccms/usr/bitrise/xsl/custom/assets/layout-70867/61770eafbf909.svg"/>
   <param name="portal.background.filename" select=""/>
-  <param name="portal.background.filename.out" select="/paligo/tmp/bitrise/production-6403adf1ab5035.94263760/78560-Bitrise_Docs-html5/out/css/image/portal-bg.jpg"/>
+  <param name="portal.background.filename.out" select="/paligo/tmp/bitrise/production-640b34e6408cb8.30522677/72049-Bitrise_Docs-html5/out/css/image/portal-bg.jpg"/>
   <param name="company.name" select=""/>
   <param name="copyright.year" select=""/>
   <param name="copyright"> © 2023  </param>
   <param name="sticky.header" select="1"/>
   <param name="full.width.header" select="1"/>
-  <param name="cookie.consent" select="0"/>
+  <param name="cookie.consent" select="opt-out"/>
   <param name="privacypolicy" select="/privacy"/>
   <param name="privacypolicy" select="/privacy"/>
   <param name="google.analytics" select=""/>
@@ -99,11 +99,11 @@
   <param name="slides.revealjs.theme.custom" select=""/>
   <param name="slides.revealjs.background.image.opacity" select="1"/>
   <param name="slides.revealjs.default.background.image" select=""/>
-  <param name="slides.revealjs.default.background.image.out" select="/paligo/tmp/bitrise/production-6403adf1ab5035.94263760/78560-Bitrise_Docs-html5/out/css/image/default_slide_background.png"/>
+  <param name="slides.revealjs.default.background.image.out" select="/paligo/tmp/bitrise/production-640b34e6408cb8.30522677/72049-Bitrise_Docs-html5/out/css/image/default_slide_background.png"/>
   <param name="slides.revealjs.logo" select=""/>
-  <param name="slides.revealjs.logo.out" select="/paligo/tmp/bitrise/production-6403adf1ab5035.94263760/78560-Bitrise_Docs-html5/out/css/image/logo-light.png"/>
+  <param name="slides.revealjs.logo.out" select="/paligo/tmp/bitrise/production-640b34e6408cb8.30522677/72049-Bitrise_Docs-html5/out/css/image/logo-light.png"/>
   <param name="slides.revealjs.logo.alt" select=""/>
-  <param name="slides.revealjs.logo.alt.out" select="/paligo/tmp/bitrise/production-6403adf1ab5035.94263760/78560-Bitrise_Docs-html5/out/css/image/logo-dark.png"/>
+  <param name="slides.revealjs.logo.alt.out" select="/paligo/tmp/bitrise/production-640b34e6408cb8.30522677/72049-Bitrise_Docs-html5/out/css/image/logo-dark.png"/>
   <param name="delayed.algolia.search" select="0"/>
   <param name="choose.startpage.by.role" select="1"/>
 </params>
