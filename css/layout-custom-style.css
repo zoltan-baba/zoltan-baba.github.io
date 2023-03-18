@@ -18,6 +18,12 @@
 
 
 
+
+
+
+
+
+
 @charset: "utf8";
 
 @font-face {
@@ -524,50 +530,42 @@ button.navbar-toggle {
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(11) > a:before {
-  content: url(/css/image/navicons/monitoring.svg);
+  content: url(/css/image/navicons/release-mgt.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(11).active > a:before {
-  content: url(/css/image/navicons/monitoring-active.svg);  
+  content: url(/css/image/navicons/release-mgt-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(12) > a:before {
-  content: url(/css/image/navicons/window.svg);
+  content: url(/css/image/navicons/insights.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(12).active > a:before {
-  content: url(/css/image/navicons/window-active.svg);  
+  content: url(/css/image/navicons/insights-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(13) > a:before {
-  content: url(/css/image/navicons/code.svg);
+  content: url(/css/image/navicons/window.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(13).active > a:before {
-  content: url(/css/image/navicons/code-active.svg);
+  content: url(/css/image/navicons/window-active.svg);  
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(14) > a:before {
-  content: url(/css/image/navicons/bug.svg);
+  content: url(/css/image/navicons/code.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(14).active > a:before {
-  content: url(/css/image/navicons/bug-active.svg);  
+  content: url(/css/image/navicons/code-active.svg);
 }
 
 .toc.nav.nav-site-sidebar > li:nth-child(15) > a:before {
-  content: url(/css/image/navicons/support.svg);
-}
-
-.toc.nav.nav-site-sidebar > li:nth-child(15).active > a:before {
-  content: url(/css/image/navicons/support-active.svg);  
-}
-
-.toc.nav.nav-site-sidebar > li:nth-child(16) > a:before {
   content: url(/css/image/navicons/book.svg);
 }
 
-.toc.nav.nav-site-sidebar > li:nth-child(16).active > a:before {
+.toc.nav.nav-site-sidebar > li:nth-child(15).active > a:before {
   content: url(/css/image/navicons/book-active.svg);  
 }
 
@@ -1022,14 +1020,14 @@ div.feedback-panel .btn:focus, div.feedback-panel .btn:hover, div.feedback-panel
 
 /*
 #feedback-yes-btn::before {
-  content: url(/css/image/navicons/tick.svg);
+  content: url(../css/image/navicons/tick.svg);
   position: absolute;
   left: 5px;
   margin: auto;
 }
 
 #feedback-no-btn::before {
-  content: url(/css/image/navicons/close-small.svg);
+  content: url(../css/image/navicons/close-small.svg);
   position: absolute;
   left: 5px;
   margin: auto;
@@ -1105,7 +1103,6 @@ p.index-title:before {
 .index-box {
   padding: 0 0 1.5rem;
   margin: 0.825rem auto;
-  border-radius: 8px;
   background-color: #ffffff;
   text-align: left;
   color: #444444;
@@ -1157,11 +1154,11 @@ ul.itemizedlist.explore {
   color: #616161 !important;
 }
 
-section.intro-container {
+div.intro-container {
   display: flex;
   flex-direction: row;
+  padding: 30px 0px 20px;
   justify-content: space-between;
-  padding: 0;
   /*
   border-radius: 8px;
   box-shadow: 0 11px 24px 0 rgb(0 0 0 / 8%);
@@ -1176,9 +1173,10 @@ section.intro-container {
   font-weight: bold;
 }
 
-section.intro-container-text {
+ul.itemizedlist.intro-container {
   display: flex;
   flex-direction: column;
+  padding-left: 0;
   width: 50%;
 }
 
@@ -1188,10 +1186,6 @@ section.intro-container-text {
 
 .index-image {
   width: 30%;
-}
-
-.placeholder-section {
-  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -1254,7 +1248,11 @@ div.tab-content.is-active {
   color: #7D7184;
   border-bottom: 1px solid #DFDAE1;
   margin-bottom: 2.5rem;
+  margin-left: -2px;
   background-color: RGBA(223,218,225,0.3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*
@@ -1294,6 +1292,7 @@ div.tab-content.is-active {
 }
 */
 
+
 .index-list .listitem a.linktype-component {
   padding: 10px;
   border: solid 1px #ccc;
@@ -1302,6 +1301,9 @@ div.tab-content.is-active {
   width: 90%;
   margin-bottom: 20px;
   float: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .index-list .listitem a.linktype-component:hover {
@@ -1354,16 +1356,6 @@ div.tab-content.is-active {
 .index-list .listitem p a {
   color: rgb(32, 27, 34);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
