@@ -65,6 +65,9 @@ function initialConfig() {
   if (storedTheme) {
     document.documentElement.setAttribute('data-theme', storedTheme);
   }
+  else {
+    document.documentElement.setAttribute('data-theme', 'light')
+  }
 
   const toggleDarkMode = () => {
     let currentTheme = document.documentElement.getAttribute('data-theme');
