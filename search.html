@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta xmlns="http://www.w3.org/1999/xhtml" charset="utf-8">
-  <meta xmlns="http://www.w3.org/1999/xhtml" http-equiv="x-ua-compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta xmlns="http://www.w3.org/1999/xhtml" charset="utf-8" />
+  <meta xmlns="http://www.w3.org/1999/xhtml" http-equiv="x-ua-compatible" content="IE=edge" />
   <title>Search</title>
-  <link href="css/roboto.font.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
-  <link href="css/theme2.css" rel="stylesheet">
-  <link href="css/content-theme2.css" rel="stylesheet">
-  <link href="css/html5.algoliasearch.css" rel="stylesheet">
-  <link href="css/layout-custom-style.css?version=20231011" rel="stylesheet">
+  <link href="css/roboto.font.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous" />
+  <link href="css/theme2.css" rel="stylesheet" />
+  <link href="css/content-theme2.css" rel="stylesheet" />
+  <link href="css/html5.algoliasearch.css" rel="stylesheet" />
+  <link href="css/layout-custom-style.css?version=20240202" rel="stylesheet" />
 </head>
 <body class="theme2 search-page">
   <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">
+  /*<![CDATA[*/
             div.skipnav {
             }
             div.skipnav a {
@@ -37,13 +39,14 @@
                 text-decoration: underline;
                 z-index: 99999; /* has to be higher than the side panel */
     }
+  /*]]>*/
   </style>
   <div xmlns="http://www.w3.org/1999/xhtml" class="skipnav">
     <a href="#content-wrapper">Skip to main content</a>
   </div>
   <header xmlns="http://www.w3.org/1999/xhtml" class="portal-header" data-portal-language="en">
     <div xmlns="" class="inner">
-      <a class="logo-link" href="https://www.bitrise.io" target="_blank" rel="noopener"><img class="logo" src="css/image/portal-logo.svg" alt="Logo"></a>
+      <a class="logo-link" href="https://www.bitrise.io" target="_blank" rel="noopener"><img class="logo" src="css/image/portal-logo.svg" alt="Logo" /></a>
       <div class="portal-search form-inline">
         <div id="searchbox" class="ais-SearchBox"></div>
       </div>
@@ -88,11 +91,13 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/jquery-3/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-migrate-3.4.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.35.1/dist/algoliasearchLite.min.js" integrity="sha256-5rOQwvvJdM9oDYQYCGzaJuuTy6SUALjma3OtzEGyJM0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
   <script type="text/javascript">
+  //<![CDATA[
 
                             var portalLanguage = 'en';
                             var lang = getQueryVariable("lang");
@@ -111,14 +116,16 @@
                             }
                             return (false);
                             }
+  //]]>
   </script>
   <script type="text/javascript">
+  //<![CDATA[
 
                             var searchimmediate = true;
                             
                             var use_breadcrumbs_for_algolia_searchresults = '0';
                             var search = instantsearch({
-                            indexName : portalLanguage + '-UUID-7395f1f7-ccf0-589c-1269-55efc35b445b',
+                            indexName : portalLanguage + '-UUID-63eb665c-e506-3c15-78f2-fbfd4599c5aa',
   searchClient : algoliasearch('HI1538U2K4', 'eda8ab602a414630fc98dfac94d555bf'),
 
                             });
@@ -162,11 +169,14 @@
                                 }
                                 })
                                 );
+  //]]>
   </script>
   <script src="js/html5.algoliasearchpage.js"></script>
   <script type="text/javascript">
+  //<![CDATA[
   search.start();
+  //]]>
   </script>
-  <script xmlns="http://www.w3.org/1999/xhtml" src="js/layout-custom-script.js?version=20231011" type="text/javascript"></script>
+  <script xmlns="http://www.w3.org/1999/xhtml" src="js/layout-custom-script.js?version=20240202" type="text/javascript"></script>
 </body>
 </html>
