@@ -19,11 +19,29 @@ $(document).on('toc.ready', function () {
     var glyphicon = "<span class='glyphicon'></span>";
     $('ul.nav-site-sidebar .swagger-topic').append(glyphicon);
 
-    $(".nav-site-sidebar a .glyphicon").click(function (e) {
-        e.preventDefault();
-        $(this).closest("li").toggleClass("opened");
-    });
+    updateCollapseTocListener();
+    
 });
+
+function updateCollapseTocListener() {
+    if (collapseTocSectionOnLinkTitleClick) {
+        $(".nav-site-sidebar li>a:not(.topichead) .glyphicon, .nav-site-sidebar a.topichead, .nav-site-sidebar li>a").off();
+        $(".nav-site-sidebar li:not(.opened.active)>a:not(.topichead) .glyphicon, .nav-site-sidebar a.topichead, .nav-site-sidebar li.active>a").click(function (e) {
+            if (!($(this).hasClass('glyphicon') && $(this).parent().parent().hasClass('active'))) {
+                e.preventDefault();
+                $(this).closest("li").toggleClass("opened");
+                updateCollapseTocListener();
+            }
+        });
+    }else {
+        $(".nav-site-sidebar a:not(.topichead) .glyphicon, .nav-site-sidebar a.topichead").off();
+        $(".nav-site-sidebar a:not(.topichead) .glyphicon, .nav-site-sidebar a.topichead").click(function (e) {
+            e.preventDefault();
+            $(this).closest("li").toggleClass("opened");
+            updateCollapseTocListener();
+        });
+    }
+}
 
 function syntaxHighlight() {
     /**
@@ -93,6 +111,10 @@ $(document).ready(function () {
             $(clickedhref).scrollView();
             event.preventDefault();
         }
+        /* Load entire page on languageswitch dropdown */
+        else if ($(event.target).hasClass('language-item dropdown-item')) {
+            /* Bypass ajax loading and load entire page */
+        }
         /* Don’t load topic on glyphicon arrow toggle-click */
         else if ($(event.target).hasClass('glyphicon') && clickedLink.parents('.nav-site-sidebar').length) {
             event.preventDefault();
@@ -101,8 +123,8 @@ $(document).ready(function () {
         else if (clickedLink.parents('.version-dropdown').length) {
             /* Bypass ajax loading and load entire page */
         }
-        /*Make external links and home url redirect as usual:*/
-        else if (clickedhref.match(/^http.*|\/index\.html|^mailto/)) {
+        /*Make external links and home url redirect as usual (PAL2-9742 DJ: added match for /?lang= to catch PrettyURLs):*/
+        else if (clickedhref.match(/^http.*|\/index\.html|\/?lang=|^mailto/) && !($(event.target).hasClass("next") || $(event.target).hasClass("prev"))) {
             /*Just let link work as by default*/
         }
         /*Make special links like with target blank work as usual:*/
@@ -121,10 +143,12 @@ $(document).ready(function () {
         //for accordions:
         else if ($(this).parents('.panel-heading').length) {
             event.preventDefault();
+        } else if (this.href === window.location.href) {
+            event.preventDefault();
         } else {
             event.preventDefault();
             var href = this.href;
-            var hash = this.hash;
+            var hash = jqEscapeChars(this.hash);
 
             history.pushState(href, null, href);
 
@@ -173,6 +197,9 @@ function loadContent(href, hash) {
     $('[data-toggle="popover"]').popover('hide');
 
     var id = href.split('#')[1];
+    if (typeof (id) !== "undefined") {
+        id = jqEscapeChars(id);
+    }
     $(".site-content").load(href + ' .site-content>*', function () {
         $(this).unbind('load');
 
@@ -227,9 +254,12 @@ function loadContent(href, hash) {
                 chunkedPrevNext();
                 buildSectionToc();
                 syntaxHighlight();
+                setActiveTocline();
+                updateCollapseTocListener()
                 return false;
             }
         });
+        chunkedPrevNext();
         addSearch();
         addPopover();
         initChecklist();
@@ -246,7 +276,21 @@ function loadContent(href, hash) {
         //Get dynamic code snippets from URL
         getEmbedCode();
 
+        setActiveTocline();
+        updateCollapseTocListener()
     });
+}
+
+/**
+ * Because jQuery uses CSS syntax for selecting elements, 
+ * some characters are interpreted as CSS notation. 
+ * In order to tell jQuery to treat these characters literally rather than as CSS notation, 
+ * they must be escaped by placing two backslashes in front of them.
+ * @param {string} id string to escape characters in.
+ * @returns {string} string with special characters secaped.
+ */
+function jqEscapeChars(id) {
+    return id.replace( /(:|\.|\[|\]|,|=|@)/g, "\\$1" );
 }
 
 window.addEventListener('popstate', function (e) {

@@ -3,7 +3,7 @@ $(document).ready(function () {
 });
 
 function addSearch() {
-    $("#aa-search-input").keyup(function () {
+    $("#aa-search-input, .aa-search-input").keyup(function () {
         var input = $(this);
 
         if (input.val() == "") {
@@ -34,7 +34,7 @@ function addSearch() {
     var index = client.initIndex(publication_id);
     //initialize autocomplete on search input (ID selector must match)
     //minlength is the number of characters entered before first search is executed. 1 default, 3 with delayed algolia search configured.
-    $("[data-portal-language='" + portalLanguage + "'] #aa-search-input, .site-body #aa-search-input, .site-header #aa-search-input").autocomplete({
+    $("[data-portal-language='" + portalLanguage + "'] #aa-search-input, .site-body #aa-search-input, .site-header #aa-search-input, [data-portal-language='" + portalLanguage + "'] .aa-search-input, .site-body .aa-search-input, .site-header .aa-search-input").autocomplete({
         hint: false,
         autoselect: true,
         minLength: instantsearch_minlength
@@ -62,6 +62,11 @@ function addSearch() {
                 var html = '<a href="' + up + suggestion.url + '"><div class="aa-search-title">' +
                 suggestion._highlightResult.title.value + '</div><div class="aa-search-body">' +
                 body + '</div></a>';
+                if (use_breadcrumbs_for_algolia_searchresults === '1') {
+                    html = '<a href="' + up + suggestion.url + '"><div class="aa-search-title" data-toggle="tooltip" title="' + suggestion.breadcrumbs + '">' +
+                    suggestion._highlightResult.title.value + '</div><div class="aa-search-body">' +
+                    body + '</div></a>';
+                }
 
                 return html;
             }

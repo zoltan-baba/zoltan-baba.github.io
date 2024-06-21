@@ -120,33 +120,76 @@ function mapVersionPage(){
     });
 }
 
+/**
+ * Matches a path against href regardless if prettyURL is used or not
+ * @param {string} path to match
+ * @param {string} href to match against
+ * @returns {boolean} true or false
+ */
+function matchHref(path, href) {
+    // Certain hosts use "Pretty URLs" which removes the .html extension in the hrefs.
+    // This will add the .html back when looking for a match.
+    if (path === href) {
+        return true;
+    }else if (path.replace(/(.*?)(\.html?|)(#.*)?$/, "$1.html$3") === href.replace(/(.*?)(\.html?|)(#.*)?$/, "$1.html$3")) {
+        return true;
+    }else {
+        return false;
+    }
+}
+
+/**
+ * Evaluates if a Toc line should be active or not
+ * @param {string} path to match
+ * @param {object} thisLink link to evaluate.
+ * @returns {boolean} true or false
+ */
+function evaluateTocLine(path, thisLink) {
+    var pathBase = path.split('#')[0];
+    
+    // jquery object
+    var $thisLink = $(thisLink);
+    
+    var href = decodeURI(thisLink.href);
+    
+    var childNodeLinks = $thisLink.parent().find('ul>li>a');
+    
+    var foundMatch = false;
+    if (childNodeLinks.length > 0) {
+
+        for (var j = 0; j < childNodeLinks.length; j++) {
+            if (evaluateTocLine(path, childNodeLinks[j])) {
+                foundMatch = true;
+            }
+        }
+    }
+    
+    var fragmentNotInToc = (matchHref(pathBase, href) && !foundMatch);
+
+    //Bug in Chrome on Windows makes regex test fail, so checking for equality
+    if (matchHref(path, href) || fragmentNotInToc) {
+        $thisLink.parent().addClass("active");
+        $thisLink.parents("li").addClass("opened");
+        return true;
+    }
+}
 
 function setActiveTocline() {
-    // set the active link in the toc on first load. No hash or querystring included
-    var path = decodeURI(window.location.href.split('#')[0]);
-
+    // set the active link in the toc on first load.
+    var path = decodeURI(window.location.href);
+    //Remove search or language parameters from the url.
     path = path.replace(/\?.*$/, '');
 
     //Clean slate
-    $("aside ul.toc a").parent().removeClass("active").removeClass("opened");
+    $("aside ul.toc a").parent().removeClass("active");
 
-    var links = $('aside ul.toc a');
+    var links = $('aside ul.toc>li>a');
 
     for (var i = 0; i < links.length; i++) {
-        var thisLink = links[i];
         // element
-
-        var $thisLink = $(links[i]);
-        // jquery object
-
-        var href = decodeURI(thisLink.href);
-
-        //Bug in Chrome on Windows makes regex test fail, so checking for equality
-        if (href === path) {
-            $thisLink.parent().addClass("active");
-            $thisLink.parents("li").addClass("opened");
-            return false;
-        }
+        var thisLink = links[i];
+        
+        evaluateTocLine(path, thisLink);
     }
 }
 
@@ -166,8 +209,7 @@ function buildSectionToc() {
         var toc = $('aside ul.toc');
 
         var currentChunkListitem = toc.find('li.opened>a').filter(function () {
-            var hrefdecoded = decodeURI(this.href);
-            return hrefdecoded.match(regex);
+            return matchHrefWithRegex(this.href, regex);
         }).parent();
 
         var links = currentChunkListitem.find(">ul");
@@ -178,6 +220,8 @@ function buildSectionToc() {
             $(".section-toc").remove();
         } else {
             var sectionTocLinks = links.clone();
+            // PAL2-9835 DJ: Select first valid decendant link for topicheads.
+            sectionTocLinks = handleTopicheadInSectionToc(sectionTocLinks);
             //Only show first level children, section TOCS could get very long otherwise
             sectionTocLinks.find('ul').remove();
             sectionTocLinks.find('.glyphicon').remove();
@@ -188,45 +232,77 @@ function buildSectionToc() {
     }
 }
 
-function chunkedPrevNext() {
-    var toc = $('aside ul.toc');
-    var links = toc.find('a').filter(function () {
-        return this.href.match(/.*\.html?$/);
+function handleTopicheadInSectionToc(sectionTocLinks) {
+    sectionTocLinks.children('li').each(function () {
+        if($(this).children('a').hasClass('topichead')) {
+            $(this).children('a').first().attr('href', $(this).find('a:not(.topichead').attr('href'));
+        }
     });
+    return sectionTocLinks;
+}
 
-    var nextlink = $('.pager .next a');
-    var prevlink = $('.pager .previous a');
+function chunkedPrevNext() {
+    var links = getTocLinks();
+    var navigation = getPageNavigation();
 
     var next = '';
     var prev = '';
 
-    /*Looping the toc to create correct prev/next navigation corresponding to toc options.*/
-    for (var index = 0; index < links.length; index++) {
-        var minusone = links[index - 1];
-        var plusone = links[index + 1];
-        if (typeof minusone !== "undefined") {
-            if (minusone.parentElement.classList.contains('active')) {
-                var jqueryObj = $(links[index]);
-                next = jqueryObj.attr('href');
-                nextlink.attr('href', next);
-            }
+    //If no topic is active in the ToC, the index-[lang].html is active. Then point the next link to the first valid topic.
+    if (typeof links.activeIndex === "undefined") {
+        if (typeof links[0] !== "undefined") {
+            next = links[0].href;
         }
+        navigation.nextlink.attr('href', next);
+        navigation.prevlink.remove();
+        return false;
+    }
 
-        if (typeof plusone !== "undefined") {
-            if (plusone.parentElement.classList.contains('active')) {
-                var jqueryObj = $(links[index]);
-                prev = jqueryObj.attr('href');
-                prevlink.attr('href', prev);
-            }
-        }
-    };
-
+    next = links[links.activeIndex].next;
+    prev = links[links.activeIndex].prev;
+    navigation.nextlink.attr('href', next);
+    navigation.prevlink.attr('href', prev);
 
     if (next == '') {
-        /*If there is no next in the TOC, it means the standard transform has created a next from an internal link, which we don't want.
-        Not needed for prev, because it will always be the index for that situation (first topic). */
-        nextlink.remove();
+        navigation.nextlink.remove();
     }
+
+    if (prev == '') {
+        navigation.prevlink.remove();
+    }
+}
+
+function getTocLinks() {
+    var toc = $('aside ul.toc');
+    var links = toc.find('a').filter(function () {
+        return matchHrefWithRegex(this.href, /.*\.html?$/);
+    });
+    var tocLinks = {};
+    for (var index = 0; index < links.length; index++) {
+        var tocLink = {};
+        tocLink.index = index;
+        tocLink.active = links[index].parentNode.classList.contains('active');
+        tocLink.href = links[index].href;
+        tocLink.next = index === links.length -1 ? "" : links[index + 1].href;
+        var relativePrefix = "";
+        relativePrefix += $('#topic-content section').attr('data-relative-prefix') ? $('#topic-content section').attr('data-relative-prefix') : "";
+        var language = $('html').attr('lang');
+        //Point the first valid topic prev link to index-[lang].html
+        tocLink.prev = index === 0 ? relativePrefix + "index-" + language + ".html" : links[index - 1].href;
+        if (tocLink.active) {
+            tocLinks.activeIndex = index;
+        }
+        tocLinks[index] = tocLink;
+    }
+
+    return tocLinks;
+}
+
+function getPageNavigation() {
+    var navigation = {};
+    navigation.nextlink = $('.pager .next a');
+    navigation.prevlink = $('.pager .previous a');
+    return navigation;
 }
 
 function displayAccordionTarget(id) {
@@ -282,9 +358,31 @@ function getEmbedCode(){
                     } else {
                         code = hljs.highlightAuto(code.value);
                     }
+                } else {
+                    $pre.empty();
                 }
 
                 $pre.append(code.value).addClass(code.language);
             });
     });
+}
+
+/**
+ * Matches a href against a regex
+ * @param {string} href href to match
+ * @param {RegExp} regex The regular expression to match against
+ * @returns {(null|Array)} null or Array with matched urls
+ */
+function matchHrefWithRegex(href, regex) {
+    let hrefdecoded = decodeURI(href);
+    if (! hrefdecoded) {
+        return false;
+    }
+    // Certain hosts use "Pretty URLs" which removes the .html extension in the hrefs.
+    // This will add the .html back when looking for a match if the href isn't a fragment link.
+    const endsWithHTMLorFragment = (hrefdecoded.endsWith('.html') || hrefdecoded.endsWith('.htm') || hrefdecoded.includes('#'));
+    if (!endsWithHTMLorFragment) {
+        hrefdecoded += '.html';
+    }
+    return hrefdecoded.match(regex);
 }

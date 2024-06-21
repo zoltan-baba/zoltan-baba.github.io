@@ -25,6 +25,8 @@ $(document).ready(function () {
     /* Adjusting position in view for internal page toc links */
     $(document.body).on('click', '.section-nav-container a', function (e) {
         var clickedhref = $(this).attr('href');
+        var id = this.hash;
+        displayAccordionTarget(id);
         $(clickedhref).scrollView();
         e.preventDefault();
     });
@@ -152,9 +154,17 @@ $(document).on('toc.ready', function () {
     var glyphicon = "<span class='glyphicon'></span>";
     $('ul.nav-site-sidebar .swagger-topic').append(glyphicon);
 
-    /*Collapse sections:*/
-    $(".nav-site-sidebar a .glyphicon").click(function (e) {
-        e.preventDefault();
-        $(this).closest("li").toggleClass("opened");
-    });
+    /*Collapse sections (and make non-clickable topic headings act in the same way as glyphicons):*/
+    if (collapseTocSectionOnLinkTitleClick) {
+        $(".nav-site-sidebar a:not(.topichead) .glyphicon, .nav-site-sidebar a.topichead, .nav-site-sidebar li.active.opened>a").click(function (e) {
+            e.preventDefault();
+            $(this).closest("li").toggleClass("opened");
+        });
+    }else {
+        $(".nav-site-sidebar a:not(.topichead) .glyphicon, .nav-site-sidebar a.topichead").click(function (e) {
+            e.preventDefault();
+            $(this).closest("li").toggleClass("opened");
+        });
+    }
+    
 });
