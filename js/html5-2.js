@@ -36,7 +36,7 @@ $(document).ready(function () {
     $('[data-toggle="popover"]').popover({
         animation: "fade",
         delay: {
-            show: "500",
+            show: "200",
             hide: "100"
         },
         trigger: "hover",
