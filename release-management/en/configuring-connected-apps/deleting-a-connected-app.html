@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="search" content="algolia" />
+  <meta name="use.ic" content="yes" />
+  <meta name="tocstandalone" content="no" />
+  <link rel="canonical" href="https://devcenter.bitrise.io/en/configuring-connected-apps/deleting-a-connected-app.html" />
+  <meta name="theme" content="2" />
+  <meta name="search.placeholder" content="Search" />
+  <meta name="search.results" content="Search results" />
+  <meta name="no.search.results" content="No results found" />
+  <title>Deleting a connected app</title>
+  <link rel="stylesheet" type="text/css" href="../../css/docbook.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/roboto.font.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2.css?version=20241114" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2-colors.css?version=20241114" />
+  <link rel="stylesheet" type="text/css" href="../../css/content-theme2.css?version=20241114" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-core-css.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-simple.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-print.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-common.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/html5.algoliasearch.css?version=20241114" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-modern-tables.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/graphical-lists.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/layout-custom-style.css?version=20241114" />
+  <meta xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:util="http://www.paligo.net/xsl1/functions/utility" name="generator" content="Paligo" />
+  <link rel="prev" href="integrating-launchdarkly-feature-flags.html#selecting-your-launchdarkly-project-and-environment" title="Selecting your LaunchDarkly project and environment" />
+  <link rel="next" href="../adding-a-new-release.html" title="Adding a new release" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+  /*<![CDATA[*/
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+  /*]]>*/
+  </style>
+</head>
+<body class="theme2 fixed-toolbar colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix="../">
+  <div class="skipnav">
+    <a href="#content-wrapper">Skip to main content</a>
+  </div>
+  <header class="site-header">
+    <nav class="site-header-navbar navbar navbar-fixed-top">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div id="logotype-container" class="pull-left">
+            <a class="navbar-brand" href="https://www.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="top-nav-menu sm sm-simple">
+            <li>
+              <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+            </li>
+            <li>
+              <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="site-body">
+    <div class="site-body-container">
+      <div class="site-body-row">
+        <aside class="site-sidebar">
+          <div class="site-sidebar-header">
+            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://www.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
+            "../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+          <ul class="toc nav nav-site-sidebar">
+            <li>
+              <a href="../getting-started-with-release-management.html" class="topic-link section" data-origin-id="UUID-11bb907b-ee05-fc82-f9c1-1a212dfad918" data-legacy-id="UUID-50bdc246-2961-538a-6634-94eb3f4aa9c7" data-permalink="getting-started-with-release-management.html" data-topic-level="1" data-relative-prefix="" data-publication-date=
+              ""><span class="glyphicon"></span> Getting started with Release Management</a>
+              <ul>
+                <li>
+                  <a href="../getting-started-with-release-management/connecting-an-app.html" class="topic-link section" data-origin-id="UUID-261723c2-5b63-e358-41a7-a13b694695d0" data-legacy-id="UUID-330a924a-497a-6ddc-5ae7-01b1729e47d4" data-permalink="getting-started-with-release-management/connecting-an-app.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Connecting an app</a>
+                </li>
+                <li>
+                  <a href="../getting-started-with-release-management/release-management-concepts.html" class="topic-link section" data-origin-id="UUID-0d1c73fb-6f8e-42ae-4497-3f55f95026a6" data-legacy-id="UUID-abb4ca4c-7205-7b28-0b95-08f4dc38dc9d" data-permalink="getting-started-with-release-management/release-management-concepts.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Release Management concepts</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started-with-release-management/managing-licenses.html" class="topic-link section" data-origin-id="UUID-2020dc1b-6d8d-8b23-2a06-7a9fe00a067a" data-legacy-id="UUID-79191df4-a434-cdc6-4afd-d92ee338b5b7" data-permalink="getting-started-with-release-management/managing-licenses.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Managing licenses</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../configuring-connected-apps.html" class="topic-link section" data-origin-id="UUID-8656ad35-0414-5278-6656-cec9a791fc7c" data-legacy-id="UUID-c5794e75-a00b-d7cb-84b0-1ae9799c19af" data-permalink="configuring-connected-apps.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> Configuring connected apps</a>
+              <ul>
+                <li>
+                  <a href="../configuring-connected-apps/configuring-connected-app-integration.html" class="topic-link section" data-origin-id="UUID-922891a3-8d1e-6f36-ed47-d628128a3d81" data-legacy-id="UUID-6742ca1c-5247-8274-d56d-bc66131719ea" data-permalink="configuring-connected-apps/configuring-connected-app-integration.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Configuring connected app integration</a>
+                </li>
+                <li>
+                  <a href="../configuring-connected-apps/changing-connected-app-appearance.html" class="topic-link section" data-origin-id="UUID-acea4cd7-a990-cc8f-a062-4a593347bf9a" data-legacy-id="UUID-faaec790-6baa-ce1d-aa62-848db4aa043e" data-permalink="configuring-connected-apps/changing-connected-app-appearance.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Changing connected app appearance</a>
+                </li>
+                <li>
+                  <a href="../configuring-connected-apps/release-presets.html" class="topic-link section" data-origin-id="UUID-e41a0a84-588c-fcdd-b7ad-7b771013d397" data-legacy-id="UUID-d3853860-7acb-d7e5-def6-b1178b6b0244" data-permalink="configuring-connected-apps/release-presets.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Release presets</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../configuring-connected-apps/release-management-roles-and-permissions.html" class="topic-link section" data-origin-id="UUID-347024bb-069b-dff6-a12e-75b71d8644bf" data-legacy-id="UUID-2199fc26-3f80-54e3-ab8e-db6273f48f36" data-permalink="configuring-connected-apps/release-management-roles-and-permissions.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Release managers</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../configuring-connected-apps/integrating-launchdarkly-feature-flags.html" class="topic-link section" data-origin-id="UUID-498e2961-6b33-0fdf-bb8f-ce8f9324a783" data-legacy-id="UUID-4b3f97f0-44b2-74a0-e034-048552bcab68" data-permalink="configuring-connected-apps/integrating-launchdarkly-feature-flags.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Integrating LaunchDarkly feature flags</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../configuring-connected-apps/deleting-a-connected-app.html" class="topic-link section" data-origin-id="UUID-c08ee791-f4a0-380c-5185-5cd4ee558b9e" data-legacy-id="UUID-de7bf895-a2c4-0b15-a1e0-d794e25b3205" data-permalink="configuring-connected-apps/deleting-a-connected-app.html" data-topic-level="2" data-relative-prefix=
+                  "../" data-publication-date="">Deleting a connected app</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../adding-a-new-release.html" class="topic-link section" data-origin-id="UUID-ef2824d0-a017-dc2a-7c5c-fc8741e8ec96" data-legacy-id="UUID-5c3d482a-a8b2-b726-62dd-c847d90720a0" data-permalink="adding-a-new-release.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Adding a new release</a>
+            </li>
+            <li>
+              <a href="../configuring-a-release.html" class="topic-link section" data-origin-id="UUID-01b22d81-e087-ef64-7535-d8d227373071" data-legacy-id="UUID-e18e1281-0523-e0cf-a175-0d7c3e227919" data-permalink="configuring-a-release.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span>
+              Configuring a release</a>
+              <ul>
+                <li>
+                  <a href="../configuring-a-release/editing-the-description-of-a-release.html" class="topic-link section" data-origin-id="UUID-f5eb06bd-2533-944f-ab07-906cff170865" data-legacy-id="UUID-f02538c4-0c75-39e2-8dbd-a7648200a000" data-permalink="configuring-a-release/editing-the-description-of-a-release.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Editing the description of a release</a>
+                </li>
+                <li>
+                  <a href="../configuring-a-release/configuring-slack-and-teams-notifications.html" class="topic-link section" data-origin-id="UUID-b4a61b6c-583f-7470-45bc-ac40b1e0c769" data-legacy-id="UUID-d950e0e2-de8c-2a96-7caf-391377e8cf01" data-permalink="configuring-a-release/configuring-slack-and-teams-notifications.html" data-topic-level=
+                  "2" data-relative-prefix="../" data-publication-date="">Configuring Slack and Teams notifications for releases</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../configuring-a-release/configuring-auto-upload.html" class="topic-link section" data-origin-id="UUID-dbc6d1ee-75d8-c988-5916-4c5d26937c5d" data-legacy-id="UUID-f1b9662b-f9ae-5a80-29f3-729c51efda2e" data-permalink="configuring-a-release/configuring-auto-upload.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Configuring auto-upload</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../configuring-a-release/release-automation.html" class="topic-link section" data-origin-id="UUID-81ccf793-4937-82d4-f46c-5af3f40c280f" data-legacy-id="UUID-11081b9b-9ff9-f0bb-aa21-6fc3caf286c2" data-permalink="configuring-a-release/release-automation.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Configuring release automation</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../configuring-a-release/removing-a-release.html" class="topic-link section" data-origin-id="UUID-916edee7-cf0d-ab9c-5fce-338503730b96" data-legacy-id="UUID-51951620-7211-cde6-ce8c-54f641f402a8" data-permalink="configuring-a-release/removing-a-release.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Removing a release</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../managing-the-release-process.html" class="topic-link section" data-origin-id="UUID-acb0191a-658b-16a3-bd0e-848a88c38fd7" data-legacy-id="UUID-2e14d817-7921-ac8e-3843-36e397d5ebcb" data-permalink="managing-the-release-process.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> Managing the release process</a>
+              <ul>
+                <li>
+                  <a href="../managing-the-release-process/selecting-a-release-candidate.html" class="topic-link section" data-origin-id="UUID-94b8d612-6439-4354-6b5d-060f4876d9fc" data-legacy-id="UUID-1e59710b-8eea-eb7a-0490-d1e9f92a8012" data-permalink="managing-the-release-process/selecting-a-release-candidate.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Selecting a release candidate</a>
+                </li>
+                <li>
+                  <a href="../managing-the-release-process/testflight-upload-stage.html" class="topic-link section" data-origin-id="UUID-9c3dfe6d-6015-8908-2f0d-104ea3e6736e" data-legacy-id="UUID-e12ce7b5-211b-e0f3-ae86-ca6ec272c50d" data-permalink="managing-the-release-process/testflight-upload-stage.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">TestFlight upload stage</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../managing-the-release-process/google-play-upload-stage.html" class="topic-link section" data-origin-id="UUID-672600c8-51af-6928-eb9b-60f9d3c9fe06" data-legacy-id="UUID-35aa3866-d2d6-ad98-6225-569f0814476c" data-permalink="managing-the-release-process/google-play-upload-stage.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Google Play upload stage</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../managing-the-release-process/creating-tasks-for-the-approvals-stage.html" class="topic-link section" data-origin-id="UUID-3c1e89ad-7039-1a87-005a-03f236711c31" data-legacy-id="UUID-67063d4b-16c1-c0ce-592c-b43aadcbeb7a" data-permalink="managing-the-release-process/creating-tasks-for-the-approvals-stage.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Creating tasks for the Approvals stage</a>
+                </li>
+                <li>
+                  <a href="../managing-the-release-process/sending-your-app-to-app-store-review.html" class="topic-link section" data-origin-id="UUID-81984918-3d64-aab7-951f-cf7a899a9c94" data-legacy-id="UUID-1e7dcdb9-4b1f-0e5c-7db9-1ff9a3b76792" data-permalink="managing-the-release-process/sending-your-app-to-app-store-review.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Sending your app to App Store review</a>
+                </li>
+                <li>
+                  <a href="../managing-the-release-process/releasing-your-app-on-the-app-store.html" class="topic-link section" data-origin-id="UUID-87b673a6-ab6c-83dc-d1e4-f599aceee132" data-legacy-id="UUID-c91f20d2-7cf3-c64f-5960-8ad358232b6e" data-permalink="managing-the-release-process/releasing-your-app-on-the-app-store.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Releasing your app on the App Store</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../managing-the-release-process/releasing-your-app-on-google-play.html" class="topic-link section" data-origin-id="UUID-e13d306a-3ca0-a99a-24eb-90403db9c978" data-legacy-id="UUID-bb370a57-0561-74ef-797b-e80049e31a22" data-permalink="managing-the-release-process/releasing-your-app-on-google-play.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Releasing your app on Google Play</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../release-management-api.html" class="topic-link section" data-origin-id="UUID-52445b63-1c64-fa9d-9623-ea7e071e3ab4" data-legacy-id="UUID-8566b848-9d9b-6681-5b97-bbc10f3c3c73" data-permalink="release-management-api.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Release Management API</a>
+              <ul></ul>
+            </li>
+          </ul>
+        </aside>
+        <div class="site-content">
+          <div class="toolbar top-nav-on">
+            <div class="toolbar-tools">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="top-nav-menu sm sm-simple">
+                  <li>
+                    <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+                  </li>
+                  <li>
+                    <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tool-print">
+                <i class="fa fa-print" aria-hidden="true">print</i>
+              </div>
+              <div class="tool-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <form class="tool-search-form" autocomplete="off">
+                  <input type="text" placeholder="Search" class="form-control search-field" id="aa-search-input" />
+                </form>
+              </div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+          </div>
+          <main>
+            <div id="top-pager">
+              <ul class="pager">
+                <li class="previous">
+                  <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="integrating-launchdarkly-feature-flags.html#selecting-your-launchdarkly-project-and-environment">Prev</a>
+                </li>
+                <li class="next">
+                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="../adding-a-new-release.html">Next</a>
+                </li>
+              </ul>
+            </div>
+            <article class="topic content-container" id="content-wrapper">
+              <div id="topic-content" class="topic-content">
+                <div class="breadcrumb-container">
+                  <ul xmlns:util="http://www.paligo.net/xsl1/functions/utility" class="breadcrumb">
+                    <li class="breadcrumb-link">
+                      <a href="../index-en.html">Welcome to Bitrise documentation!</a>
+                    </li>
+                    <li class="breadcrumb-link">
+                      <a href="../configuring-connected-apps.html">Configuring connected apps</a>
+                    </li>
+                    <li class="breadcrumb-node">Deleting a connected app</li>
+                  </ul>
+                </div>
+                <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-c08ee791-f4a0-380c-5185-5cd4ee558b9e" data-legacy-id="UUID-de7bf895-a2c4-0b15-a1e0-d794e25b3205" data-permalink="configuring-connected-apps/deleting-a-connected-app.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="" id=
+                "deleting-a-connected-app">
+                  <div class="titlepage">
+                    <div>
+                      <div class="title">
+                        <h1 class="title" style="clear: both">Deleting a connected app</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <p>When you delete a connected app from Release Management, all data related to this app will be removed from Bitrise permanently.</p>
+                  <p>To delete a connected app:</p>
+                  <div class="procedure" id="UUID-de7bf895-a2c4-0b15-a1e0-d794e25b3205_procedure-idm4518938287539234241496363159">
+                    <ol class="procedure" type="1">
+                      <li class="step">
+                        <p>Log in to Bitrise, and from the left sidebar, select <span class="guilabel">Releases</span>.</p>
+                      </li>
+                      <li class="step">
+                        <p>From the <span class="guilabel">Connected apps</span> list, select your app.</p>
+                        <div class="mediaobject"><img src="../image/uuid-c446a6a9-f922-2641-53ad-49099a7921fe.png" style="" alt="rm-overview-connected.png" /></div>
+                      </li>
+                      <li class="step">
+                        <p>On the left, select <span class="guilabel">App settings</span>.</p>
+                      </li>
+                      <li class="step">
+                        <p>On the bottom of the <span class="guilabel">Connected app settings</span> page, click <span class="guibutton">Delete app</span>. This opens the <span class="guilabel">Delete connected app</span> dialog.</p>
+                        <div class="mediaobject"><img src="../image/uuid-c93bbd2a-6d87-97d3-11ee-ca32475064af.png" style="" alt="dialog-delete-app.png" /></div>
+                      </li>
+                      <li class="step">
+                        <p>Follow the instructions in the dialog to delete the app permanently.</p>
+                      </li>
+                    </ol>
+                  </div>
+                </section>
+                <div class="footer-content">
+                  <div class="section-toc section-toc-after">
+                    <div class="section-toc-title">
+                      In this section<span class="section-toc-title-delimiter">:</span>
+                    </div>
+                  </div>
+                  <div class="glossary-definitions"></div>
+                </div>
+                <footer></footer>
+              </div>
+            </article>
+            <article id="search-result-wrapper">
+              <div class="search-container" style="display: none;">
+                <h2>Search results</h2>
+                <ul class="searchresults"></ul>
+                <p class="noresults">No results found</p>
+              </div>
+            </article>
+            <div class="feedback-panel">
+              <div id="email-feedback" class="no-voting toggle-feedback">
+                <p><a href=
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Deleting%20a%20connected%20app%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Deleting%20a%20connected%20app%22%20in%20the%20publication%20%22Welcome%20to%20Bitrise%20documentation!%22.">
+                <i aria-hidden="true" class="fa fa-pencil-square-o feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
+              </div>
+            </div>
+          </main>
+          <div id="bottom-pager">
+            <ul class="pager">
+              <li class="previous">
+                <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="integrating-launchdarkly-feature-flags.html#selecting-your-launchdarkly-project-and-environment">Prev</a>
+              </li>
+              <li class="next">
+                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="../adding-a-new-release.html">Next</a>
+              </li>
+            </ul>
+          </div>
+          <footer class="site-footer">
+            <div class="inner">
+              <div class="copyright">
+                © 2024
+              </div>
+              <div class="publication-date">
+                <span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">:</span> <span class="formatted-date"></span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //<![CDATA[
+  var theme = '2';
+
+                        
+                        window.versionsfile = '';
+
+
+                        window.indexDict = new Array();
+                        window.store = {};
+                        window.portalLanguage = 'en';
+                        window.enterKey = 'select';
+                        
+                        
+                                var fuse_threshold = 0.3;
+                        
+                                        var local_csh = false;
+                                
+                                        var anchoroption = false;
+                                        var instantsearch_minlength = 1;
+                                                
+                        var useanchorlinks = false;
+                        
+                                useanchorlinks = true;
+                                
+                                var clicktocopy = 'Click to copy link';
+                                var linkcopied =  'Copied!';
+                                        var collapseTocSectionOnLinkTitleClick = false;
+  //]]>
+  </script>
+  <script src="../../js/jquery-3/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="../../js/jquery-migrate-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../../js/materialize.min.js" type="text/javascript"></script>
+  <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../js/purl.js" type="text/javascript"></script>
+  <script src="../../js/jquery.smartmenus.js" type="text/javascript"></script>
+  <script src="../../js/html5-2-mp-common.js?version=20241114" type="text/javascript"></script>
+  <script src="../../js/html5-2.js?version=20241114" type="text/javascript"></script>
+  <script src="../../js/checklist.js" type="text/javascript"></script>
+  <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+  <script src="../../js/anchorlinks.js" type="text/javascript"></script>
+  <script src="../../js/html5.algoliasearch.js?version=20241114" type="text/javascript"></script>
+  <script src="../../js/csh.js" type="text/javascript"></script>
+  <script src="../../js/layout-custom-script.js?version=20241114" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script>
+  <script type="text/javascript" src="../../js/cookie-consent.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+
+                                $(document).ready(function () {
+                                $(".mediaobject img").addClass('materialboxed');
+                                //Exclude images with links
+                                $(".mediaobject a img").removeClass('materialboxed');
+                                if (!document.documentMode) {
+                                $('.materialboxed').materialbox();
+                                }});
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var intercom_appid = 'e2rdidtm';
+  var intercom_src = 'https://widget.intercom.io/widget/e2rdidtm';
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var publication_id = 'en-UUID-d3f301ae-db7b-10ec-5717-cec5f27f9930';
+  var algolia_application_id = 'HI1538U2K4';
+  var algolia_search_only_api_key = 'f817c83dbdb923d880c215c9380d1107';
+  var use_breadcrumbs_for_algolia_searchresults = '0';
+  //]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+  <script xmlns="" type="text/javascript" src="../../js/intercom/intercom.js"></script>
+</body>
+</html>
