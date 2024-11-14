@@ -59,7 +59,8 @@ function addPopover() {
     $('[data-toggle="popover"]').off();
 
     $('[data-toggle="popover"]').popover({
-        trigger: "manual", placement: "auto bottom",
+        trigger: "manual",
+        placement: "auto bottom",
         container: 'body',
         html: true,
         content: function () {
@@ -73,12 +74,17 @@ function addPopover() {
         $(".popover .mediaobject img").removeClass('materialboxed');
 
         $('.popover').on("mouseleave", function () {
-            $(_this).popover('hide');
+            setTimeout(function () {
+                if (! $('.popover:hover').length && ! $(_this).is(':hover')) {
+                    $(_this).popover("hide");
+                }
+            },
+            300);
         });
     }).on("mouseleave", function () {
         var _this = this;
         setTimeout(function () {
-            if (! $('.popover:hover').length) {
+            if (! $('.popover:hover').length && ! $(_this).is(':hover')) {
                 $(_this).popover("hide");
             }
         },
@@ -108,6 +114,8 @@ $(document).ready(function () {
 
         /* Adjusting position in view for internal page toc links. */
         if($(this).closest('.section-nav-container').length){
+            var id = this.hash;
+            displayAccordionTarget(id);
             $(clickedhref).scrollView();
             event.preventDefault();
         }

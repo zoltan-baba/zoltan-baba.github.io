@@ -49,8 +49,9 @@ $(document).ready(function () {
     }
 
     //Bootstrap popovers for glossterms
-        $('[data-toggle="popover"]').popover({
-        trigger: "manual", placement: "auto bottom",
+    $('[data-toggle="popover"]').popover({
+        trigger: "manual",
+        placement: "auto bottom",
         container: 'body',
         html: true,
         content: function () {
@@ -64,12 +65,17 @@ $(document).ready(function () {
         $(".popover .mediaobject img").removeClass('materialboxed');
 
         $('.popover').on("mouseleave", function () {
-            $(_this).popover('hide');
+            setTimeout(function () {
+                if (! $('.popover:hover').length && ! $(_this).is(':hover')) {
+                    $(_this).popover("hide");
+                }
+            },
+            300);
         });
     }).on("mouseleave", function () {
         var _this = this;
         setTimeout(function () {
-            if (! $('.popover:hover').length) {
+            if (! $('.popover:hover').length && ! $(_this).is(':hover')) {
                 $(_this).popover("hide");
             }
         },

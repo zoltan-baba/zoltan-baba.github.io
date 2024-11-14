@@ -102,12 +102,14 @@ function mapVersionPage(){
                 currentVersion = version;
             }
         });
-        const lang = document.documentElement.lang || portalLanguage || '';
+        const lang = portalLanguage || document.documentElement.lang || '';
         const candidateURL = URLFromHref(this.getAttribute('href'));
         const defaultURL = URLFromHref(this.getAttribute('href'));
 
-        // for default - only set lang
+        // set lang param in case the target is the portal page
         defaultURL.searchParams.set('lang', lang);
+        candidateURL.searchParams.set('lang', lang);
+
 
         // for candidate - try use current with new version only
         const newVersion = candidateURL.pathname.replace('index.html', '')
