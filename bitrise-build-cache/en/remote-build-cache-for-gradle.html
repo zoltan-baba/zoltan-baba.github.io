@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="search" content="algolia" />
+  <meta name="use.ic" content="yes" />
+  <meta name="tocstandalone" content="no" />
+  <link rel="canonical" href="https://devcenter.bitrise.io/en/remote-build-cache-for-gradle.html" />
+  <meta name="theme" content="2" />
+  <meta name="search.placeholder" content="Search" />
+  <meta name="search.results" content="Search results" />
+  <meta name="no.search.results" content="No results found" />
+  <title>Bitrise Build Cache for Gradle</title>
+  <link rel="stylesheet" type="text/css" href="../css/docbook.css" />
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="../css/roboto.font.css" />
+  <link rel="stylesheet" type="text/css" href="../css/theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/theme2-colors.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/content-theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/sm-core-css.css" />
+  <link rel="stylesheet" type="text/css" href="../css/sm-simple.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style-print.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style-common.css" />
+  <link rel="stylesheet" type="text/css" href="../css/html5.algoliasearch.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css" />
+  <link rel="stylesheet" type="text/css" href="../css/graphical-lists.css" />
+  <link rel="stylesheet" type="text/css" href="../css/layout-custom-style.css?version=20250327" />
+  <meta name="generator" content="Paligo" />
+  <meta name="description" content="The Bitrise remote build cache allows you to utilize the Gradle build cache for both local and CI builds. The solution caches Gradle task outputs on a remote server. When you run a build, Gradle will not execute tasks whose output is available in the remote cache and download the cache entry instead." />
+  <link rel="prev" href="remote-build-cache-for-bazel.html#configuring-the-bitrise-build-cache-for-bazel-in-non-bitrise-ci-environments" title="Configuring the Bitrise Build Cache for Bazel in non-Bitrise CI environments" />
+  <link rel="next" href="remote-build-cache-for-gradle.html#configuring-the-bitrise-build-cache-for-gradle-in-the-bitrise-ci-environment" title="Configuring the Bitrise Build Cache for Gradle in the Bitrise CI environment" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+  /*<![CDATA[*/
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+  /*]]>*/
+  </style>
+</head>
+<body class="theme2 fixed-toolbar colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix="">
+  <div class="skipnav">
+    <a href="#content-wrapper">Skip to main content</a>
+  </div>
+  <header class="site-header">
+    <nav class="site-header-navbar navbar navbar-fixed-top">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div id="logotype-container" class="pull-left">
+            <a class="navbar-brand" href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="top-nav-menu sm sm-simple">
+            <li>
+              <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+            </li>
+            <li>
+              <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="site-body">
+    <div class="site-body-container">
+      <div class="site-body-row">
+        <aside class="site-sidebar">
+          <div class="site-sidebar-header">
+            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
+            "../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+          <ul class="toc nav nav-site-sidebar">
+            <li>
+              <a class="topic-link section topichead" data-origin-id="UUID-16495559-0abb-7844-fdd5-9084763e9d49" data-legacy-id="UUID-52e632b5-5a6f-d23e-4d79-6ae3ca0aa6a1" data-permalink="remote-build-caching.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Bitrise Build Cache</a>
+              <ul>
+                <li>
+                  <a href="remote-build-caching/at-rest-encryption-for-the-build-cache.html" class="topic-link section" data-origin-id="UUID-12852626-2895-0e88-7326-30eba9b00317" data-legacy-id="UUID-636a91a3-bd4e-ccb2-872b-84d4f948e1c2" data-permalink="remote-build-caching/at-rest-encryption-for-the-build-cache.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">At-rest encryption for the Build Cache</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="remote-build-caching/clearing-the-build-cache.html" class="topic-link section" data-origin-id="UUID-893a161b-4a75-480a-761a-b967ed029767" data-legacy-id="UUID-4c14b064-ed1b-fae3-4d67-f7f5865929ee" data-permalink="remote-build-caching/clearing-the-build-cache.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Clearing the Build Cache</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="remote-build-cache-for-bazel.html" class="topic-link section" data-origin-id="UUID-3b3d077a-9369-3542-e579-f3a1a756f413" data-legacy-id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e" data-permalink="remote-build-cache-for-bazel.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Bitrise Build Cache for
+              Bazel</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="remote-build-cache-for-gradle.html" class="topic-link section taxonomy-actions-builds taxonomy-actions-caching taxonomy-related-links-taxonomies-android-rel taxonomy-related-links-taxonomies-builds-rel" data-origin-id="UUID-e4e0bc15-e1c7-bafe-adfc-f75afd59fc69" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461"
+              data-permalink="remote-build-cache-for-gradle.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Bitrise Build Cache for Gradle</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="insights.html" class="topic-link section" data-origin-id="UUID-db8404e1-fa1d-6f35-7fec-b24e287e20d9" data-legacy-id="UUID-ea9afad4-b316-02ba-12eb-9dc6ee3834bb" data-permalink="insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Insights</a>
+            </li>
+            <li>
+              <a href="api.html" class="topic-link section" data-origin-id="UUID-57bc118a-10ee-fa39-a15a-bb84ac20c17e" data-legacy-id="UUID-d1677e09-2515-b866-cf5f-076abd407122" data-permalink="api.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">API</a>
+            </li>
+          </ul>
+        </aside>
+        <div class="site-content">
+          <div class="toolbar top-nav-on">
+            <div class="toolbar-tools">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="top-nav-menu sm sm-simple">
+                  <li>
+                    <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+                  </li>
+                  <li>
+                    <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tool-print">
+                <i class="fa fa-print" aria-hidden="true">print</i>
+              </div>
+              <div class="tool-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <form class="tool-search-form" autocomplete="off">
+                  <input type="text" placeholder="Search" class="form-control search-field" id="aa-search-input" />
+                </form>
+              </div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+          </div>
+          <main>
+            <div id="top-pager">
+              <ul class="pager">
+                <li class="previous">
+                  <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="remote-build-cache-for-bazel.html#configuring-the-bitrise-build-cache-for-bazel-in-non-bitrise-ci-environments">Prev</a>
+                </li>
+                <li class="next">
+                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="remote-build-cache-for-gradle.html#configuring-the-bitrise-build-cache-for-gradle-in-the-bitrise-ci-environment">Next</a>
+                </li>
+              </ul>
+            </div>
+            <article class="topic content-container" id="content-wrapper">
+              <div id="topic-content" class="topic-content">
+                <div class="breadcrumb-container">
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-link">
+                      <a href="index-en.html">Bitrise Build Cache</a>
+                    </li>
+                    <li class="breadcrumb-node">Bitrise Build Cache for Gradle</li>
+                  </ul>
+                </div>
+                <section xml:lang="en" lang="en" dir="ltr" class="section taxonomy-actions-builds taxonomy-actions-caching taxonomy-related-links-taxonomies-android-rel taxonomy-related-links-taxonomies-builds-rel" data-origin-id="UUID-e4e0bc15-e1c7-bafe-adfc-f75afd59fc69" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461" data-permalink=
+                "remote-build-cache-for-gradle.html" data-topic-level="1" data-relative-prefix="" data-publication-date="" id="bitrise-build-cache-for-gradle">
+                  <div class="titlepage">
+                    <div>
+                      <div class="title">
+                        <h1 class="title" style="clear: both">Bitrise Build Cache for Gradle</h1>
+                      </div>
+                      <div>
+                        <div class="abstract">
+                          <div class="abstract-title">
+                            Abstract
+                          </div>
+                          <p>The Bitrise remote build cache allows you to utilize the Gradle build cache for both local and CI builds. The solution caches Gradle task outputs on a remote server. When you run a build, Gradle will not execute tasks whose output is available in the remote cache and download the cache entry instead.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr" class="tip">
+                    <h3 class="title">Try it for free</h3>
+                    <p>We offer a 30-day free trial at no cost; you don't even need to provide payment information. The trial starts automatically when you set up the Bitrise Build Cache.</p>
+                    <p><a class="link" href="https://app.bitrise.io/build-cache" target="_blank" rel="noopener">Click here to get started with the Bitrise Build Cache</a>. If you don't have a Bitrise account, you will be prompted to create one first before proceeding to set up the Build Cache.</p>
+                  </div>
+                  <p><a class="link" href="https://docs.gradle.org/current/userguide/build_cache.html" target="_blank" rel="noopener">The Gradle build cache</a> helps you save time by reusing outputs produced by other builds. The Bitrise Build Cache allows you to utilize it for CI builds both on Bitrise and other CI environments.</p>
+                  <p>Gradle builds are a series of tasks with inputs and outputs. Bitrise caches task outputs on a performant remote server. When you start a Gradle build, Gradle will skip executing tasks whose output is available in the remote cache and will instead download and reuse the cache entry.</p>
+                  <div dir="ltr" class="note">
+                    <h3 class="title">Dependency caching vs build caching</h3>
+                    <p>Build caching and dependency caching are separate concepts. The best practice is to use both to minimize build times. Read more: <a class="xref linktype-component linktextconsumer" href="/document/preview/80753#UUID-484ea897-2cd1-b6fc-fd72-2a57bc2649a6_section-idm4590506644486433627534208508" target="_blank">Android
+                    dependencies</a>.<span style="display:none !important;" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c2829302a" class="linktextprovider">Android dependencies</span></p>
+                  </div>
+                  <div dir="ltr" class="caution">
+                    <h3 class="title">Use key-based dependency caching</h3>
+                    <p>We recommend that you do not use the legacy dependency caching Steps in combination with remote build caching. Instead, combine build cache only with <a class="link linktype-component linktextconsumer" href="/document/preview/76866#UUID-7fb2b052-5d90-9cbc-eb02-2fa658fa70bd" target="_blank">key-based dependency caching</a>.
+                    This is to prevent unintended consequences that can happen when the legacy dependency cache carries build settings&nbsp;over between builds.<span style="display:none !important;" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c28295995" class="linktextprovider">Key-based caching</span></p>
+                  </div>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section taxonomy-actions-caching taxonomy-related-links-taxonomies-android-rel" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_UUID-68082ca3-8e0b-e336-6177-2299fd6f127b" data-publication-date="" id=
+                  "configuring-the-bitrise-build-cache-for-gradle-in-the-bitrise-ci-environment">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Configuring the Bitrise Build Cache for Gradle in the Bitrise CI environment</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>In the Bitrise CI environment, you only need our official <em class="glossterm">Step</em> to use the Bitrise Build Cache for your Gradle builds.</p>
+                    <p>If you want to use the Bitrise Build Cache in your local builds, you need to first activate it in our CI environment.</p>
+                    <p class="tabs is-active">Workflow Editor</p>
+                    <p class="tabs">bitrise.yml</p>
+                    <div class="procedure tab-content is-active" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm4556857254075233722780788694">
+                      <ol class="procedure tab-content is-active" type="1">
+                        <li class="step">
+                          <p>Log in to Bitrise and select <span class="guilabel">Bitrise CI</span> on the left, then select your project.</p>
+                        </li>
+                        <li class="step">
+                          <p>Click the <span class="guibutton">Workflows</span> button on the main page.</p>
+                        </li>
+                        <li class="step">
+                          <p>Add the <span class="bold"><strong>Build Cache for Gradle</strong></span> Step to your Workflow.</p>
+                          <p>The Step should be before any Step that executes Gradle tasks, such as <span class="bold"><strong>Gradle Runner</strong></span> or <span class="bold"><strong>Android Build</strong></span>.</p>
+                          <div class="mediaobject"><img src="image/uuid-1afefa9a-7cc1-db41-6186-0ee56293458c.png" style="" alt="activate-remote-cache-gradle.png" /></div>
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="procedure tab-content" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm33372280392266">
+                      <ul class="procedure tab-content">
+                        <li class="step">
+                          <p>Open the <code class="filename">bitrise.yml</code> file and add the <code class="code">activate-build-cache-for-gradle</code> Step to your Workflow.</p>
+                          <p>The Step should be before any Step that executes Gradle tasks, such as <code class="code">gradle-runner</code> or <code class="code">android-build</code>.</p>
+                          <pre class="programlisting yaml" data-language="yaml">your-workflow:
+  steps:
+    - git-clone@8: {}
+    - activate-build-cache-for-gradle:
+</pre>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_UUID-e4e01823-7bc2-ce6f-2397-6a8f375a32b2" data-publication-date="" id="configuring-the-bitrise-build-cache-for-gradle-in-non-bitrise-ci-environments">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Configuring the Bitrise Build Cache for Gradle in non-Bitrise CI environments</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>The Bitrise Build Cache does not require using the Bitrise CI. You can use other CI/CD services and still take advantage of the cache to improve your Gradle build times.</p>
+                    <p>To do so, you need to configure your CI environment to download the Bitrise Build Cache CLI during the build and then run the CLI to enable the Bitrise Build Cache.</p>
+                    <div class="procedure" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm33412393456790">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>Generate a Personal Access Token on Bitrise: <a class="xref linktype-component linktextconsumer" href="/document/preview/54560#UUID-c66f5d4e-d48d-6bf4-0b49-2c77a0763de0" target="_blank">Creating a personal access token</a>.<span id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c28297db2" class="linktextprovider"
+                          style="display:none !important;">Creating a personal access token</span></p>
+                          <p>Copy the value of the token, as you will need it during the process.</p>
+                        </li>
+                        <li class="step">
+                          <p><a class="link linktype-component linktextconsumer" href="/document/preview/84117#UUID-f859777c-17d2-bae8-a431-1ee931a2d7b0" target="_blank">Find your Workspace ID</a>: open the <span class="guilabel">Workspace settings</span> page and select <span class="guilabel">General settings</span> on the left navigation menu.
+                          You can find and copy the slug from there.<span id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c28298f0b" class="linktextprovider" style="display:none !important;">Identifying Workspaces and projects with their slugs</span></p>
+                        </li>
+                        <li class="step">
+                          <p>Set the following Environment Variables in your CI configuration:</p>
+                          <div class="itemizedlist">
+                            <ul class="itemizedlist" style="list-style-type: disc;">
+                              <li class="listitem">
+                                <p><code class="envar">BITRISE_BUILD_CACHE_AUTH_TOKEN</code>: The value should be your Personal Access Token.</p>
+                              </li>
+                              <li class="listitem">
+                                <p><code class="envar">BITRISE_BUILD_CACHE_WORKSPACE_ID</code>: The value should be the Bitrise Workspace slug.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="step">
+                          <p>Add the following script to your CI configuration before the step you want to speed up:</p>
+                          <div dir="ltr" class="important">
+                            <h3 class="title">Environment</h3>
+                            <p>Make sure to run the script in the same environment as the Gradle command(s) you want to speed up. For example, if you use multiple Docker containers throughout the build, make sure that the Bitrise Build Cache CLI runs in the same Docker container as the Gradle command.</p>
+                          </div>
+                          <pre class="programlisting">#!/usr/bin/env bash
+set -euxo pipefail
+
+# download Bitrise Build Cache CLI
+curl -sSfL 'https://raw.githubusercontent.com/bitrise-io/bitrise-build-cache-cli/main/install/installer.sh' | sh -s -- -b /tmp/bin -d
+
+# run the CLI to enable Bitrise build cache for Gradle
+/tmp/bin/bitrise-build-cache enable-for gradle</pre>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_UUID-9b4b9c9a-5714-81d2-ec67-4ed85cd376d5" data-publication-date="" id="gradle-execution-reason-diagnostic-builds">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Gradle execution reason diagnostic builds</h2>
+                        </div>
+                        <div>
+                          <div class="abstract">
+                            <div class="abstract-title">
+                              Abstract
+                            </div>
+                            <p>You can run Gradle diagnostic builds on Bitrise to find out the reasons behind Gradle task execution events. This helps reducing cache misses for remote caching.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mediaobject">
+                      <div class="video-container">
+                        <div class="videoobject">
+                          <iframe title="" style="border:0;" allow="fullscreen *" src="https://www.youtube.com/embed/hEVGJfTOlR4"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Cache hit ratio is&nbsp;a measurement of how many content requests a cache is able to fill successfully, compared to how many requests it receives. Getting a high amount of cache misses slows down your build as it doesn't take full advantage of caching.</p>
+                    <p>When running Gradle tasks, a change in task inputs usually lead to a cache miss. Gradle's execution reasons can help understand why the change in inputs happened, and to debug the problem.</p>
+                    <p>You can keep on reading to understand the details of how Gradle tasks and their caching works.</p>
+                    <p>To learn how to set up diagnostic builds on Bitrise, skip ahead to <a class="xref linktype-component" href="remote-build-cache-for-gradle.html#diagnostic-builds" title="Diagnostic builds"><span class="xreftitle">Diagnostic builds</span></a>.</p>
+                    <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_UUID-2daac4f0-f5e8-405d-c5f7-52b518f77373" data-publication-date="" id="gradle-tasks-and-caching">
+                      <div class="titlepage">
+                        <div>
+                          <div class="title">
+                            <h3 class="title">Gradle tasks and caching</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <p>In the Gradle build system, the basic unit of action is a task. A task could be compiling classes, running unit tests, or creating a JAR. Each task has its own inputs, such as files or environmental variables, and outputs.</p>
+                      <p>Tasks usually generate their output in a specific build directory which is configurable for each module. The contents of this directory can be often reused between builds on the same machine. As such, Gradle saves time by executing only the tasks that can't be reused. For other tasks, the output from the build directory is
+                      reused and the task gets the <code class="code">UP-TO-DATE</code> label. This process is what Gradle calls an <a class="link" href="https://docs.gradle.org/current/userguide/incremental_build.html" target="_blank" rel="noopener">incremental build</a>.</p>
+                      <div dir="ltr" class="note">
+                        <h3 class="title">Incremental build vs incremental task execution</h3>
+                        <p>Incremental builds are not the same as incremental task execution! You can read about incremental tasks <a class="link" href="https://docs.gradle.org/current/userguide/custom_tasks.html#incremental_tasks" target="_blank" rel="noopener">in Gradle's official docs</a>.</p>
+                      </div>
+                      <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm4542133398508834208108881707" data-publication-date="" id="gradle-tasks-in-a-ci-environment">
+                        <div class="titlepage">
+                          <div>
+                            <div class="title">
+                              <h4 class="title">Gradle tasks in a CI environment</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <p>When running Gradle in a CI environment, all tasks are either executed or retrieved from cache because the build directory is empty. After execution, Gradle saves metadata about the task inputs in the <a class="link" href="https://docs.gradle.org/current/userguide/directory_layout.html" target="_blank" rel=
+                        "noopener">project cache directory</a>. Gradle uses this metadata to be able to perfom incremental builds.</p>
+                        <p>For example, in the case of a compile task, Gradle saves the checksum of the source files and only re-compiles files that have changed, based on the checksums. For more information on how Gradle checks task inputs, <a class="link" href=
+                        "https://docs.gradle.org/current/userguide/incremental_build.html#sec:task_inputs_outputs" target="_blank" rel="noopener">read Gradle’s docs on task inputs and outputs.</a></p>
+                        <p>If metadata is not available, Gradle will execute all tasks.</p>
+                      </section>
+                      <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm4600715529120034208116697979" data-publication-date="" id="caching-tasks">
+                        <div class="titlepage">
+                          <div>
+                            <div class="title">
+                              <h4 class="title">Caching tasks</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <p>If the metadata indicates that a task has to be executed, and the Bitrise build cache is enabled, the task inputs and certain Gradle properties such as the version are hashed into the cache key. If either the remote or local cache has a match for the cache key, the task does not have to be fully executed: its execution
+                        result is loaded from the cache and gets the <code class="code">FROM-CACHE</code> outcome label.</p>
+                        <p>If there is no match for the cache key in the remote or local cache (a cache miss), the task is fully executed and its outputs are stored in the cache.</p>
+                        <p>When a task doesn't have the <code class="code">UP-TO-DATE</code> label, the reasons for this are recorded and displayed in the task's row in the invocation details on Bitrise. Some of the possible reasons are as follows:</p>
+                        <div class="itemizedlist">
+                          <ul class="itemizedlist" style="list-style-type: disc;">
+                            <li class="listitem">
+                              <p>If the metadata is missing, <span class="guilabel">No history available</span> is displayed.</p>
+                            </li>
+                            <li class="listitem">
+                              <p>If the outputs are missing, <span class="guilabel">Output... has been removed</span> is displayed.</p>
+                            </li>
+                            <li class="listitem">
+                              <p>Tasks without the <code class="code">UP-DO-DATE</code> label can still be cached if their inputs were cached at least once previously.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
+                    </section>
+                    <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_UUID-bae4be67-215c-daa2-07e9-055a1ec60f34" data-publication-date="" id="diagnostic-builds">
+                      <div class="titlepage">
+                        <div>
+                          <div class="title">
+                            <h3 class="title">Diagnostic builds</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <p>To understand what changes contribute to a task’s execution, you’ll need the Gradle metadata and the build outputs from a previous build. Restoring them on a CI environment simulates a local incremental build, showing the changes between builds that contribute to cache misses.</p>
+                      <p>These builds are called diagnostic builds on Bitrise.</p>
+                      <div dir="ltr" class="important">
+                        <h3 class="title">Debugging purposes only</h3>
+                        <p>Diagnostic builds heavily use <a class="link linktype-component linktextconsumer" href="/document/preview/76866#UUID-7fb2b052-5d90-9cbc-eb02-2fa658fa70bd" target="_blank">key-based caching</a> and have increased build time. Their purpose is debugging and they shouldn't be a part of your daily workflows!<span style=
+                        "display:none !important;" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c2829a0ef" class="linktextprovider">Key-based caching</span></p>
+                        <p>The archive limit for key-based cache is 15 Gb. If your app’s outputs exceed that, you can run two separate builds with the same principle, using your own artifact storage solution.</p>
+                      </div>
+                      <p>To set up and run a Gradle diagnostic build:</p>
+                      <div class="orderedlist">
+                        <ol class="orderedlist" type="1">
+                          <li class="listitem">
+                            <p>Create a CI configuration that:</p>
+                            <div class="itemizedlist">
+                              <ul class="itemizedlist" style="list-style-type: disc;">
+                                <li class="listitem">
+                                  <p>Saves the build outputs and Gradle metadata with the Bitrise Build Cache CLI.</p>
+                                </li>
+                                <li class="listitem">
+                                  <p>Restores the build outputs and metadata from cache.</p>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="listitem">
+                            <p>Run an initial build to save the necessary directories in the key-based cache.</p>
+                          </li>
+                          <li class="listitem">
+                            <p>Run the diagnostic build to reveal Gradle execution reasons.</p>
+                          </li>
+                        </ol>
+                      </div>
+                      <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm4574404408601634208193694222" data-publication-date="" id="creating-the-ci-configuration-for-a-diagnostic-build">
+                        <div class="titlepage">
+                          <div>
+                            <div class="title">
+                              <h4 class="title">Creating the CI configuration for a diagnostic build</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <p>To create a CI configuration for a Gradle diagnostic build, your Bitrise Workflow will need two new Steps to save and restore build outputs, using the Bitrise Build Cache CLI.</p>
+                        <div dir="ltr" class="note">
+                          <h3 class="title">Do not use key-based caching Steps</h3>
+                          <p>Diagnostic builds use key-based caching but for this purpose, do not use our dedicated key-based caching Steps. Set up <span class="bold"><strong>Script</strong></span> Steps as they are described in this guide.</p>
+                        </div>
+                        <p class="tabs is-active">Workflow Editor</p>
+                        <p class="tabs">bitrise.yml</p>
+                        <div class="procedure tab-content is-active" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm4542711318590434208218079352">
+                          <ol class="procedure tab-content is-active" type="1">
+                            <li class="step">
+                              <p>Create a new Workflow for the diagnostic build.</p>
+                              <p>If you store your <code class="filename">bitrise.yml</code> file <a class="link linktype-component linktextconsumer" href="/document/preview/53298#UUID-f18689c6-db62-6c36-6c27-5e43b8617b57" target="_blank">in your repository</a>, we recommend creating a new branch, too, and run the diagnostic build from that
+                              branch.<span id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c2829b267" class="linktextprovider" style="display:none !important;">Storing the bitrise.yml file in your repository</span></p>
+                            </li>
+                            <li class="step">
+                              <p>Add the <span class="bold"><strong>Build Cache for Gradle</strong></span> Step to the Workflow.</p>
+                            </li>
+                            <li class="step">
+                              <p>After the Step that runs your Gradle tasks (for example, <span class="bold"><strong>Android Build</strong></span>), add a <span class="bold"><strong>Script</strong></span> Step.</p>
+                              <div dir="ltr" class="important">
+                                <h3 class="title">Environment</h3>
+                                <p>Make sure to run the script in the same environment as the Gradle command(s) you want to speed up. For example, if you use multiple Docker containers throughout the build, make sure that the Bitrise Build Cache CLI runs in the same Docker container as the Gradle command.</p>
+                              </div>
+                            </li>
+                            <li class="step">
+                              <p>To the <span class="guilabel">Script content</span> input, add the following:</p>
+                              <pre class="programlisting">/tmp/bin/bitrise-build-cache save-gradle-output-data</pre>
+                              <p>This saves the Gradle metadata directory and the build outputs to the key-based cache under a cache key unique for your Workspace, app, and Workflow.</p>
+                            </li>
+                            <li class="step">
+                              <p>Before the Step that runs your Gradle tasks, add another <span class="bold"><strong>Script</strong></span> Step.</p>
+                            </li>
+                            <li class="step">
+                              <p>To the <span class="guilabel">Script content</span> input, add the following:</p>
+                              <pre class="programlisting">/tmp/bin/bitrise-build-cache restore-gradle-output-data</pre>
+                              <p>This Step accesses the cache and restores your Gradle build data.</p>
+                            </li>
+                          </ol>
+                        </div>
+                        <div class="procedure tab-content" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm33421894684968">
+                          <ol class="procedure tab-content" type="1">
+                            <li class="step">
+                              <p>Create a new Workflow for the diagnostic build.</p>
+                              <p>If you store your <code class="filename">bitrise.yml</code> file <a class="link linktype-component linktextconsumer" href="/document/preview/53298#UUID-f18689c6-db62-6c36-6c27-5e43b8617b57" target="_blank">in your repository</a>, we recommend creating a new branch, too, and run the diagnostic build from that
+                              branch.<span id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c2829d91a" class="linktextprovider" style="display:none !important;">Storing the bitrise.yml file in your repository</span></p>
+                            </li>
+                            <li class="step">
+                              <p>Add the <code class="code">activate-build-cache-for-gradle</code> Step to your Workflow.</p>
+                            </li>
+                            <li class="step">
+                              <p>After the Step that runs your Gradle tasks (for example, <code class="code">android-build</code>), add a <code class="code">script</code> Step.</p>
+                              <div dir="ltr" class="important">
+                                <h3 class="title">Environment</h3>
+                                <p>Make sure to run the script in the same environment as the Gradle command(s) you want to speed up. For example, if you use multiple Docker containers throughout the build, make sure that the Bitrise Build Cache CLI runs in the same Docker container as the Gradle command.</p>
+                              </div>
+                            </li>
+                            <li class="step">
+                              <p>To the <code class="code">content</code> input, add:</p>
+                              <pre class="programlisting">- script:
+  inputs:
+  - content: |-
+      /tmp/bin/bitrise-build-cache save-gradle-output-data</pre>
+                              <p>This saves the Gradle metadata directory and the build outputs to the key-based cache under a cache key unique for your Workspace, app, and Workflow.</p>
+                            </li>
+                            <li class="step">
+                              <p>Before the Step that runs your Gradle tasks, add another <code class="code">script</code> Step.</p>
+                            </li>
+                            <li class="step">
+                              <p>To the <code class="code">content</code> input, add <code class="code">/tmp/bin/bitrise-build-cache restore-gradle-output-data</code>:</p>
+                              <pre class="programlisting">- script:
+  inputs:
+  - content: |-
+      /tmp/bin/bitrise-build-cache restore-gradle-output-data</pre>
+                              <p>This Step accesses the cache and restores your Gradle build data.</p>
+                            </li>
+                          </ol>
+                          <div class="result">
+                            <p>Your configuration should look something like this:</p>
+                            <pre class="programlisting">- activate-build-cache-for-gradle:
+- script:
+  inputs:
+  - content: |-
+      /tmp/bin/bitrise-build-cache restore-gradle-output-data
+- gradle-runner:
+  inputs:
+  - gradle_options: "--stacktrace --stacktrace"
+  - gradlew_path: "./gradlew"
+  - gradle_task: assembleDebug
+- script:
+  inputs:
+  - content: |-
+      /tmp/bin/bitrise-build-cache save-gradle-output-data</pre>
+                          </div>
+                        </div>
+                      </section>
+                      <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm4555859863406434208246126579" data-publication-date="" id="saving-the-directories-in-the-key-based-cache">
+                        <div class="titlepage">
+                          <div>
+                            <div class="title">
+                              <h4 class="title">Saving the directories in the key-based cache</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <p>When setting up a Gradle diagnostic build for the first time, you need to run an initial build with the <a class="link" href="remote-build-cache-for-gradle.html#creating-the-ci-configuration-for-a-diagnostic-build" title="Creating the CI configuration for a diagnostic build">created configuration</a> to save the
+                        necessary directories in the key-based cache. This initial build will not show any execution reason in the invocation details.</p>
+                        <div class="procedure" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm4555860801809634208250054255">
+                          <ol class="procedure" type="1">
+                            <li class="step">
+                              <p>Once the CI configuration is complete, run a build.</p>
+                            </li>
+                            <li class="step">
+                              <p>Check the logs to make sure the uploads have been successfully completed.</p>
+                              <div class="mediaobject"><img src="image/uuid-223b519e-cddd-6157-de92-bfdf36d7ba2d.png" style="" alt="upload-complete.png" /></div>
+                            </li>
+                          </ol>
+                        </div>
+                      </section>
+                      <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm4575995633979234208254778011" data-publication-date="" id="running-and-checking-a-diagnostic-build">
+                        <div class="titlepage">
+                          <div>
+                            <div class="title">
+                              <h4 class="title">Running and checking a diagnostic build</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <p>After the <a class="link" href="remote-build-cache-for-gradle.html#creating-the-ci-configuration-for-a-diagnostic-build" title="Creating the CI configuration for a diagnostic build">CI configuration is complete</a> and <a class="link" href="remote-build-cache-for-gradle.html#saving-the-directories-in-the-key-based-cache"
+                        title="Saving the directories in the key-based cache">an initial build has successfully uploaded</a> the necessary directories to the key-based cache, you can run a diagnostic build to reveal execution reasons for Gradle tasks. Make sure you use the same Workflow and branch as the initial build</p>
+                        <p>With a diagnostic build, Gradle will behave as if it was an incremental local build.</p>
+                        <div class="procedure" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm4542711219899234208265180654">
+                          <ol class="procedure" type="1">
+                            <li class="step">
+                              <p>Run the build.</p>
+                            </li>
+                            <li class="step">
+                              <p>Open <a class="link" href="https://app.bitrise.io/build-cache/" target="_blank" rel="noopener">the Build Cache page</a>.</p>
+                            </li>
+                            <li class="step">
+                              <p>Among the <span class="guilabel">Latest invocations</span>, find the tasks you need. A blue icon will show you the tasks that contain task execution reasons:</p>
+                              <div class="mediaobject"><img src="image/uuid-f63b2a01-2f9d-fb91-dc1d-a94aa4d3e386.png" style="" alt="invocations-significant.png" /></div>
+                              <p>You will see changes related to your CI configuration that frequently cause cache task input changes and cache misses.</p>
+                              <div class="mediaobject"><img src="image/uuid-60ec20cb-92a4-2e4d-c084-55988b170c60.png" style="" alt="task-reason.png" /></div>
+                            </li>
+                          </ol>
+                        </div>
+                        <p>To successfully interpret and debug these reasons, you can check out the <a class="link" href="https://docs.gradle.org/current/userguide/build_cache_debugging.html" target="_blank" rel="noopener">relevant Gradle documentation</a> or delve into our <a class="link" href=
+                        "https://discuss.bitrise.io/t/debugging-and-optimizing-bitrise-build-cache-for-gradle/23275" target="_blank" rel="noopener">debugging tips</a>.</p>
+                      </section>
+                    </section>
+                  </section>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_UUID-1fcfb188-b44f-a1f9-d82a-6f90a05e3891" data-publication-date="" id="gradle-configuration-cache">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Gradle configuration cache</h2>
+                        </div>
+                        <div>
+                          <div class="abstract">
+                            <div class="abstract-title">
+                              Abstract
+                            </div>
+                            <p>Gradle configuration cache reduces build times by caching the result of a Gradle project's configuration phase and reusing it in subsequent builds. For details, read <a class="link" href="https://docs.gradle.org/current/userguide/configuration_cache.html" target="_blank" rel="noopener">Gradle's official
+                            documentation</a>. The Bitrise Build Cache supports this feature for Gradle 8.6 and later versions.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Gradle configuration cache reduces build times by caching the result of a Gradle project's configuration phase and reusing it in subsequent builds. For details, read <a class="link" href="https://docs.gradle.org/current/userguide/configuration_cache.html" target="_blank" rel="noopener">Gradle's official documentation</a>.
+                    The <a class="link" href="https://bitrise.io/platform/devops/build-caching" target="_blank" rel="noopener">Bitrise Build Cache</a> supports this feature for Gradle 8.6 and later versions.</p>
+                    <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm234606138558015" data-publication-date="" id="setting-up-the-configuration-cache">
+                      <div class="titlepage">
+                        <div>
+                          <div class="title">
+                            <h3 class="title">Setting up the configuration cache</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <p>To set up the configuration cache:</p>
+                      <div class="procedure" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm234606063932673">
+                        <ol class="procedure" type="1">
+                          <li class="step">
+                            <p>Make sure you have a subscription or a trial for the <a class="link" href="https://bitrise.io/platform/devops/build-caching" target="_blank" rel="noopener">Bitrise Build Cache</a>.</p>
+                          </li>
+                          <li class="step">
+                            <p>Run a build locally with the <code class="code">--configuration-cache</code> flag.</p>
+                            <p>This ensures that your Gradle project supports configuration caching. To enable configuration caching in the Gradle settings, <a class="link" href="https://docs.gradle.org/current/userguide/configuration_cache.html#config_cache:usage:enable" target="_blank" rel="noopener">refer to Gradle's official guide</a>.</p>
+                          </li>
+                          <li class="step">
+                            <p>Generate a Bitrise <a class="link linktype-component linktextconsumer" href="/document/preview/54560#UUID-c66f5d4e-d48d-6bf4-0b49-2c77a0763de0" target="_blank">personal access token</a> and add it as a <a class="link linktype-component linktextconsumer" href=
+                            "/document/preview/53200#UUID-e6946697-1571-f957-a619-8973cd5cf399" target="_blank">Secret</a> with the <code class="envar">BITRISE_BUILD_CACHE_AUTH_TOKEN</code> key.<span id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c2829eb10" class="linktextprovider" style="display:none !important;">Creating a personal access
+                            token</span><span id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c2829fc1c" class="linktextprovider" style="display:none !important;">Secrets</span></p>
+                            <div dir="ltr" class="note">
+                              <h3 class="title">Token consistency</h3>
+                              <p>For the configuration cache to function correctly, the authentication token used by the Gradle plugins must remain consistent across builds.</p>
+                            </div>
+                          </li>
+                          <li class="step">
+                            <p>Generate a Gradle encryption key:</p>
+                            <pre class="programlisting">openssl rand -base64 16</pre>
+                          </li>
+                          <li class="step">
+                            <p>Save the key as a <a class="link linktype-component linktextconsumer" href="/document/preview/53200#UUID-e6946697-1571-f957-a619-8973cd5cf399" target="_blank">Secret</a> named <code class="envar">GRADLE_ENCRYPTION_KEY</code> in your Bitrise project.<span id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c282a2016"
+                            class="linktextprovider" style="display:none !important;">Secrets</span></p>
+                            <p>This ensures that the encrypted value of the configuration cache remains the same across different builds. Using a fixed encryption key is supported from Gradle version 8.6 or later. Bitrise doesn't support Gradle configuration cache for earlier Gradle versions.</p>
+                          </li>
+                          <li class="step">
+                            <p>Set your Bitrise <a class="link linktype-component linktextconsumer" href="/document/preview/84117#UUID-f859777c-17d2-bae8-a431-1ee931a2d7b0" target="_blank">workspace slug</a> as an Environment Variable named <code class="envar">BITRISE_BUILD_CACHE_WORKSPACE_ID</code>.<span id=
+                            "UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c282a30df" class="linktextprovider" style="display:none !important;">Identifying Workspaces and projects with their slugs</span></p>
+                          </li>
+                          <li class="step">
+                            <p>Add the <span class="bold"><strong>Build Cache for Gradle</strong></span> Step to your Workflow.</p>
+                            <p>The Step must be of version 2.7.7 or later. Any subsequent updates to the Step will cause a one-off invalidation of the configuration cache. If this happens, do a rebuild to fix the issue.</p>
+                          </li>
+                          <li class="step">
+                            <p>Add the <span class="bold"><strong>Restore Gradle configuration cache</strong></span> and the <span class="bold"><strong>Restore Gradle Cache</strong></span> Steps before your Gradle invocation in the Workflow.</p>
+                            <p>The Steps retrieve cached configuration data and enable the configuration cache to access artifacts it references.</p>
+                            <div dir="ltr" class="note">
+                              <h3 class="title">Configuration cache directory</h3>
+                              <p>The <span class="bold"><strong>Restore Gradle configuration cache</strong></span> Step saves data in the <code class="filename">./.gradle/configuration-cache</code> directory. You can override this by changing the <span class="guilabel">Configuration cache directory</span> input.</p>
+                            </div>
+                            <p>For example, if you use <span class="bold"><strong>Android Build</strong></span> to build your Gradle project, these two Steps must come before it in the Workflow.</p>
+                          </li>
+                          <li class="step">
+                            <p>Add the <span class="bold"><strong>Save Gradle configuration cache</strong></span> and the <span class="bold"><strong>Save Gradle Cache</strong></span> Steps after your Gradle invocation in the Workflow.</p>
+                            <p>The Steps save the configuration data to the cache and save artifacts referenced by the configuration cache.</p>
+                          </li>
+                          <li class="step">
+                            <p>Enable the <span class="guilabel">Save transforms</span> input of the <span class="bold"><strong>Save Gradle Cache</strong></span> Step. You need Step version 1.4.1 or later.</p>
+                          </li>
+                        </ol>
+                      </div>
+                    </section>
+                    <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm23460613639422" data-publication-date="" id="saving-the-gradle-configuration-cache-log">
+                      <div class="titlepage">
+                        <div>
+                          <div class="title">
+                            <h3 class="title">Saving the Gradle configuration cache log</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <p>Gradle's build logs might contain information about why it didn't reuse the configuration cache. You can save the log to the <span class="guilabel">Artifacts</span> page of your build:</p>
+                      <div class="procedure" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm234606137091261">
+                        <ol class="procedure" type="1">
+                          <li class="step">
+                            <p>Enable the <code class="code">--info</code> <a class="link" href="https://docs.gradle.org/current/userguide/logging.html" target="_blank" rel="noopener">log level</a> in Gradle.</p>
+                          </li>
+                          <li class="step">
+                            <p>Add the <span class="bold"><strong>Deploy to Bitrise.io</strong></span> Step to your Workflow.</p>
+                          </li>
+                          <li class="step">
+                            <p>Set the <span class="guilabel">Deploy directory or file path</span> input to what Gradle outputs as the file path.</p>
+                          </li>
+                        </ol>
+                      </div>
+                      <p>You can check the deployed file on the <span class="guilabel">Artifacts</span> page: open Bitrise CI, select your project and then the build, and select the <span class="guilabel">Artifacts</span> tab.</p>
+                    </section>
+                    <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm234626202154768" data-publication-date="" id="troubleshooting-the-configuration-cache">
+                      <div class="titlepage">
+                        <div>
+                          <div class="title">
+                            <h3 class="title">Troubleshooting the configuration cache</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <p>If your build doesn't reuse the configuration cache, you can check a number of potential problems.</p>
+                      <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm234626528548103" data-publication-date="" id="general-troubleshooting">
+                        <div class="titlepage">
+                          <div>
+                            <div class="title">
+                              <h4 class="title">General troubleshooting</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="itemizedlist">
+                          <ul class="itemizedlist" style="list-style-type: disc;">
+                            <li class="listitem">
+                              <p>Make sure to add the Save/Restore Gradle cache Steps to utilize dependency caching. Gradle configuration cache references artifacts that must be present.</p>
+                            </li>
+                            <li class="listitem">
+                              <p>It may take multiple runs before the configuration cache is fully applied and reused.</p>
+                            </li>
+                            <li class="listitem">
+                              <p>Check the Gradle logs to find out why Gradle didn't reuse the configuration cache. You can <a class="link" href="remote-build-cache-for-gradle.html#saving-the-gradle-configuration-cache-log" title="Saving the Gradle configuration cache log">save the gradle configuration cache log</a> to your build artifacts.</p>
+                            </li>
+                            <li class="listitem">
+                              <p>Updates to the <span class="bold"><strong>Build Cache for Gradle</strong></span> Step will cause a one-off invalidation of the configuration cache. Just run another build to fix the problem.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
+                      <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm234626524197698" data-publication-date="" id="failed-to-instrument-class-error">
+                        <div class="titlepage">
+                          <div>
+                            <div class="title">
+                              <h4 class="title">Failed to instrument class error</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <p>Your build could fail with the following error:</p>
+                        <pre class="programlisting">org.gradle.internal.operations.BuildOperationInvocationException: Failed to instrument class io/bitrise/gradle/cache/BitriseBuildCache in ClassLoaderScopeIdentifier.Id{coreAndPlugins:init-file:/root/.gradle/init.d/bitrise-build-cache.init.gradle.kts(export)}</pre>
+                        <p>To fix this issue:</p>
+                        <div class="procedure" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm234626525053213">
+                          <ol class="procedure" type="1">
+                            <li class="step">
+                              <p>In the <span class="bold"><strong>Save Gradle cache</strong></span> Step, set the <span class="guilabel">Save transforms</span> input to <span class="guimenuitem">true</span>.</p>
+                              <div dir="ltr" class="note">
+                                <h3 class="title">Version requirement</h3>
+                                <p>The input is only available from version 1.4.1 or later.</p>
+                              </div>
+                            </li>
+                            <li class="step">
+                              <p>Force a save by running a build without the <span class="bold"><strong>Restore Gradle cache</strong></span> Step.</p>
+                            </li>
+                          </ol>
+                        </div>
+                      </section>
+                    </section>
+                  </section>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_UUID-bda8a3cd-d0a3-55e9-389f-c705d8786170" data-publication-date="" id="gradle-dependency-verification">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Gradle dependency verification</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Gradle dependency verification requires every plugin and dependency be listed in the Gradle project's verification metadata XML file. If any plugins or dependencies aren't listed, Gradle will exit with an error listing the relevant plugins and dependencies.</p>
+                    <p>The Bitrise Build Cache uses two custom Gradle plugins:</p>
+                    <div class="itemizedlist">
+                      <ul class="itemizedlist" style="list-style-type: disc;">
+                        <li class="listitem">
+                          <p>The Bitrise Build Cache Gradle plugin implements Gradle's build cache interface.</p>
+                        </li>
+                        <li class="listitem">
+                          <p>The Bitrise Gradle Analytics Gradle plugin implements a build event listener.</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <p>The <span class="bold"><strong>Build Cache for Gradle</strong></span> Step generates the necessary Gradle <code class="filename">.init</code> file which specifies these two plugins and the necessary initialization configuration. When this file exists in Gradle's <code class="filename">.init.d</code> directory, Gradle will
+                    automatically use the specified configuration. This conflicts with the dependency verification feature, as these plugins aren't listed in the metadata XML file.</p>
+                    <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm234765203573231" data-publication-date="" id="configuring-the-build-cache-with-dependency-verification">
+                      <div class="titlepage">
+                        <div>
+                          <div class="title">
+                            <h3 class="title">Configuring the Build Cache with dependency verification</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <p>To be able to use the Bitrise Build Cache for Gradle with dependency verification, you need to:</p>
+                      <div class="itemizedlist">
+                        <ul class="itemizedlist" style="list-style-type: disc;">
+                          <li class="listitem">
+                            <p>List the Bitrise plugins and their dependencies in the project's <code class="filename">verification-metadata.xml</code> file.</p>
+                          </li>
+                          <li class="listitem">
+                            <p>Lock the <span class="bold"><strong>Build Cache for Gradle</strong></span> Step to the latest patch version. Locking the Step to a specific version prevents automatic updates so the builds will always use the same version of the Step. For more information, check out <a class="xref linktype-component linktextconsumer"
+                            href="/document/preview/65158#UUID-35278d7e-e471-0683-c386-786d7386fda7" target="_blank">Using a specific Step version</a>.<span id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c282a46b8" class="linktextprovider" style="display:none !important;">Using a specific Step version</span></p>
+                          </li>
+                        </ul>
+                      </div>
+                      <p>To do so:</p>
+                      <div class="procedure" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm234766837264461">
+                        <ol class="procedure" type="1">
+                          <li class="step">
+                            <p>Open the <a class="link" href="https://bitrise-io.github.io/bitrise-build-cache-cli/dependency-matrix" target="_blank" rel="noopener">dependency matrix</a> and look up the latest version of the <span class="bold"><strong>Build Cache for Gradle</strong></span> Step.</p>
+                          </li>
+                          <li class="step">
+                            <p>In the <a class="link linktype-component linktextconsumer" href="/document/preview/90159#UUID-6d0dff54-f46c-da4e-5fcc-082d3f1e5bf9" target="_blank">configuration YAML</a> file of your project, lock the Step to the latest patch version:<span id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_N67e5c282a6e69" class=
+                            "linktextprovider" style="display:none !important;">Configuration YAML</span></p>
+                            <div dir="ltr" class="important">
+                              <h3 class="title">Updating the metadata</h3>
+                              <p>Every time you change the locked version of the Step, you need to update the <code class="filename">verification-metada.xml</code> file!</p>
+                            </div>
+                            <pre class="programlisting">- activate-build-cache-for-gradle@2.7.14:
+    inputs:
+    - verbose: 'true'</pre>
+                          </li>
+                          <li class="step">
+                            <p>Go back to the <a class="link" href="https://bitrise-io.github.io/bitrise-build-cache-cli/dependency-matrix" target="_blank" rel="noopener">dependency matrix</a> and find the CLI version corresponding to the Step version you locked in.</p>
+                          </li>
+                          <li class="step">
+                            <p>Click the link on the CLI version number to go to the CLI release page.</p>
+                          </li>
+                          <li class="step">
+                            <p>Find the <code class="filename">verification-metadata.xml</code> file and download it.</p>
+                          </li>
+                          <li class="step">
+                            <p>Add the content of the <span class="bold"><strong>components</strong></span> element from the downloaded file to your <code class="filename">$PROJECT_ROOT/gradle/verification-metadata.xml</code> file.</p>
+                            <div dir="ltr" class="note">
+                              <h3 class="title">Note</h3>
+                              <p>We've collected the dependencies for the plugins with a simple Gradle project and a specific project platform runtime version. In your setup, Gradle might pull slightly different dependencies. In that case, you need to generate the dependency metadata yourself: <a class="xref" href=
+                              "remote-build-cache-for-gradle.html#generating-and-updating-the-verification-metadata" title="Generating and updating the verification metadata"><span class="xreftitle">Generating and updating the verification metadata</span></a>.</p>
+                            </div>
+                          </li>
+                          <li class="step">
+                            <p>Review and commit your changes.</p>
+                          </li>
+                        </ol>
+                      </div>
+                    </section>
+                    <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_section-idm234766857802346" data-publication-date="" id="generating-and-updating-the-verification-metadata">
+                      <div class="titlepage">
+                        <div>
+                          <div class="title">
+                            <h3 class="title">Generating and updating the verification metadata</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <p>You might need to generate the dependency metadata yourself if:</p>
+                      <div class="itemizedlist">
+                        <ul class="itemizedlist" style="list-style-type: disc;">
+                          <li class="listitem">
+                            <p>You update the <span class="bold"><strong>Build Cache for Gradle</strong></span> Step to a new version.</p>
+                          </li>
+                          <li class="listitem">
+                            <p>The collected metadata in the metadata XML file differs from what Gradle expects in your environment.</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="procedure" id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461_procedure-idm234766864843484">
+                        <ol class="procedure" type="1">
+                          <li class="step">
+                            <p>Lock the <span class="bold"><strong>Build Cache for Gradle</strong></span> Step to the latest version in your configuration YAML file.</p>
+                          </li>
+                          <li class="step">
+                            <p>Open the <a class="link" href="https://bitrise-io.github.io/bitrise-build-cache-cli/dependency-matrix" target="_blank" rel="noopener">dependency matrix</a> and find the CLI version corresponding to the Step version you locked in.</p>
+                            <p>On your development machine or on Bitrise in a separate (non-production) Workflow, install that version of the CLI: replace <code class="code">CLIVERSION</code> in the below curl command with the version you want to install, for example, <code class="code">v0.15.9</code>.</p>
+                            <pre class="programlisting">curl --retry 5 -sSfL 'https://raw.githubusercontent.com/bitrise-io/bitrise-build-cache-cli/main/install/installer.sh' | sh -s -- -b /tmp/bin -d "CLIVERSION"</pre>
+                          </li>
+                          <li class="step">
+                            <p>Back up <code class="filename">$HOME/.gradle/init.d/bitrise-build-cache.init.gradle.kts</code> as the next step in the process will overwrite it.</p>
+                          </li>
+                          <li class="step">
+                            <p>Run the Bitrise CLI's <code class="code">gradle-verification add-reference-deps</code> command:</p>
+                            <pre class="programlisting">/tmp/bin/bitrise-build-cache gradle-verification add-reference-deps</pre>
+                          </li>
+                          <li class="step">
+                            <p>In your Gradle project folder, write the verification metadata. For example:</p>
+                            <pre class="programlisting">./gradlew tasks --write-verification-metadata sha256</pre>
+                          </li>
+                          <li class="step">
+                            <p>Review the metadata differences and then commit and migrate your changes to your production Workflow.</p>
+                          </li>
+                          <li class="step">
+                            <p>If you backed up <code class="filename">$HOME/.gradle/init.d/bitrise-build-cache.init.gradle.kts</code>, you can revert the changes.</p>
+                          </li>
+                        </ol>
+                      </div>
+                    </section>
+                  </section>
+                </section>
+                <div class="footer-content">
+                  <div class="section-toc section-toc-after">
+                    <div class="section-toc-title">
+                      In this section<span class="section-toc-title-delimiter">:</span>
+                    </div>
+                  </div>
+                  <div class="glossary-definitions">
+                    <em class="glossterm">Step</em><em class="glossterm">Workspace</em>
+                  </div>
+                </div>
+                <footer></footer>
+              </div>
+            </article>
+            <aside class="section-nav-container">
+              <ul class="section-nav nav">
+                <li>
+                  <a href="#bitrise-build-cache-for-gradle">Bitrise Build Cache for Gradle</a>
+                </li>
+                <li>
+                  <a href="#configuring-the-bitrise-build-cache-for-gradle-in-the-bitrise-ci-environment">Configuring the Bitrise Build Cache for Gradle in the Bitrise CI environment</a>
+                </li>
+                <li>
+                  <a href="#configuring-the-bitrise-build-cache-for-gradle-in-non-bitrise-ci-environments">Configuring the Bitrise Build Cache for Gradle in non-Bitrise CI environments</a>
+                </li>
+                <li>
+                  <a href="#gradle-execution-reason-diagnostic-builds">Gradle execution reason diagnostic builds</a>
+                  <ul class="nav">
+                    <li>
+                      <a href="#gradle-tasks-and-caching">Gradle tasks and caching</a>
+                      <ul class="nav"></ul>
+                    </li>
+                    <li>
+                      <a href="#diagnostic-builds">Diagnostic builds</a>
+                      <ul class="nav"></ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#gradle-configuration-cache">Gradle configuration cache</a>
+                  <ul class="nav">
+                    <li>
+                      <a href="#setting-up-the-configuration-cache">Setting up the configuration cache</a>
+                    </li>
+                    <li>
+                      <a href="#saving-the-gradle-configuration-cache-log">Saving the Gradle configuration cache log</a>
+                    </li>
+                    <li>
+                      <a href="#troubleshooting-the-configuration-cache">Troubleshooting the configuration cache</a>
+                      <ul class="nav"></ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#gradle-dependency-verification">Gradle dependency verification</a>
+                  <ul class="nav">
+                    <li>
+                      <a href="#configuring-the-build-cache-with-dependency-verification">Configuring the Build Cache with dependency verification</a>
+                    </li>
+                    <li>
+                      <a href="#generating-and-updating-the-verification-metadata">Generating and updating the verification metadata</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </aside>
+            <article id="search-result-wrapper">
+              <div class="search-container" style="display: none;">
+                <h2>Search results</h2>
+                <ul class="searchresults"></ul>
+                <p class="noresults">No results found</p>
+              </div>
+            </article>
+            <div class="feedback-panel">
+              <div id="email-feedback" class="no-voting toggle-feedback">
+                <p><a href=
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Bitrise%20Build%20Cache%20for%20Gradle%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Bitrise%20Build%20Cache%20for%20Gradle%22%20in%20the%20publication%20%22Bitrise%20Build%20Cache%22.">
+                <i aria-hidden="true" class="fa fa-pencil-square-o feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
+              </div>
+            </div>
+          </main>
+          <div id="bottom-pager">
+            <ul class="pager">
+              <li class="previous">
+                <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="remote-build-cache-for-bazel.html#configuring-the-bitrise-build-cache-for-bazel-in-non-bitrise-ci-environments">Prev</a>
+              </li>
+              <li class="next">
+                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="remote-build-cache-for-gradle.html#configuring-the-bitrise-build-cache-for-gradle-in-the-bitrise-ci-environment">Next</a>
+              </li>
+            </ul>
+          </div>
+          <footer class="site-footer">
+            <div class="inner">
+              <div class="copyright">
+                © 2025
+              </div>
+              <div class="publication-date">
+                <span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">:</span> <span class="formatted-date"></span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //<![CDATA[
+  var theme = '2';
+
+                        
+                        window.versionsfile = '';
+
+
+                        window.indexDict = new Array();
+                        window.store = {};
+                        window.portalLanguage = 'en';
+                        window.enterKey = 'select';
+                        
+                        
+                                var fuse_threshold = 0.3;
+                        
+                                        var local_csh = false;
+                                
+                                        var anchoroption = false;
+                                        var instantsearch_minlength = 1;
+                                                
+                        var useanchorlinks = false;
+                        
+                                useanchorlinks = true;
+                                
+                                var clicktocopy = 'Click to copy link';
+                                var linkcopied =  'Copied!';
+                                        var collapseTocSectionOnLinkTitleClick = false;
+  //]]>
+  </script>
+  <script src="../js/jquery-3/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="../js/jquery-migrate-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../js/materialize.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/purl.js" type="text/javascript"></script>
+  <script src="../js/jquery.smartmenus.js" type="text/javascript"></script>
+  <script src="../js/html5-2-mp-common.js?version=20250327" type="text/javascript"></script>
+  <script src="../js/html5-2.js?version=20250327" type="text/javascript"></script>
+  <script src="../js/checklist.js" type="text/javascript"></script>
+  <script src="../js/clipboard.min.js" type="text/javascript"></script>
+  <script src="../js/anchorlinks.js" type="text/javascript"></script>
+  <script src="../js/html5.algoliasearch.js?version=20250327" type="text/javascript"></script>
+  <script src="../js/csh.js" type="text/javascript"></script>
+  <script src="../js/layout-custom-script.js?version=20250327" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script>
+  <script type="text/javascript" src="../js/cookie-consent.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+
+                                $(document).ready(function () {
+                                $(".mediaobject img").addClass('materialboxed');
+                                //Exclude images with links
+                                $(".mediaobject a img").removeClass('materialboxed');
+                                if (!document.documentMode) {
+                                $('.materialboxed').materialbox();
+                                }});
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var intercom_appid = 'e2rdidtm';
+  var intercom_src = 'https://widget.intercom.io/widget/e2rdidtm';
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var publication_id = 'en-UUID-75d09f3c-80ef-0a95-e55f-6d1638bd0c9a';
+  var algolia_application_id = 'HI1538U2K4';
+  var algolia_search_only_api_key = 'f817c83dbdb923d880c215c9380d1107';
+  var use_breadcrumbs_for_algolia_searchresults = '0';
+  //]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+  <script xmlns="" type="text/javascript" src="../js/intercom/intercom.js"></script>
+</body>
+</html>

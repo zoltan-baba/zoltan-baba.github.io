@@ -1,0 +1,205 @@
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] # Output Factory initiated (html5)
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] # Building output for: Release Management
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] # URL /document/edit/90740
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] # User: Zoltán Bába
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] # Time: Thu, 27 Mar 2025 21:26:01 +0000
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] # Server: ip-172-31-20-141.eu-west-1.compute.internal
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] Group: custom
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] Type: html5
+[27/Mar/2025 21:26:01 Europe/Dublin] [Info] Transformation: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] File found: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] Building output for: html5
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] Using stylesheet: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] Parameters for this build: []
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] Environment variables for this build: {"taxonomies.propagate":"1","use.algolia.search":"1","tidy.output":"1","taxonomies.relationship":"Related links taxonomies"}
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] Building output for languages: ["en"]
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] Building multilang: no
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] Building preview: no
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:02 Europe/Dublin] [Info] Using build directory: $local_tmp/production-67e5c2184b6a40.32087776/90740-Release_Management-html5
+[27/Mar/2025 21:26:03 Europe/Dublin] [Info] -- Generating source files
+[27/Mar/2025 21:26:03 Europe/Dublin] [Info] -- Propagating taxonomies: true
+[27/Mar/2025 21:26:03 Europe/Dublin] [Info] -- Source files have been generated
+[27/Mar/2025 21:26:03 Europe/Dublin] [Info] -- Publication has no unresolved dependencies.
+[27/Mar/2025 21:26:03 Europe/Dublin] [Info] Parsing processing instructions
+[27/Mar/2025 21:26:03 Europe/Dublin] [Info] -- Generating source files complete.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] Localizing: publication-90740.xml
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] Language: en
+[27/Mar/2025 21:26:05 Europe/Dublin] [Warning] Resolving some links failed
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[2]/*[4]/*[2]/*/*] An outgoing link in <a href="/document/edit/77572">Getting started with Release Management</a> could not be resolved. The link points to <a href="/document/edit/90298">Adding your first project</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[2]/*[4]/*[3]/*/*] An outgoing link in <a href="/document/edit/77572">Getting started with Release Management</a> could not be resolved. The link points to <a href="/document/edit/93557">Adding a new app to Release Management</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[2]/*[5]/*[7]/*[2]/*[2]/*] An outgoing link in <a href="/document/edit/87032">Connecting an app</a> could not be resolved. The link points to <a href="/document/edit/94025">Adding a CI configuration to a project</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[2]/*[5]/*[7]/*[3]/*/*] An outgoing link in <a href="/document/edit/87032">Connecting an app</a> could not be resolved. The link points to <a href="/document/edit/42021">Connecting to an Apple service with API key</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[2]/*[5]/*[8]/*[3]/*/*] An outgoing link in <a href="/document/edit/87032">Connecting an app</a> could not be resolved. The link points to <a href="/document/edit/82264">Connecting a Google service account to Bitrise</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[3]/*[7]/*[3]/*[1]] An outgoing link in <a href="/document/edit/86976">Configuring connected app integration</a> could not be resolved. The link points to <a href="/document/edit/82264">Connecting a Google service account to Bitrise</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[3]/*[7]/*[3]/*[2]] An outgoing link in <a href="/document/edit/86976">Configuring connected app integration</a> could not be resolved. The link points to <a href="/document/edit/42021">Connecting to an Apple service with API key</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[3]/*[7]/*[8]/*[5]/*[1]/*/*] An outgoing link in <a href="/document/edit/86976">Configuring connected app integration</a> could not be resolved. The link points to <a href="/document/edit/42021">Connecting to an Apple service with API key</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[3]/*[7]/*[8]/*[6]/*[1]/*/*] An outgoing link in <a href="/document/edit/86976">Configuring connected app integration</a> could not be resolved. The link points to <a href="/document/edit/82264">Connecting a Google service account to Bitrise</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[3]/*[7]/*[9]/*[5]/*[1]/*/*] An outgoing link in <a href="/document/edit/86976">Configuring connected app integration</a> could not be resolved. The link points to <a href="/document/edit/42021">Connecting to an Apple service with API key</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[3]/*[7]/*[9]/*[6]/*[1]/*/*] An outgoing link in <a href="/document/edit/86976">Configuring connected app integration</a> could not be resolved. The link points to <a href="/document/edit/82264">Connecting a Google service account to Bitrise</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[4]/*[6]/*[3]/*[1]/*[2]/*[1]/*/*[1]] An outgoing link in <a href="/document/edit/92027">Uploading installable artifacts</a> could not be resolved. The link points to <a href="/document/edit/86327">Workspace API token</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[4]/*[6]/*[3]/*[1]/*[2]/*[1]/*/*[2]] An outgoing link in <a href="/document/edit/92027">Uploading installable artifacts</a> could not be resolved. The link points to <a href="/document/edit/54561">Personal access tokens</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[4]/*[7]/*[4]/*[3]/*[2]/*[2]/*/*[2]] An outgoing link in <a href="/document/edit/92027">Uploading installable artifacts</a> could not be resolved. The link points to <a href="/document/edit/54561">Personal access tokens</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[4]/*[7]/*[4]/*[3]/*[2]/*[2]/*/*[3]] An outgoing link in <a href="/document/edit/92027">Uploading installable artifacts</a> could not be resolved. The link points to <a href="/document/edit/86327">Workspace API token</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[5]/*[5]/*[1]/*/*] An outgoing link in <a href="/document/edit/92118">Build distribution</a> could not be resolved. The link points to <a href="/document/edit/92999">Managing builds</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[5]/*[5]/*[2]/*/*] An outgoing link in <a href="/document/edit/92118">Build distribution</a> could not be resolved. The link points to <a href="/document/edit/93001">Tester groups</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[6]/*[4]/*[8]/*[5]/*[5]/*[1]/*/*] An outgoing link in <a href="/document/edit/79288">Configuring Slack and Teams notifications</a> could not be resolved. The link points to <a href="/document/edit/93464">Workspace Slack integration</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[6]/*[4]/*[8]/*[6]/*[5]/*[1]/*/*] An outgoing link in <a href="/document/edit/79288">Configuring Slack and Teams notifications</a> could not be resolved. The link points to <a href="/document/edit/93464">Workspace Slack integration</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[6]/*[4]/*[10]/*[5]/*[2]/*] An outgoing link in <a href="/document/edit/81172">Release automation</a> could not be resolved. The link points to <a href="/document/edit/42655">Available environment variables</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[6]/*[5]/*[6]/*[1]/*[2]/*[2]/*[2]] An outgoing link in <a href="/document/edit/87249">Managing the release process</a> could not be resolved. The link points to <a href="/document/edit/42655">Available environment variables</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[6]/*[5]/*[9]/*[4]/*[2]/*/*] An outgoing link in <a href="/document/edit/87325">TestFlight upload stage</a> could not be resolved. The link points to <a href="/meta/locate/87419/true">Distributing iOS release candidates for testing</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[7]/*[6]/*[2]/*[1]] An outgoing link in <a href="/document/edit/88785">Release Management API</a> could not be resolved. The link points to <a href="/document/edit/43136">Authenticating with the Bitrise API</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[7]/*[6]/*[2]/*[2]] An outgoing link in <a href="/document/edit/88785">Release Management API</a> could not be resolved. The link points to <a href="/document/edit/54561">Personal access tokens</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] [/*/*[7]/*[6]/*[2]/*[3]] An outgoing link in <a href="/document/edit/88785">Release Management API</a> could not be resolved. The link points to <a href="/document/edit/86327">Workspace API token</a> which is not part of this publication.
+[27/Mar/2025 21:26:05 Europe/Dublin] [Info] Variable sets found: 0
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Inserting image links.
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found 44 image(s).
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'release-man-connect-app.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'rm-overview-connected.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'app-store-api-rm.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'service-account-rm.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'presets.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'release-manager-toggle.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'account-settings.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'connect-launchdarkly.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'launchdarkly.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'existing-launchdarkly-config.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'dialog-delete-app.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'configure-source-rm.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'upload-url.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'installable-artifacts-api.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'setup_method.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'Managing_releases.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'edit-release-details.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'release-config-notifications_083123_015406_PM.jpg'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'edit-webhook-url.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'release-presets-notif.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'slack-int-rm.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'release-config-auto.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'release_automation.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'add_event.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'release-automation-dialog.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'build-artifact-source.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'select-artifact.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'locked-artifact.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'upload_to_testflight.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'testflight-testing-info.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'testflight-testing-int-ext.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'google-play-ready-to-upload.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'testing-google-play-processing-finished.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'testing-google-play-cant-replace.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'approval-stage.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'release_settings.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'edit-settings.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'release-version.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'release_manually.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'staged-rollout-google.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'google_clear_shedule.gif'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'phased-rollout-cancel.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'phased-rollout.png'
+[27/Mar/2025 21:26:07 Europe/Dublin] [Info] Found image 'resume-rollout.png'
+[27/Mar/2025 21:26:08 Europe/Dublin] [Info] Profiling parameters: []
+[27/Mar/2025 21:26:08 Europe/Dublin] [Info] Profiling customisation: $user_dir/xsl/profile.xsl (not found)
+[27/Mar/2025 21:26:08 Europe/Dublin] [Info] Transformation: publication-90740--en.org.xml -> publication-90740--en.xml [profile.xsl]
+[27/Mar/2025 21:26:08 Europe/Dublin] [Info] Transformation: publication-90740--en.xml -> publication-90740--en.xml [internal-xref.xsl]
+[27/Mar/2025 21:26:09 Europe/Dublin] [Info] Transformation: A-filelist.xml -> B-sorted.xml [IO.document.sortlang.xsl]
+[27/Mar/2025 21:26:09 Europe/Dublin] [Info] Transformation: B-sorted.xml -> C-concatenated.xml [IO.document.concat.xsl]
+[27/Mar/2025 21:26:09 Europe/Dublin] [Info] Transformation: B-sorted.xml -> index-en.xml [IO.document.head.xsl]
+[27/Mar/2025 21:26:09 Europe/Dublin] [Info] Created copy: $user_dir/xsl/custom/layout-435.xsl -> $user_dir/xsl/custom/67e5c27169571.xsl
+[27/Mar/2025 21:26:09 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.page.xsl -> $user_dir/xsl/custom/67e5c27169571.page.xsl
+[27/Mar/2025 21:26:09 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.index.xsl -> $user_dir/xsl/custom/67e5c27169571.index.xsl
+[27/Mar/2025 21:26:09 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.toc.xsl -> $user_dir/xsl/custom/67e5c27169571.toc.xsl
+[27/Mar/2025 21:26:09 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.page.xsl -> $user_dir/xsl/custom/67e5c27169571.page.xsl
+[27/Mar/2025 21:26:09 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.index.xsl -> $user_dir/xsl/custom/67e5c27169571.index.xsl
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-58be0b4a-94fa-0a4b-1bac-91d7f81078a1.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-c446a6a9-f922-2641-53ad-49099a7921fe.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-e39aa886-e484-fe54-2563-8d5295796112.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-14a7856e-16ca-8a64-04fa-acf92ba93cc2.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-bf243542-7a52-3b3e-e6d5-26d0248c3951.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-a98a1a1b-e74e-6845-7402-01d9404894e1.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-b08c42b9-affd-b40d-3c6e-87410001d2fb.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-56915efe-d16d-4ab6-6535-f2b18d6ee6af.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-9d7fd7fc-e125-4f45-d011-f5ddcabe0106.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-7902ae23-26f7-bcf3-ffee-11dd4e08a183.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-c93bbd2a-6d87-97d3-11ee-ca32475064af.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-5e506f8a-6c68-cbef-ee53-8e97df232093.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-044617c9-e24c-068d-1978-df721db2a9f8.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-33deefaf-a687-276f-ff84-cb0b6e45e885.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-c30837f5-7edd-4db0-fe9a-5c0515bed5bd.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-4955154b-d553-bb34-5b96-c1779bfecbed.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-9a391304-ff73-b661-ccfd-33d0c9d2ebab.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-9504e5f7-f59a-b080-4a6f-2db6b889ae50.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-823c9a6f-187a-6778-36eb-130492487193.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-7c480e99-66d6-8197-a63a-e9275e127d78.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-0876f906-f150-c883-a882-3d1da1ae42dc.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-f316a946-dc82-c3b9-9e73-a65f9f12349c.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-7225cae0-64cd-a1cf-b878-270a054e58da.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-5e41d5a0-b686-edc7-44a5-42c09bf1b12b.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-28812c0e-a307-6879-8d90-d0d516765519.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-ca5383f8-2b6e-a07a-1876-35ad58894b5f.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-9502548e-c9ec-985e-7224-7e06aa0dfbda.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-4d8bea06-abe3-0ad5-9a37-d840ad2c0875.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-1cc790d0-1d08-d98c-7fdf-2cafa999984d.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-0247679e-247c-dd61-77eb-340600f634c9.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-ee309b75-e71d-aaea-5b0f-2477d3c77231.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-76fec79f-6b16-d420-3d74-53967ecf4d31.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-0022d0d2-8794-bad9-bf5d-a7413b7bb473.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-66a9dd86-282a-8695-d1c9-aa89bb61ef49.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-3964f74c-96ac-8bd0-c5f5-35c6c7832b7e.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-0356f699-7e6f-0169-7fb3-82576e470b62.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-05ba3ed0-0f1c-c4be-e46f-cc500b21041c.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-4f7e400b-3a64-eb42-5b85-c51a3f41da03.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-fafa8157-e6f0-6495-1da6-7112515830d8.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-bff97bcb-df0b-c062-3f8b-e446d171d6e9.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-7b4d08a4-23ee-c089-5e7a-a8f2ea99abda.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-29b1db0e-2fa8-8f7e-ba48-da85ed4db64b.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-fd923003-5828-07e5-376b-b1d9e05c9652.png
+[27/Mar/2025 21:26:10 Europe/Dublin] [Info] Image copied: en/image/uuid-2da28206-9def-429e-3b2f-d3d769b15c3b.png
+[27-Mar-2025 21:26:11 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, js/jquery-3/*, fonts/*, js/swagger/*, js/intercom/*
+[27-Mar-2025 21:26:11 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, fonts/*
+[27-Mar-2025 21:26:11 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/6163f759b3bf1.svg' to '$local_tmp/production-67e5c2184b6a40.32087776/90740-Release_Management-html5/out/css/image/corporate-logo.svg'
+[27-Mar-2025 21:26:11 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/61770eafbf909.svg' to '$local_tmp/production-67e5c2184b6a40.32087776/90740-Release_Management-html5/out/css/image/portal-logo.svg'
+[27-Mar-2025 21:26:11 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/67a22bcb69288.js' to '$local_tmp/production-67e5c2184b6a40.32087776/90740-Release_Management-html5/out/js/layout-custom-script.js'
+[27-Mar-2025 21:26:11 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/6167440fdbabf.ico' to '$local_tmp/production-67e5c2184b6a40.32087776/90740-Release_Management-html5/out/favicon.ico'
+[27-Mar-2025 21:26:12 Europe/Dublin] Post build HTML5
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: index-en.html -> toc-en.html [67e5c27169571.toc.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: release-management-api.html -> release-management-api.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: getting-started-with-release-management.html -> getting-started-with-release-management.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: build-distribution.html -> build-distribution.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: uploading-installable-artifacts.html -> uploading-installable-artifacts.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: integrating-launchdarkly-feature-flags.html -> integrating-launchdarkly-feature-flags.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: configuring-connected-app-integration.html -> configuring-connected-app-integration.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: changing-connected-app-appearance.html -> changing-connected-app-appearance.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: release-management-roles-and-permissions.html -> release-management-roles-and-permissions.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: deleting-a-connected-app.html -> deleting-a-connected-app.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: release-presets.html -> release-presets.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: connecting-an-app.html -> connecting-an-app.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: release-management-concepts.html -> release-management-concepts.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: managing-licenses.html -> managing-licenses.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: adding-a-new-release.html -> adding-a-new-release.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: editing-the-description-of-a-release.html -> editing-the-description-of-a-release.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: configuring-slack-and-teams-notifications.html -> configuring-slack-and-teams-notifications.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: removing-a-release.html -> removing-a-release.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: configuring-auto-upload.html -> configuring-auto-upload.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: release-automation.html -> release-automation.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: configuring-a-release.html -> configuring-a-release.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: managing-the-release-process.html -> managing-the-release-process.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: creating-tasks-for-the-approvals-stage.html -> creating-tasks-for-the-approvals-stage.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: releasing-your-app-on-the-app-store.html -> releasing-your-app-on-the-app-store.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: testflight-upload-stage.html -> testflight-upload-stage.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:12 Europe/Dublin] [Info] Transformation: google-play-upload-stage.html -> google-play-upload-stage.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:13 Europe/Dublin] [Info] Transformation: releasing-your-app-on-google-play.html -> releasing-your-app-on-google-play.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:13 Europe/Dublin] [Info] Transformation: selecting-a-release-candidate.html -> selecting-a-release-candidate.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:13 Europe/Dublin] [Info] Transformation: sending-your-app-to-app-store-review.html -> sending-your-app-to-app-store-review.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:13 Europe/Dublin] [Info] Transformation: index-en.html -> index-en.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:13 Europe/Dublin] [Info] Transformation: configuring-connected-apps.html -> configuring-connected-apps.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:13 Europe/Dublin] [Info] Transformation: releases.html -> releases.html [67e5c27169571.page.xsl]
+[27/Mar/2025 21:26:13 Europe/Dublin] [Info] Algolia search enabled.
+[27/Mar/2025 21:26:13 Europe/Dublin] [Info] Updating Algolia index.
+[27/Mar/2025 21:26:14 Europe/Dublin] [Info] Generating index page.
+[27/Mar/2025 21:26:14 Europe/Dublin] [Info] Transformation: index.manifest -> index.html [67e5c27169571.index.xsl]
+[27/Mar/2025 21:26:14 Europe/Dublin] [Info] Running tidy: /usr/bin/find '$local_tmp/production-67e5c2184b6a40.32087776/90740-Release_Management-html5/out' -type f -name "*.html" -exec /usr/bin/tidy -m -q -utf8 -i -w 350 --drop-empty-elements false --tidy-mark false --show-warnings false {} \; & > /dev/null;
+[27/Mar/2025 21:26:15 Europe/Dublin] [Info] # Took 13.241392 seconds to render.

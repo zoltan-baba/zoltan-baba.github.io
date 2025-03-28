@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="search" content="algolia" />
+  <meta name="use.ic" content="yes" />
+  <meta name="tocstandalone" content="no" />
+  <link rel="canonical" href="https://devcenter.bitrise.io/en/remote-build-caching/clearing-the-build-cache.html" />
+  <meta name="theme" content="2" />
+  <meta name="search.placeholder" content="Search" />
+  <meta name="search.results" content="Search results" />
+  <meta name="no.search.results" content="No results found" />
+  <title>Clearing the Build Cache</title>
+  <link rel="stylesheet" type="text/css" href="../../css/docbook.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/roboto.font.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2-colors.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/content-theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-core-css.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-simple.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-print.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-common.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/html5.algoliasearch.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-modern-tables.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/graphical-lists.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/layout-custom-style.css?version=20250327" />
+  <meta name="generator" content="Paligo" />
+  <meta name="description" content="You can clear the entire contents of your Bitrise Build Cache any time. This clears everything, including the Gradle configuration cache." />
+  <link rel="prev" href="at-rest-encryption-for-the-build-cache.html#customer-managed-encryption-keys" title="Customer-managed Encryption Keys" />
+  <link rel="next" href="../remote-build-cache-for-bazel.html" title="Bitrise Build Cache for Bazel" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+  /*<![CDATA[*/
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+  /*]]>*/
+  </style>
+</head>
+<body class="theme2 fixed-toolbar colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix="../">
+  <div class="skipnav">
+    <a href="#content-wrapper">Skip to main content</a>
+  </div>
+  <header class="site-header">
+    <nav class="site-header-navbar navbar navbar-fixed-top">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div id="logotype-container" class="pull-left">
+            <a class="navbar-brand" href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="top-nav-menu sm sm-simple">
+            <li>
+              <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+            </li>
+            <li>
+              <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="site-body">
+    <div class="site-body-container">
+      <div class="site-body-row">
+        <aside class="site-sidebar">
+          <div class="site-sidebar-header">
+            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
+            "../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+          <ul class="toc nav nav-site-sidebar">
+            <li>
+              <a class="topic-link section topichead" data-origin-id="UUID-16495559-0abb-7844-fdd5-9084763e9d49" data-legacy-id="UUID-52e632b5-5a6f-d23e-4d79-6ae3ca0aa6a1" data-permalink="remote-build-caching.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Bitrise Build Cache</a>
+              <ul>
+                <li>
+                  <a href="../remote-build-caching/at-rest-encryption-for-the-build-cache.html" class="topic-link section" data-origin-id="UUID-12852626-2895-0e88-7326-30eba9b00317" data-legacy-id="UUID-636a91a3-bd4e-ccb2-872b-84d4f948e1c2" data-permalink="remote-build-caching/at-rest-encryption-for-the-build-cache.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">At-rest encryption for the Build Cache</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../remote-build-caching/clearing-the-build-cache.html" class="topic-link section" data-origin-id="UUID-893a161b-4a75-480a-761a-b967ed029767" data-legacy-id="UUID-4c14b064-ed1b-fae3-4d67-f7f5865929ee" data-permalink="remote-build-caching/clearing-the-build-cache.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Clearing the Build Cache</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../remote-build-cache-for-bazel.html" class="topic-link section" data-origin-id="UUID-3b3d077a-9369-3542-e579-f3a1a756f413" data-legacy-id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e" data-permalink="remote-build-cache-for-bazel.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Bitrise Build Cache
+              for Bazel</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="../remote-build-cache-for-gradle.html" class="topic-link section taxonomy-actions-builds taxonomy-actions-caching taxonomy-related-links-taxonomies-android-rel taxonomy-related-links-taxonomies-builds-rel" data-origin-id="UUID-e4e0bc15-e1c7-bafe-adfc-f75afd59fc69" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461"
+              data-permalink="remote-build-cache-for-gradle.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Bitrise Build Cache for Gradle</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="../insights.html" class="topic-link section" data-origin-id="UUID-db8404e1-fa1d-6f35-7fec-b24e287e20d9" data-legacy-id="UUID-ea9afad4-b316-02ba-12eb-9dc6ee3834bb" data-permalink="insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Insights</a>
+            </li>
+            <li>
+              <a href="../api.html" class="topic-link section" data-origin-id="UUID-57bc118a-10ee-fa39-a15a-bb84ac20c17e" data-legacy-id="UUID-d1677e09-2515-b866-cf5f-076abd407122" data-permalink="api.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">API</a>
+            </li>
+          </ul>
+        </aside>
+        <div class="site-content">
+          <div class="toolbar top-nav-on">
+            <div class="toolbar-tools">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="top-nav-menu sm sm-simple">
+                  <li>
+                    <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+                  </li>
+                  <li>
+                    <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tool-print">
+                <i class="fa fa-print" aria-hidden="true">print</i>
+              </div>
+              <div class="tool-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <form class="tool-search-form" autocomplete="off">
+                  <input type="text" placeholder="Search" class="form-control search-field" id="aa-search-input" />
+                </form>
+              </div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+          </div>
+          <main>
+            <div id="top-pager">
+              <ul class="pager">
+                <li class="previous">
+                  <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="at-rest-encryption-for-the-build-cache.html#customer-managed-encryption-keys">Prev</a>
+                </li>
+                <li class="next">
+                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="../remote-build-cache-for-bazel.html">Next</a>
+                </li>
+              </ul>
+            </div>
+            <article class="topic content-container" id="content-wrapper">
+              <div id="topic-content" class="topic-content">
+                <div class="breadcrumb-container">
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-link">
+                      <a href="../index-en.html">Bitrise Build Cache</a>
+                    </li>
+                    <li class="breadcrumb-link">
+                      <a>Bitrise Build Cache</a>
+                    </li>
+                    <li class="breadcrumb-node">Clearing the Build Cache</li>
+                  </ul>
+                </div>
+                <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-893a161b-4a75-480a-761a-b967ed029767" data-legacy-id="UUID-4c14b064-ed1b-fae3-4d67-f7f5865929ee" data-permalink="remote-build-caching/clearing-the-build-cache.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="" id=
+                "clearing-the-build-cache">
+                  <div class="titlepage">
+                    <div>
+                      <div class="title">
+                        <h1 class="title" style="clear: both">Clearing the Build Cache</h1>
+                      </div>
+                      <div>
+                        <div class="abstract">
+                          <div class="abstract-title">
+                            Abstract
+                          </div>
+                          <p>You can clear the entire contents of your Bitrise Build Cache any time. This clears everything, including the Gradle configuration cache.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>You can clear the entire contents of your Bitrise Build Cache any time. This clears everything, including the Gradle configuration cache. There is no way to delete specific parts of the cache.</p>
+                  <p>To clear the cache:</p>
+                  <div class="procedure" id="UUID-4c14b064-ed1b-fae3-4d67-f7f5865929ee_procedure-idm234689062458441">
+                    <ol class="procedure" type="1">
+                      <li class="step">
+                        <p>Open the Bitrise Build Cache.</p>
+                      </li>
+                      <li class="step">
+                        <p>Click <span class="guilabel">Settings</span>.</p>
+                      </li>
+                      <li class="step">
+                        <p>Select <span class="guilabel">Clear cache</span>.</p>
+                        <div class="mediaobject"><img src="../image/uuid-77da33a7-ed0f-7ef0-7720-165a7247edd0.png" style="" alt="clear-cache.png" /></div>
+                      </li>
+                    </ol>
+                  </div>
+                </section>
+                <div class="footer-content">
+                  <div class="section-toc section-toc-after">
+                    <div class="section-toc-title">
+                      In this section<span class="section-toc-title-delimiter">:</span>
+                    </div>
+                  </div>
+                  <div class="glossary-definitions"></div>
+                </div>
+                <footer></footer>
+              </div>
+            </article>
+            <article id="search-result-wrapper">
+              <div class="search-container" style="display: none;">
+                <h2>Search results</h2>
+                <ul class="searchresults"></ul>
+                <p class="noresults">No results found</p>
+              </div>
+            </article>
+            <div class="feedback-panel">
+              <div id="email-feedback" class="no-voting toggle-feedback">
+                <p><a href=
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Clearing%20the%20Build%20Cache%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Clearing%20the%20Build%20Cache%22%20in%20the%20publication%20%22Bitrise%20Build%20Cache%22.">
+                <i aria-hidden="true" class="fa fa-pencil-square-o feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
+              </div>
+            </div>
+          </main>
+          <div id="bottom-pager">
+            <ul class="pager">
+              <li class="previous">
+                <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="at-rest-encryption-for-the-build-cache.html#customer-managed-encryption-keys">Prev</a>
+              </li>
+              <li class="next">
+                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="../remote-build-cache-for-bazel.html">Next</a>
+              </li>
+            </ul>
+          </div>
+          <footer class="site-footer">
+            <div class="inner">
+              <div class="copyright">
+                © 2025
+              </div>
+              <div class="publication-date">
+                <span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">:</span> <span class="formatted-date"></span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //<![CDATA[
+  var theme = '2';
+
+                        
+                        window.versionsfile = '';
+
+
+                        window.indexDict = new Array();
+                        window.store = {};
+                        window.portalLanguage = 'en';
+                        window.enterKey = 'select';
+                        
+                        
+                                var fuse_threshold = 0.3;
+                        
+                                        var local_csh = false;
+                                
+                                        var anchoroption = false;
+                                        var instantsearch_minlength = 1;
+                                                
+                        var useanchorlinks = false;
+                        
+                                useanchorlinks = true;
+                                
+                                var clicktocopy = 'Click to copy link';
+                                var linkcopied =  'Copied!';
+                                        var collapseTocSectionOnLinkTitleClick = false;
+  //]]>
+  </script>
+  <script src="../../js/jquery-3/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="../../js/jquery-migrate-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../../js/materialize.min.js" type="text/javascript"></script>
+  <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../js/purl.js" type="text/javascript"></script>
+  <script src="../../js/jquery.smartmenus.js" type="text/javascript"></script>
+  <script src="../../js/html5-2-mp-common.js?version=20250327" type="text/javascript"></script>
+  <script src="../../js/html5-2.js?version=20250327" type="text/javascript"></script>
+  <script src="../../js/checklist.js" type="text/javascript"></script>
+  <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+  <script src="../../js/anchorlinks.js" type="text/javascript"></script>
+  <script src="../../js/html5.algoliasearch.js?version=20250327" type="text/javascript"></script>
+  <script src="../../js/csh.js" type="text/javascript"></script>
+  <script src="../../js/layout-custom-script.js?version=20250327" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script>
+  <script type="text/javascript" src="../../js/cookie-consent.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+
+                                $(document).ready(function () {
+                                $(".mediaobject img").addClass('materialboxed');
+                                //Exclude images with links
+                                $(".mediaobject a img").removeClass('materialboxed');
+                                if (!document.documentMode) {
+                                $('.materialboxed').materialbox();
+                                }});
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var intercom_appid = 'e2rdidtm';
+  var intercom_src = 'https://widget.intercom.io/widget/e2rdidtm';
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var publication_id = 'en-UUID-75d09f3c-80ef-0a95-e55f-6d1638bd0c9a';
+  var algolia_application_id = 'HI1538U2K4';
+  var algolia_search_only_api_key = 'f817c83dbdb923d880c215c9380d1107';
+  var use_breadcrumbs_for_algolia_searchresults = '0';
+  //]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+  <script xmlns="" type="text/javascript" src="../../js/intercom/intercom.js"></script>
+</body>
+</html>

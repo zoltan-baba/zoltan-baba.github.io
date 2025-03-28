@@ -1,0 +1,210 @@
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] # Output Factory initiated (html5)
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] # Building output for: Insights
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] # URL /document/edit/94879
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] # User: Zoltán Bába
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] # Time: Thu, 27 Mar 2025 21:26:42 +0000
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] # Server: ip-172-31-41-52.eu-west-1.compute.internal
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Group: custom
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Type: html5
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Transformation: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] File found: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Building output for: html5
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Using stylesheet: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Parameters for this build: []
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Environment variables for this build: {"taxonomies.propagate":"1","use.algolia.search":"1","tidy.output":"1","taxonomies.relationship":"Related links taxonomies"}
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Building output for languages: ["en"]
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Building multilang: no
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Building preview: no
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:42 Europe/Dublin] [Info] Using build directory: $local_tmp/production-67e5c22c42ab98.29607218/94879-Insights-html5
+[27/Mar/2025 21:26:43 Europe/Dublin] [Info] -- Generating source files
+[27/Mar/2025 21:26:43 Europe/Dublin] [Info] -- Propagating taxonomies: true
+[27/Mar/2025 21:26:43 Europe/Dublin] [Info] -- Source files have been generated
+[27/Mar/2025 21:26:43 Europe/Dublin] [Info] -- Publication has no unresolved dependencies.
+[27/Mar/2025 21:26:43 Europe/Dublin] [Info] Parsing processing instructions
+[27/Mar/2025 21:26:43 Europe/Dublin] [Info] -- Generating source files complete.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] Localizing: publication-94879.xml
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] Language: en
+[27/Mar/2025 21:26:45 Europe/Dublin] [Warning] Resolving some links failed
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] [/*/*[3]/*[6]/*[1]/*/*] An outgoing link in <a href="/document/edit/53071">Available metrics in Insights</a> could not be resolved. The link points to <a href="/document/edit/81799">Remote build caching</a> which is not part of this publication.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] [/*/*[3]/*[9]/*[6]/*[3]/*/*[2]] An outgoing link in <a href="/document/edit/53071">Available metrics in Insights</a> could not be resolved. The link points to <a href="/document/edit/81799">Remote build caching</a> which is not part of this publication.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] [/*/*[4]/*[9]/*[3]/*[4]/*[2]/*[1]] An outgoing link in <a href="/document/edit/82938">Creating a new alert</a> could not be resolved. The link points to <a href="/document/edit/72810">Pipelines with stages</a> which is not part of this publication.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] [/*/*[4]/*[9]/*[3]/*[4]/*[2]/*[4]] An outgoing link in <a href="/document/edit/82938">Creating a new alert</a> could not be resolved. The link points to <a href="/document/edit/42151">Build stacks</a> which is not part of this publication.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] [/*/*[4]/*[9]/*[3]/*[4]/*[2]/*[5]] An outgoing link in <a href="/document/edit/82938">Creating a new alert</a> could not be resolved. The link points to <a href="/document/edit/42155">Build machines</a> which is not part of this publication.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] [/*/*[5]/*[5]/*[2]/*] An outgoing link in <a href="/document/edit/84236">Configuring webhooks for Git Insights</a> could not be resolved. The link points to <a href="/document/edit/42428">Webhooks</a> which is not part of this publication.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] [/*/*[5]/*[5]/*[3]/*[2]/*] An outgoing link in <a href="/document/edit/84236">Configuring webhooks for Git Insights</a> could not be resolved. The link points to <a href="/document/edit/52725">Triggering builds automatically</a> which is not part of this publication.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] [/*/*[5]/*[5]/*[5]/*[1]/*[1]/*[2]] An outgoing link in <a href="/document/edit/84236">Configuring webhooks for Git Insights</a> could not be resolved. The link points to <a href="/document/edit/42438">Adding a GitHub webhook</a> which is not part of this publication.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] [/*/*[5]/*[5]/*[5]/*[2]/*[1]/*[2]] An outgoing link in <a href="/document/edit/84236">Configuring webhooks for Git Insights</a> could not be resolved. The link points to <a href="/document/edit/42451">Adding a Gitlab webhook</a> which is not part of this publication.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] [/*/*[5]/*[5]/*[5]/*[3]/*/*[2]] An outgoing link in <a href="/document/edit/84236">Configuring webhooks for Git Insights</a> could not be resolved. The link points to <a href="/document/edit/42460">Adding a Bitbucket webhook</a> which is not part of this publication.
+[27/Mar/2025 21:26:45 Europe/Dublin] [Info] Variable sets found: 0
+[27/Mar/2025 21:26:46 Europe/Dublin] [Info] Inserting image links.
+[27/Mar/2025 21:26:46 Europe/Dublin] [Info] Found 63 image(s).
+[27/Mar/2025 21:26:46 Europe/Dublin] [Info] Found image 'insights-overview-gif.gif'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'filtering_highlight.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'testing_metrics.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'builds_timeframe.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'dashboards.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'Add_To_dashboard.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'Create_dashboard.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'project_selector_arrow.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image '3dots_2.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'Edit_mode.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'Edit_mode_opened.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'p90-uploads.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'trends.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'issues-list.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'cache-hit-rate-workflow.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'started-build-cache.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'stopped-using-cache.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'create-alert-button.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'bell.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'metric-type.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'filters.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'alerts.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'existing-alert.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'edit-alert.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'github-webhook-permissions.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'gitlab-webhook-settings.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'git_-insights.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'apps-filter.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'git-main-chart.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'breakdown-tab.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'builds-explore.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'explore-builds-example.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'filter-by-workflow.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'build-history.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'bottlenecks-overview.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'failure-rate-tab.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'most-failing-app.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'workflow-breakdown-chart.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'failed-build-history.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'bottlenecks-menu-option.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'test-failure-rate-tab.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'most-failing-app-test.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'filter-test-suite.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'test-case-history.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'related-test-cases.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'flakiness-bottlenecks.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'flaky-runs-tab.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'flakiest-app.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'flakiest-test-suite.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'test-cases-list.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'related-test-cases-runs-tab.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'case-report-card.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'overview-credits.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'credits-page-home.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'cumulative-credits.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'weekly-view.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'costliest-app.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'costliest-workflow.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'total-duration.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'ios-device-testing.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'related-builds.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'step-failed-quickly.png'
+[27/Mar/2025 21:26:47 Europe/Dublin] [Info] Found image 'step-took-long.png'
+[27/Mar/2025 21:26:48 Europe/Dublin] [Info] Profiling parameters: []
+[27/Mar/2025 21:26:48 Europe/Dublin] [Info] Profiling customisation: $user_dir/xsl/profile.xsl (not found)
+[27/Mar/2025 21:26:48 Europe/Dublin] [Info] Transformation: publication-94879--en.org.xml -> publication-94879--en.xml [profile.xsl]
+[27/Mar/2025 21:26:48 Europe/Dublin] [Info] Transformation: publication-94879--en.xml -> publication-94879--en.xml [internal-xref.xsl]
+[27/Mar/2025 21:26:49 Europe/Dublin] [Info] Transformation: A-filelist.xml -> B-sorted.xml [IO.document.sortlang.xsl]
+[27/Mar/2025 21:26:49 Europe/Dublin] [Info] Transformation: B-sorted.xml -> C-concatenated.xml [IO.document.concat.xsl]
+[27/Mar/2025 21:26:49 Europe/Dublin] [Info] Transformation: B-sorted.xml -> index-en.xml [IO.document.head.xsl]
+[27/Mar/2025 21:26:49 Europe/Dublin] [Info] Created copy: $user_dir/xsl/custom/layout-435.xsl -> $user_dir/xsl/custom/67e5c29969c5d.xsl
+[27/Mar/2025 21:26:49 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.page.xsl -> $user_dir/xsl/custom/67e5c29969c5d.page.xsl
+[27/Mar/2025 21:26:49 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.index.xsl -> $user_dir/xsl/custom/67e5c29969c5d.index.xsl
+[27/Mar/2025 21:26:49 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.toc.xsl -> $user_dir/xsl/custom/67e5c29969c5d.toc.xsl
+[27/Mar/2025 21:26:49 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.page.xsl -> $user_dir/xsl/custom/67e5c29969c5d.page.xsl
+[27/Mar/2025 21:26:49 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.index.xsl -> $user_dir/xsl/custom/67e5c29969c5d.index.xsl
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-dbb181a9-053e-bed3-133f-11e485313efa.gif
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-0242fdf7-4025-4aca-215a-ffbecf5e62b9.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-ce8ef015-6c7d-9b31-d3ce-69669a18b4ac.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-a5b75043-f9b0-b1c3-51ac-dc1be80e1034.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-fc575279-c87c-1046-a747-4ea6a59fae5f.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-26a387b3-ea77-211f-b2f8-09325e1cc44a.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-6da7408c-facc-9a1a-b494-b9acdf47accb.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-06b2413b-0794-39ff-c8b0-176c85c8e1e1.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-811a202d-1f3a-d7eb-932f-555b5eeed51e.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-d21f2840-9772-4870-9818-a3fd1162be1f.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-cac01df1-7cc0-598f-62b5-87a237ecc669.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-cb1811cf-42dd-3707-9288-42d1291a9780.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-5d4f1f7c-0ca9-93fb-251c-4b63c26f1f4b.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-7d6dc7a5-d2ad-0a24-e940-6ce654e08db4.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-cf5db37b-0d3a-2292-c706-28a35c9c342e.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-d2661447-265a-5f94-41dc-40c36c7acad6.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-8f7bf7cb-1d82-dacf-ecc0-b3e98438c118.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-6df6ae6a-869d-58a9-dbea-2fa93fba24e2.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-d7b270fb-8c64-ce2d-c083-c1dbcfdde87f.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-3cab36a0-7c43-5fb3-40cb-d7c03cd8ab00.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-918b42a8-4b92-3f05-5514-1b137c85e283.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-3c75e562-bf1f-266f-ec68-910589ed408e.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-387f919f-49c9-14ae-cb62-1bc4f47cda1e.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-a493c03e-ab64-9b02-748d-556fdd1c1b1a.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-7a681d2b-732b-b061-0eb1-ecd158c0a9b9.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-130fe737-4629-1dfa-3234-9c03ad22f5dc.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-33016129-6c3c-5427-c4ac-8dca1c01770d.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-0b5537ea-42ab-780f-cd11-05072d508a72.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-ef391d65-8868-242c-c6b6-380d117676b7.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-7bf083ec-108e-2c84-cb3e-b47a85b69a48.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-c73e996d-b1f3-422a-f317-5ec31fedcd68.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-1789f853-23db-4863-8ecc-70e6a837ad2f.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-f1483521-2b52-d69c-9cbb-ae0eff053094.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-ac92de93-beb4-8a7d-d28c-0fe5cc8296b8.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-6b2fbeca-bd57-7bfa-2ba6-7bb84f9036b4.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-605f48bd-0c0c-9003-4605-0b682c26dc57.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-80961ec0-a95b-8cce-6af1-263d07fcc5a4.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-211085d7-b298-e040-1432-189aa06bca6c.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-6507d4b6-e17c-fe9a-7fcf-286e99bf5447.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-3861bf61-778c-af22-dad4-28d5b52cf1f0.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-fd3ff35c-c57e-151a-20ad-8170daf832dd.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-c46c2c36-ef48-dd8e-7fd4-d025a8c1403d.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-0fffb4e5-f4e4-037e-3378-fde21e261acb.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-704db8ad-4a9b-ce01-8631-97ca9682edcc.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-7d85c0ea-4806-d797-750e-ef3b092eb2db.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-f995aafc-a3ef-b1d1-5d31-751c5507e60a.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-3bbc4214-3819-7b12-200a-d211bc965b7e.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-9b72d008-6924-060b-2efc-96f96390b627.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-7c7f36d3-3226-2a6c-3549-cd3321895ef1.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-4775415f-854a-3e11-430a-34c233f7fc5f.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-b53b6a0d-3e15-8891-131e-9c1b5637f0bc.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-603588f5-3a76-1594-bd18-53063a966a21.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-c0daa517-7b8f-10d5-c390-511c68829d40.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-cf875ee5-ad50-e67e-eeb9-059ac158285d.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-b309f819-a995-58ae-e686-2e98ac27a1c3.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-0c1048ad-a593-b587-4dad-63c8cb4ddfc1.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-27ec3df6-bdce-7f78-95be-647668661e56.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-71015c65-9c35-e1b8-e5fc-9bf9d1833731.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-f20ee280-d116-8015-6f87-2fd8b74da9a2.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-c81ac3ec-31ee-45b9-3be1-497feae7a780.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-86def2f6-adbf-52b0-1bf9-dbe7ca05c08f.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-86871cee-ac96-75d5-d63b-bc5daa5b56c2.png
+[27/Mar/2025 21:26:50 Europe/Dublin] [Info] Image copied: en/image/uuid-c92d5036-7f13-9541-6a80-0614d27e928d.png
+[27-Mar-2025 21:26:50 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, js/jquery-3/*, fonts/*, js/swagger/*, js/intercom/*
+[27-Mar-2025 21:26:50 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, fonts/*
+[27-Mar-2025 21:26:50 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/6163f759b3bf1.svg' to '$local_tmp/production-67e5c22c42ab98.29607218/94879-Insights-html5/out/css/image/corporate-logo.svg'
+[27-Mar-2025 21:26:50 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/61770eafbf909.svg' to '$local_tmp/production-67e5c22c42ab98.29607218/94879-Insights-html5/out/css/image/portal-logo.svg'
+[27-Mar-2025 21:26:50 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/67a22bcb69288.js' to '$local_tmp/production-67e5c22c42ab98.29607218/94879-Insights-html5/out/js/layout-custom-script.js'
+[27-Mar-2025 21:26:50 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/6167440fdbabf.ico' to '$local_tmp/production-67e5c22c42ab98.29607218/94879-Insights-html5/out/favicon.ico'
+[27-Mar-2025 21:26:51 Europe/Dublin] Post build HTML5
+[27/Mar/2025 21:26:51 Europe/Dublin] [Info] Transformation: index-en.html -> toc-en.html [67e5c29969c5d.toc.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: configuring-alerts-in-insights.html -> configuring-alerts-in-insights.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: available-metrics-in-insights.html -> available-metrics-in-insights.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: insights-tutorials.html -> insights-tutorials.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: git-insights.html -> git-insights.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: monitoring-and-optimizing-your-slowest-mobile-builds.html -> monitoring-and-optimizing-your-slowest-mobile-builds.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: tracking-build-failure-rate.html -> tracking-build-failure-rate.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: tracking-flaky-tests.html -> tracking-flaky-tests.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: tracking-test-failure-rate.html -> tracking-test-failure-rate.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: credit-usage.html -> credit-usage.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: getting-started-with-insights.html -> getting-started-with-insights.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: index-en.html -> index-en.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: command-metrics.html -> command-metrics.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Transformation: build-cache-metrics.html -> build-cache-metrics.html [67e5c29969c5d.page.xsl]
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Algolia search enabled.
+[27/Mar/2025 21:26:52 Europe/Dublin] [Info] Updating Algolia index.
+[27/Mar/2025 21:26:53 Europe/Dublin] [Info] Generating index page.
+[27/Mar/2025 21:26:53 Europe/Dublin] [Info] Transformation: index.manifest -> index.html [67e5c29969c5d.index.xsl]
+[27/Mar/2025 21:26:53 Europe/Dublin] [Info] Running tidy: /usr/bin/find '$local_tmp/production-67e5c22c42ab98.29607218/94879-Insights-html5/out' -type f -name "*.html" -exec /usr/bin/tidy -m -q -utf8 -i -w 350 --drop-empty-elements false --tidy-mark false --show-warnings false {} \; & > /dev/null;
+[27/Mar/2025 21:26:54 Europe/Dublin] [Info] # Took 11.952644 seconds to render.

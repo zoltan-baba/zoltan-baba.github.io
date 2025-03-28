@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="search" content="algolia" />
+  <meta name="use.ic" content="yes" />
+  <meta name="tocstandalone" content="no" />
+  <link rel="canonical" href="https://devcenter.bitrise.io/en/configuring-alerts-in-insights.html" />
+  <meta name="theme" content="2" />
+  <meta name="search.placeholder" content="Search" />
+  <meta name="search.results" content="Search results" />
+  <meta name="no.search.results" content="No results found" />
+  <title>Alerts in Insights</title>
+  <link rel="stylesheet" type="text/css" href="../css/docbook.css" />
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="../css/roboto.font.css" />
+  <link rel="stylesheet" type="text/css" href="../css/theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/theme2-colors.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/content-theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/sm-core-css.css" />
+  <link rel="stylesheet" type="text/css" href="../css/sm-simple.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style-print.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style-common.css" />
+  <link rel="stylesheet" type="text/css" href="../css/html5.algoliasearch.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css" />
+  <link rel="stylesheet" type="text/css" href="../css/graphical-lists.css" />
+  <link rel="stylesheet" type="text/css" href="../css/layout-custom-style.css?version=20250327" />
+  <meta name="generator" content="Paligo" />
+  <meta name="description" content="Insights allows you to configure alerts. Alerts monitor specified metrics and notify you when they reach a certain threshold. For example, you can configure an alert to notify you when a build of any of your apps exceeds 15 minutes or consumes more than a 1000 credits." />
+  <link rel="prev" href="available-metrics-in-insights/build-cache-metrics.html#common-use-cases-for-build-cache-metrics" title="Common use cases for build cache metrics" />
+  <link rel="next" href="configuring-alerts-in-insights.html#creating-a-new-alert" title="Creating a new alert" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+  /*<![CDATA[*/
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+  /*]]>*/
+  </style>
+</head>
+<body class="theme2 fixed-toolbar colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix="">
+  <div class="skipnav">
+    <a href="#content-wrapper">Skip to main content</a>
+  </div>
+  <header class="site-header">
+    <nav class="site-header-navbar navbar navbar-fixed-top">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div id="logotype-container" class="pull-left">
+            <a class="navbar-brand" href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="top-nav-menu sm sm-simple">
+            <li>
+              <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+            </li>
+            <li>
+              <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="site-body">
+    <div class="site-body-container">
+      <div class="site-body-row">
+        <aside class="site-sidebar">
+          <div class="site-sidebar-header">
+            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
+            "../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+          <ul class="toc nav nav-site-sidebar">
+            <li>
+              <a href="getting-started-with-insights.html" class="topic-link section" data-origin-id="UUID-b08cc96c-32cb-f704-788c-bbfd1fe854b9" data-legacy-id="UUID-e9c8a83f-5515-4907-9921-8dba67b55a11" data-permalink="getting-started-with-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Getting started with
+              Insights</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="available-metrics-in-insights.html" class="topic-link section" data-origin-id="UUID-882de749-0081-e73f-b327-a8aa4f7dca44" data-legacy-id="UUID-91980e65-5fa3-7cab-6749-f64693d4c327" data-permalink="available-metrics-in-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> Available metrics in Insights</a>
+              <ul>
+                <li>
+                  <a href="available-metrics-in-insights/command-metrics.html" class="topic-link section" data-origin-id="UUID-03f5f255-9b28-750d-d538-28a2b3035c0f" data-legacy-id="UUID-dd8f1242-fe72-20dd-38d0-e1b6bdc9a4ea" data-permalink="available-metrics-in-insights/command-metrics.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Command metrics</a>
+                </li>
+                <li>
+                  <a href="available-metrics-in-insights/build-cache-metrics.html" class="topic-link section" data-origin-id="UUID-48217058-040d-b054-40e3-685a205184aa" data-legacy-id="UUID-465174a0-44e8-7298-92f9-c7c7b06e65d6" data-permalink="available-metrics-in-insights/build-cache-metrics.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Build cache metrics</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="configuring-alerts-in-insights.html" class="topic-link section" data-origin-id="UUID-dfe12cc9-688e-c9b7-5607-34b390bd25d9" data-legacy-id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478" data-permalink="configuring-alerts-in-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Alerts in
+              Insights</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="git-insights.html" class="topic-link section" data-origin-id="UUID-54c277f6-5e2b-0a44-d61b-801dbe40f7e9" data-legacy-id="UUID-8790fa34-7a2f-834d-255f-2e91c9093a3d" data-permalink="git-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Git Insights</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="insights-tutorials.html" class="topic-link section" data-origin-id="UUID-0aee8f6d-7fab-a775-45ab-73aabfb019ca" data-legacy-id="UUID-25fc4da5-9857-518d-bc4d-22fcecd34868" data-permalink="insights-tutorials.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Insights
+              tutorials</a>
+              <ul>
+                <li>
+                  <a href="insights-tutorials/monitoring-and-optimizing-your-slowest-mobile-builds.html" class="topic-link section" data-origin-id="UUID-993dc3da-a9da-dba4-760f-110ef521dbbc" data-legacy-id="UUID-d07c60cc-a1b9-6962-89cc-bc053bdbf7e4" data-permalink="insights-tutorials/monitoring-and-optimizing-your-slowest-mobile-builds.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Monitoring and optimizing your slowest mobile builds</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="insights-tutorials/tracking-build-failure-rate.html" class="topic-link section" data-origin-id="UUID-21c0f7cd-7920-13a0-059d-56a25eef25eb" data-legacy-id="UUID-e39dfc2a-8981-f1a5-3a15-4c3bf8863916" data-permalink="insights-tutorials/tracking-build-failure-rate.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Tracking build failure rate</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="insights-tutorials/tracking-test-failure-rate.html" class="topic-link section" data-origin-id="UUID-707f52ec-ee03-7fe2-dbba-c07b9f8c5d8c" data-legacy-id="UUID-fe7a0682-ab28-f02c-6c33-0c3c2fa80578" data-permalink="insights-tutorials/tracking-test-failure-rate.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Tracking test failure rate</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="insights-tutorials/tracking-flaky-tests.html" class="topic-link section" data-origin-id="UUID-4577dce6-0518-6fbe-15d0-0c6210bae566" data-legacy-id="UUID-9f4e6d49-e7e3-99cf-cfd1-1248eb27c743" data-permalink="insights-tutorials/tracking-flaky-tests.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Tracking flaky tests</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="insights-tutorials/credit-usage.html" class="topic-link section" data-origin-id="UUID-f377af2d-9e1d-fd1b-77d1-862922c4ea70" data-legacy-id="UUID-9843d3e7-194d-f744-7711-2dda56e730a6" data-permalink="insights-tutorials/credit-usage.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Credit
+                  usage</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+        <div class="site-content">
+          <div class="toolbar top-nav-on">
+            <div class="toolbar-tools">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="top-nav-menu sm sm-simple">
+                  <li>
+                    <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+                  </li>
+                  <li>
+                    <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tool-print">
+                <i class="fa fa-print" aria-hidden="true">print</i>
+              </div>
+              <div class="tool-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <form class="tool-search-form" autocomplete="off">
+                  <input type="text" placeholder="Search" class="form-control search-field" id="aa-search-input" />
+                </form>
+              </div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+          </div>
+          <main>
+            <div id="top-pager">
+              <ul class="pager">
+                <li class="previous">
+                  <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="available-metrics-in-insights/build-cache-metrics.html#common-use-cases-for-build-cache-metrics">Prev</a>
+                </li>
+                <li class="next">
+                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="configuring-alerts-in-insights.html#creating-a-new-alert">Next</a>
+                </li>
+              </ul>
+            </div>
+            <article class="topic content-container" id="content-wrapper">
+              <div id="topic-content" class="topic-content">
+                <div class="breadcrumb-container">
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-link">
+                      <a href="index-en.html">Insights</a>
+                    </li>
+                    <li class="breadcrumb-node">Alerts in Insights</li>
+                  </ul>
+                </div>
+                <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-dfe12cc9-688e-c9b7-5607-34b390bd25d9" data-legacy-id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478" data-permalink="configuring-alerts-in-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="" id="alerts-in-insights">
+                  <div class="titlepage">
+                    <div>
+                      <div class="title">
+                        <h1 class="title" style="clear: both">Alerts in Insights</h1>
+                      </div>
+                      <div>
+                        <div class="abstract">
+                          <div class="abstract-title">
+                            Abstract
+                          </div>
+                          <p>Insights allows you to configure alerts. Alerts monitor specified metrics and notify you when they reach a certain threshold. For example, you can configure an alert to notify you when a build of any of your apps exceeds 15 minutes or consumes more than a 1000 credits.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>Insights allows you to configure alerts. Alerts monitor specified metrics and notify you when they reach a certain threshold. For example, you can configure an alert to notify you when a build of any of your apps exceeds 15 minutes or consumes more than a 1000 credits.</p>
+                  <p>You can configure alerts for:</p>
+                  <div class="itemizedlist">
+                    <ul class="itemizedlist" style="list-style-type: disc;">
+                      <li class="listitem">
+                        <p>Builds</p>
+                      </li>
+                      <li class="listitem">
+                        <p>Tests</p>
+                      </li>
+                      <li class="listitem">
+                        <p>Credit usage</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <p>For each category, you can set alerts for any of the available metrics: <a class="xref linktype-component" href="available-metrics-in-insights.html" title="Available metrics in Insights"><span class="xreftitle">Available metrics in Insights</span></a>.</p>
+                  <p>For each alert, you have to choose how to receive the notification. There are three options:</p>
+                  <div class="itemizedlist">
+                    <ul class="itemizedlist" style="list-style-type: disc;">
+                      <li class="listitem">
+                        <p>Microsoft Teams: The alert will post a notification to a Teams channel of your choice. <a class="link" href="https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook?tabs=dotnet" target="_blank" rel="noopener">You need to configure incoming webhooks in Teams</a>.</p>
+                      </li>
+                      <li class="listitem">
+                        <p>Slack: The alert will post a notification to a Slack channel of your choice. You need <a class="link" href="https://api.slack.com/messaging/webhooks" target="_blank" rel="noopener">a Slack app with incoming webhooks enabled</a>.</p>
+                      </li>
+                      <li class="listitem">
+                        <p>Email: The alert will notify you via email.</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478_UUID-775368cd-34d3-b9b8-5547-fc67661f4554" data-publication-date="" id="creating-a-new-alert">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Creating a new alert</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>You can create a new alert at any time in Insights:</p>
+                    <div class="procedure" id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478_procedure-idm33468847675012">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>Open Insights for your project.</p>
+                        </li>
+                        <li class="step">
+                          <p>Go to the <span class="guilabel">Create alert</span> page. To do so, you have two options:</p>
+                          <div class="itemizedlist">
+                            <ul class="itemizedlist" style="list-style-type: disc;">
+                              <li class="listitem">
+                                <p>Select <span class="guimenu">Alerts</span> from the left menu and click on <span class="guibutton">Create alert</span>.</p>
+                                <div class="mediaobject"><img src="image/uuid-6df6ae6a-869d-58a9-dbea-2fa93fba24e2.png" style="" alt="create-alert-button.png" /></div>
+                              </li>
+                              <li class="listitem">
+                                <p>Click on the bell icon above any metric in <span class="bold"><strong>Builds</strong></span>, <span class="bold"><strong>Tests</strong></span>, or <span class="bold"><strong>Credits</strong></span>.</p>
+                                <div class="mediaobject">
+                                  <table class="image-viewport" style="border-collapse:collapse;border:0; width:75%;">
+                                    <tr>
+                                      <td style="padding:0;"><img src="image/uuid-d7b270fb-8c64-ce2d-c083-c1dbcfdde87f.png" style="width: 100%;" alt="bell.png" /></td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="step">
+                          <p>Choose a metric type and a specific metric within that type in the <span class="guilabel">Metric type</span> section.</p>
+                          <div class="mediaobject"><img src="image/uuid-3cab36a0-7c43-5fb3-40cb-d7c03cd8ab00.png" style="" alt="metric-type.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>In the <span class="guilabel">Filters</span> section, select a project then click <span class="guilabel">Add filter</span> to add filter conditions. If you don't select a project, the alert will apply to every project in the workspace, without filters.</p>
+                          <p>You can create filters for a specific <a class="link linktype-component linktextconsumer" href="/document/preview/72810#UUID-f89e7a41-bc16-bc09-73f1-eaec61cb92d0" target="_blank">Pipeline</a>, a <em class="glossterm">Workflow</em>, or even a <em class="glossterm">Step</em>. You can also filter for branches, <a class=
+                          "link linktype-component linktextconsumer" href="/document/preview/42151#UUID-d6a228ed-8c03-64f9-dd96-993adf80523b" target="_blank">stacks</a>, and <a class="link linktype-component linktextconsumer" href="/document/preview/42155#UUID-03e06c05-1450-1415-7613-b6ed7c04c079" target="_blank">machine types</a>.<span id=
+                          "UUID-f582ef58-6b14-e1c4-724e-5e9892074478_N67e5c2954fafc" class="linktextprovider" style="display:none !important;">Pipelines with stages</span><span id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478_N67e5c29551bc0" class="linktextprovider" style="display:none !important;">Build stacks</span><span id=
+                          "UUID-f582ef58-6b14-e1c4-724e-5e9892074478_N67e5c29553d91" class="linktextprovider" style="display:none !important;">Build machines</span></p>
+                          <div class="mediaobject"><img src="image/uuid-918b42a8-4b92-3f05-5514-1b137c85e283.png" style="" alt="filters.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>In the <span class="guilabel">Conditions</span> section, set up the alert conditions.</p>
+                          <div class="itemizedlist">
+                            <ul class="itemizedlist" style="list-style-type: disc;">
+                              <li class="listitem">
+                                <p><span class="guilabel">Direction</span>: Choose whether to create an alert when a given threshold is above, equal, or below a certain limit.</p>
+                              </li>
+                              <li class="listitem">
+                                <p><span class="guilabel">Threshold</span>: The value the direction applies to. The exact nature of it depends on the metric you chose: for example, if you chose credit usage, you can set an amount of credits consumed to trigger an alert.</p>
+                              </li>
+                              <li class="listitem">
+                                <p><span class="guilabel">Monitored window</span>: The time period that the alert monitors.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="step">
+                          <p>In the <span class="guilabel">Notifications</span> section, name the alert in the <span class="guilabel">Alert name</span> field.</p>
+                        </li>
+                        <li class="step">
+                          <p>In the <span class="guilabel">Notification providers</span> section, click <span class="guibutton">Add new</span> and choose between three notification providers from the dropdown menu:</p>
+                          <div class="itemizedlist">
+                            <ul class="itemizedlist" style="list-style-type: disc;">
+                              <li class="listitem">
+                                <p><span class="guilabel">Slack</span>: Create an incoming webhook that posts into a selected channel and paste the webhook URL. To do so, you need to create a Slack app and enable incoming webhooks in the app: <a class="link" href="https://api.slack.com/messaging/webhooks" target="_blank" rel="noopener">Sending
+                                messages using incoming webhooks</a>.</p>
+                              </li>
+                              <li class="listitem">
+                                <p><span class="guilabel">Teams</span>: Create an incoming webhook for a selected Teams channel and paste the webhook URL: <a class="link" href="https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook?tabs=dotnet" target="_blank" rel="noopener">Create incoming
+                                webhooks for Teams</a>.</p>
+                              </li>
+                              <li class="listitem">
+                                <p><span class="guilabel">Email</span>: Set a valid email address. The alert will send a notification to the address.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="step">
+                          <p>When you're ready, click <span class="guibutton">Create</span> to finish the alert.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478_UUID-48a44cd1-58f3-e1c7-e88c-f28aec4624ca" data-publication-date="" id="editing-an-existing-alert">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Editing an existing alert</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Once an alert is in place in Insights, you can modify it at any time from the <span class="guilabel">Alerts</span> page. You can change the threshold, the granularity (the time period the alert applies to), or modify the notification providers.</p>
+                    <div dir="ltr" class="important">
+                      <h3 class="title">Metric type can't be changed</h3>
+                      <p>You can't modify the metric type that the alert monitors. For example, if the alert is monitoring build failure rate, you can't change it to monitor credit usage instead. Similarly, you can't change the filtering: if you were monitoring a specific app, you can't change the alert to monitor a different app instead.</p>
+                      <p>If you need a similar alert for a different metric or with a different filter, duplicate the existing alert: <a class="xref linktype-component" href="configuring-alerts-in-insights.html#duplicating-an-existing-alert" title="Duplicating an existing alert"><span class="xreftitle">Duplicating an existing alert</span></a>.</p>
+                    </div>
+                    <p>To edit an alert:</p>
+                    <div class="procedure" id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478_procedure-idm4612456002256033795663982616">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>Open Insights for your app.</p>
+                        </li>
+                        <li class="step">
+                          <p>On the left, select <span class="guilabel">Alerts</span>.</p>
+                          <div class="mediaobject"><img src="image/uuid-3c75e562-bf1f-266f-ec68-910589ed408e.png" style="" alt="alerts.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>Select the alert you need and on the right, click the <span class="guibutton">View alert</span> button.</p>
+                          <div class="mediaobject"><img src="image/uuid-387f919f-49c9-14ae-cb62-1bc4f47cda1e.png" style="" alt="existing-alert.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>On the alert's page, click the ellipsis in the top right corner to open the context menu.</p>
+                          <div class="mediaobject"><img src="image/uuid-a493c03e-ab64-9b02-748d-556fdd1c1b1a.png" style="" alt="edit-alert.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Edit alert</span>.</p>
+                        </li>
+                        <li class="step">
+                          <p>Modify the threshold, the granularity, or the notification provider.</p>
+                        </li>
+                        <li class="step">
+                          <p>Click <span class="guibutton">Save</span>.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478_UUID-6ce9afcd-ee24-bbf9-74c3-eb03915211ec" data-publication-date="" id="duplicating-an-existing-alert">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Duplicating an existing alert</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>You can duplicate any existing alert and then modify it during the alert creation process. This allows users to quickly create new alerts based on existing ones.</p>
+                    <p>To duplicate an alert:</p>
+                    <div class="procedure" id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478_procedure-idm33379569228146">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>Open Insights for your app.</p>
+                        </li>
+                        <li class="step">
+                          <p>On the left, select <span class="guilabel">Alerts</span>.</p>
+                          <div class="mediaobject"><img src="image/uuid-3c75e562-bf1f-266f-ec68-910589ed408e.png" style="" alt="alerts.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>Select the alert you need and on the right, click the <span class="guibutton">View alert</span> button.</p>
+                          <div class="mediaobject"><img src="image/uuid-387f919f-49c9-14ae-cb62-1bc4f47cda1e.png" style="" alt="existing-alert.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>On the alert's page, click the ellipsis in the top right corner to open the context menu.</p>
+                          <div class="mediaobject"><img src="image/uuid-a493c03e-ab64-9b02-748d-556fdd1c1b1a.png" style="" alt="edit-alert.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Duplicate</span>.</p>
+                        </li>
+                        <li class="step">
+                          <p>The duplicate feature takes you <a class="link linktype-component" href="configuring-alerts-in-insights.html#creating-a-new-alert" title="Creating a new alert">to the <span class="guilabel">Create alert</span> page</a>, with the existing alerts values already set. Make your changes and then click <span class=
+                          "guibutton">Create</span> at the bottom of the page.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
+                </section>
+                <div class="footer-content">
+                  <div class="section-toc section-toc-after">
+                    <div class="section-toc-title">
+                      In this section<span class="section-toc-title-delimiter">:</span>
+                    </div>
+                  </div>
+                  <div class="glossary-definitions">
+                    <em class="glossterm">Workflow</em><em class="glossterm">Step</em>
+                  </div>
+                </div>
+                <footer></footer>
+              </div>
+            </article>
+            <aside class="section-nav-container">
+              <ul class="section-nav nav">
+                <li>
+                  <a href="#alerts-in-insights">Alerts in Insights</a>
+                </li>
+                <li>
+                  <a href="#creating-a-new-alert">Creating a new alert</a>
+                </li>
+                <li>
+                  <a href="#editing-an-existing-alert">Editing an existing alert</a>
+                </li>
+                <li>
+                  <a href="#duplicating-an-existing-alert">Duplicating an existing alert</a>
+                </li>
+              </ul>
+            </aside>
+            <article id="search-result-wrapper">
+              <div class="search-container" style="display: none;">
+                <h2>Search results</h2>
+                <ul class="searchresults"></ul>
+                <p class="noresults">No results found</p>
+              </div>
+            </article>
+            <div class="feedback-panel">
+              <div id="email-feedback" class="no-voting toggle-feedback">
+                <p><a href=
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Alerts%20in%20Insights%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Alerts%20in%20Insights%22%20in%20the%20publication%20%22Insights%22."><i aria-hidden="true"
+                class="fa fa-pencil-square-o feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
+              </div>
+            </div>
+          </main>
+          <div id="bottom-pager">
+            <ul class="pager">
+              <li class="previous">
+                <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="available-metrics-in-insights/build-cache-metrics.html#common-use-cases-for-build-cache-metrics">Prev</a>
+              </li>
+              <li class="next">
+                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="configuring-alerts-in-insights.html#creating-a-new-alert">Next</a>
+              </li>
+            </ul>
+          </div>
+          <footer class="site-footer">
+            <div class="inner">
+              <div class="copyright">
+                © 2025
+              </div>
+              <div class="publication-date">
+                <span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">:</span> <span class="formatted-date"></span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //<![CDATA[
+  var theme = '2';
+
+                        
+                        window.versionsfile = '';
+
+
+                        window.indexDict = new Array();
+                        window.store = {};
+                        window.portalLanguage = 'en';
+                        window.enterKey = 'select';
+                        
+                        
+                                var fuse_threshold = 0.3;
+                        
+                                        var local_csh = false;
+                                
+                                        var anchoroption = false;
+                                        var instantsearch_minlength = 1;
+                                                
+                        var useanchorlinks = false;
+                        
+                                useanchorlinks = true;
+                                
+                                var clicktocopy = 'Click to copy link';
+                                var linkcopied =  'Copied!';
+                                        var collapseTocSectionOnLinkTitleClick = false;
+  //]]>
+  </script>
+  <script src="../js/jquery-3/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="../js/jquery-migrate-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../js/materialize.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/purl.js" type="text/javascript"></script>
+  <script src="../js/jquery.smartmenus.js" type="text/javascript"></script>
+  <script src="../js/html5-2-mp-common.js?version=20250327" type="text/javascript"></script>
+  <script src="../js/html5-2.js?version=20250327" type="text/javascript"></script>
+  <script src="../js/checklist.js" type="text/javascript"></script>
+  <script src="../js/clipboard.min.js" type="text/javascript"></script>
+  <script src="../js/anchorlinks.js" type="text/javascript"></script>
+  <script src="../js/html5.algoliasearch.js?version=20250327" type="text/javascript"></script>
+  <script src="../js/csh.js" type="text/javascript"></script>
+  <script src="../js/layout-custom-script.js?version=20250327" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script>
+  <script type="text/javascript" src="../js/cookie-consent.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+
+                                $(document).ready(function () {
+                                $(".mediaobject img").addClass('materialboxed');
+                                //Exclude images with links
+                                $(".mediaobject a img").removeClass('materialboxed');
+                                if (!document.documentMode) {
+                                $('.materialboxed').materialbox();
+                                }});
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var intercom_appid = 'e2rdidtm';
+  var intercom_src = 'https://widget.intercom.io/widget/e2rdidtm';
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var publication_id = 'en-UUID-ef41ad40-ccc3-2b32-436c-d00ffda1252a';
+  var algolia_application_id = 'HI1538U2K4';
+  var algolia_search_only_api_key = 'f817c83dbdb923d880c215c9380d1107';
+  var use_breadcrumbs_for_algolia_searchresults = '0';
+  //]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+  <script xmlns="" type="text/javascript" src="../js/intercom/intercom.js"></script>
+</body>
+</html>

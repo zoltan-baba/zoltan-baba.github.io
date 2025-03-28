@@ -17,20 +17,20 @@
   <link rel="stylesheet" type="text/css" href="../../css/docbook.css" />
   <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css" />
   <link rel="stylesheet" type="text/css" href="../../css/roboto.font.css" />
-  <link rel="stylesheet" type="text/css" href="../../css/theme2.css?version=20241114" />
-  <link rel="stylesheet" type="text/css" href="../../css/theme2-colors.css?version=20241114" />
-  <link rel="stylesheet" type="text/css" href="../../css/content-theme2.css?version=20241114" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2-colors.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/content-theme2.css?version=20250327" />
   <link rel="stylesheet" type="text/css" href="../../css/sm-core-css.css" />
   <link rel="stylesheet" type="text/css" href="../../css/sm-simple.css" />
   <link rel="stylesheet" type="text/css" href="../../css/style-print.css" />
   <link rel="stylesheet" type="text/css" href="../../css/style-common.css" />
-  <link rel="stylesheet" type="text/css" href="../../css/html5.algoliasearch.css?version=20241114" />
+  <link rel="stylesheet" type="text/css" href="../../css/html5.algoliasearch.css?version=20250327" />
   <link rel="stylesheet" type="text/css" href="../../css/style-modern-tables.css" />
   <link rel="stylesheet" type="text/css" href="../../css/graphical-lists.css" />
-  <link rel="stylesheet" type="text/css" href="../../css/layout-custom-style.css?version=20241114" />
-  <meta xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:util="http://www.paligo.net/xsl1/functions/utility" name="generator" content="Paligo" />
+  <link rel="stylesheet" type="text/css" href="../../css/layout-custom-style.css?version=20250327" />
+  <meta name="generator" content="Paligo" />
   <link rel="prev" href="integrating-launchdarkly-feature-flags.html#selecting-your-launchdarkly-project-and-environment" title="Selecting your LaunchDarkly project and environment" />
-  <link rel="next" href="../adding-a-new-release.html" title="Adding a new release" />
+  <link rel="next" href="../uploading-installable-artifacts.html" title="Uploading installable artifacts" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style type="text/css">
   /*<![CDATA[*/
@@ -70,7 +70,7 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
           <div id="logotype-container" class="pull-left">
-            <a class="navbar-brand" href="https://www.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+            <a class="navbar-brand" href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
           </div>
         </div>
         <div class="navbar-collapse collapse" id="navbar">
@@ -91,7 +91,7 @@
       <div class="site-body-row">
         <aside class="site-sidebar">
           <div class="site-sidebar-header">
-            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://www.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
+            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
             "../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
           </div>
           <ul class="toc nav nav-site-sidebar">
@@ -121,7 +121,8 @@
               <ul>
                 <li>
                   <a href="../configuring-connected-apps/configuring-connected-app-integration.html" class="topic-link section" data-origin-id="UUID-922891a3-8d1e-6f36-ed47-d628128a3d81" data-legacy-id="UUID-6742ca1c-5247-8274-d56d-bc66131719ea" data-permalink="configuring-connected-apps/configuring-connected-app-integration.html"
-                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Configuring connected app integration</a>
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Modifying a connected app's store connection</a>
+                  <ul></ul>
                 </li>
                 <li>
                   <a href="../configuring-connected-apps/changing-connected-app-appearance.html" class="topic-link section" data-origin-id="UUID-acea4cd7-a990-cc8f-a062-4a593347bf9a" data-legacy-id="UUID-faaec790-6baa-ce1d-aa62-848db4aa043e" data-permalink="configuring-connected-apps/changing-connected-app-appearance.html" data-topic-level="2"
@@ -149,72 +150,79 @@
               </ul>
             </li>
             <li>
-              <a href="../adding-a-new-release.html" class="topic-link section" data-origin-id="UUID-ef2824d0-a017-dc2a-7c5c-fc8741e8ec96" data-legacy-id="UUID-5c3d482a-a8b2-b726-62dd-c847d90720a0" data-permalink="adding-a-new-release.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Adding a new release</a>
+              <a href="../uploading-installable-artifacts.html" class="topic-link section" data-origin-id="UUID-b60a25b2-58b7-4049-f20a-45b88a731949" data-legacy-id="UUID-aedff350-3714-f0b3-8cb4-8a9efc4d401b" data-permalink="uploading-installable-artifacts.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Uploading
+              installable artifacts</a>
+              <ul></ul>
             </li>
             <li>
-              <a href="../configuring-a-release.html" class="topic-link section" data-origin-id="UUID-01b22d81-e087-ef64-7535-d8d227373071" data-legacy-id="UUID-e18e1281-0523-e0cf-a175-0d7c3e227919" data-permalink="configuring-a-release.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span>
-              Configuring a release</a>
-              <ul>
-                <li>
-                  <a href="../configuring-a-release/editing-the-description-of-a-release.html" class="topic-link section" data-origin-id="UUID-f5eb06bd-2533-944f-ab07-906cff170865" data-legacy-id="UUID-f02538c4-0c75-39e2-8dbd-a7648200a000" data-permalink="configuring-a-release/editing-the-description-of-a-release.html" data-topic-level="2"
-                  data-relative-prefix="../" data-publication-date="">Editing the description of a release</a>
-                </li>
-                <li>
-                  <a href="../configuring-a-release/configuring-slack-and-teams-notifications.html" class="topic-link section" data-origin-id="UUID-b4a61b6c-583f-7470-45bc-ac40b1e0c769" data-legacy-id="UUID-d950e0e2-de8c-2a96-7caf-391377e8cf01" data-permalink="configuring-a-release/configuring-slack-and-teams-notifications.html" data-topic-level=
-                  "2" data-relative-prefix="../" data-publication-date="">Configuring Slack and Teams notifications for releases</a>
-                  <ul></ul>
-                </li>
-                <li>
-                  <a href="../configuring-a-release/configuring-auto-upload.html" class="topic-link section" data-origin-id="UUID-dbc6d1ee-75d8-c988-5916-4c5d26937c5d" data-legacy-id="UUID-f1b9662b-f9ae-5a80-29f3-729c51efda2e" data-permalink="configuring-a-release/configuring-auto-upload.html" data-topic-level="2" data-relative-prefix="../"
-                  data-publication-date="">Configuring auto-upload</a>
-                  <ul></ul>
-                </li>
-                <li>
-                  <a href="../configuring-a-release/release-automation.html" class="topic-link section" data-origin-id="UUID-81ccf793-4937-82d4-f46c-5af3f40c280f" data-legacy-id="UUID-11081b9b-9ff9-f0bb-aa21-6fc3caf286c2" data-permalink="configuring-a-release/release-automation.html" data-topic-level="2" data-relative-prefix="../"
-                  data-publication-date="">Configuring release automation</a>
-                  <ul></ul>
-                </li>
-                <li>
-                  <a href="../configuring-a-release/removing-a-release.html" class="topic-link section" data-origin-id="UUID-916edee7-cf0d-ab9c-5fce-338503730b96" data-legacy-id="UUID-51951620-7211-cde6-ce8c-54f641f402a8" data-permalink="configuring-a-release/removing-a-release.html" data-topic-level="2" data-relative-prefix="../"
-                  data-publication-date="">Removing a release</a>
-                </li>
-              </ul>
+              <a href="../build-distribution.html" class="topic-link section" data-origin-id="UUID-06958928-29a8-8310-4cd1-3002659885e5" data-legacy-id="UUID-d7ab339e-72b8-25b0-e3ad-cf41d48ba918" data-permalink="build-distribution.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Build distribution for testing</a>
             </li>
             <li>
-              <a href="../managing-the-release-process.html" class="topic-link section" data-origin-id="UUID-acb0191a-658b-16a3-bd0e-848a88c38fd7" data-legacy-id="UUID-2e14d817-7921-ac8e-3843-36e397d5ebcb" data-permalink="managing-the-release-process.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
-              "glyphicon"></span> Managing the release process</a>
+              <a class="topic-link section topichead" data-origin-id="UUID-8a78ce14-56ae-c667-6ea9-ada4766a3cc8" data-legacy-id="UUID-72b0c5b9-55ef-d7b3-9835-014b839b9d55" data-permalink="releases.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Releases</a>
               <ul>
                 <li>
-                  <a href="../managing-the-release-process/selecting-a-release-candidate.html" class="topic-link section" data-origin-id="UUID-94b8d612-6439-4354-6b5d-060f4876d9fc" data-legacy-id="UUID-1e59710b-8eea-eb7a-0490-d1e9f92a8012" data-permalink="managing-the-release-process/selecting-a-release-candidate.html" data-topic-level="2"
-                  data-relative-prefix="../" data-publication-date="">Selecting a release candidate</a>
+                  <a href="../releases/adding-a-new-release.html" class="topic-link section" data-origin-id="UUID-ef2824d0-a017-dc2a-7c5c-fc8741e8ec96" data-legacy-id="UUID-5c3d482a-a8b2-b726-62dd-c847d90720a0" data-permalink="releases/adding-a-new-release.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Adding a new
+                  release</a>
                 </li>
                 <li>
-                  <a href="../managing-the-release-process/testflight-upload-stage.html" class="topic-link section" data-origin-id="UUID-9c3dfe6d-6015-8908-2f0d-104ea3e6736e" data-legacy-id="UUID-e12ce7b5-211b-e0f3-ae86-ca6ec272c50d" data-permalink="managing-the-release-process/testflight-upload-stage.html" data-topic-level="2"
-                  data-relative-prefix="../" data-publication-date="">TestFlight upload stage</a>
-                  <ul></ul>
+                  <a href="../releases/configuring-a-release.html" class="topic-link section" data-origin-id="UUID-01b22d81-e087-ef64-7535-d8d227373071" data-legacy-id="UUID-e18e1281-0523-e0cf-a175-0d7c3e227919" data-permalink="releases/configuring-a-release.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=
+                  ""><span class="glyphicon"></span> Configuring a release</a>
+                  <ul>
+                    <li>
+                      <a href="../releases/configuring-a-release/editing-the-description-of-a-release.html" class="topic-link section" data-origin-id="UUID-f5eb06bd-2533-944f-ab07-906cff170865" data-legacy-id="UUID-f02538c4-0c75-39e2-8dbd-a7648200a000" data-permalink="releases/configuring-a-release/editing-the-description-of-a-release.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Editing the description of a release</a>
+                    </li>
+                    <li>
+                      <a href="../releases/configuring-a-release/configuring-slack-and-teams-notifications.html" class="topic-link section" data-origin-id="UUID-b4a61b6c-583f-7470-45bc-ac40b1e0c769" data-legacy-id="UUID-d950e0e2-de8c-2a96-7caf-391377e8cf01" data-permalink=
+                      "releases/configuring-a-release/configuring-slack-and-teams-notifications.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Configuring Slack and Teams notifications for releases</a>
+                    </li>
+                    <li>
+                      <a href="../releases/configuring-a-release/configuring-auto-upload.html" class="topic-link section" data-origin-id="UUID-dbc6d1ee-75d8-c988-5916-4c5d26937c5d" data-legacy-id="UUID-f1b9662b-f9ae-5a80-29f3-729c51efda2e" data-permalink="releases/configuring-a-release/configuring-auto-upload.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Configuring auto-upload</a>
+                    </li>
+                    <li>
+                      <a href="../releases/configuring-a-release/release-automation.html" class="topic-link section" data-origin-id="UUID-81ccf793-4937-82d4-f46c-5af3f40c280f" data-legacy-id="UUID-11081b9b-9ff9-f0bb-aa21-6fc3caf286c2" data-permalink="releases/configuring-a-release/release-automation.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">Configuring release automation</a>
+                    </li>
+                    <li>
+                      <a href="../releases/configuring-a-release/removing-a-release.html" class="topic-link section" data-origin-id="UUID-916edee7-cf0d-ab9c-5fce-338503730b96" data-legacy-id="UUID-51951620-7211-cde6-ce8c-54f641f402a8" data-permalink="releases/configuring-a-release/removing-a-release.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">Removing a release</a>
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <a href="../managing-the-release-process/google-play-upload-stage.html" class="topic-link section" data-origin-id="UUID-672600c8-51af-6928-eb9b-60f9d3c9fe06" data-legacy-id="UUID-35aa3866-d2d6-ad98-6225-569f0814476c" data-permalink="managing-the-release-process/google-play-upload-stage.html" data-topic-level="2"
-                  data-relative-prefix="../" data-publication-date="">Google Play upload stage</a>
-                  <ul></ul>
-                </li>
-                <li>
-                  <a href="../managing-the-release-process/creating-tasks-for-the-approvals-stage.html" class="topic-link section" data-origin-id="UUID-3c1e89ad-7039-1a87-005a-03f236711c31" data-legacy-id="UUID-67063d4b-16c1-c0ce-592c-b43aadcbeb7a" data-permalink="managing-the-release-process/creating-tasks-for-the-approvals-stage.html"
-                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Creating tasks for the Approvals stage</a>
-                </li>
-                <li>
-                  <a href="../managing-the-release-process/sending-your-app-to-app-store-review.html" class="topic-link section" data-origin-id="UUID-81984918-3d64-aab7-951f-cf7a899a9c94" data-legacy-id="UUID-1e7dcdb9-4b1f-0e5c-7db9-1ff9a3b76792" data-permalink="managing-the-release-process/sending-your-app-to-app-store-review.html"
-                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Sending your app to App Store review</a>
-                </li>
-                <li>
-                  <a href="../managing-the-release-process/releasing-your-app-on-the-app-store.html" class="topic-link section" data-origin-id="UUID-87b673a6-ab6c-83dc-d1e4-f599aceee132" data-legacy-id="UUID-c91f20d2-7cf3-c64f-5960-8ad358232b6e" data-permalink="managing-the-release-process/releasing-your-app-on-the-app-store.html"
-                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Releasing your app on the App Store</a>
-                  <ul></ul>
-                </li>
-                <li>
-                  <a href="../managing-the-release-process/releasing-your-app-on-google-play.html" class="topic-link section" data-origin-id="UUID-e13d306a-3ca0-a99a-24eb-90403db9c978" data-legacy-id="UUID-bb370a57-0561-74ef-797b-e80049e31a22" data-permalink="managing-the-release-process/releasing-your-app-on-google-play.html" data-topic-level="2"
-                  data-relative-prefix="../" data-publication-date="">Releasing your app on Google Play</a>
-                  <ul></ul>
+                  <a href="../releases/managing-the-release-process.html" class="topic-link section" data-origin-id="UUID-acb0191a-658b-16a3-bd0e-848a88c38fd7" data-legacy-id="UUID-2e14d817-7921-ac8e-3843-36e397d5ebcb" data-permalink="releases/managing-the-release-process.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=
+                  ""><span class="glyphicon"></span> Managing the release process</a>
+                  <ul>
+                    <li>
+                      <a href="../releases/managing-the-release-process/selecting-a-release-candidate.html" class="topic-link section" data-origin-id="UUID-94b8d612-6439-4354-6b5d-060f4876d9fc" data-legacy-id="UUID-1e59710b-8eea-eb7a-0490-d1e9f92a8012" data-permalink="releases/managing-the-release-process/selecting-a-release-candidate.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Selecting a release candidate</a>
+                    </li>
+                    <li>
+                      <a href="../releases/managing-the-release-process/testflight-upload-stage.html" class="topic-link section" data-origin-id="UUID-9c3dfe6d-6015-8908-2f0d-104ea3e6736e" data-legacy-id="UUID-e12ce7b5-211b-e0f3-ae86-ca6ec272c50d" data-permalink="releases/managing-the-release-process/testflight-upload-stage.html" data-topic-level=
+                      "3" data-relative-prefix="../../" data-publication-date="">TestFlight upload stage</a>
+                    </li>
+                    <li>
+                      <a href="../releases/managing-the-release-process/google-play-upload-stage.html" class="topic-link section" data-origin-id="UUID-672600c8-51af-6928-eb9b-60f9d3c9fe06" data-legacy-id="UUID-35aa3866-d2d6-ad98-6225-569f0814476c" data-permalink="releases/managing-the-release-process/google-play-upload-stage.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Google Play upload stage</a>
+                    </li>
+                    <li>
+                      <a href="../releases/managing-the-release-process/creating-tasks-for-the-approvals-stage.html" class="topic-link section" data-origin-id="UUID-3c1e89ad-7039-1a87-005a-03f236711c31" data-legacy-id="UUID-67063d4b-16c1-c0ce-592c-b43aadcbeb7a" data-permalink=
+                      "releases/managing-the-release-process/creating-tasks-for-the-approvals-stage.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Creating tasks for the Approvals stage</a>
+                    </li>
+                    <li>
+                      <a href="../releases/managing-the-release-process/sending-your-app-to-app-store-review.html" class="topic-link section" data-origin-id="UUID-81984918-3d64-aab7-951f-cf7a899a9c94" data-legacy-id="UUID-1e7dcdb9-4b1f-0e5c-7db9-1ff9a3b76792" data-permalink=
+                      "releases/managing-the-release-process/sending-your-app-to-app-store-review.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Sending your app to App Store review</a>
+                    </li>
+                    <li>
+                      <a href="../releases/managing-the-release-process/releasing-your-app-on-the-app-store.html" class="topic-link section" data-origin-id="UUID-87b673a6-ab6c-83dc-d1e4-f599aceee132" data-legacy-id="UUID-c91f20d2-7cf3-c64f-5960-8ad358232b6e" data-permalink=
+                      "releases/managing-the-release-process/releasing-your-app-on-the-app-store.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Releasing your app on the App Store</a>
+                    </li>
+                    <li>
+                      <a href="../releases/managing-the-release-process/releasing-your-app-on-google-play.html" class="topic-link section" data-origin-id="UUID-e13d306a-3ca0-a99a-24eb-90403db9c978" data-legacy-id="UUID-bb370a57-0561-74ef-797b-e80049e31a22" data-permalink=
+                      "releases/managing-the-release-process/releasing-your-app-on-google-play.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Releasing your app on Google Play</a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
@@ -255,16 +263,16 @@
                   <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="integrating-launchdarkly-feature-flags.html#selecting-your-launchdarkly-project-and-environment">Prev</a>
                 </li>
                 <li class="next">
-                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="../adding-a-new-release.html">Next</a>
+                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="../uploading-installable-artifacts.html">Next</a>
                 </li>
               </ul>
             </div>
             <article class="topic content-container" id="content-wrapper">
               <div id="topic-content" class="topic-content">
                 <div class="breadcrumb-container">
-                  <ul xmlns:util="http://www.paligo.net/xsl1/functions/utility" class="breadcrumb">
+                  <ul class="breadcrumb">
                     <li class="breadcrumb-link">
-                      <a href="../index-en.html">Welcome to Bitrise documentation!</a>
+                      <a href="../index-en.html">Release Management</a>
                     </li>
                     <li class="breadcrumb-link">
                       <a href="../configuring-connected-apps.html">Configuring connected apps</a>
@@ -326,7 +334,7 @@
             <div class="feedback-panel">
               <div id="email-feedback" class="no-voting toggle-feedback">
                 <p><a href=
-                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Deleting%20a%20connected%20app%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Deleting%20a%20connected%20app%22%20in%20the%20publication%20%22Welcome%20to%20Bitrise%20documentation!%22.">
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Deleting%20a%20connected%20app%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Deleting%20a%20connected%20app%22%20in%20the%20publication%20%22Release%20Management%22.">
                 <i aria-hidden="true" class="fa fa-pencil-square-o feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
               </div>
             </div>
@@ -337,14 +345,14 @@
                 <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="integrating-launchdarkly-feature-flags.html#selecting-your-launchdarkly-project-and-environment">Prev</a>
               </li>
               <li class="next">
-                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="../adding-a-new-release.html">Next</a>
+                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="../uploading-installable-artifacts.html">Next</a>
               </li>
             </ul>
           </div>
           <footer class="site-footer">
             <div class="inner">
               <div class="copyright">
-                © 2024
+                © 2025
               </div>
               <div class="publication-date">
                 <span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">:</span> <span class="formatted-date"></span>
@@ -391,14 +399,14 @@
   <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
   <script src="../../js/purl.js" type="text/javascript"></script>
   <script src="../../js/jquery.smartmenus.js" type="text/javascript"></script>
-  <script src="../../js/html5-2-mp-common.js?version=20241114" type="text/javascript"></script>
-  <script src="../../js/html5-2.js?version=20241114" type="text/javascript"></script>
+  <script src="../../js/html5-2-mp-common.js?version=20250327" type="text/javascript"></script>
+  <script src="../../js/html5-2.js?version=20250327" type="text/javascript"></script>
   <script src="../../js/checklist.js" type="text/javascript"></script>
   <script src="../../js/clipboard.min.js" type="text/javascript"></script>
   <script src="../../js/anchorlinks.js" type="text/javascript"></script>
-  <script src="../../js/html5.algoliasearch.js?version=20241114" type="text/javascript"></script>
+  <script src="../../js/html5.algoliasearch.js?version=20250327" type="text/javascript"></script>
   <script src="../../js/csh.js" type="text/javascript"></script>
-  <script src="../../js/layout-custom-script.js?version=20241114" type="text/javascript"></script>
+  <script src="../../js/layout-custom-script.js?version=20250327" type="text/javascript"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script>
   <script type="text/javascript" src="../../js/cookie-consent.js"></script>
   <script type="text/javascript">

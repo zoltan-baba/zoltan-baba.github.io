@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="search" content="algolia" />
+  <meta name="use.ic" content="yes" />
+  <meta name="tocstandalone" content="no" />
+  <link rel="canonical" href="https://devcenter.bitrise.io/en/insights-tutorials/tracking-flaky-tests.html" />
+  <meta name="theme" content="2" />
+  <meta name="search.placeholder" content="Search" />
+  <meta name="search.results" content="Search results" />
+  <meta name="no.search.results" content="No results found" />
+  <title>Tracking flaky tests</title>
+  <link rel="stylesheet" type="text/css" href="../../css/docbook.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/roboto.font.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2-colors.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/content-theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-core-css.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-simple.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-print.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-common.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/html5.algoliasearch.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-modern-tables.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/graphical-lists.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/layout-custom-style.css?version=20250327" />
+  <meta name="generator" content="Paligo" />
+  <link rel="prev" href="tracking-test-failure-rate.html#finding-frequently-failing-tests" title="Finding frequently failing tests" />
+  <link rel="next" href="tracking-flaky-tests.html#the-importance-of-tracking-flaky-tests" title="The importance of tracking flaky tests" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+  /*<![CDATA[*/
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+  /*]]>*/
+  </style>
+</head>
+<body class="theme2 fixed-toolbar colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix="../">
+  <div class="skipnav">
+    <a href="#content-wrapper">Skip to main content</a>
+  </div>
+  <header class="site-header">
+    <nav class="site-header-navbar navbar navbar-fixed-top">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div id="logotype-container" class="pull-left">
+            <a class="navbar-brand" href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="top-nav-menu sm sm-simple">
+            <li>
+              <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+            </li>
+            <li>
+              <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="site-body">
+    <div class="site-body-container">
+      <div class="site-body-row">
+        <aside class="site-sidebar">
+          <div class="site-sidebar-header">
+            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
+            "../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+          <ul class="toc nav nav-site-sidebar">
+            <li>
+              <a href="../getting-started-with-insights.html" class="topic-link section" data-origin-id="UUID-b08cc96c-32cb-f704-788c-bbfd1fe854b9" data-legacy-id="UUID-e9c8a83f-5515-4907-9921-8dba67b55a11" data-permalink="getting-started-with-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Getting started with
+              Insights</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="../available-metrics-in-insights.html" class="topic-link section" data-origin-id="UUID-882de749-0081-e73f-b327-a8aa4f7dca44" data-legacy-id="UUID-91980e65-5fa3-7cab-6749-f64693d4c327" data-permalink="available-metrics-in-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> Available metrics in Insights</a>
+              <ul>
+                <li>
+                  <a href="../available-metrics-in-insights/command-metrics.html" class="topic-link section" data-origin-id="UUID-03f5f255-9b28-750d-d538-28a2b3035c0f" data-legacy-id="UUID-dd8f1242-fe72-20dd-38d0-e1b6bdc9a4ea" data-permalink="available-metrics-in-insights/command-metrics.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Command metrics</a>
+                </li>
+                <li>
+                  <a href="../available-metrics-in-insights/build-cache-metrics.html" class="topic-link section" data-origin-id="UUID-48217058-040d-b054-40e3-685a205184aa" data-legacy-id="UUID-465174a0-44e8-7298-92f9-c7c7b06e65d6" data-permalink="available-metrics-in-insights/build-cache-metrics.html" data-topic-level="2" data-relative-prefix=
+                  "../" data-publication-date="">Build cache metrics</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../configuring-alerts-in-insights.html" class="topic-link section" data-origin-id="UUID-dfe12cc9-688e-c9b7-5607-34b390bd25d9" data-legacy-id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478" data-permalink="configuring-alerts-in-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Alerts in
+              Insights</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="../git-insights.html" class="topic-link section" data-origin-id="UUID-54c277f6-5e2b-0a44-d61b-801dbe40f7e9" data-legacy-id="UUID-8790fa34-7a2f-834d-255f-2e91c9093a3d" data-permalink="git-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Git Insights</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="../insights-tutorials.html" class="topic-link section" data-origin-id="UUID-0aee8f6d-7fab-a775-45ab-73aabfb019ca" data-legacy-id="UUID-25fc4da5-9857-518d-bc4d-22fcecd34868" data-permalink="insights-tutorials.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Insights
+              tutorials</a>
+              <ul>
+                <li>
+                  <a href="../insights-tutorials/monitoring-and-optimizing-your-slowest-mobile-builds.html" class="topic-link section" data-origin-id="UUID-993dc3da-a9da-dba4-760f-110ef521dbbc" data-legacy-id="UUID-d07c60cc-a1b9-6962-89cc-bc053bdbf7e4" data-permalink="insights-tutorials/monitoring-and-optimizing-your-slowest-mobile-builds.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Monitoring and optimizing your slowest mobile builds</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../insights-tutorials/tracking-build-failure-rate.html" class="topic-link section" data-origin-id="UUID-21c0f7cd-7920-13a0-059d-56a25eef25eb" data-legacy-id="UUID-e39dfc2a-8981-f1a5-3a15-4c3bf8863916" data-permalink="insights-tutorials/tracking-build-failure-rate.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Tracking build failure rate</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../insights-tutorials/tracking-test-failure-rate.html" class="topic-link section" data-origin-id="UUID-707f52ec-ee03-7fe2-dbba-c07b9f8c5d8c" data-legacy-id="UUID-fe7a0682-ab28-f02c-6c33-0c3c2fa80578" data-permalink="insights-tutorials/tracking-test-failure-rate.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Tracking test failure rate</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../insights-tutorials/tracking-flaky-tests.html" class="topic-link section" data-origin-id="UUID-4577dce6-0518-6fbe-15d0-0c6210bae566" data-legacy-id="UUID-9f4e6d49-e7e3-99cf-cfd1-1248eb27c743" data-permalink="insights-tutorials/tracking-flaky-tests.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Tracking flaky tests</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../insights-tutorials/credit-usage.html" class="topic-link section" data-origin-id="UUID-f377af2d-9e1d-fd1b-77d1-862922c4ea70" data-legacy-id="UUID-9843d3e7-194d-f744-7711-2dda56e730a6" data-permalink="insights-tutorials/credit-usage.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Credit
+                  usage</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+        <div class="site-content">
+          <div class="toolbar top-nav-on">
+            <div class="toolbar-tools">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="top-nav-menu sm sm-simple">
+                  <li>
+                    <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+                  </li>
+                  <li>
+                    <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tool-print">
+                <i class="fa fa-print" aria-hidden="true">print</i>
+              </div>
+              <div class="tool-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <form class="tool-search-form" autocomplete="off">
+                  <input type="text" placeholder="Search" class="form-control search-field" id="aa-search-input" />
+                </form>
+              </div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+          </div>
+          <main>
+            <div id="top-pager">
+              <ul class="pager">
+                <li class="previous">
+                  <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="tracking-test-failure-rate.html#finding-frequently-failing-tests">Prev</a>
+                </li>
+                <li class="next">
+                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="tracking-flaky-tests.html#the-importance-of-tracking-flaky-tests">Next</a>
+                </li>
+              </ul>
+            </div>
+            <article class="topic content-container" id="content-wrapper">
+              <div id="topic-content" class="topic-content">
+                <div class="breadcrumb-container">
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-link">
+                      <a href="../index-en.html">Insights</a>
+                    </li>
+                    <li class="breadcrumb-link">
+                      <a href="../insights-tutorials.html">Insights tutorials</a>
+                    </li>
+                    <li class="breadcrumb-node">Tracking flaky tests</li>
+                  </ul>
+                </div>
+                <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-4577dce6-0518-6fbe-15d0-0c6210bae566" data-legacy-id="UUID-9f4e6d49-e7e3-99cf-cfd1-1248eb27c743" data-permalink="insights-tutorials/tracking-flaky-tests.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="" id=
+                "tracking-flaky-tests">
+                  <div class="titlepage">
+                    <div>
+                      <div class="title">
+                        <h1 class="title" style="clear: both">Tracking flaky tests</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <p>Flaky tests are a persistent issue that can make a mobile developer's life frustrating and challenging. Failing tests that produce different results even when the code hasn’t changed can cause confusion and setbacks, leading to time-consuming and frustrating debugging sessions. Eliminating flaky tests is essential for ensuring
+                  a stable and reliable testing process. This article explores the importance of tracking flaky tests with Bitrise Insights, and how to diagnose the causes behind them. Additionally, it also discusses how Bitrise Insights can detect flaky tests, and how developers can use the tool to track, identify, and diagnose the flakiness of
+                  their tests.</p>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-9f4e6d49-e7e3-99cf-cfd1-1248eb27c743_UUID-d269cdd2-b1c7-c312-b54c-72f5d95ec326" data-publication-date="" id="the-importance-of-tracking-flaky-tests">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">The importance of tracking flaky tests</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>First, what is a flaky test and how is it calculated? A test is flaky if it produces different results even when the code isn’t changed. For example, this simple code will sometimes fail and other times it’ll be successful, without any code change:</p>
+                    <pre class="programlisting">randNum := r1.Intn(100)
+require.Equal(t, true, randNum &gt; 40, "More than 40?")</pre>
+                    <p>Flaky tests are a special case of failing tests, and probably the most crucial ones to fix.</p>
+                    <p>Flaky tests are a persistent problem that can make a developer's life frustrating and challenging. They are a unique type of failing tests that may cause confusion and setbacks even when the code change being made is functioning as intended. Unlike other failing tests, flaky tests can cause failures in seemingly unrelated
+                    parts of the code, leading to time-consuming and frustrating debugging sessions. Fixing flaky tests is essential for ensuring a stable and reliable testing process.</p>
+                    <p>Eliminating flaky tests is not only important to prevent time waste, but is also crucial to improving developers' confidence in the tests. If tests fail randomly, developers will start to ignore test failures over time.</p>
+                    <p>Bitrise Insights can detect when a test produces inconsistent results for the same code state. For builds which have a code commit hash information specified when <em class="glossterm">triggered</em> (usually all builds except manually triggered and scheduled ones) it can detect this across builds (where the commit hash is
+                    the same, but the test had multiple different results on the same commit hash). Insights can also detect flaky tests in a given build, if the same test was performed multiple times in a single build, even if the build did not have a commit hash specified when it was triggered (common for manual and scheduled builds).</p>
+                  </section>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-9f4e6d49-e7e3-99cf-cfd1-1248eb27c743_UUID-b58d01c1-9e58-ec61-b62c-2f7a8321f044" data-publication-date="" id="finding-flaky-tests">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Finding flaky tests</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>When you open Bitrise Insights, you start on the <span class="guilabel">Overview</span> page. From here, you can go to either the <span class="guilabel">Bottlenecks</span> page, which lists the top 3 most flaky tests, or you can go to the <span class="guilabel">Tests</span> page under the <span class=
+                    "guilabel">EXPLORE</span> section to list and filter all your flaky tests. This will help you track and investigate flaky tests.</p>
+                    <p>Let’s check the <span class="guilabel">Bottlenecks</span> page first. When you open the <span class="guilabel">Bottlenecks</span> page you’ll see all the negative trends and issues Bitrise Insights detected in the last 7 days. When you’re checking flaky tests you can use the <span class="guilabel">Flakiness</span>
+                    section:</p>
+                    <div class="mediaobject"><img src="../image/uuid-f995aafc-a3ef-b1d1-5d31-751c5507e60a.png" style="" alt="flakiness-bottlenecks.png" /></div>
+                    <p>This <span class="guilabel">Bottlenecks</span> section lists the test cases which had the most flaky runs in the last 7 days. Click on any of them and you’ll land on the relevant section of the <span class="guilabel">Tests</span> page.</p>
+                    <p>Another way to go about it, is to go to the <span class="guilabel">Tests</span> page and switch to the <span class="guilabel">Flaky runs</span> metric tab:</p>
+                    <div class="mediaobject"><img src="../image/uuid-3bbc4214-3819-7b12-200a-d211bc965b7e.png" style="" alt="flaky-runs-tab.png" /></div>
+                    <p>Just like on any other <span class="guilabel">Tests</span> metric pages, you’ll see two charts. The upper chart always shows you data for the filters you set. The lower chart is called the breakdown chart and it shows you data “one level deeper” than what you filtered on.</p>
+                    <p>If you only have a single app in your <em class="glossterm">Workspace</em>, Bitrise Insights will automatically select that app when you open any of the Explore pages. If you have multiple apps in your workspace, when you open the <span class="guilabel">Tests</span> page, the upper chart will show you the overall flaky runs
+                    of the workspace across all of your apps in that specific workspace.</p>
+                    <p>The lower chart in this case shows you the same data but on a per app basis. From this you can see which app had the most flaky runs in the selected time period:</p>
+                    <div class="mediaobject"><img src="../image/uuid-9b72d008-6924-060b-2efc-96f96390b627.png" style="" alt="flakiest-app.png" /></div>
+                    <p>Here, on the breakdown chart you can see that we have this application which had the most amount of flaky test runs in this workspace. Filter down to that app, and on the next level you'll find the per test suite breakdown:</p>
+                    <p>The upper chart now shows selected filters view, which in this case is the selected app's flaky test runs. On the lower breakdown chart, you can see which the test suite which had the most flaky test runs:</p>
+                    <p>Let's filter down to that test suite to investigate it a little further:</p>
+                    <div class="mediaobject"><img src="../image/uuid-7c7f36d3-3226-2a6c-3549-cd3321895ef1.png" style="" alt="flakiest-test-suite.png" /></div>
+                    <p>The upper chart now reflects this filtering, and the breakdown chart switched over to per branch flaky runs. Under the graphs you can see the <span class="guilabel">Test cases</span> list, which is filtered based on the filters that you set at the top and also on the time/date range that you set in the top right corner.</p>
+                    <p>Using this <span class="guilabel">Test cases</span> table you can find which test case is flaky most frequently (<span class="guilabel">Flaky rate</span>) or which test case had the most amount of flaky runs (<span class="guilabel">Flaky runs</span>) in the selected time period, app, and test suite.</p>
+                    <div class="mediaobject"><img src="../image/uuid-4775415f-854a-3e11-430a-34c233f7fc5f.png" style="" alt="test-cases-list.png" /></div>
+                    <p>Select the test case which had the most flaky runs to continue your investigation.</p>
+                    <p>This will set the relevant filters for you to focus only on this specific test case. As a result, the charts at the top will now only show the flaky run trends of this specific test case.</p>
+                    <p>Under the charts, Bitrise Insights automatically switched over to the <span class="guilabel">Related test case runs</span> tab:</p>
+                    <div class="mediaobject"><img src="../image/uuid-b53b6a0d-3e15-8891-131e-9c1b5637f0bc.png" style="" alt="related-test-cases-runs-tab.png" /></div>
+                    <p>The <span class="guilabel">Related test case runs</span> table lists the specific executions of the test case which had inconsistent results, either in a given build, or across builds with the same commit hash. As you can see on this example, the <span class="guilabel">testFlakyFeature()</span> test case had both successful
+                    and failed results for the same commit (for commit <code class="code">f74ca14</code> and also for <code class="code">c84f1fd</code>).</p>
+                    <p>Using the <span class="guilabel">Related test case runs</span> table you can see all the previous flaky runs of this specific test case, how long that run was and whether it was successful or not. Using the buttons in the test run popup you can quickly jump to the relevant build’s page and to the relevant test report’s page
+                    and then continue your investigation there:&nbsp;</p>
+                    <div class="mediaobject"><img src="../image/uuid-603588f5-3a76-1594-bd18-53063a966a21.png" style="" alt="case-report-card.png" /></div>
+                    <p>Keeping an eye on and fixing flaky tests helps you to reduce time waste during the app development process and to increase the overall test confidence of the team.</p>
+                  </section>
+                </section>
+                <div class="footer-content">
+                  <div class="section-toc section-toc-after">
+                    <div class="section-toc-title">
+                      In this section<span class="section-toc-title-delimiter">:</span>
+                    </div>
+                  </div>
+                  <div class="glossary-definitions">
+                    <em class="glossterm">triggered</em><em class="glossterm">Workspace</em>
+                  </div>
+                </div>
+                <footer></footer>
+              </div>
+            </article>
+            <aside class="section-nav-container">
+              <ul class="section-nav nav">
+                <li>
+                  <a href="#tracking-flaky-tests">Tracking flaky tests</a>
+                </li>
+                <li>
+                  <a href="#the-importance-of-tracking-flaky-tests">The importance of tracking flaky tests</a>
+                </li>
+                <li>
+                  <a href="#finding-flaky-tests">Finding flaky tests</a>
+                </li>
+              </ul>
+            </aside>
+            <article id="search-result-wrapper">
+              <div class="search-container" style="display: none;">
+                <h2>Search results</h2>
+                <ul class="searchresults"></ul>
+                <p class="noresults">No results found</p>
+              </div>
+            </article>
+            <div class="feedback-panel">
+              <div id="email-feedback" class="no-voting toggle-feedback">
+                <p><a href=
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Tracking%20flaky%20tests%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Tracking%20flaky%20tests%22%20in%20the%20publication%20%22Insights%22.">
+                <i aria-hidden="true" class="fa fa-pencil-square-o feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
+              </div>
+            </div>
+          </main>
+          <div id="bottom-pager">
+            <ul class="pager">
+              <li class="previous">
+                <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="tracking-test-failure-rate.html#finding-frequently-failing-tests">Prev</a>
+              </li>
+              <li class="next">
+                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="tracking-flaky-tests.html#the-importance-of-tracking-flaky-tests">Next</a>
+              </li>
+            </ul>
+          </div>
+          <footer class="site-footer">
+            <div class="inner">
+              <div class="copyright">
+                © 2025
+              </div>
+              <div class="publication-date">
+                <span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">:</span> <span class="formatted-date"></span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //<![CDATA[
+  var theme = '2';
+
+                        
+                        window.versionsfile = '';
+
+
+                        window.indexDict = new Array();
+                        window.store = {};
+                        window.portalLanguage = 'en';
+                        window.enterKey = 'select';
+                        
+                        
+                                var fuse_threshold = 0.3;
+                        
+                                        var local_csh = false;
+                                
+                                        var anchoroption = false;
+                                        var instantsearch_minlength = 1;
+                                                
+                        var useanchorlinks = false;
+                        
+                                useanchorlinks = true;
+                                
+                                var clicktocopy = 'Click to copy link';
+                                var linkcopied =  'Copied!';
+                                        var collapseTocSectionOnLinkTitleClick = false;
+  //]]>
+  </script>
+  <script src="../../js/jquery-3/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="../../js/jquery-migrate-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../../js/materialize.min.js" type="text/javascript"></script>
+  <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../js/purl.js" type="text/javascript"></script>
+  <script src="../../js/jquery.smartmenus.js" type="text/javascript"></script>
+  <script src="../../js/html5-2-mp-common.js?version=20250327" type="text/javascript"></script>
+  <script src="../../js/html5-2.js?version=20250327" type="text/javascript"></script>
+  <script src="../../js/checklist.js" type="text/javascript"></script>
+  <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+  <script src="../../js/anchorlinks.js" type="text/javascript"></script>
+  <script src="../../js/html5.algoliasearch.js?version=20250327" type="text/javascript"></script>
+  <script src="../../js/csh.js" type="text/javascript"></script>
+  <script src="../../js/layout-custom-script.js?version=20250327" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script>
+  <script type="text/javascript" src="../../js/cookie-consent.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+
+                                $(document).ready(function () {
+                                $(".mediaobject img").addClass('materialboxed');
+                                //Exclude images with links
+                                $(".mediaobject a img").removeClass('materialboxed');
+                                if (!document.documentMode) {
+                                $('.materialboxed').materialbox();
+                                }});
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var intercom_appid = 'e2rdidtm';
+  var intercom_src = 'https://widget.intercom.io/widget/e2rdidtm';
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var publication_id = 'en-UUID-ef41ad40-ccc3-2b32-436c-d00ffda1252a';
+  var algolia_application_id = 'HI1538U2K4';
+  var algolia_search_only_api_key = 'f817c83dbdb923d880c215c9380d1107';
+  var use_breadcrumbs_for_algolia_searchresults = '0';
+  //]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+  <script xmlns="" type="text/javascript" src="../../js/intercom/intercom.js"></script>
+</body>
+</html>

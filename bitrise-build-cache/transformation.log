@@ -1,0 +1,94 @@
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] # Output Factory initiated (html5)
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] # Building output for: Bitrise Build Cache
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] # URL /document/edit/94853
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] # User: Zoltán Bába
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] # Time: Thu, 27 Mar 2025 21:26:23 +0000
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] # Server: ip-172-31-9-221.eu-west-1.compute.internal
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Group: custom
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Type: html5
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Transformation: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] File found: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Building output for: html5
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Using stylesheet: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Parameters for this build: []
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Environment variables for this build: {"taxonomies.propagate":"1","use.algolia.search":"1","tidy.output":"1","taxonomies.relationship":"Related links taxonomies"}
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Building output for languages: ["en"]
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Building multilang: no
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Building preview: no
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 21:26:23 Europe/Dublin] [Info] Using build directory: $local_tmp/production-67e5c2238ce181.31410300/94853-Bitrise_Build_Cache-html5
+[27/Mar/2025 21:26:24 Europe/Dublin] [Info] -- Generating source files
+[27/Mar/2025 21:26:24 Europe/Dublin] [Info] -- Propagating taxonomies: true
+[27/Mar/2025 21:26:25 Europe/Dublin] [Info] -- Source files have been generated
+[27/Mar/2025 21:26:25 Europe/Dublin] [Info] -- Publication has no unresolved dependencies.
+[27/Mar/2025 21:26:25 Europe/Dublin] [Info] Parsing processing instructions
+[27/Mar/2025 21:26:25 Europe/Dublin] [Info] -- Generating source files complete.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] Localizing: publication-94853.xml
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] Language: en
+[27/Mar/2025 21:26:26 Europe/Dublin] [Warning] Resolving some links failed
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[3]/*[6]/*[4]/*[1]/*[1]/*] An outgoing link in <a href="/document/edit/85024">Configuring remote cache for Bazel in other CI environments</a> could not be resolved. The link points to <a href="/document/edit/54560">Creating a personal access token</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[3]/*[6]/*[4]/*[2]/*/*[1]] An outgoing link in <a href="/document/edit/85024">Configuring remote cache for Bazel in other CI environments</a> could not be resolved. The link points to <a href="/document/edit/84117">Identifying Workspaces and apps with their slugs</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[6]/*[2]/*] An outgoing link in <a href="/document/edit/81683">Remote build cache for Gradle</a> could not be resolved. The link points to <a href="/document/edit/80753">Managing dependencies for Android apps</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[7]/*[2]/*] An outgoing link in <a href="/document/edit/81683">Remote build cache for Gradle</a> could not be resolved. The link points to <a href="/document/edit/76866">Key-based caching</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[9]/*[4]/*[1]/*[1]/*] An outgoing link in <a href="/document/edit/85052">Configuring remote cache for Gradle in other CI environments</a> could not be resolved. The link points to <a href="/document/edit/54560">Creating a personal access token</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[9]/*[4]/*[2]/*/*[1]] An outgoing link in <a href="/document/edit/85052">Configuring remote cache for Gradle in other CI environments</a> could not be resolved. The link points to <a href="/document/edit/84117">Identifying Workspaces and apps with their slugs</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[10]/*[9]/*[4]/*[2]/*] An outgoing link in <a href="/document/edit/86492">Diagnostic builds</a> could not be resolved. The link points to <a href="/document/edit/76866">Key-based caching</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[10]/*[9]/*[7]/*[6]/*[1]/*[2]/*[2]] An outgoing link in <a href="/document/edit/86492">Diagnostic builds</a> could not be resolved. The link points to <a href="/document/edit/53298">Storing the bitrise.yml file in your repository</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[10]/*[9]/*[7]/*[7]/*[1]/*[2]/*[2]] An outgoing link in <a href="/document/edit/86492">Diagnostic builds</a> could not be resolved. The link points to <a href="/document/edit/53298">Storing the bitrise.yml file in your repository</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[11]/*[4]/*[3]/*[3]/*[1]/*[1]] An outgoing link in <a href="/document/edit/92211">Gradle configuration cache</a> could not be resolved. The link points to <a href="/document/edit/54560">Creating a personal access token</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[11]/*[4]/*[3]/*[3]/*[1]/*[2]] An outgoing link in <a href="/document/edit/92211">Gradle configuration cache</a> could not be resolved. The link points to <a href="/document/edit/53200">Secrets</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[11]/*[4]/*[3]/*[5]/*[1]/*[1]] An outgoing link in <a href="/document/edit/92211">Gradle configuration cache</a> could not be resolved. The link points to <a href="/document/edit/53200">Secrets</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[11]/*[4]/*[3]/*[6]/*/*[1]] An outgoing link in <a href="/document/edit/92211">Gradle configuration cache</a> could not be resolved. The link points to <a href="/document/edit/84117">Identifying Workspaces and apps with their slugs</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[12]/*[6]/*[3]/*[2]/*/*[2]] An outgoing link in <a href="/document/edit/93867">Dependency verification for Gradle</a> could not be resolved. The link points to <a href="/document/edit/65158">Using a specific Step version</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] [/*/*[4]/*[12]/*[6]/*[5]/*[2]/*[1]/*] An outgoing link in <a href="/document/edit/93867">Dependency verification for Gradle</a> could not be resolved. The link points to <a href="/document/edit/90159">Configuration YAML</a> which is not part of this publication.
+[27/Mar/2025 21:26:26 Europe/Dublin] [Info] Variable sets found: 0
+[27/Mar/2025 21:26:28 Europe/Dublin] [Info] Inserting image links.
+[27/Mar/2025 21:26:28 Europe/Dublin] [Info] Found 5 image(s).
+[27/Mar/2025 21:26:28 Europe/Dublin] [Info] Found image 'clear-cache.png'
+[27/Mar/2025 21:26:28 Europe/Dublin] [Info] Found image 'activate-remote-cache-gradle.png'
+[27/Mar/2025 21:26:28 Europe/Dublin] [Info] Found image 'upload-complete.png'
+[27/Mar/2025 21:26:28 Europe/Dublin] [Info] Found image 'invocations-significant.png'
+[27/Mar/2025 21:26:28 Europe/Dublin] [Info] Found image 'task-reason.png'
+[27/Mar/2025 21:26:29 Europe/Dublin] [Info] Profiling parameters: []
+[27/Mar/2025 21:26:29 Europe/Dublin] [Info] Profiling customisation: $user_dir/xsl/profile.xsl (not found)
+[27/Mar/2025 21:26:29 Europe/Dublin] [Info] Transformation: publication-94853--en.org.xml -> publication-94853--en.xml [profile.xsl]
+[27/Mar/2025 21:26:29 Europe/Dublin] [Info] Transformation: publication-94853--en.xml -> publication-94853--en.xml [internal-xref.xsl]
+[27/Mar/2025 21:26:29 Europe/Dublin] [Info] Transformation: A-filelist.xml -> B-sorted.xml [IO.document.sortlang.xsl]
+[27/Mar/2025 21:26:29 Europe/Dublin] [Info] Transformation: B-sorted.xml -> C-concatenated.xml [IO.document.concat.xsl]
+[27/Mar/2025 21:26:29 Europe/Dublin] [Info] Transformation: B-sorted.xml -> index-en.xml [IO.document.head.xsl]
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Created copy: $user_dir/xsl/custom/layout-435.xsl -> $user_dir/xsl/custom/67e5c285f2bb0.xsl
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.page.xsl -> $user_dir/xsl/custom/67e5c285f2bb0.page.xsl
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.index.xsl -> $user_dir/xsl/custom/67e5c285f2bb0.index.xsl
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.toc.xsl -> $user_dir/xsl/custom/67e5c285f2bb0.toc.xsl
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.page.xsl -> $user_dir/xsl/custom/67e5c285f2bb0.page.xsl
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.index.xsl -> $user_dir/xsl/custom/67e5c285f2bb0.index.xsl
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Image copied: en/image/uuid-77da33a7-ed0f-7ef0-7720-165a7247edd0.png
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Image copied: en/image/uuid-1afefa9a-7cc1-db41-6186-0ee56293458c.png
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Image copied: en/image/uuid-223b519e-cddd-6157-de92-bfdf36d7ba2d.png
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Image copied: en/image/uuid-f63b2a01-2f9d-fb91-dc1d-a94aa4d3e386.png
+[27/Mar/2025 21:26:30 Europe/Dublin] [Info] Image copied: en/image/uuid-60ec20cb-92a4-2e4d-c084-55988b170c60.png
+[27-Mar-2025 21:26:31 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, js/jquery-3/*, fonts/*, js/swagger/*, js/intercom/*
+[27-Mar-2025 21:26:31 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, fonts/*
+[27-Mar-2025 21:26:31 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/6163f759b3bf1.svg' to '$local_tmp/production-67e5c2238ce181.31410300/94853-Bitrise_Build_Cache-html5/out/css/image/corporate-logo.svg'
+[27-Mar-2025 21:26:31 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/61770eafbf909.svg' to '$local_tmp/production-67e5c2238ce181.31410300/94853-Bitrise_Build_Cache-html5/out/css/image/portal-logo.svg'
+[27-Mar-2025 21:26:31 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/67a22bcb69288.js' to '$local_tmp/production-67e5c2238ce181.31410300/94853-Bitrise_Build_Cache-html5/out/js/layout-custom-script.js'
+[27-Mar-2025 21:26:31 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/6167440fdbabf.ico' to '$local_tmp/production-67e5c2238ce181.31410300/94853-Bitrise_Build_Cache-html5/out/favicon.ico'
+[27-Mar-2025 21:26:31 Europe/Dublin] Post build HTML5
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Transformation: index-en.html -> toc-en.html [67e5c285f2bb0.toc.xsl]
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Transformation: remote-build-caching.html -> remote-build-caching.html [67e5c285f2bb0.page.xsl]
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Transformation: clearing-the-build-cache.html -> clearing-the-build-cache.html [67e5c285f2bb0.page.xsl]
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Transformation: at-rest-encryption-for-the-build-cache.html -> at-rest-encryption-for-the-build-cache.html [67e5c285f2bb0.page.xsl]
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Transformation: api.html -> api.html [67e5c285f2bb0.page.xsl]
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Transformation: remote-build-cache-for-bazel.html -> remote-build-cache-for-bazel.html [67e5c285f2bb0.page.xsl]
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Transformation: index-en.html -> index-en.html [67e5c285f2bb0.page.xsl]
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Transformation: insights.html -> insights.html [67e5c285f2bb0.page.xsl]
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Transformation: remote-build-cache-for-gradle.html -> remote-build-cache-for-gradle.html [67e5c285f2bb0.page.xsl]
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Algolia search enabled.
+[27/Mar/2025 21:26:32 Europe/Dublin] [Info] Updating Algolia index.
+[27/Mar/2025 21:26:33 Europe/Dublin] [Info] Generating index page.
+[27/Mar/2025 21:26:33 Europe/Dublin] [Info] Transformation: index.manifest -> index.html [67e5c285f2bb0.index.xsl]
+[27/Mar/2025 21:26:33 Europe/Dublin] [Info] Running tidy: /usr/bin/find '$local_tmp/production-67e5c2238ce181.31410300/94853-Bitrise_Build_Cache-html5/out' -type f -name "*.html" -exec /usr/bin/tidy -m -q -utf8 -i -w 350 --drop-empty-elements false --tidy-mark false --show-warnings false {} \; & > /dev/null;
+[27/Mar/2025 21:26:34 Europe/Dublin] [Info] # Took 11.029080 seconds to render.

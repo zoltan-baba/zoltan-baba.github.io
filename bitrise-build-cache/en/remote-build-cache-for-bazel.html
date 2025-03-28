@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="search" content="algolia" />
+  <meta name="use.ic" content="yes" />
+  <meta name="tocstandalone" content="no" />
+  <link rel="canonical" href="https://devcenter.bitrise.io/en/remote-build-cache-for-bazel.html" />
+  <meta name="theme" content="2" />
+  <meta name="search.placeholder" content="Search" />
+  <meta name="search.results" content="Search results" />
+  <meta name="no.search.results" content="No results found" />
+  <title>Bitrise Build Cache for Bazel</title>
+  <link rel="stylesheet" type="text/css" href="../css/docbook.css" />
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="../css/roboto.font.css" />
+  <link rel="stylesheet" type="text/css" href="../css/theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/theme2-colors.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/content-theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/sm-core-css.css" />
+  <link rel="stylesheet" type="text/css" href="../css/sm-simple.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style-print.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style-common.css" />
+  <link rel="stylesheet" type="text/css" href="../css/html5.algoliasearch.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../css/style-modern-tables.css" />
+  <link rel="stylesheet" type="text/css" href="../css/graphical-lists.css" />
+  <link rel="stylesheet" type="text/css" href="../css/layout-custom-style.css?version=20250327" />
+  <meta name="generator" content="Paligo" />
+  <meta name="description" content="To successfully use remote caching for Bazel, you need a bitrise.bazelrc file that contains the necessary configurations to enable the remote build cache for your Bazel project. You can use the remote cache for builds running on Bitrise or in other CI environments." />
+  <link rel="prev" href="remote-build-caching/clearing-the-build-cache.html" title="Clearing the Build Cache" />
+  <link rel="next" href="remote-build-cache-for-bazel.html#configuring-the-bitrise-build-cache-for-bazel-in-the-bitrise-ci-environment" title="Configuring the Bitrise Build Cache for Bazel in the Bitrise CI environment" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+  /*<![CDATA[*/
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+  /*]]>*/
+  </style>
+</head>
+<body class="theme2 fixed-toolbar colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix="">
+  <div class="skipnav">
+    <a href="#content-wrapper">Skip to main content</a>
+  </div>
+  <header class="site-header">
+    <nav class="site-header-navbar navbar navbar-fixed-top">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div id="logotype-container" class="pull-left">
+            <a class="navbar-brand" href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="top-nav-menu sm sm-simple">
+            <li>
+              <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+            </li>
+            <li>
+              <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="site-body">
+    <div class="site-body-container">
+      <div class="site-body-row">
+        <aside class="site-sidebar">
+          <div class="site-sidebar-header">
+            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
+            "../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+          <ul class="toc nav nav-site-sidebar">
+            <li>
+              <a class="topic-link section topichead" data-origin-id="UUID-16495559-0abb-7844-fdd5-9084763e9d49" data-legacy-id="UUID-52e632b5-5a6f-d23e-4d79-6ae3ca0aa6a1" data-permalink="remote-build-caching.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Bitrise Build Cache</a>
+              <ul>
+                <li>
+                  <a href="remote-build-caching/at-rest-encryption-for-the-build-cache.html" class="topic-link section" data-origin-id="UUID-12852626-2895-0e88-7326-30eba9b00317" data-legacy-id="UUID-636a91a3-bd4e-ccb2-872b-84d4f948e1c2" data-permalink="remote-build-caching/at-rest-encryption-for-the-build-cache.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">At-rest encryption for the Build Cache</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="remote-build-caching/clearing-the-build-cache.html" class="topic-link section" data-origin-id="UUID-893a161b-4a75-480a-761a-b967ed029767" data-legacy-id="UUID-4c14b064-ed1b-fae3-4d67-f7f5865929ee" data-permalink="remote-build-caching/clearing-the-build-cache.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Clearing the Build Cache</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="remote-build-cache-for-bazel.html" class="topic-link section" data-origin-id="UUID-3b3d077a-9369-3542-e579-f3a1a756f413" data-legacy-id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e" data-permalink="remote-build-cache-for-bazel.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Bitrise Build Cache for
+              Bazel</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="remote-build-cache-for-gradle.html" class="topic-link section taxonomy-actions-builds taxonomy-actions-caching taxonomy-related-links-taxonomies-android-rel taxonomy-related-links-taxonomies-builds-rel" data-origin-id="UUID-e4e0bc15-e1c7-bafe-adfc-f75afd59fc69" data-legacy-id="UUID-8b310642-b9ee-a060-2aa1-6bbc9591b461"
+              data-permalink="remote-build-cache-for-gradle.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Bitrise Build Cache for Gradle</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="insights.html" class="topic-link section" data-origin-id="UUID-db8404e1-fa1d-6f35-7fec-b24e287e20d9" data-legacy-id="UUID-ea9afad4-b316-02ba-12eb-9dc6ee3834bb" data-permalink="insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Insights</a>
+            </li>
+            <li>
+              <a href="api.html" class="topic-link section" data-origin-id="UUID-57bc118a-10ee-fa39-a15a-bb84ac20c17e" data-legacy-id="UUID-d1677e09-2515-b866-cf5f-076abd407122" data-permalink="api.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">API</a>
+            </li>
+          </ul>
+        </aside>
+        <div class="site-content">
+          <div class="toolbar top-nav-on">
+            <div class="toolbar-tools">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="top-nav-menu sm sm-simple">
+                  <li>
+                    <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+                  </li>
+                  <li>
+                    <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tool-print">
+                <i class="fa fa-print" aria-hidden="true">print</i>
+              </div>
+              <div class="tool-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <form class="tool-search-form" autocomplete="off">
+                  <input type="text" placeholder="Search" class="form-control search-field" id="aa-search-input" />
+                </form>
+              </div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+          </div>
+          <main>
+            <div id="top-pager">
+              <ul class="pager">
+                <li class="previous">
+                  <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="remote-build-caching/clearing-the-build-cache.html">Prev</a>
+                </li>
+                <li class="next">
+                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="remote-build-cache-for-bazel.html#configuring-the-bitrise-build-cache-for-bazel-in-the-bitrise-ci-environment">Next</a>
+                </li>
+              </ul>
+            </div>
+            <article class="topic content-container" id="content-wrapper">
+              <div id="topic-content" class="topic-content">
+                <div class="breadcrumb-container">
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-link">
+                      <a href="index-en.html">Bitrise Build Cache</a>
+                    </li>
+                    <li class="breadcrumb-node">Bitrise Build Cache for Bazel</li>
+                  </ul>
+                </div>
+                <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-3b3d077a-9369-3542-e579-f3a1a756f413" data-legacy-id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e" data-permalink="remote-build-cache-for-bazel.html" data-topic-level="1" data-relative-prefix="" data-publication-date="" id="bitrise-build-cache-for-bazel">
+                  <div class="titlepage">
+                    <div>
+                      <div class="title">
+                        <h1 class="title" style="clear: both">Bitrise Build Cache for Bazel</h1>
+                      </div>
+                      <div>
+                        <div class="abstract">
+                          <div class="abstract-title">
+                            Abstract
+                          </div>
+                          <p>To successfully use remote caching for Bazel, you need a <code class="filename">bitrise.bazelrc</code> file that contains the necessary configurations to enable the remote build cache for your Bazel project. You can use the remote cache for builds running on Bitrise or in other CI environments.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr" class="tip">
+                    <h3 class="title">Try it for free</h3>
+                    <p>We offer a 30-day free trial at no cost; you don't even need to provide payment information. The trial starts automatically when you set up the Bitrise Build Cache.</p>
+                    <p><a class="link" href="https://app.bitrise.io/build-cache" target="_blank" rel="noopener">Click here to get started with the Bitrise Build Cache</a>. If you don't have a Bitrise account, you will be prompted to create one first before proceeding to set up the Build Cache.</p>
+                  </div>
+                  <p>To successfully use the Bitrise Build Cache for Bazel, you need a <code class="filename">bitrise.bazelrc</code> file that contains the necessary configurations to enable the cache for your Bazel project. You can use the Bitrise Build Cache for builds running on Bitrise or in other CI environments.</p>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e_UUID-263d4d68-0057-fc29-ebd8-3d6ca1219d91" data-publication-date="" id="configuring-the-bitrise-build-cache-for-bazel-in-the-bitrise-ci-environment">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Configuring the Bitrise Build Cache for Bazel in the Bitrise CI environment</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>You can use the Bitrise Build Cache for Bazel on the Bitrise CI by adding our dedicated Step to your Workflow. The Step activates the Bitrise Build Cache. After it executes, Bazel builds will automatically read from the build cache and push new entries if it's enabled.</p>
+                    <p class="tabs is-active">Workflow Editor</p>
+                    <p class="tabs">bitrise.yml</p>
+                    <div class="procedure tab-content is-active" id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e_procedure-idm33424595396994">
+                      <ol class="procedure tab-content is-active" type="1">
+                        <li class="step">
+                          <p>Log in to Bitrise and select <span class="guilabel">Bitrise CI</span> on the left, then select your project.</p>
+                        </li>
+                        <li class="step">
+                          <p>Click the <span class="guibutton">Workflows</span> button on the main page.</p>
+                        </li>
+                        <li class="step">
+                          <p>Add the <span class="bold"><strong>Bitrise Build Cache for Bazel</strong></span> Step to your Workflow.</p>
+                          <p>The Step requires no configuration.</p>
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="procedure tab-content" id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e_procedure-idm33424595865072">
+                      <ul class="procedure tab-content">
+                        <li class="step">
+                          <p>Open the <code class="filename">bitrise.yml</code> file and add the <code class="code">activate-build-cache-for-bazel</code> Step to your Workflow.</p>
+                          <p>The Step requires no configuration.</p>
+                          <pre class="programlisting yaml" data-language="yaml">your-workflow:
+  steps:
+    - git-clone: {}
+    - activate-build-cache-for-bazel:
+</pre>
+                        </li>
+                      </ul>
+                    </div>
+                    <p>During your first build, outputs will be saved to cache. We recommend running a couple of builds to ensure the cache is warmed up.</p>
+                  </section>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e_UUID-f5695ed7-cde4-dda0-c640-66d55f09dbf2" data-publication-date="" id="configuring-the-bitrise-build-cache-for-bazel-in-non-bitrise-ci-environments">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Configuring the Bitrise Build Cache for Bazel in non-Bitrise CI environments</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>The Bitrise Build Cache does not require using the Bitrise CI. You can use other CI/CD services and still take advantage of remote caching to improve your Bazel build times.</p>
+                    <p>To do so, you need to configure your CI environment to download the Bitrise Build Cache CLI during the build and then run the CLI to enable the Bitrise Build Cache.</p>
+                    <div class="procedure" id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e_procedure-idm4517567947545634123749967629">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>Generate a Personal Access Token on Bitrise: <a class="xref linktype-component linktextconsumer" href="/document/preview/54560#UUID-c66f5d4e-d48d-6bf4-0b49-2c77a0763de0" target="_blank">Creating a personal access token</a>.<span id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e_N67e5c2828eee8" class="linktextprovider"
+                          style="display:none !important;">Creating a personal access token</span></p>
+                          <p>Copy the value of the token, as you will need it during the process.</p>
+                        </li>
+                        <li class="step">
+                          <p><a class="link linktype-component linktextconsumer" href="/document/preview/84117#UUID-f859777c-17d2-bae8-a431-1ee931a2d7b0" target="_blank">Find your Workspace ID</a>: open the <span class="guilabel">Workspace settings</span> page and select <span class="guilabel">General settings</span> on the left navigation menu.
+                          You can find and copy the slug from there.<span id="UUID-92ed8590-6696-e1e7-c225-6b7e5f3db02e_N67e5c282901f2" class="linktextprovider" style="display:none !important;">Identifying Workspaces and projects with their slugs</span></p>
+                        </li>
+                        <li class="step">
+                          <p>Set the following Environment Variables in your CI configuration:</p>
+                          <div class="itemizedlist">
+                            <ul class="itemizedlist" style="list-style-type: disc;">
+                              <li class="listitem">
+                                <p><code class="envar">BITRISE_BUILD_CACHE_AUTH_TOKEN</code>: The value should be your Personal Access Token.</p>
+                              </li>
+                              <li class="listitem">
+                                <p><code class="envar">BITRISE_BUILD_CACHE_WORKSPACE_ID</code>: The value should be the Bitrise Workspace slug.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="step">
+                          <p>Add the following script to your CI configuration before the step you want to speed up:</p>
+                          <div dir="ltr" class="important">
+                            <h3 class="title">Environment</h3>
+                            <p>Make sure to run the script in the same environment as the Bazel command you want to speed up. For example, if you use multiple Docker containers throughout the build, make sure that the Bitrise Build Cache CLI runs in the same Docker container as the Bazel command.</p>
+                          </div>
+                          <pre class="programlisting">#!/usr/bin/env bash
+set -euxo pipefail
+
+# download Bitrise Build Cache CLI
+curl -sSfL 'https://raw.githubusercontent.com/bitrise-io/bitrise-build-cache-cli/main/install/installer.sh' | sh -s -- -b /tmp/bin -d
+
+# run the CLI to enable Bitrise build cache for Bazel
+/tmp/bin/bitrise-build-cache enable-for bazel</pre>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
+                </section>
+                <div class="footer-content">
+                  <div class="section-toc section-toc-after">
+                    <div class="section-toc-title">
+                      In this section<span class="section-toc-title-delimiter">:</span>
+                    </div>
+                  </div>
+                  <div class="glossary-definitions">
+                    <em class="glossterm">Workspace</em>
+                  </div>
+                </div>
+                <footer></footer>
+              </div>
+            </article>
+            <aside class="section-nav-container">
+              <ul class="section-nav nav">
+                <li>
+                  <a href="#bitrise-build-cache-for-bazel">Bitrise Build Cache for Bazel</a>
+                </li>
+                <li>
+                  <a href="#configuring-the-bitrise-build-cache-for-bazel-in-the-bitrise-ci-environment">Configuring the Bitrise Build Cache for Bazel in the Bitrise CI environment</a>
+                </li>
+                <li>
+                  <a href="#configuring-the-bitrise-build-cache-for-bazel-in-non-bitrise-ci-environments">Configuring the Bitrise Build Cache for Bazel in non-Bitrise CI environments</a>
+                </li>
+              </ul>
+            </aside>
+            <article id="search-result-wrapper">
+              <div class="search-container" style="display: none;">
+                <h2>Search results</h2>
+                <ul class="searchresults"></ul>
+                <p class="noresults">No results found</p>
+              </div>
+            </article>
+            <div class="feedback-panel">
+              <div id="email-feedback" class="no-voting toggle-feedback">
+                <p><a href=
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Bitrise%20Build%20Cache%20for%20Bazel%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Bitrise%20Build%20Cache%20for%20Bazel%22%20in%20the%20publication%20%22Bitrise%20Build%20Cache%22.">
+                <i aria-hidden="true" class="fa fa-pencil-square-o feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
+              </div>
+            </div>
+          </main>
+          <div id="bottom-pager">
+            <ul class="pager">
+              <li class="previous">
+                <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="remote-build-caching/clearing-the-build-cache.html">Prev</a>
+              </li>
+              <li class="next">
+                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="remote-build-cache-for-bazel.html#configuring-the-bitrise-build-cache-for-bazel-in-the-bitrise-ci-environment">Next</a>
+              </li>
+            </ul>
+          </div>
+          <footer class="site-footer">
+            <div class="inner">
+              <div class="copyright">
+                © 2025
+              </div>
+              <div class="publication-date">
+                <span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">:</span> <span class="formatted-date"></span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //<![CDATA[
+  var theme = '2';
+
+                        
+                        window.versionsfile = '';
+
+
+                        window.indexDict = new Array();
+                        window.store = {};
+                        window.portalLanguage = 'en';
+                        window.enterKey = 'select';
+                        
+                        
+                                var fuse_threshold = 0.3;
+                        
+                                        var local_csh = false;
+                                
+                                        var anchoroption = false;
+                                        var instantsearch_minlength = 1;
+                                                
+                        var useanchorlinks = false;
+                        
+                                useanchorlinks = true;
+                                
+                                var clicktocopy = 'Click to copy link';
+                                var linkcopied =  'Copied!';
+                                        var collapseTocSectionOnLinkTitleClick = false;
+  //]]>
+  </script>
+  <script src="../js/jquery-3/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="../js/jquery-migrate-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../js/materialize.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/purl.js" type="text/javascript"></script>
+  <script src="../js/jquery.smartmenus.js" type="text/javascript"></script>
+  <script src="../js/html5-2-mp-common.js?version=20250327" type="text/javascript"></script>
+  <script src="../js/html5-2.js?version=20250327" type="text/javascript"></script>
+  <script src="../js/checklist.js" type="text/javascript"></script>
+  <script src="../js/clipboard.min.js" type="text/javascript"></script>
+  <script src="../js/anchorlinks.js" type="text/javascript"></script>
+  <script src="../js/html5.algoliasearch.js?version=20250327" type="text/javascript"></script>
+  <script src="../js/csh.js" type="text/javascript"></script>
+  <script src="../js/layout-custom-script.js?version=20250327" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script>
+  <script type="text/javascript" src="../js/cookie-consent.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+
+                                $(document).ready(function () {
+                                $(".mediaobject img").addClass('materialboxed');
+                                //Exclude images with links
+                                $(".mediaobject a img").removeClass('materialboxed');
+                                if (!document.documentMode) {
+                                $('.materialboxed').materialbox();
+                                }});
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var intercom_appid = 'e2rdidtm';
+  var intercom_src = 'https://widget.intercom.io/widget/e2rdidtm';
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var publication_id = 'en-UUID-75d09f3c-80ef-0a95-e55f-6d1638bd0c9a';
+  var algolia_application_id = 'HI1538U2K4';
+  var algolia_search_only_api_key = 'f817c83dbdb923d880c215c9380d1107';
+  var use_breadcrumbs_for_algolia_searchresults = '0';
+  //]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+  <script xmlns="" type="text/javascript" src="../js/intercom/intercom.js"></script>
+</body>
+</html>

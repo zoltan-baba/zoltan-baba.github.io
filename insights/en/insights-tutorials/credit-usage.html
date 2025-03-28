@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="search" content="algolia" />
+  <meta name="use.ic" content="yes" />
+  <meta name="tocstandalone" content="no" />
+  <link rel="canonical" href="https://devcenter.bitrise.io/en/insights-tutorials/credit-usage.html" />
+  <meta name="theme" content="2" />
+  <meta name="search.placeholder" content="Search" />
+  <meta name="search.results" content="Search results" />
+  <meta name="no.search.results" content="No results found" />
+  <title>Credit usage</title>
+  <link rel="stylesheet" type="text/css" href="../../css/docbook.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/roboto.font.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2-colors.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/content-theme2.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-core-css.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-simple.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-print.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-common.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/html5.algoliasearch.css?version=20250327" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-modern-tables.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/graphical-lists.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/layout-custom-style.css?version=20250327" />
+  <meta name="generator" content="Paligo" />
+  <link rel="prev" href="tracking-flaky-tests.html#finding-flaky-tests" title="Finding flaky tests" />
+  <link rel="next" href="credit-usage.html#tracking-overall-credit-usage" title="Tracking overall credit usage" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+  /*<![CDATA[*/
+            div.skipnav {
+            }
+            div.skipnav a {
+                position: fixed;
+                left: -10000px;
+                top: 1.5em;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+                background: white;
+                color: black;
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+                position: fixed;
+                left: 2em;
+                top: 1.5em;
+                width: auto;
+                height: auto;
+                overflow: visible;
+                text-decoration: underline;
+                z-index: 99999; /* has to be higher than the side panel */
+    }
+  /*]]>*/
+  </style>
+</head>
+<body class="theme2 fixed-toolbar colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix="../">
+  <div class="skipnav">
+    <a href="#content-wrapper">Skip to main content</a>
+  </div>
+  <header class="site-header">
+    <nav class="site-header-navbar navbar navbar-fixed-top">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div id="logotype-container" class="pull-left">
+            <a class="navbar-brand" href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="top-nav-menu sm sm-simple">
+            <li>
+              <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+            </li>
+            <li>
+              <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="site-body">
+    <div class="site-body-container">
+      <div class="site-body-row">
+        <aside class="site-sidebar">
+          <div class="site-sidebar-header">
+            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://devcenter.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
+            "../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+          <ul class="toc nav nav-site-sidebar">
+            <li>
+              <a href="../getting-started-with-insights.html" class="topic-link section" data-origin-id="UUID-b08cc96c-32cb-f704-788c-bbfd1fe854b9" data-legacy-id="UUID-e9c8a83f-5515-4907-9921-8dba67b55a11" data-permalink="getting-started-with-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Getting started with
+              Insights</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="../available-metrics-in-insights.html" class="topic-link section" data-origin-id="UUID-882de749-0081-e73f-b327-a8aa4f7dca44" data-legacy-id="UUID-91980e65-5fa3-7cab-6749-f64693d4c327" data-permalink="available-metrics-in-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> Available metrics in Insights</a>
+              <ul>
+                <li>
+                  <a href="../available-metrics-in-insights/command-metrics.html" class="topic-link section" data-origin-id="UUID-03f5f255-9b28-750d-d538-28a2b3035c0f" data-legacy-id="UUID-dd8f1242-fe72-20dd-38d0-e1b6bdc9a4ea" data-permalink="available-metrics-in-insights/command-metrics.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Command metrics</a>
+                </li>
+                <li>
+                  <a href="../available-metrics-in-insights/build-cache-metrics.html" class="topic-link section" data-origin-id="UUID-48217058-040d-b054-40e3-685a205184aa" data-legacy-id="UUID-465174a0-44e8-7298-92f9-c7c7b06e65d6" data-permalink="available-metrics-in-insights/build-cache-metrics.html" data-topic-level="2" data-relative-prefix=
+                  "../" data-publication-date="">Build cache metrics</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../configuring-alerts-in-insights.html" class="topic-link section" data-origin-id="UUID-dfe12cc9-688e-c9b7-5607-34b390bd25d9" data-legacy-id="UUID-f582ef58-6b14-e1c4-724e-5e9892074478" data-permalink="configuring-alerts-in-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Alerts in
+              Insights</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="../git-insights.html" class="topic-link section" data-origin-id="UUID-54c277f6-5e2b-0a44-d61b-801dbe40f7e9" data-legacy-id="UUID-8790fa34-7a2f-834d-255f-2e91c9093a3d" data-permalink="git-insights.html" data-topic-level="1" data-relative-prefix="" data-publication-date="">Git Insights</a>
+              <ul></ul>
+            </li>
+            <li>
+              <a href="../insights-tutorials.html" class="topic-link section" data-origin-id="UUID-0aee8f6d-7fab-a775-45ab-73aabfb019ca" data-legacy-id="UUID-25fc4da5-9857-518d-bc4d-22fcecd34868" data-permalink="insights-tutorials.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Insights
+              tutorials</a>
+              <ul>
+                <li>
+                  <a href="../insights-tutorials/monitoring-and-optimizing-your-slowest-mobile-builds.html" class="topic-link section" data-origin-id="UUID-993dc3da-a9da-dba4-760f-110ef521dbbc" data-legacy-id="UUID-d07c60cc-a1b9-6962-89cc-bc053bdbf7e4" data-permalink="insights-tutorials/monitoring-and-optimizing-your-slowest-mobile-builds.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Monitoring and optimizing your slowest mobile builds</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../insights-tutorials/tracking-build-failure-rate.html" class="topic-link section" data-origin-id="UUID-21c0f7cd-7920-13a0-059d-56a25eef25eb" data-legacy-id="UUID-e39dfc2a-8981-f1a5-3a15-4c3bf8863916" data-permalink="insights-tutorials/tracking-build-failure-rate.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Tracking build failure rate</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../insights-tutorials/tracking-test-failure-rate.html" class="topic-link section" data-origin-id="UUID-707f52ec-ee03-7fe2-dbba-c07b9f8c5d8c" data-legacy-id="UUID-fe7a0682-ab28-f02c-6c33-0c3c2fa80578" data-permalink="insights-tutorials/tracking-test-failure-rate.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Tracking test failure rate</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../insights-tutorials/tracking-flaky-tests.html" class="topic-link section" data-origin-id="UUID-4577dce6-0518-6fbe-15d0-0c6210bae566" data-legacy-id="UUID-9f4e6d49-e7e3-99cf-cfd1-1248eb27c743" data-permalink="insights-tutorials/tracking-flaky-tests.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Tracking flaky tests</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../insights-tutorials/credit-usage.html" class="topic-link section" data-origin-id="UUID-f377af2d-9e1d-fd1b-77d1-862922c4ea70" data-legacy-id="UUID-9843d3e7-194d-f744-7711-2dda56e730a6" data-permalink="insights-tutorials/credit-usage.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Credit
+                  usage</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+        <div class="site-content">
+          <div class="toolbar top-nav-on">
+            <div class="toolbar-tools">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="top-nav-menu sm sm-simple">
+                  <li>
+                    <a href="https://support.bitrise.io/en/" class="external-top-nav-link" target="_blank">Go to Support</a>
+                  </li>
+                  <li>
+                    <a href="https://app.bitrise.io/users/sign_up" class="external-top-nav-link" target="_blank">Start for free</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tool-print">
+                <i class="fa fa-print" aria-hidden="true">print</i>
+              </div>
+              <div class="tool-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <form class="tool-search-form" autocomplete="off">
+                  <input type="text" placeholder="Search" class="form-control search-field" id="aa-search-input" />
+                </form>
+              </div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+          </div>
+          <main>
+            <div id="top-pager">
+              <ul class="pager">
+                <li class="previous">
+                  <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="tracking-flaky-tests.html#finding-flaky-tests">Prev</a>
+                </li>
+                <li class="next">
+                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="credit-usage.html#tracking-overall-credit-usage">Next</a>
+                </li>
+              </ul>
+            </div>
+            <article class="topic content-container" id="content-wrapper">
+              <div id="topic-content" class="topic-content">
+                <div class="breadcrumb-container">
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-link">
+                      <a href="../index-en.html">Insights</a>
+                    </li>
+                    <li class="breadcrumb-link">
+                      <a href="../insights-tutorials.html">Insights tutorials</a>
+                    </li>
+                    <li class="breadcrumb-node">Credit usage</li>
+                  </ul>
+                </div>
+                <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-f377af2d-9e1d-fd1b-77d1-862922c4ea70" data-legacy-id="UUID-9843d3e7-194d-f744-7711-2dda56e730a6" data-permalink="insights-tutorials/credit-usage.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="" id="credit-usage">
+                  <div class="titlepage">
+                    <div>
+                      <div class="title">
+                        <h1 class="title" style="clear: both">Credit usage</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr" class="important">
+                    <h3 class="title">Credit-based plans only</h3>
+                    <p>This article is only relevant if you are on a <a class="link" href="http://www.bitrise.io/pricing" target="_blank" rel="noopener">credit based (pay-by-minute) subscription plan</a>. Users who aren’t on a credit based plan don’t see the Credits page on Insights.</p>
+                  </div>
+                  <p>Keeping an eye on your credit usage can help to avoid surprises caused by changes which result in increased credit usage. Using Bitrise Insights you can see your credit usage trends and if you notice any negative trend you can use Insights to track down what is causing that.</p>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-9843d3e7-194d-f744-7711-2dda56e730a6_UUID-e28bcfd7-1733-a53f-d7eb-dcdcb14efcaa" data-publication-date="" id="tracking-overall-credit-usage">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Tracking overall credit usage</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>When you open Bitrise Insights you start on the <span class="guilabel">Overview</span> page.</p>
+                    <p>Scroll down to the Credit usage section to see your <em class="glossterm">Workspace</em>’s overall credit usage and the top 5 <em class="glossterm">apps</em> using the most amount of credits.</p>
+                    <div class="mediaobject"><img src="../image/uuid-c0daa517-7b8f-10d5-c390-511c68829d40.png" style="" alt="overview-credits.png" /></div>
+                    <p>If you want to predict your credit usage switch over to the <span class="guilabel">Credits</span> page, either by clicking the <span class="guilabel">Credits</span> option under the <span class="guilabel">EXPLORE</span> section in the left sidebar, or click the <span class="guilabel">View details</span> button in the
+                    <span class="guilabel">Credit usage</span> section.</p>
+                    <p>On the <span class="guilabel">Credits</span> page by default you’ll see your last 12 weeks (3 months) credit usage trend on a week-by-week basis.To predict how much credits you’ll use you have a few options.</p>
+                    <div class="mediaobject"><img src="../image/uuid-cf875ee5-ad50-e67e-eeb9-059ac158285d.png" style="" alt="credits-page-home.png" /></div>
+                    <p>Switch to monthly view to see your last 6 months credit usage, the trend of your credit usage, and the current month’s usage so far.</p>
+                    <p>Alternatively you can also switch to daily view (<span class="guilabel">Last 30 days</span>) and change the chart to <span class="guilabel">Cumulative</span> to see how much credit you used in the last 30 days and the trend of it:</p>
+                    <div class="mediaobject"><img src="../image/uuid-b309f819-a995-58ae-e686-2e98ac27a1c3.png" style="" alt="cumulative-credits.png" /></div>
+                    <p>If the trend is fairly stable (no large jumps and drops) then most likely you’ll use about the same amount of credits than what you did in the last 30 days, which you can see in the upper left corner under <span class="guilabel">Credit usag</span>e.</p>
+                    <p>Comparing this daily to the monthly view should give you a good guidance about how much credit usage you should expect in the month and how that compares to your previous months' credit usage.</p>
+                  </section>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-9843d3e7-194d-f744-7711-2dda56e730a6_UUID-9aac12bb-c985-da60-33e5-7a9a38e4338d" data-publication-date="" id="credit-usage-by-app--workflow-or-step">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Credit usage by app, Workflow or Step</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p id="UUID-9843d3e7-194d-f744-7711-2dda56e730a6_para-idm33355320975152">Open the <span class="guilabel">Credits page</span> under the <span class="guilabel">EXPLORE</span> section in the left sidebar. You can also switch to weekly view, to the last 12 weeks, if you’re not already in weekly view:</p>
+                    <div class="mediaobject"><img src="../image/uuid-0c1048ad-a593-b587-4dad-63c8cb4ddfc1.png" style="" alt="weekly-view.png" /></div>
+                    <p>Just like on any other Explore pages you’ll see two charts. The upper chart always shows you data for the filters you set. The lower chart is called the breakdown chart and it shows you data one level deeper than what you filtered on.</p>
+                    <p>If you have only a single app in your Workspace then Insights will automatically select that app when you open any of the Explore pages. If you have multiple apps in your Workspace, when you open the <span class="guilabel">Credits</span> page the upper chart shows you the overall credit use of the Workspace across all of
+                    your apps in the Workspace.</p>
+                    <p>The lower chart in this case shows you the same data but on a per app basis. From this you can see which app used the most amount of credits in the selected time period.</p>
+                    <div class="mediaobject"><img src="../image/uuid-27ec3df6-bdce-7f78-95be-647668661e56.png" style="" alt="costliest-app.png" /></div>
+                    <p>Here on the breakdown chart you can see that we have this application which used the most amount of credits in this Workspace. Filter down to that app, and on the next level you'll find the per Workflow breakdown.</p>
+                    <p>The upper chart now shows what is filtered on, so in this case it's the selected app's credit usage. On the lower, breakdown chart you can see which is the Workflow which used the most credits.</p>
+                    <div class="mediaobject"><img src="../image/uuid-71015c65-9c35-e1b8-e5fc-9bf9d1833731.png" style="" alt="costliest-workflow.png" /></div>
+                    <p>Let's filter down to that Workflow.</p>
+                    <p>The chart now reflects this filtering and shows the credit usage trend of the Workflow.</p>
+                    <p>From here we should find out what is causing this credit usage increase in this Workflow. This might be caused by slower builds, increased amount of builds, or by changing the machine type to one which uses more credits per minute.</p>
+                    <p>To investigate this switch over to the <span class="guilabel">Builds</span> page. When you switch to any other Explore pages the filters you previously selected will carry over, so you won’t have to select the same app and Workflow again.In this case going through the metric tabs most metrics seem stable during this period,
+                    but we can see a similar pattern on the <span class="guilabel">Total duration</span> metric:</p>
+                    <div class="mediaobject"><img src="../image/uuid-f20ee280-d116-8015-6f87-2fd8b74da9a2.png" style="" alt="total-duration.png" /></div>
+                    <p>Similar to the <span class="guilabel">Credits</span> page, the <span class="guilabel">Builds</span> page also has 2 charts on it. The top one shows the selected metric (<span class="guilabel">Total duration</span> in this case) for the relevant filters (for the selected app and Workflow).</p>
+                    <p>The lower breakdown chart shows the per step distribution of the total build duration. From this we can see that the <span class="bold"><strong>iOS Device Testing</strong></span> Step took the most amount of time and it also correlates with the overall trend.</p>
+                    <p>As build times and build count was consistent for the whole 12 weeks, and the only other metric which had a change during this period was <span class="guilabel">Failure rate</span>, let’s switch over to that tab:</p>
+                    <p>What we can see here is that where we had the drop in credit usage as well as in total duration the <span class="bold"><strong>iOS Device Testing</strong></span> Step had a 100% failure rate. As failed Steps usually take less time to finish, let’s check the related builds as well in the <span class="guilabel">Related
+                    builds</span> section under the charts.</p>
+                    <div class="mediaobject"><img src="../image/uuid-c81ac3ec-31ee-45b9-3be1-497feae7a780.png" style="" alt="ios-device-testing.png" /></div>
+                    <p>To find the relevant builds we’ll zoom into the period where failure rate increased. The easiest way is to click-hold-and-drag on the chart.</p>
+                    <p>Let’s filter down to just this single Step as well in the <span class="guilabel">Related builds</span> section:</p>
+                    <div class="mediaobject"><img src="../image/uuid-86def2f6-adbf-52b0-1bf9-dbe7ca05c08f.png" style="" alt="related-builds.png" /></div>
+                    <p>Now we can scroll through the build history and see how the build time of this Step changed. At the end of the period, where the failure rate was 100% we can see that it only took a few seconds:</p>
+                    <div class="mediaobject"><img src="../image/uuid-86871cee-ac96-75d5-d63b-bc5daa5b56c2.png" style="" alt="step-failed-quickly.png" /></div>
+                    <p>As we keep scrolling we can see that back in early December where we still had successful builds the Step took multiple minutes to complete:</p>
+                    <div class="mediaobject"><img src="../image/uuid-c92d5036-7f13-9541-6a80-0614d27e928d.png" style="" alt="step-took-long.png" /></div>
+                    <p>So in this case the drop on the total duration (and in credits) was caused by this Step failing a lot, which meant that builds completed quicker, until the issue with the tests was fixed, when the Step and the builds once again took longer to finish, but could actually run and finish the tests.</p>
+                    <p>Another place which worth to be checked periodically is the <span class="guilabel">Bottlenecks</span> page:</p>
+                    <div class="mediaobject"><img src="../image/uuid-6b2fbeca-bd57-7bfa-2ba6-7bb84f9036b4.png" style="" alt="bottlenecks-overview.png" /></div>
+                    <p>On this page you can find a <span class="guilabel">Credits</span> section where Bitrise Insights highlights you negative trends which consumed the most amount of credits.</p>
+                    <p><span class="guilabel">Failing Workflow</span>s shows you Workflows which had a lot of credit usage on failed builds. On the example above you can see that the Workflow called test failed in 73.68% of the cases in the last 7 days and those failed builds consumed 624 credits in total.</p>
+                    <p>Build time shows slowing build trends, where the build took longer in the last 7 days than in the 7 days before that, and tells you the credit impact of that negative trend.</p>
+                    <p>The <span class="guilabel">Usage</span> bottleneck simply lists you the Workflows which used the most amount of credits in the last 7 days.</p>
+                    <p>Clicking any of these bottleneck items will open the relevant Explore page filtered down to the Workflow.</p>
+                  </section>
+                </section>
+                <div class="footer-content">
+                  <div class="section-toc section-toc-after">
+                    <div class="section-toc-title">
+                      In this section<span class="section-toc-title-delimiter">:</span>
+                    </div>
+                  </div>
+                  <div class="glossary-definitions">
+                    <em class="glossterm">Workspace</em><em class="glossterm">apps</em>
+                  </div>
+                </div>
+                <footer></footer>
+              </div>
+            </article>
+            <aside class="section-nav-container">
+              <ul class="section-nav nav">
+                <li>
+                  <a href="#credit-usage">Credit usage</a>
+                </li>
+                <li>
+                  <a href="#tracking-overall-credit-usage">Tracking overall credit usage</a>
+                </li>
+                <li>
+                  <a href="#credit-usage-by-app--workflow-or-step">Credit usage by app, Workflow or Step</a>
+                </li>
+              </ul>
+            </aside>
+            <article id="search-result-wrapper">
+              <div class="search-container" style="display: none;">
+                <h2>Search results</h2>
+                <ul class="searchresults"></ul>
+                <p class="noresults">No results found</p>
+              </div>
+            </article>
+            <div class="feedback-panel">
+              <div id="email-feedback" class="no-voting toggle-feedback">
+                <p><a href=
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Credit%20usage%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Credit%20usage%22%20in%20the%20publication%20%22Insights%22."><i aria-hidden=
+                "true" class="fa fa-pencil-square-o feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
+              </div>
+            </div>
+          </main>
+          <div id="bottom-pager">
+            <ul class="pager">
+              <li class="previous">
+                <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="tracking-flaky-tests.html#finding-flaky-tests">Prev</a>
+              </li>
+              <li class="next">
+                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="credit-usage.html#tracking-overall-credit-usage">Next</a>
+              </li>
+            </ul>
+          </div>
+          <footer class="site-footer">
+            <div class="inner">
+              <div class="copyright">
+                © 2025
+              </div>
+              <div class="publication-date">
+                <span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">:</span> <span class="formatted-date"></span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //<![CDATA[
+  var theme = '2';
+
+                        
+                        window.versionsfile = '';
+
+
+                        window.indexDict = new Array();
+                        window.store = {};
+                        window.portalLanguage = 'en';
+                        window.enterKey = 'select';
+                        
+                        
+                                var fuse_threshold = 0.3;
+                        
+                                        var local_csh = false;
+                                
+                                        var anchoroption = false;
+                                        var instantsearch_minlength = 1;
+                                                
+                        var useanchorlinks = false;
+                        
+                                useanchorlinks = true;
+                                
+                                var clicktocopy = 'Click to copy link';
+                                var linkcopied =  'Copied!';
+                                        var collapseTocSectionOnLinkTitleClick = false;
+  //]]>
+  </script>
+  <script src="../../js/jquery-3/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="../../js/jquery-migrate-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../../js/materialize.min.js" type="text/javascript"></script>
+  <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../js/purl.js" type="text/javascript"></script>
+  <script src="../../js/jquery.smartmenus.js" type="text/javascript"></script>
+  <script src="../../js/html5-2-mp-common.js?version=20250327" type="text/javascript"></script>
+  <script src="../../js/html5-2.js?version=20250327" type="text/javascript"></script>
+  <script src="../../js/checklist.js" type="text/javascript"></script>
+  <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+  <script src="../../js/anchorlinks.js" type="text/javascript"></script>
+  <script src="../../js/html5.algoliasearch.js?version=20250327" type="text/javascript"></script>
+  <script src="../../js/csh.js" type="text/javascript"></script>
+  <script src="../../js/layout-custom-script.js?version=20250327" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script>
+  <script type="text/javascript" src="../../js/cookie-consent.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+
+                                $(document).ready(function () {
+                                $(".mediaobject img").addClass('materialboxed');
+                                //Exclude images with links
+                                $(".mediaobject a img").removeClass('materialboxed');
+                                if (!document.documentMode) {
+                                $('.materialboxed').materialbox();
+                                }});
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var intercom_appid = 'e2rdidtm';
+  var intercom_src = 'https://widget.intercom.io/widget/e2rdidtm';
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var publication_id = 'en-UUID-ef41ad40-ccc3-2b32-436c-d00ffda1252a';
+  var algolia_application_id = 'HI1538U2K4';
+  var algolia_search_only_api_key = 'f817c83dbdb923d880c215c9380d1107';
+  var use_breadcrumbs_for_algolia_searchresults = '0';
+  //]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+  <script xmlns="" type="text/javascript" src="../../js/intercom/intercom.js"></script>
+</body>
+</html>

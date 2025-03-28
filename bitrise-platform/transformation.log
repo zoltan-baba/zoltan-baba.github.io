@@ -1,0 +1,471 @@
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] # Output Factory initiated (html5)
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] # Building output for: Bitrise Platform
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] # URL /document/edit/94881
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] # User: Zoltán Bába
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] # Time: Thu, 27 Mar 2025 20:19:33 +0000
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] # Server: ip-172-31-9-221.eu-west-1.compute.internal
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] Group: custom
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] Type: html5
+[27/Mar/2025 20:19:33 Europe/Dublin] [Info] Transformation: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] File found: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] Building output for: html5
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] Using stylesheet: $user_dir/xsl/custom/layout-435.xsl
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] Parameters for this build: []
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] Environment variables for this build: {"taxonomies.propagate":"1","use.algolia.search":"1","tidy.output":"1","taxonomies.relationship":"Related links taxonomies"}
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] Building output for languages: ["en"]
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] Building multilang: no
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] Building preview: no
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] ############################################################
+[27/Mar/2025 20:19:34 Europe/Dublin] [Info] Using build directory: $local_tmp/production-67e5b2d49da361.08473344/94881-Bitrise_Platform-html5
+[27/Mar/2025 20:19:36 Europe/Dublin] [Info] -- Generating source files
+[27/Mar/2025 20:19:36 Europe/Dublin] [Info] -- Propagating taxonomies: true
+[27/Mar/2025 20:19:39 Europe/Dublin] [Info] -- Source files have been generated
+[27/Mar/2025 20:19:39 Europe/Dublin] [Info] -- Publication has no unresolved dependencies.
+[27/Mar/2025 20:19:39 Europe/Dublin] [Info] Parsing processing instructions
+[27/Mar/2025 20:19:39 Europe/Dublin] [Info] -- Generating source files complete.
+[27/Mar/2025 20:19:42 Europe/Dublin] [Info] Localizing: publication-94881.xml
+[27/Mar/2025 20:19:42 Europe/Dublin] [Info] Language: en
+[27/Mar/2025 20:19:43 Europe/Dublin] [Warning] Resolving some links failed
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[4]/*[1]] An outgoing link in <a href="/document/edit/90482">Migrating from App Center to Bitrise</a> could not be resolved. The link points to <a href="/document/edit/41982">Getting started</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[2]/*[1]] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42150">Infrastructure</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[2]/*[2]] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42557">Builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[3]/*] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42060">Adding your first app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[6]/*[3]/*[1]/*/*[1]] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42520">Steps and Workflows</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[6]/*[3]/*[1]/*/*[2]] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42616">Environment Variables</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[6]/*[3]/*[2]/*/*] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/52725">Triggering builds automatically</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[6]/*[3]/*[3]/*/*[1]] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42151">Build stacks</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[6]/*[3]/*[3]/*/*[2]] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/75459">Build machine types</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[6]/*[3]/*[4]/*[2]/*[1]/*/*] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42595">Configuring email notifications</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[6]/*[3]/*[4]/*[2]/*[2]/*/*] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42606">Rolling builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[6]/*[3]/*[4]/*[2]/*[3]/*/*] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42007">Connecting to services</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[6]/*[3]/*[4]/*[2]/*[4]/*/*] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42717">Code signing</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[6]/*[3]/*[4]/*[2]/*[5]/*/*] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/76866">Key-based caching</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[7]/*[3]/*[1]] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/52840">Starting builds manually</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[7]/*[3]/*[2]] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/52841">Scheduling builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[8]/*[7]/*[3]/*[3]] An outgoing link in <a href="/document/edit/90485">App Center Build service and Bitrise builds</a> could not be resolved. The link points to <a href="/document/edit/42656">Build logs</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[9]/*[5]/*] An outgoing link in <a href="/document/edit/90536">Testing on App Center and on Bitrise</a> could not be resolved. The link points to <a href="/document/edit/42791">Test Reports</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[10]/*[2]/*] An outgoing link in <a href="/document/edit/90544">Deploying on App Center and Bitrise</a> could not be resolved. The link points to <a href="/document/edit/77516">Release Management</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[10]/*[4]/*] An outgoing link in <a href="/document/edit/90544">Deploying on App Center and Bitrise</a> could not be resolved. The link points to <a href="/document/edit/87032">Connecting an app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[5]/*[10]/*[5]/*] An outgoing link in <a href="/document/edit/90544">Deploying on App Center and Bitrise</a> could not be resolved. The link points to <a href="/document/edit/88785">Release Management API</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[5]/*[3]/*[4]/*/*[1]] An outgoing link in <a href="/document/edit/54023">Quick start guide</a> could not be resolved. The link points to <a href="/document/edit/52725">Triggering builds automatically</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[5]/*[3]/*[4]/*/*[2]] An outgoing link in <a href="/document/edit/54023">Quick start guide</a> could not be resolved. The link points to <a href="/document/edit/52841">Scheduling builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[2]/*[1]] An outgoing link in <a href="/document/edit/54025">Managing builds on Jenkins and on Bitrise</a> could not be resolved. The link points to <a href="/document/edit/42536">Introduction to Workflows</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[2]/*[2]] An outgoing link in <a href="/document/edit/54025">Managing builds on Jenkins and on Bitrise</a> could not be resolved. The link points to <a href="/document/edit/42521">Introduction to Steps</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[2]/*[3]] An outgoing link in <a href="/document/edit/54025">Managing builds on Jenkins and on Bitrise</a> could not be resolved. The link points to <a href="/document/edit/43013">Bitrise CLI</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[2]/*[5]] An outgoing link in <a href="/document/edit/54025">Managing builds on Jenkins and on Bitrise</a> could not be resolved. The link points to <a href="/document/edit/42656">Build logs</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[3]/*[3]/*[1]/*/*[2]] An outgoing link in <a href="/document/edit/54027">Triggering builds on Jenkins and Bitrise</a> could not be resolved. The link points to <a href="/document/edit/52840">Starting builds manually</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[3]/*[3]/*[1]/*/*[3]] An outgoing link in <a href="/document/edit/54027">Triggering builds on Jenkins and Bitrise</a> could not be resolved. The link points to <a href="/document/edit/53520">Advanced configuration options</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[3]/*[3]/*[2]/*/*[2]] An outgoing link in <a href="/document/edit/54027">Triggering builds on Jenkins and Bitrise</a> could not be resolved. The link points to <a href="/document/edit/52841">Scheduling builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[3]/*[3]/*[3]/*/*] An outgoing link in <a href="/document/edit/54027">Triggering builds on Jenkins and Bitrise</a> could not be resolved. The link points to <a href="/document/edit/52725">Triggering builds automatically</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[3]/*[3]/*[4]/*/*[2]] An outgoing link in <a href="/document/edit/54027">Triggering builds on Jenkins and Bitrise</a> could not be resolved. The link points to <a href="/document/edit/42547">Managing Workflows</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[3]/*[3]/*[6]/*/*] An outgoing link in <a href="/document/edit/54027">Triggering builds on Jenkins and Bitrise</a> could not be resolved. The link points to <a href="/document/edit/42590">Reporting the build status to your Git hosting provider</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[4]/*[2]/*] An outgoing link in <a href="/document/edit/65401">Environment Variables and Secrets on Bitrise</a> could not be resolved. The link points to <a href="/document/edit/42616">Environment Variables</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[4]/*[4]/*[1]/*/*] An outgoing link in <a href="/document/edit/65401">Environment Variables and Secrets on Bitrise</a> could not be resolved. The link points to <a href="/document/edit/43054">Exposing Env Vars and using them in another Step or Workflow</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[6]/*[5]/*[2]/*] An outgoing link in <a href="/document/edit/65403">Build caching</a> could not be resolved. The link points to <a href="/document/edit/42558">Caching</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[7]/*[10]/*[1]/*/*] An outgoing link in <a href="/document/edit/65406">Jenkins plugins and Bitrise Steps</a> could not be resolved. The link points to <a href="/document/edit/42522">Adding Steps to a Workflow</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[7]/*[10]/*[2]/*/*] An outgoing link in <a href="/document/edit/65406">Jenkins plugins and Bitrise Steps</a> could not be resolved. The link points to <a href="/document/edit/42525">Step versions</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[7]/*[10]/*[3]/*/*] An outgoing link in <a href="/document/edit/65406">Jenkins plugins and Bitrise Steps</a> could not be resolved. The link points to <a href="/document/edit/42535">Enabling or disabling a Step conditionally</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[7]/*[10]/*[4]/*/*] An outgoing link in <a href="/document/edit/65406">Jenkins plugins and Bitrise Steps</a> could not be resolved. The link points to <a href="/document/edit/41968">Developing your own Bitrise Step</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[7]/*[11]/*[3]/*] An outgoing link in <a href="/document/edit/65406">Jenkins plugins and Bitrise Steps</a> could not be resolved. The link points to <a href="/document/edit/77300">Integrating fastlane to Bitrise</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[8]/*[2]/*] An outgoing link in <a href="/document/edit/65410">Jenkins Pipeline - Bitrise Workflow</a> could not be resolved. The link points to <a href="/document/edit/42536">Introduction to Workflows</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[8]/*[8]/*[1]/*/*[1]] An outgoing link in <a href="/document/edit/65410">Jenkins Pipeline - Bitrise Workflow</a> could not be resolved. The link points to <a href="/document/edit/42717">Code signing</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[8]/*[8]/*[2]/*/*] An outgoing link in <a href="/document/edit/65410">Jenkins Pipeline - Bitrise Workflow</a> could not be resolved. The link points to <a href="/document/edit/53200">Secrets</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[8]/*[8]/*[3]/*/*] An outgoing link in <a href="/document/edit/65410">Jenkins Pipeline - Bitrise Workflow</a> could not be resolved. The link points to <a href="/document/edit/42616">Environment Variables</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[8]/*[8]/*[4]/*/*] An outgoing link in <a href="/document/edit/65410">Jenkins Pipeline - Bitrise Workflow</a> could not be resolved. The link points to <a href="/document/edit/52725">Triggering builds automatically</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[8]/*[8]/*[5]/*/*] An outgoing link in <a href="/document/edit/65410">Jenkins Pipeline - Bitrise Workflow</a> could not be resolved. The link points to <a href="/document/edit/42151">Build stacks</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[9]/*[5]/*[4]] An outgoing link in <a href="/document/edit/65412">Dashboards in Jenkins and Bitrise</a> could not be resolved. The link points to <a href="/document/edit/52841">Scheduling builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[9]/*[8]/*[2]/*[3]] An outgoing link in <a href="/document/edit/65415">Adding a new app to Bitrise</a> could not be resolved. The link points to <a href="/document/edit/42060">Adding your first app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[9]/*[8]/*[2]/*[4]] An outgoing link in <a href="/document/edit/65415">Adding a new app to Bitrise</a> could not be resolved. The link points to <a href="/document/edit/42075">Adding a new app from a CLI</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[9]/*[9]/*[5]/*[2]/*/*] An outgoing link in <a href="/document/edit/65417">Webhooks on Bitrise</a> could not be resolved. The link points to <a href="/document/edit/43135">API</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[10]/*[3]/*[3]] An outgoing link in <a href="/document/edit/65421">Jenkinsfile - Bitrise YAML</a> could not be resolved. The link points to <a href="/document/edit/53298">Storing the bitrise.yml file in your repository</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[10]/*[4]/*[2]] An outgoing link in <a href="/document/edit/65421">Jenkinsfile - Bitrise YAML</a> could not be resolved. The link points to <a href="/document/edit/43013">Bitrise CLI</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[10]/*[5]/*[2]/*[4]] An outgoing link in <a href="/document/edit/65421">Jenkinsfile - Bitrise YAML</a> could not be resolved. The link points to <a href="/document/edit/52725">Triggering builds automatically</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[10]/*[5]/*[3]/*] An outgoing link in <a href="/document/edit/65421">Jenkinsfile - Bitrise YAML</a> could not be resolved. The link points to <a href="/document/edit/79920">Bitrise demo apps</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[3]/*[6]/*[11]/*[7]/*] An outgoing link in <a href="/document/edit/65426">Master and agent on Jenkins - Bitrise stacks</a> could not be resolved. The link points to <a href="/document/edit/42154">Stack update policy</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[5]/*[6]/*[2]/*[1]] An outgoing link in <a href="/document/edit/85488">Key Bitrise concepts</a> could not be resolved. The link points to <a href="/document/edit/42536">Introduction to Workflows</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[5]/*[6]/*[2]/*[2]] An outgoing link in <a href="/document/edit/85488">Key Bitrise concepts</a> could not be resolved. The link points to <a href="/document/edit/42521">Introduction to Steps</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[5]/*[7]/*[2]/*] An outgoing link in <a href="/document/edit/85488">Key Bitrise concepts</a> could not be resolved. The link points to <a href="/document/edit/72810">Pipelines with stages</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[3]/*[5]/*[8]/*[2]/*] An outgoing link in <a href="/document/edit/85488">Key Bitrise concepts</a> could not be resolved. The link points to <a href="/document/edit/42616">Environment Variables</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[4]/*[4]/*[4]/*/*] An outgoing link in <a href="/document/edit/42158">Accounts</a> could not be resolved. The link points to <a href="/document/edit/43135">API</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[4]/*[4]/*[5]/*/*] An outgoing link in <a href="/document/edit/42158">Accounts</a> could not be resolved. The link points to <a href="/document/edit/42839">Registering a test device</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[4]/*[5]/*[3]/*[2]/*/*] An outgoing link in <a href="/document/edit/42158">Accounts</a> could not be resolved. The link points to <a href="/document/edit/42198">Adding other users to Workspaces</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[5]/*[8]/*[11]/*[5]/*[2]/*] An outgoing link in <a href="/document/edit/86146">Managing user roles in Workspaces</a> could not be resolved. The link points to <a href="/document/edit/79198">Managing app access for Workspace groups</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[5]/*[13]/*[3]/*[1]] An outgoing link in <a href="/document/edit/86327">Workspace API token</a> could not be resolved. The link points to <a href="/document/edit/43135">API</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[6]/*[2]] An outgoing link in <a href="/document/edit/54460">Apps</a> could not be resolved. The link points to <a href="/document/edit/79198">Managing app access for Workspace groups</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[7]/*[5]/*[4]/*[3]/*[2]/*[3]] An outgoing link in <a href="/document/edit/94025">Adding a CI configuration to a project</a> could not be resolved. The link points to <a href="/document/edit/93557">Adding a new app to Release Management</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[7]/*[5]/*[6]/*/*] An outgoing link in <a href="/document/edit/94025">Adding a CI configuration to a project</a> could not be resolved. The link points to <a href="/document/edit/20301">Adding a new app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[9]/*[8]/*[2]/*] An outgoing link in <a href="/document/edit/54847">Adding outside contributor to an app team</a> could not be resolved. The link points to <a href="/document/edit/42198">Adding other users to Workspaces</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[10]/*[10]/*[5]/*[2]/*] An outgoing link in <a href="/document/edit/54958">Admins</a> could not be resolved. The link points to <a href="/document/edit/84223">Granting Release manager rights</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[14]/*[5]/*[1]] An outgoing link in <a href="/document/edit/42086">Public apps</a> could not be resolved. The link points to <a href="/document/edit/42060">Adding your first app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[14]/*[9]/*[1]/*/*] An outgoing link in <a href="/document/edit/42086">Public apps</a> could not be resolved. The link points to <a href="/document/edit/42656">Build logs</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[14]/*[9]/*[3]/*/*] An outgoing link in <a href="/document/edit/42086">Public apps</a> could not be resolved. The link points to <a href="/document/edit/42637">Managing an app's bitrise.yml file</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[15]/*[3]/*[2]] An outgoing link in <a href="/document/edit/43075">Creating white label app versions</a> could not be resolved. The link points to <a href="/document/edit/42616">Environment Variables</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[15]/*[6]/*[3]/*/*[1]] An outgoing link in <a href="/document/edit/43075">Creating white label app versions</a> could not be resolved. The link points to <a href="/document/edit/43026">Workflows reference</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[15]/*[6]/*[3]/*/*[5]] An outgoing link in <a href="/document/edit/43075">Creating white label app versions</a> could not be resolved. The link points to <a href="/document/edit/65189">Chaining Workflows together</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[15]/*[7]/*[2]/*[1]/*/*] An outgoing link in <a href="/document/edit/70933">Prepping Workflows of a white label app</a> could not be resolved. The link points to <a href="/document/edit/42060">Adding your first app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[15]/*[7]/*[2]/*[7]/*[1]/*[2]] An outgoing link in <a href="/document/edit/70933">Prepping Workflows of a white label app</a> could not be resolved. The link points to <a href="/document/edit/43026">Workflows reference</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[6]/*[15]/*[8]/*[3]/*[1]/*/*[2]] An outgoing link in <a href="/document/edit/70935">Chaining Workflows for a white label app</a> could not be resolved. The link points to <a href="/document/edit/52725">Triggering builds automatically</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[3]/*[2]] An outgoing link in <a href="/document/edit/81050">Connectivity</a> could not be resolved. The link points to <a href="/document/edit/42557">Builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[4]/*[2]/*[1]] An outgoing link in <a href="/document/edit/81050">Connectivity</a> could not be resolved. The link points to <a href="/document/edit/42060">Adding your first app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[4]/*[4]/*[1]] An outgoing link in <a href="/document/edit/81050">Connectivity</a> could not be resolved. The link points to <a href="/document/edit/42590">Reporting the build status to your Git hosting provider</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[6]/*[2]/*[1]] An outgoing link in <a href="/document/edit/81050">Connectivity</a> could not be resolved. The link points to <a href="/document/edit/52725">Triggering builds automatically</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[7]/*[6]/*[1]/*/*] An outgoing link in <a href="/document/edit/73655">The service credential user</a> could not be resolved. The link points to <a href="/document/edit/42590">Reporting the build status to your Git hosting provider</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[7]/*[6]/*[2]/*/*] An outgoing link in <a href="/document/edit/73655">The service credential user</a> could not be resolved. The link points to <a href="/document/edit/52842">Selective builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[7]/*[6]/*[3]/*/*] An outgoing link in <a href="/document/edit/73655">The service credential user</a> could not be resolved. The link points to <a href="/document/edit/53298">Storing the bitrise.yml file in your repository</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[7]/*[9]/*[2]] An outgoing link in <a href="/document/edit/73655">The service credential user</a> could not be resolved. The link points to <a href="/document/edit/52842">Selective builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[7]/*[11]/*[3]/*[1]] An outgoing link in <a href="/document/edit/79940">Service credential user actions and their required repository access</a> could not be resolved. The link points to <a href="/document/edit/53298">Storing the bitrise.yml file in your repository</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[7]/*[11]/*[5]/*[3]/*[1]/*[1]/*/*] An outgoing link in <a href="/document/edit/79940">Service credential user actions and their required repository access</a> could not be resolved. The link points to <a href="/document/edit/53298">Storing the bitrise.yml file in your repository</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[7]/*[11]/*[5]/*[3]/*[3]/*[1]/*/*] An outgoing link in <a href="/document/edit/79940">Service credential user actions and their required repository access</a> could not be resolved. The link points to <a href="/document/edit/52842">Selective builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[7]/*[11]/*[5]/*[3]/*[4]/*[1]/*/*] An outgoing link in <a href="/document/edit/79940">Service credential user actions and their required repository access</a> could not be resolved. The link points to <a href="/document/edit/42590">Reporting the build status to your Git hosting provider</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[8]/*[8]/*[3]/*[1]/*/*] An outgoing link in <a href="/document/edit/54698">Connecting a Git provider account when adding an app</a> could not be resolved. The link points to <a href="/document/edit/20301">Adding a new app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[8]/*[8]/*[3]/*[2]/*/*[3]] An outgoing link in <a href="/document/edit/54698">Connecting a Git provider account when adding an app</a> could not be resolved. The link points to <a href="/document/edit/84181">Git Insights</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[8]/*[9]/*[3]/*[1]/*/*] An outgoing link in <a href="/document/edit/54700">Connecting a Git provider account from the Profile settings page</a> could not be resolved. The link points to <a href="/document/edit/20301">Adding a new app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[8]/*[9]/*[3]/*[2]/*/*[3]] An outgoing link in <a href="/document/edit/54700">Connecting a Git provider account from the Profile settings page</a> could not be resolved. The link points to <a href="/document/edit/84181">Git Insights</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[9]/*[7]/*[8]/*[2]/*] An outgoing link in <a href="/document/edit/88229">Installing the GitHub App integration</a> could not be resolved. The link points to <a href="/document/edit/42060">Adding your first app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[9]/*[7]/*[8]/*[3]/*[1]/*/*] An outgoing link in <a href="/document/edit/88229">Installing the GitHub App integration</a> could not be resolved. The link points to <a href="/document/edit/20301">Adding a new app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[9]/*[10]/*[5]/*[2]] An outgoing link in <a href="/document/edit/90334">Using a private Step library via the GitHub App</a> could not be resolved. The link points to <a href="/document/edit/55120">Step reference/ID format</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[10]/*[4]/*] An outgoing link in <a href="/document/edit/84926">Integrating GitHub Enterprise with Bitrise</a> could not be resolved. The link points to <a href="/document/edit/53298">Storing the bitrise.yml file in your repository</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[10]/*[6]/*[3]/*[1]/*[2]] An outgoing link in <a href="/document/edit/84926">Integrating GitHub Enterprise with Bitrise</a> could not be resolved. The link points to <a href="/document/edit/77361">IP addresses for the Bitrise website</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[10]/*[8]/*[1]/*[2]/*[1]] An outgoing link in <a href="/document/edit/84926">Integrating GitHub Enterprise with Bitrise</a> could not be resolved. The link points to <a href="/document/edit/42665">Bitrise Checks on GitHub</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[10]/*[8]/*[1]/*[2]/*[2]] An outgoing link in <a href="/document/edit/84926">Integrating GitHub Enterprise with Bitrise</a> could not be resolved. The link points to <a href="/document/edit/52803">Enabling GitHub Checks</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[10]/*[9]/*[2]/*[7]/*[3]/*[2]/*[5]/*[2]/*[3]/*[2]/*[1]] An outgoing link in <a href="/document/edit/84979">Creating the GitHub app</a> could not be resolved. The link points to <a href="/document/edit/42665">Bitrise Checks on GitHub</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[10]/*[9]/*[2]/*[7]/*[3]/*[2]/*[5]/*[2]/*[3]/*[2]/*[2]] An outgoing link in <a href="/document/edit/84979">Creating the GitHub app</a> could not be resolved. The link points to <a href="/document/edit/52842">Selective builds</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[10]/*[10]/*[5]/*[3]] An outgoing link in <a href="/document/edit/84975">Connecting to the GHES instance</a> could not be resolved. The link points to <a href="/document/edit/53298">Storing the bitrise.yml file in your repository</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[11]/*[6]/*[2]/*[1]/*/*] An outgoing link in <a href="/document/edit/54719">Adding a new app from a self-hosted GitLab repository</a> could not be resolved. The link points to <a href="/document/edit/42060">Adding your first app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[11]/*[6]/*[3]/*] An outgoing link in <a href="/document/edit/54719">Adding a new app from a self-hosted GitLab repository</a> could not be resolved. The link points to <a href="/document/edit/20301">Adding a new app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[12]/*[9]/*[8]/*[5]/*] An outgoing link in <a href="/document/edit/74082">Required access with Apple ID authentication</a> could not be resolved. The link points to <a href="/document/edit/42745">Creating a signed IPA for Xcode projects</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[12]/*[13]/*[10]/*[2]/*[2]] An outgoing link in <a href="/document/edit/42038">Steps requiring Apple authentication</a> could not be resolved. The link points to <a href="/document/edit/77300">Integrating fastlane to Bitrise</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[13]/*[2]/*] An outgoing link in <a href="/document/edit/82264">Connecting a Google service account to Bitrise</a> could not be resolved. The link points to <a href="/document/edit/77516">Release Management</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[14]/*[5]/*[1]/*[1]/*[1]] An outgoing link in <a href="/document/edit/42428">Webhooks</a> could not be resolved. The link points to <a href="/document/edit/52725">Triggering builds automatically</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[14]/*[5]/*[1]/*[1]/*[2]] An outgoing link in <a href="/document/edit/42428">Webhooks</a> could not be resolved. The link points to <a href="/document/edit/84181">Git Insights</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[14]/*[7]/*] An outgoing link in <a href="/document/edit/42428">Webhooks</a> could not be resolved. The link points to <a href="/document/edit/43145">Incoming and outgoing webhooks</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[14]/*[8]/*[3]/*] An outgoing link in <a href="/document/edit/42429">Adding incoming webhooks</a> could not be resolved. The link points to <a href="/document/edit/52725">Triggering builds automatically</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[14]/*[8]/*[5]/*[3]/*] An outgoing link in <a href="/document/edit/55044">Registering an incoming webhook automatically</a> could not be resolved. The link points to <a href="/document/edit/42060">Adding your first app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[14]/*[9]/*[7]/*[3]/*[1]/*/*] An outgoing link in <a href="/document/edit/42510">Adding outgoing webhooks</a> could not be resolved. The link points to <a href="/document/edit/54051">Configuring your network to access our build machines</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[16]/*[2]/*/*/*] An outgoing link in <a href="/document/edit/82302">Configuring HTTPS authorization credentials</a> could not be resolved. The link points to <a href="/document/edit/42155">Build machines</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[16]/*[3]/*] An outgoing link in <a href="/document/edit/82302">Configuring HTTPS authorization credentials</a> could not be resolved. The link points to <a href="/document/edit/42155">Build machines</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[16]/*[4]/*[1]/*/*] An outgoing link in <a href="/document/edit/82302">Configuring HTTPS authorization credentials</a> could not be resolved. The link points to <a href="/document/edit/42060">Adding your first app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[17]/*[13]/*[4]/*[3]/*[2]/*[1]/*/*] An outgoing link in <a href="/document/edit/65443">Adding the SSH key to the machine user</a> could not be resolved. The link points to <a href="/document/edit/42060">Adding your first app</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[18]/*[5]/*[1]/*/*] An outgoing link in <a href="/document/edit/43091">Connecting to a VPN during a build</a> could not be resolved. The link points to <a href="/document/edit/54051">Configuring your network to access our build machines</a> which is not part of this publication.
+[27/Mar/2025 20:19:43 Europe/Dublin] [Info] [/*/*[7]/*[18]/*[9]/*[4]/*[3]/*[4]/*[1]/*] An outgoing link in <a href="/document/edit/64197">Using the Connect to OpenVPN Server Step</a> could not be resolved. The link points to <a href="/document/edit/53200">Secrets</a> which is not part of this publication.
+[27/Mar/2025 20:19:44 Europe/Dublin] [Info] Variable sets found: 0
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Inserting image links.
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found 116 image(s).
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'steps-1.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'dashboard.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'Adding a GitHub webhook'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'stacks-1.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image '6165411195831.jpg'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'startforfree.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'signuppage.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'authorize-github.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'authorize-bitbucket.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'authorize-gitlab.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'get_started_bitrise.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'signuppage-1.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'checkyourinbox.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'Signing up for Bitrise'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'Signing up for Bitrise'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'workspace-settings-new.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'enablesinglesignon.jpg'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'SAML SSO in Workspaces'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'noconnectedsamlsso.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'saml_status.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'enforce_saml.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'SAML SSO in Workspaces'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'disable_sso.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'configure_update_sso.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'account-settings.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'Resetting your password'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'Account security'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'Account security'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'workspace-menu.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'Creating Workspaces'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'add-members-to-workspace.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'assign-ws-roles.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'remove_png.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'remove_member_confirm.png'
+[27/Mar/2025 20:19:45 Europe/Dublin] [Info] Found image 'edit-webhook.svg'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'Workspace_add_group.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'Add_member_new.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'members_group.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image '3_dots.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'Assign_access.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'new_team_grant.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'owners-tab.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'add-owner.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'workspace-general-settings.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'download-invoice.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'plan-select.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'checkout.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'teams-sub.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'slack-inte.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'rename-int.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'integrations-id.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'workspace-api-token.svg'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'create-token.svg'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'create-per-app.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'view-details-token.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'regenerate-token.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'remove_yourself.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'extending-ci-config.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'project-settings-button.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'git-page.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'apps-repository-url-change.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'team-people-tab.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'remove-group.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'Remove_group.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'admin-role.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'developers-role.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'plateng-role.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'tester-qa-role.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'move-project.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'transferownership.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'transferownership_2.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'support_access.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'change-icon.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'embed-url.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'getting-to-workflows.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'create-workflow.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'Creating white label app versions'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'Creating white label app versions'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'Creating white label app versions'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'service-credential-user.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'select_git_repo.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'Connect account to Bitrise'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'https-credentials.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'github-app-card.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'install-the-app.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'authorizing-app.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'select-repository.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'connect-github-app.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'Linked_repositories.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'New Application'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'New Application settings'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'Connecting self-hosted GitLab instances'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'self-hosted-gitlab.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'usersandaccess.jpg'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'api-key-app-store.png'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'apikeyauthentication.jpg'
+[27/Mar/2025 20:19:46 Europe/Dublin] [Info] Found image 'accounts-apple-api-key-auth.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'api-key-enterprise.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'api-key-chart.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'appspecificpassword.jpg'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'appleidauthentication.jpg'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'google-service-account.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'add-json-file.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'select-button.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'attach-service-account.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'webhooks-tab.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'apps-webhooks-select.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'outgoing-webhook.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'edit-outgoing-webhook.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'recent-deliveries.svg'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'webhooks-redeliver.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'redeliver.svg'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'ssh_keypair.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'change-https-credentials-popup.png'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'Can I add projects with submodules or with private repo dependencies?'
+[27/Mar/2025 20:19:47 Europe/Dublin] [Info] Found image 'clone-private.png'
+[27/Mar/2025 20:19:48 Europe/Dublin] [Info] Profiling parameters: []
+[27/Mar/2025 20:19:48 Europe/Dublin] [Info] Profiling customisation: $user_dir/xsl/profile.xsl (not found)
+[27/Mar/2025 20:19:48 Europe/Dublin] [Info] Transformation: publication-94881--en.org.xml -> publication-94881--en.xml [profile.xsl]
+[27/Mar/2025 20:19:48 Europe/Dublin] [Info] Transformation: publication-94881--en.xml -> publication-94881--en.xml [internal-xref.xsl]
+[27/Mar/2025 20:19:49 Europe/Dublin] [Info] Transformation: A-filelist.xml -> B-sorted.xml [IO.document.sortlang.xsl]
+[27/Mar/2025 20:19:49 Europe/Dublin] [Info] Transformation: B-sorted.xml -> C-concatenated.xml [IO.document.concat.xsl]
+[27/Mar/2025 20:19:49 Europe/Dublin] [Info] Transformation: B-sorted.xml -> index-en.xml [IO.document.head.xsl]
+[27/Mar/2025 20:19:49 Europe/Dublin] [Info] Created copy: $user_dir/xsl/custom/layout-435.xsl -> $user_dir/xsl/custom/67e5b2e568a09.xsl
+[27/Mar/2025 20:19:49 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.page.xsl -> $user_dir/xsl/custom/67e5b2e568a09.page.xsl
+[27/Mar/2025 20:19:49 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5-2.index.xsl -> $user_dir/xsl/custom/67e5b2e568a09.index.xsl
+[27/Mar/2025 20:19:49 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.toc.xsl -> $user_dir/xsl/custom/67e5b2e568a09.toc.xsl
+[27/Mar/2025 20:19:49 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.page.xsl -> $user_dir/xsl/custom/67e5b2e568a09.page.xsl
+[27/Mar/2025 20:19:49 Europe/Dublin] [Info] Created symlink: $apppath/lib/docbook/xsl/html5/html5.index.xsl -> $user_dir/xsl/custom/67e5b2e568a09.index.xsl
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-bf053193-9664-34c1-1f75-4676fd5d8190.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-8a140daa-342f-6de0-372b-56f6edceb65c.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-b0b76977-de1e-53de-d8fb-9473e122d5a6.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-fac91c22-821f-db46-6f82-a8a130d8becd.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-2ad0d0bc-1b57-b1c2-d74f-01ea19a5d272.jpg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-b79c5818-c8d3-4ab7-ea8d-00fbbd11684e.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-0217f326-a59f-fabb-ebcc-feff66d20632.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-245d62ac-c277-cae8-0f6d-6d60ae23bb70.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-2b51312c-d04b-29f9-c83a-14dcfa9306d2.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-78feab6d-8731-8d33-b453-bbf6b14a781c.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-cfb7fa41-a106-26b8-af03-a12058f5639f.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-d7118397-afd2-fcec-a464-e6537b882068.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-06a9ef1f-701a-678b-cc0c-8aad5c078cd2.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-461e5ad3-505e-3218-58ea-a4beed999808.jpg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-a8522c9f-3f69-b7a4-4939-61d7d7f4612c.jpg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-b9660c7d-79af-481d-c05a-17356619dd07.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-26ad84be-65c7-1916-f079-6b553b4c436d.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-6b6829af-604c-0cb0-6e18-92137f066492.jpg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-569f5076-4033-d192-1287-db8b9b6e98b3.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-38cefb5d-2dc6-7a86-98cd-d1dac6484ded.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-642c1745-3bb7-c296-bd5a-35a2368a3945.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-1c504e60-2870-0918-ec8a-3739f10d15e4.jpg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-ea11f723-edcb-2e88-0d83-c4c60f1cb794.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-2b97d7ef-4512-cf79-868f-bc66e728b509.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-b08c42b9-affd-b40d-3c6e-87410001d2fb.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-6466da39-be6a-66e4-fc28-662201fbb0b2.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-cf53d41b-4a10-c359-3816-2f847f107db4.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-bd209862-be8e-f0b7-c8c6-23b6f23d2329.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-c9c66545-e909-2236-e073-d55e134d6548.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-09615e71-c7e5-0a43-b41d-b611e25b0c29.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-e09eda1b-3f0e-58ce-ab3f-979d05e557e6.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-434950e4-c881-35ee-cd72-7a126615b856.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-ac29f14a-dd0f-9360-8e51-6bc1c83f724d.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-ecd84027-5433-4ce8-cfbe-bbd61a77c095.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-fe3755f8-efba-2923-17e8-fa4ffd1ef16e.svg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-73d51d1a-c73b-847b-d458-6107ca4e901b.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-642e1898-479a-7590-b0ae-3d3a5cc6b9c7.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-42c797d6-13f2-d5b3-c183-c48546d78983.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-49a6993c-5bb1-9295-d85d-6608aff04419.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-5b7fd557-dadc-4d73-eaa5-39119cd3b63f.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-4023a0e5-a889-7041-05ab-f31969f8e898.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-d0da76d5-0ec1-fd85-9ebd-b8d529c150be.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-820b4fbc-df87-77b2-04c1-8f688d9f6433.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-d36425af-6967-473f-d8d7-07fdaed7ebc1.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-95fcc51e-94c6-ec28-5d06-5578439cf173.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-e09272e9-48fe-2dba-c52c-24b79391c293.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-85ec7e12-6811-a14d-5388-d5502f87fc22.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-dbe3dd32-b361-1fe0-2883-cf93cd64102d.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-952a4ad0-8b1d-4707-2062-f4683aaa854d.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-a5864e82-1efc-0191-b37c-a162cfcb8f42.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-3b1378b0-3006-c0d1-a710-7c4a51821841.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-cb123ebc-f548-8e87-615f-aab39fefa078.svg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-1610488e-2548-99b4-8386-9f2f66bb7f03.svg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-774a69fb-d5b9-333d-f373-eab6cab793cb.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-efe62dac-0331-a3e4-6bf8-57318826bcd3.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-3850ebd0-6ab7-934f-c232-4305ccffe249.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-90c1360e-a4ab-6005-48df-b56fd2831c16.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-d6541f5d-351c-81f9-7a8b-41cfa8c1a21d.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-14defaa4-472c-2d09-84df-145dc3aef4f5.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-79649825-b87a-767f-f3e1-11035daa9903.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-fa95efd5-ff6f-a7a3-2dc3-7ccc5878cd47.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-63ec803d-7551-ebbb-ca47-b3915c746ea2.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-464e4d9f-1911-a722-1008-2b9f67b6bc5c.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-84805be3-7557-14df-e78e-44edaea87777.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-822f879a-7f22-981d-d28f-55c91311b281.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-8051df2c-f4c0-70ff-b957-0f15c737b323.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-0db12ced-a7df-99c7-2c04-4818d5c52832.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-7bb467f5-6ccc-d11e-73f9-f54d550668a8.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-5aa8c4c0-1851-b6c3-810b-11ca0c3dda28.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-2ce0bbbd-d455-1840-7b19-0bcfc6da8e12.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-4c68fb66-ab5a-75a7-bb14-ab0f2617444f.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-c26b5123-a015-a06f-1e80-0845b40a2895.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-b2225b17-758e-9676-2e0a-615aebd28335.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-a3ebc86e-b8db-eedf-bcff-64947885e344.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-32b5ff3d-8431-8fe3-9971-89d8aca076f4.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-426d42b4-ca6f-d5de-d91a-b9e8a4fd8ba1.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-68837c3f-707c-19aa-86e2-bbac732be5a5.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-52def735-231b-d0ea-e01e-b8b12cfbe86a.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-dada2b23-2bc7-5796-3d98-9131dbaa2a87.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-6519a945-1fd2-97fd-da4a-fdab48705503.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-909bb98f-3195-8726-8b09-a60a33209ccb.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-9393180d-64de-86ac-430e-709b09a1de2c.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-3de8dcba-e678-997e-20f0-3055cd889bb0.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-1b49695a-ea36-fe03-f9a1-48a6bfc9a737.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-cae94617-17e3-33ce-8cf7-99205e85bd22.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-a25560d9-ce2a-4181-2dc6-59cc4318c577.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-5fa460a4-aa40-627b-9ccd-d820ef1af5db.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-bbcc5c35-f82c-f026-b5a7-92bb3040d6da.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-a46d9184-159f-0596-5ede-55abc0fa5ebd.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-c139a2c3-3f9a-980e-41f0-a85bc3ea6bbb.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-9e8a91b7-c03a-f513-62a7-0e91426f1676.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-94e2570d-ce4b-720a-db91-52b46de0a96a.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-ee43070a-a23d-02a4-3860-9899749044e2.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-b104fac1-d553-69d3-ebcb-b8260e8a3595.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-1bbd8347-eb11-4439-9ece-315d004d74fe.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-22e6048e-7f47-9480-fea3-958eb9a0348b.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-95e5fcc6-46bd-1efe-69a0-538ef9c8c8cb.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-7dc1ff71-7abf-8c37-8117-a2f7abb13861.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-ea47d90b-0ff0-7cd5-2f80-4013e10f7fb3.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-635b3416-2294-9063-b841-674935c2f4ab.jpg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-36c5c931-5630-567d-9091-5047411a78ab.jpg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-fd621d1e-3ee3-14fc-065b-33bfd5d913ee.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-48a9ebfc-c07d-81f3-7b87-09f6fdcc1794.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-d9ad5624-810e-4fbf-507a-f900e03620e5.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-f8d70389-5398-fa2c-3a98-db70ffa63853.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-00d7e0d5-df77-2b41-222b-c7ff05829144.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-c1dec9c9-49a4-90c6-40b3-c3d69088567b.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-6c73acd6-91b0-2cf7-80bb-b0ef7e8b6618.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-73d46a9a-1191-00d2-578e-184d0bb3cb3d.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-78124fdc-5f54-e675-590c-e3b54a083649.svg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-b09fdf6d-9e83-e454-23c7-005f1344b4aa.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-f5c2904f-3e0b-71ae-b96a-b6059f61bed2.svg
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-f021126a-47d0-41a9-56f7-79b9c8461a0e.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-c1bacf0c-d211-9674-a2d6-625665e9b381.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-987a7495-6bb7-2c5e-0a19-6871b2ca8f1f.png
+[27/Mar/2025 20:19:50 Europe/Dublin] [Info] Image copied: en/image/uuid-ad569718-5c5c-68e2-65d4-53a5d474e2e1.png
+[27-Mar-2025 20:19:52 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, js/jquery-3/*, fonts/*, js/swagger/*, js/intercom/*
+[27-Mar-2025 20:19:52 Europe/Dublin] Parsing manifest file: css/*, css/image/*, css/image/callouts/*, js/*, fonts/*
+[27-Mar-2025 20:19:52 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/6163f759b3bf1.svg' to '$local_tmp/production-67e5b2d49da361.08473344/94881-Bitrise_Platform-html5/out/css/image/corporate-logo.svg'
+[27-Mar-2025 20:19:52 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/61770eafbf909.svg' to '$local_tmp/production-67e5b2d49da361.08473344/94881-Bitrise_Platform-html5/out/css/image/portal-logo.svg'
+[27-Mar-2025 20:19:52 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/67a22bcb69288.js' to '$local_tmp/production-67e5b2d49da361.08473344/94881-Bitrise_Platform-html5/out/js/layout-custom-script.js'
+[27-Mar-2025 20:19:52 Europe/Dublin] Copy file '$user_dir/xsl/custom/assets/layout-435/6167440fdbabf.ico' to '$local_tmp/production-67e5b2d49da361.08473344/94881-Bitrise_Platform-html5/out/favicon.ico'
+[27-Mar-2025 20:19:54 Europe/Dublin] Post build HTML5
+[27/Mar/2025 20:19:54 Europe/Dublin] [Info] Transformation: index-en.html -> toc-en.html [67e5b2e568a09.toc.xsl]
+[27/Mar/2025 20:19:54 Europe/Dublin] [Info] Transformation: resetting-your-password.html -> resetting-your-password.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:54 Europe/Dublin] [Info] Transformation: deleting-your-bitrise-account.html -> deleting-your-bitrise-account.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:54 Europe/Dublin] [Info] Transformation: editing-your-profile-settings.html -> editing-your-profile-settings.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: saml-sso-in-bitrise.html -> saml-sso-in-bitrise.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: two-factor-authentication.html -> two-factor-authentication.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: personal-access-tokens.html -> personal-access-tokens.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: bitrise-ci-overview.html -> bitrise-ci-overview.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: bitrise-build-cache-overview.html -> bitrise-build-cache-overview.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: release-management-overview.html -> release-management-overview.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: getting-started-on-the-bitrise-platform.html -> getting-started-on-the-bitrise-platform.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: changing-the-owners-of-a-workspace.html -> changing-the-owners-of-a-workspace.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: workspace-groups.html -> workspace-groups.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: workspace-members.html -> workspace-members.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: creating-workspaces.html -> creating-workspaces.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: workspace-faq.html -> workspace-faq.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: workspace-api-token.html -> workspace-api-token.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: workspace-slack-integration.html -> workspace-slack-integration.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: workspace-billing-and-invoicing.html -> workspace-billing-and-invoicing.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: workspaces.html -> workspaces.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: the-bitrise-platform.html -> the-bitrise-platform.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: configuring-the-repository-url-and-the-default-branch.html -> configuring-the-repository-url-and-the-default-branch.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: creating-white-label-app-versions.html -> creating-white-label-app-versions.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: public-apps.html -> public-apps.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: changing-the-owner-of-an-app.html -> changing-the-owner-of-an-app.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: adding-a-ci-configuration-to-a-project.html -> adding-a-ci-configuration-to-a-project.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: embedding-an-app-status-badge.html -> embedding-an-app-status-badge.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: user-roles-on-app-teams.html -> user-roles-on-app-teams.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: enabling-the-bitrise-support-user-for-your-app.html -> enabling-the-bitrise-support-user-for-your-app.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: managing-user-access-to-an-app.html -> managing-user-access-to-an-app.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: migrating-from-jenkins-to-bitrise.html -> migrating-from-jenkins-to-bitrise.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: migrating-from-app-center-to-bitrise.html -> migrating-from-app-center-to-bitrise.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: key-bitrise-concepts.html -> key-bitrise-concepts.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: migrating-to-bitrise.html -> migrating-to-bitrise.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: signing-up-for-bitrise.html -> signing-up-for-bitrise.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: connecting-a-google-service-account-to-bitrise.html -> connecting-a-google-service-account-to-bitrise.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: github-app-integration.html -> github-app-integration.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: connecting-self-hosted-gitlab-instances.html -> connecting-self-hosted-gitlab-instances.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: webhooks.html -> webhooks.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: connecting-your-github-gitlab-bitbucket-account-to-bitrise.html -> connecting-your-github-gitlab-bitbucket-account-to-bitrise.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: the-service-credential-user.html -> the-service-credential-user.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: integrating-github-enterprise-with-bitrise.html -> integrating-github-enterprise-with-bitrise.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: steps-requiring-apple-authentication.html -> steps-requiring-apple-authentication.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: connecting-to-an-apple-service-with-step-inputs.html -> connecting-to-an-apple-service-with-step-inputs.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: connecting-to-an-apple-service-with-api-key.html -> connecting-to-an-apple-service-with-api-key.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: connecting-to-an-apple-service-with-apple-id.html -> connecting-to-an-apple-service-with-apple-id.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: configuring-https-authorization-credentials.html -> configuring-https-authorization-credentials.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: connecting-to-a-vpn-during-a-build.html -> connecting-to-a-vpn-during-a-build.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: configuring-ssh-keys.html -> configuring-ssh-keys.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: adding-incoming-webhooks.html -> adding-incoming-webhooks.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: adding-outgoing-webhooks.html -> adding-outgoing-webhooks.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: apps-with-submodules-or-private-repo-dependencies.html -> apps-with-submodules-or-private-repo-dependencies.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:55 Europe/Dublin] [Info] Transformation: apple-services-connection.html -> apple-services-connection.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:56 Europe/Dublin] [Info] Transformation: connectivity.html -> connectivity.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:56 Europe/Dublin] [Info] Transformation: accounts.html -> accounts.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:56 Europe/Dublin] [Info] Transformation: apps.html -> apps.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:56 Europe/Dublin] [Info] Transformation: index-en.html -> index-en.html [67e5b2e568a09.page.xsl]
+[27/Mar/2025 20:19:56 Europe/Dublin] [Info] Algolia search enabled.
+[27/Mar/2025 20:19:56 Europe/Dublin] [Info] Updating Algolia index.
+[27/Mar/2025 20:19:57 Europe/Dublin] [Info] Generating index page.
+[27/Mar/2025 20:19:57 Europe/Dublin] [Info] Transformation: index.manifest -> index.html [67e5b2e568a09.index.xsl]
+[27/Mar/2025 20:19:57 Europe/Dublin] [Info] Running tidy: /usr/bin/find '$local_tmp/production-67e5b2d49da361.08473344/94881-Bitrise_Platform-html5/out' -type f -name "*.html" -exec /usr/bin/tidy -m -q -utf8 -i -w 350 --drop-empty-elements false --tidy-mark false --show-warnings false {} \; & > /dev/null;
+[27/Mar/2025 20:19:58 Europe/Dublin] [Info] # Took 24.485048 seconds to render.
