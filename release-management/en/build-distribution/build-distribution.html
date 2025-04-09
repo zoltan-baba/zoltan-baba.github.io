@@ -8,12 +8,12 @@
   <meta name="search" content="algolia" />
   <meta name="use.ic" content="yes" />
   <meta name="tocstandalone" content="no" />
-  <link rel="canonical" href="https://devcenter.bitrise.io/en/configuring-connected-apps/release-presets.html" />
+  <link rel="canonical" href="https://devcenter.bitrise.io/en/build-distribution/build-distribution.html" />
   <meta name="theme" content="2" />
   <meta name="search.placeholder" content="Search" />
   <meta name="search.results" content="Search results" />
   <meta name="no.search.results" content="No results found" />
-  <title>Release presets</title>
+  <title>Build distribution for testing</title>
   <link rel="stylesheet" type="text/css" href="../../css/docbook.css" />
   <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css" />
   <link rel="stylesheet" type="text/css" href="../../css/roboto.font.css" />
@@ -29,9 +29,10 @@
   <link rel="stylesheet" type="text/css" href="../../css/graphical-lists.css" />
   <link rel="stylesheet" type="text/css" href="../../css/layout-custom-style.css?version=20250409" />
   <meta name="generator" content="Paligo" />
-  <meta name="description" content="Release presets are default values and configurations for new releases of a connected app on Bitrise Release Management. Presets are automatically applied when you add a new release." />
-  <link rel="prev" href="changing-connected-app-appearance.html" title="Changing connected app appearance" />
-  <link rel="next" href="release-presets.html#configuring-release-presets" title="Configuring release presets" />
+  <meta name="description" content=
+  "Release Management offers a convenient, secure solution to distribute your mobile apps to testers without having to engage with either TestFlight or Google Play. Once you have installable artifacts, Bitrise generates both private and public install links that testers or other stakeholders can use to install the app on real devices." />
+  <link rel="prev" href="../build-distribution.html" title="Build distribution for testing" />
+  <link rel="next" href="managing-builds.html" title="Managing distributable builds" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style type="text/css">
   /*<![CDATA[*/
@@ -284,10 +285,10 @@
             <div id="top-pager">
               <ul class="pager">
                 <li class="previous">
-                  <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="changing-connected-app-appearance.html">Prev</a>
+                  <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="../build-distribution.html">Prev</a>
                 </li>
                 <li class="next">
-                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="release-presets.html#configuring-release-presets">Next</a>
+                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="managing-builds.html">Next</a>
                 </li>
               </ul>
             </div>
@@ -299,118 +300,42 @@
                       <a href="../index-en.html">Release Management</a>
                     </li>
                     <li class="breadcrumb-link">
-                      <a>Apps</a>
+                      <a>Build distribution for testing</a>
                     </li>
-                    <li class="breadcrumb-node">Release presets</li>
+                    <li class="breadcrumb-node">Build distribution for testing</li>
                   </ul>
                 </div>
-                <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-e41a0a84-588c-fcdd-b7ad-7b771013d397" data-legacy-id="UUID-d3853860-7acb-d7e5-def6-b1178b6b0244" data-permalink="configuring-connected-apps/release-presets.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="" id=
-                "release-presets-91060">
+                <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-6f4fb325-2e6e-9269-4b6f-ccd4eb03e16c" data-legacy-id="UUID-3edc3f78-dfab-0b29-dffd-1a3e95f77976" data-permalink="build-distribution/build-distribution.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="" id=
+                "build-distribution-for-testing-95623">
                   <div class="titlepage">
                     <div>
                       <div class="title">
-                        <h1 class="title" style="clear: both">Release presets</h1>
+                        <h1 class="title" style="clear: both">Build distribution for testing<span id="UUID-3edc3f78-dfab-0b29-dffd-1a3e95f77976_UUID-06958928-29a8-8310-4cd1-3002659885e5"></span></h1>
                       </div>
                       <div>
                         <div class="abstract">
                           <div class="abstract-title">
                             Abstract
                           </div>
-                          <p>Release presets are default values and configurations for new releases of <a class="link linktype-component" href="../getting-started-with-release-management/connecting-an-app.html" title="Connecting an app">a connected app</a> on Bitrise Release Management. Presets are automatically applied when you add a new
-                          release.</p>
+                          <p>Release Management offers a convenient, secure solution to distribute your mobile apps to testers without having to engage with either TestFlight or Google Play. Once you have installable artifacts, Bitrise generates both private and public install links that testers or other stakeholders can use to install the app on
+                          real devices.</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <p>Release presets are default values and configurations for new releases of <a class="link linktype-component" href="../getting-started-with-release-management/connecting-an-app.html" title="Connecting an app">a connected app</a>.</p>
-                  <p>Presets are automatically applied when you <a class="link linktype-component" href="../releases/adding-a-new-release.html" title="Adding a new release">add a new release</a> and select the <span class="guilabel">Start with a blank release</span> method. After the presets are applied, you can still edit these values during
-                  <a class="link linktype-component" href="../releases/managing-the-release-process.html" title="Managing the release process">the release process</a>.</p>
-                  <p>You can configure presets for:</p>
+                  <p>Release Management offers a convenient, secure solution to distribute the builds of your mobile apps to testers without having to engage with either TestFlight or Google Play. Once you have installable artifacts, Bitrise can generate both private and public install links that testers or other stakeholders can use to install
+                  the app on real devices via over-the-air installation.</p>
+                  <p>Build distribution allows you to define tester groups that can receive notifications about installable artifacts. The email takes the notified testers to the test build page, from where they can install the app on their own device.</p>
                   <div class="itemizedlist">
                     <ul class="itemizedlist" style="list-style-type: disc;">
                       <li class="listitem">
-                        <p><a class="link" href="release-presets.html#configuring-release-presets" title="Configuring release presets">The initial release configuration</a>.</p>
+                        <p><a class="xref linktype-component" href="managing-builds.html" title="Managing distributable builds"><span class="xreftitle">Managing distributable builds</span></a></p>
                       </li>
                       <li class="listitem">
-                        <p><a class="link linktype-component" href="../releases/managing-the-release-process/selecting-a-release-candidate.html" title="Selecting a release candidate">The release candidate stage</a>.</p>
+                        <p><a class="xref linktype-component" href="tester-groups.html" title="Tester groups"><span class="xreftitle">Tester groups</span></a></p>
                       </li>
                     </ul>
                   </div>
-                  <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-d3853860-7acb-d7e5-def6-b1178b6b0244_section-idm4583237401084834241447431116" data-publication-date="" id="configuring-release-presets">
-                    <div class="titlepage">
-                      <div>
-                        <div class="title">
-                          <h2 class="title" style="clear: both">Configuring release presets</h2>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="procedure" id="UUID-d3853860-7acb-d7e5-def6-b1178b6b0244_procedure-idm458972630557123424143855845">
-                      <p>To configure release presets:</p>
-                      <ol class="procedure" type="1">
-                        <li class="step">
-                          <p>Log in to Bitrise, and from the left sidebar, select <span class="guilabel">Releases</span>.</p>
-                        </li>
-                        <li class="step">
-                          <p>From the <span class="guilabel">Connected apps</span> list, select your app.</p>
-                          <div class="mediaobject"><img src="../image/uuid-c446a6a9-f922-2641-53ad-49099a7921fe.png" style="" alt="rm-overview-connected.png" /></div>
-                        </li>
-                        <li class="step">
-                          <p>On the left, select <span class="guilabel">Presets</span>.</p>
-                          <div class="mediaobject"><img src="../image/uuid-bf243542-7a52-3b3e-e6d5-26d0248c3951.png" style="" alt="presets.png" /></div>
-                        </li>
-                        <li class="step">
-                          <p>Select and configure the available <a class="link" href="release-presets.html#release-preset-options" title="Release preset options">preset options</a>:</p>
-                          <div class="itemizedlist">
-                            <ul class="itemizedlist" style="list-style-type: disc;">
-                              <li class="listitem">
-                                <p>In the <span class="guilabel">Configuration</span> section, configure preset options for the initial release configuration.</p>
-                              </li>
-                              <li class="listitem">
-                                <p>In the <span class="guilabel">Release candidate</span> section, create a build configuration for the release candidate stage.</p>
-                              </li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ol>
-                    </div>
-                  </section>
-                  <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-d3853860-7acb-d7e5-def6-b1178b6b0244_section-idm461340834463843424144832262" data-publication-date="" id="release-preset-options">
-                    <div class="titlepage">
-                      <div>
-                        <div class="title">
-                          <h2 class="title" style="clear: both">Release preset options</h2>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="itemizedlist">
-                      <p>The preset options for the initial release configuration:</p>
-                      <ul class="itemizedlist" style="list-style-type: disc;">
-                        <li class="listitem">
-                          <p><span class="guilabel">Auto-upload</span>: Enable or disable it with the toggle switch. This is a preset for the <a class="link linktype-component" href="../releases/configuring-a-release/configuring-auto-upload.html" title="Configuring auto-upload">Auto-upload configuration</a> of releases.</p>
-                        </li>
-                        <li class="listitem">
-                          <p><span class="guilabel">Approvals</span>: Create default approval tasks for new releases. This is a preset for the <a class="link linktype-component" href="../releases/managing-the-release-process/creating-tasks-for-the-approvals-stage.html" title="Creating tasks for the Approvals stage">Approvals configuration</a> of
-                          releases.</p>
-                        </li>
-                        <li class="listitem">
-                          <p><span class="guilabel">Notifications</span>: Enable Slack and Teams notifications for all new releases with the same settings. This is a preset for the <a class="link linktype-component" href="../releases/configuring-a-release/configuring-slack-and-teams-notifications.html" title=
-                          "Configuring Slack and Teams notifications for releases">Notifications configuration</a> of releases.</p>
-                        </li>
-                        <li class="listitem">
-                          <p><span class="guilabel">Automation</span>: Configure default automation events with their triggered Workflow or Pipeline. This is a preset for the <a class="link linktype-component" href="../releases/configuring-a-release/release-automation.html" title="Configuring release automation">Automation configuration</a> of
-                          releases.</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <p>Preset options for the release candidate stage:</p>
-                    <div class="itemizedlist">
-                      <ul class="itemizedlist" style="list-style-type: disc;">
-                        <li class="listitem">
-                          <p><span class="guilabel">Build configuration</span>: You can select the release branch for the app and the Workflow that generates the build with a signed IPA or AAB file.</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </section>
                 </section>
                 <div class="footer-content">
                   <div class="section-toc section-toc-after">
@@ -423,19 +348,6 @@
                 <footer></footer>
               </div>
             </article>
-            <aside class="section-nav-container">
-              <ul class="section-nav nav">
-                <li>
-                  <a href="#release-presets-91060">Release presets</a>
-                </li>
-                <li>
-                  <a href="#configuring-release-presets">Configuring release presets</a>
-                </li>
-                <li>
-                  <a href="#release-preset-options">Release preset options</a>
-                </li>
-              </ul>
-            </aside>
             <article id="search-result-wrapper">
               <div class="search-container" style="display: none;">
                 <h2>Search results</h2>
@@ -446,7 +358,7 @@
             <div class="feedback-panel">
               <div id="email-feedback" class="no-voting toggle-feedback">
                 <p><a href=
-                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Release%20presets%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Release%20presets%22%20in%20the%20publication%20%22Release%20Management%22.">
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Build%20distribution%20for%20testing%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Build%20distribution%20for%20testing%22%20in%20the%20publication%20%22Release%20Management%22.">
                 <i aria-hidden="true" class="fa fa-pencil-square-o feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
               </div>
             </div>
@@ -454,10 +366,10 @@
           <div id="bottom-pager">
             <ul class="pager">
               <li class="previous">
-                <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="changing-connected-app-appearance.html">Prev</a>
+                <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="../build-distribution.html">Prev</a>
               </li>
               <li class="next">
-                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="release-presets.html#configuring-release-presets">Next</a>
+                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="managing-builds.html">Next</a>
               </li>
             </ul>
           </div>

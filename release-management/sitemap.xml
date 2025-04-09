@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://devcenter.bitrise.io/en/getting-started-with-release-management.html</loc>
-    <lastmod>2025-01-22</lastmod>
-  </url>
-  <url>
     <loc>https://devcenter.bitrise.io/en/getting-started-with-release-management/connecting-an-app.html</loc>
     <lastmod>2025-03-05</lastmod>
   </url>
@@ -17,8 +13,8 @@
     <lastmod>2024-07-25</lastmod>
   </url>
   <url>
-    <loc>https://devcenter.bitrise.io/en/configuring-connected-apps.html</loc>
-    <lastmod>2024-08-13</lastmod>
+    <loc>https://devcenter.bitrise.io/en/configuring-connected-apps/configuring-connected-apps.html</loc>
+    <lastmod>2025-04-09</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/configuring-connected-apps/configuring-connected-app-integration.html</loc>
@@ -46,11 +42,19 @@
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/uploading-installable-artifacts.html</loc>
-    <lastmod>2025-03-11</lastmod>
+    <lastmod>2025-04-09</lastmod>
   </url>
   <url>
-    <loc>https://devcenter.bitrise.io/en/build-distribution.html</loc>
+    <loc>https://devcenter.bitrise.io/en/build-distribution/build-distribution.html</loc>
+    <lastmod>2025-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/build-distribution/managing-builds.html</loc>
     <lastmod>2024-12-10</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/build-distribution/tester-groups.html</loc>
+    <lastmod>2025-03-05</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/releases/adding-a-new-release.html</loc>
@@ -111,6 +115,10 @@
   <url>
     <loc>https://devcenter.bitrise.io/en/releases/managing-the-release-process/releasing-your-app-on-google-play.html</loc>
     <lastmod>2024-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://devcenter.bitrise.io/en/tester-groups.html</loc>
+    <lastmod>2025-03-05</lastmod>
   </url>
   <url>
     <loc>https://devcenter.bitrise.io/en/release-management-api.html</loc>

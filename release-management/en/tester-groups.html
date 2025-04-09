@@ -8,11 +8,12 @@
   <meta name="search" content="algolia" />
   <meta name="use.ic" content="yes" />
   <meta name="tocstandalone" content="no" />
+  <link rel="canonical" href="https://devcenter.bitrise.io/en/tester-groups.html" />
   <meta name="theme" content="2" />
   <meta name="search.placeholder" content="Search" />
   <meta name="search.results" content="Search results" />
   <meta name="no.search.results" content="No results found" />
-  <title>Release Management</title>
+  <title>Tester groups</title>
   <link rel="stylesheet" type="text/css" href="../css/docbook.css" />
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
   <link rel="stylesheet" type="text/css" href="../css/roboto.font.css" />
@@ -28,7 +29,8 @@
   <link rel="stylesheet" type="text/css" href="../css/graphical-lists.css" />
   <link rel="stylesheet" type="text/css" href="../css/layout-custom-style.css?version=20250409" />
   <meta name="generator" content="Paligo" />
-  <link rel="next" href="getting-started-with-release-management.html" title="Getting started with Release Management" />
+  <link rel="prev" href="releases/managing-the-release-process/releasing-your-app-on-google-play.html" title="Releasing your app on Google Play" />
+  <link rel="next" href="tester-groups.html#creating-tester-groups-95626" title="Creating tester groups" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style type="text/css">
   /*<![CDATA[*/
@@ -280,9 +282,11 @@
           <main>
             <div id="top-pager">
               <ul class="pager">
-                <li class="previous"></li>
+                <li class="previous">
+                  <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="releases/managing-the-release-process/releasing-your-app-on-google-play.html">Prev</a>
+                </li>
                 <li class="next">
-                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="getting-started-with-release-management.html">Next</a>
+                  <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="tester-groups.html#creating-tester-groups-95626">Next</a>
                 </li>
               </ul>
             </div>
@@ -290,17 +294,241 @@
               <div id="topic-content" class="topic-content">
                 <div class="breadcrumb-container">
                   <ul class="breadcrumb">
-                    <li class="breadcrumb-node">&nbsp;Release Management</li>
+                    <li class="breadcrumb-link">
+                      <a href="index-en.html">Release Management</a>
+                    </li>
+                    <li class="breadcrumb-node">Tester groups</li>
                   </ul>
                 </div>
-                <section xml:lang="en" lang="en" dir="ltr" class="article" id="UUID-d3f301ae-db7b-10ec-5717-cec5f27f9930">
+                <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="UUID-07f91e41-6184-d4e9-7cf6-af8d32680633" data-legacy-id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b" data-permalink="tester-groups.html" data-topic-level="1" data-relative-prefix="" data-publication-date="" id="tester-groups-95626">
                   <div class="titlepage">
                     <div>
-                      <div>
-                        <h1 class="title homepage-title">Release Management</h1>
+                      <div class="title">
+                        <h1 class="title" style="clear: both">Tester groups</h1>
                       </div>
                     </div>
                   </div>
+                  <p>Create tester groups in Release Management to to be able to distribute installable artifacts to testers automatically. When a new installable artifact is available, the tester groups can be:</p>
+                  <div class="itemizedlist">
+                    <ul class="itemizedlist" style="list-style-type: disc;">
+                      <li class="listitem">
+                        <p>Automatically notified via email.</p>
+                      </li>
+                      <li class="listitem">
+                        <p>Manually notified via email.</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <p>The notification email contains a link to the build page in Release Management.</p>
+                  <p>A connected app can have multiple tester groups. You can select testers from the project team members of the connected app.</p>
+                  <div dir="ltr" class="important">
+                    <h3 class="title">Required access level</h3>
+                    <p>Users with the following roles can manage tester groups:</p>
+                    <div class="itemizedlist">
+                      <ul style="list-style-type: disc;" class="itemizedlist">
+                        <li class="listitem">
+                          <p>Workspace owner</p>
+                        </li>
+                        <li class="listitem">
+                          <p>Workspace manager</p>
+                        </li>
+                        <li class="listitem">
+                          <p>Project admin</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_section-idm234664915476744" data-publication-date="" id="creating-tester-groups-95626">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Creating tester groups</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>To create a new tester group:</p>
+                    <div class="procedure" id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_procedure-idm234666296491204">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>Open your connected app in Release Management.</p>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Build distribution</span> and then the <span class="guilabel">Tester groups</span> tab.</p>
+                          <div class="mediaobject"><img src="image/uuid-5d668c02-0f6c-cbcb-3206-b2e5a711979f.png" style="" alt="tester-group.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>Click <span class="guibutton">+ New group</span>.</p>
+                        </li>
+                        <li class="step">
+                          <p>Enter a group name.</p>
+                          <p>The name must be unique: no other tester group can have the same name. You can change the name later.</p>
+                        </li>
+                        <li class="step">
+                          <p>Optionally, check the <span class="guilabel">Send notifications automatically</span> box.</p>
+                          <p>With this setting, every group member receives a notification when a new installable artifact is available. You can change this later.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
+                  <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_section-idm234664916530964" data-publication-date="" id="adding-members-to-tester-groups-95626">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Adding members to tester groups</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>A newly created tester group is empty. You can add <a class="link linktype-component linktextconsumer" href="/document/preview/42166#UUID-f2d36e34-20b0-22b7-8214-d75ca87322f6" target="_blank">members of the Bitrise project</a> the app belongs to.<span id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_N67f6afffc468b" class=
+                    "linktextprovider" style="display:none !important;">User roles on project teams</span></p>
+                    <p>To add members to a tester group:</p>
+                    <div class="procedure" id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_procedure-idm234666303559387">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>Open your connected app in Release Management.</p>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Build distribution</span> and then the <span class="guilabel">Tester groups</span> tab.</p>
+                        </li>
+                        <li class="step">
+                          <p>Find the group and click the vertical ellipsis (⋮) on the right.</p>
+                          <div class="mediaobject"><img src="image/uuid-fd63cf77-e2f7-bfce-3000-4a80b87f158f.png" style="" alt="manage-tester-group.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Manage testers</span>.</p>
+                        </li>
+                        <li class="step">
+                          <p>In the group page, click <span class="guibutton">Add testers</span>.</p>
+                        </li>
+                        <li class="step">
+                          <p>Select all the testers you need and click <span class="guibutton">Add</span>.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
+                  <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_section-idm234664927753272" data-publication-date="" id="removing-members-from-tester-groups-95626">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Removing members from tester groups</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>You can remove members from testing groups in two ways:</p>
+                    <div class="itemizedlist">
+                      <ul class="itemizedlist" style="list-style-type: disc;">
+                        <li class="listitem">
+                          <p>Removing them from a specific testing group.</p>
+                        </li>
+                        <li class="listitem">
+                          <p>Removing them from all testing groups at the same time.</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <p class="tabs is-active">Specific group</p>
+                    <p class="tabs">All groups</p>
+                    <div class="procedure tab-content is-active" id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_procedure-idm234666314319926">
+                      <ol class="procedure tab-content is-active" type="1">
+                        <li class="step">
+                          <p>Open your connected app in Release Management.</p>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Build distribution</span> and then the <span class="guilabel">Tester groups</span> tab.</p>
+                        </li>
+                        <li class="step">
+                          <p>Find the group and click the vertical ellipsis (⋮) on the right.</p>
+                          <div class="mediaobject"><img src="image/uuid-fd63cf77-e2f7-bfce-3000-4a80b87f158f.png" style="" alt="manage-tester-group.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Manage testers</span>.</p>
+                        </li>
+                        <li class="step">
+                          <p>In the <span class="guilabel">Testers in this group</span> list, find the tester you want to remove and click the remove button.</p>
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="procedure tab-content" id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_procedure-idm234666314502617">
+                      <ol class="procedure tab-content" type="1">
+                        <li class="step">
+                          <p>Open your connected app in Release Management.</p>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Build distribution</span> and then the <span class="guilabel">Testers</span> tab.</p>
+                        </li>
+                        <li class="step">
+                          <p>In the <span class="guilabel">All testers</span> list, find the tester you want to remove and click the remove button.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
+                  <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_section-idm2346649156837" data-publication-date="" id="configuring-notification-settings-for-tester-groups-95626">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Configuring notification settings for tester groups</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Tester groups can be notified automatically via email: whenever a new installable artifact is available for the app, each member of a tester group gets an email notification.</p>
+                    <p>The notification email contains a link to the build page in Release Management, from where you can install the app on a mobile device.</p>
+                    <div dir="ltr" class="note">
+                      <h3 class="title">New members</h3>
+                      <p>You can only send a notification once. If you add new members to the group after a notification email has been sent, those new members won't get a notification email.</p>
+                    </div>
+                    <p>To configure automatic notifications:</p>
+                    <div class="procedure" id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_procedure-idm234666324812069">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>Open your connected app in Release Management.</p>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Build distribution</span> and then the <span class="guilabel">Tester groups</span> tab.</p>
+                        </li>
+                        <li class="step">
+                          <p>Find the group and click the vertical ellipsis (⋮) on the right.</p>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Configure notifications</span>.</p>
+                        </li>
+                        <li class="step">
+                          <p>Toggle on <span class="guilabel">Automatic notifications</span>.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
+                  <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_section-idm234664915906485" data-publication-date="" id="sending-notifications-to-tester-groups-manually-95626">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Sending notifications to tester groups manually</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>You can notify a tester group manually about a new installable build artifact.</p>
+                    <div dir="ltr" class="note">
+                      <h3 class="title">New members</h3>
+                      <p>You can only send a notification once. If you add new members to the group after a notification email has been sent, those new members won't get a notification email.</p>
+                    </div>
+                    <div class="procedure" id="UUID-e143b044-c934-c1a3-1a06-73a78e384d1b_procedure-idm234666329226465">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>Open your connected app in Release Management.</p>
+                        </li>
+                        <li class="step">
+                          <p>Select <span class="guilabel">Build distribution</span> and then the <span class="guilabel">Builds</span> tab.</p>
+                        </li>
+                        <li class="step">
+                          <p>Find the build you need from the list and click the arrow on the right.</p>
+                        </li>
+                        <li class="step">
+                          <p>On the build page, select the <span class="guilabel">Testing</span> tab.</p>
+                          <div class="mediaobject"><img src="image/uuid-c8b3be87-8669-d4d7-d100-ad03c3055645.png" style="" alt="tester-settings-page.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>Find the tester group and click <span class="guibutton">Send</span>.</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
                 </section>
                 <div class="footer-content">
                   <div class="section-toc section-toc-after">
@@ -313,6 +541,28 @@
                 <footer></footer>
               </div>
             </article>
+            <aside class="section-nav-container">
+              <ul class="section-nav nav">
+                <li>
+                  <a href="#tester-groups-95626">Tester groups</a>
+                </li>
+                <li>
+                  <a href="#creating-tester-groups-95626">Creating tester groups</a>
+                </li>
+                <li>
+                  <a href="#adding-members-to-tester-groups-95626">Adding members to tester groups</a>
+                </li>
+                <li>
+                  <a href="#removing-members-from-tester-groups-95626">Removing members from tester groups</a>
+                </li>
+                <li>
+                  <a href="#configuring-notification-settings-for-tester-groups-95626">Configuring notification settings for tester groups</a>
+                </li>
+                <li>
+                  <a href="#sending-notifications-to-tester-groups-manually-95626">Sending notifications to tester groups manually</a>
+                </li>
+              </ul>
+            </aside>
             <article id="search-result-wrapper">
               <div class="search-container" style="display: none;">
                 <h2>Search results</h2>
@@ -322,16 +572,19 @@
             </article>
             <div class="feedback-panel">
               <div id="email-feedback" class="no-voting toggle-feedback">
-                <p><a href="mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22%22%20in%20the%20publication%20%22Release%20Management%22."><i aria-hidden="true"
+                <p><a href=
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22Tester%20groups%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22Tester%20groups%22%20in%20the%20publication%20%22Release%20Management%22."><i aria-hidden="true"
                 class="fa fa-pencil-square-o feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
               </div>
             </div>
           </main>
           <div id="bottom-pager">
             <ul class="pager">
-              <li class="previous"></li>
+              <li class="previous">
+                <a accesskey="p" class="prev pull-left prev visible-lg visible-md" id="header-navigation-prev" href="releases/managing-the-release-process/releasing-your-app-on-google-play.html">Prev</a>
+              </li>
               <li class="next">
-                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="getting-started-with-release-management.html">Next</a>
+                <a accesskey="n" class="pull-right next visible-lg visible-md" id="header-navigation-next" href="tester-groups.html#creating-tester-groups-95626">Next</a>
               </li>
             </ul>
           </div>
